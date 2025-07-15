@@ -11,6 +11,16 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 import requests
 from loguru import logger
+import urllib3
+import ssl
+
+# 禁用 SSL 警告
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+# 自定義 SSL 上下文
+ssl_context = ssl.create_default_context()
+ssl_context.check_hostname = False
+ssl_context.verify_mode = ssl.CERT_NONE
 
 # 配置日志
 logger.add("epg_generator.log", rotation="1 day", retention="7 days", level="INFO")
@@ -113,13 +123,27 @@ def get_programs_for_channel(channel_id, channel_name):
     logger.info(f"正在獲取 {channel_name} 節目表")
     url = f"https://www.4gtv.tv/ProgList/{channel_id}.txt"
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+        "Referer": f"https://www.4gtv.tv/channel.html?channel={channel_id}",
+        "Origin": "https://www.4gtv.tv"
     }
     
     try:
-        response = requests.get(url, headers=headers)
+        # 使用自定義 SSL 上下文
+        response = requests.get(url, headers=headers, verify=False, timeout=30)
         response.encoding = "utf-8"
-        data = response.json()
+        
+        # 檢查響應狀態
+        if response.status_code != 200:
+            logger.warning(f"頻道 {channel_name} 節目表獲取失敗: HTTP {response.status_code}")
+            return []
+        
+        # 嘗試解析 JSON
+        try:
+            data = response.json()
+        except json.JSONDecodeError:
+            logger.error(f"頻道 {channel_name} 節目表解析失敗: 無效 JSON")
+            return []
         
         programs = []
         tz = pytz.timezone('Asia/Taipei')
@@ -161,12 +185,12 @@ def get_programs_for_channel(channel_id, channel_name):
 
 def generate_epg_xml(channels, all_programs):
     """生成 EPG XML 文件"""
-    logger.info("開始生成 電子節目表單 數據")
+    logger.info("開始生成 四季線上電子節目表單 XML 數據")
     
     # 建立 XML 結構
     tv = ET.Element("tv")
-    tv.set("generator-info-name", "4GTV EPG Generator")
-    tv.set("generator-info-url", "https://github.com/myhomebox/tv")
+    tv.set("generator-info-name", "四季線上電子節目表單")
+    tv.set("generator-info-url", "https://www.4gtv.tv")
     
     # 添加頻道信息
     for channel in channels:
@@ -206,19 +230,19 @@ def generate_epg_xml(channels, all_programs):
     dom = minidom.parseString(xml_with_declaration)
     pretty_xml = dom.toprettyxml(indent="  ", encoding="utf-8")
     
-    # 儲存到文件
+    # 保存到文件
     os.makedirs("output", exist_ok=True)
     with open("output/4g.xml", "wb") as f:
         f.write(pretty_xml)
     
-    logger.success("電子節目表單表生成完成，儲存到 output/4g.xml")
+    logger.success("電子節目表單 生成完成，保存到 output/4g.xml")
     return True
 
 def main():
     # 第一步：獲取頻道數據
     channels = fetch_channels_with_selenium()
     if not channels:
-        logger.error("無法獲取頻道數據，EPG 生成終止")
+        logger.error("無法獲取頻道數據，電子節目表單 生成終止")
         return
     
     # 第二步：獲取所有頻道的節目表
@@ -227,7 +251,7 @@ def main():
         programs = get_programs_for_channel(channel["channelId"], channel["channelName"])
         all_programs.append(programs)
     
-    # 第三步：生成 電子節目表單 XML
+    # 第三步：生成 電子節目表單
     generate_epg_xml(channels, all_programs)
 
 if __name__ == "__main__":
