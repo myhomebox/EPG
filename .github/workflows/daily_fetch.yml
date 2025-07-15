@@ -36,8 +36,8 @@ jobs:
       run: mkdir -p output
 
     - name: Run Get_Channel.py
-      run: python Get_Channel.py
-      working-directory: ./scripts
+      run: python scripts/Get_Channel.py
+
       env:
         PYTHONUNBUFFERED: 1
 
@@ -45,8 +45,8 @@ jobs:
       run: |
         # 隨機延遲減少並發檢測風險
         sleep $((RANDOM % 30))
-        python Make_EPG.py
-      working-directory: ./scripts
+        python scripts/Make_EPG.py
+
       env:
         PYTHONUNBUFFERED: 1
 
