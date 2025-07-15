@@ -22,7 +22,7 @@ jobs:
       run: pip install requests
       
     - name: Fetch 4GTV data
-      run: python fetch_4gtv.py
+      run: python scripts/fetch_4gtv.py
       
     - name: Commit and push changes
       run: |
