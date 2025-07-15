@@ -17,13 +17,40 @@ BLOCKED_CHANNELS = [
     "芭樂直擊台"
 ]
 
+# 添加瀏覽器級別的請求頭
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Origin": "https://www.4gtv.tv",
+    "Referer": "https://www.4gtv.tv/",
+    "Sec-Fetch-Dest": "empty",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Site": "same-site",
+}
+
 try:
     # 發送 GET 請求並禁用 SSL 驗證
-    response = requests.get(url, verify=False)
-    response.raise_for_status()  # 檢查請求是否成功
+    response = requests.get(
+        url,
+        headers=HEADERS,
+        verify=False,
+        timeout=30
+    )
     
+    # 檢查響應狀態
+    if response.status_code != 200:
+        print(f"錯誤狀態碼: {response.status_code}")
+        print(f"響應內容: {response.text[:200]}")
+        exit(1)
+        
     # 解析 JSON 數據
     data = response.json()
+    
+    # 檢查是否有有效數據
+    if "Data" not in data or not isinstance(data["Data"], list):
+        print(f"API 返回無效數據: {data}")
+        exit(1)
     
     # 提取所需字段並過濾特定頻道
     extracted_data = []
