@@ -25,29 +25,32 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests pytz loguru selenium webdriver-manager
 
-    - name: Install Chrome dependencies
+    - name: Install system dependencies
       run: |
-        pip install requests selenium
         sudo apt-get update
         sudo apt-get install -y chromium-browser chromium-chromedriver
 
-    - name: Create output directory
-      run: mkdir -p output
+    - name: Prepare workspace
+      run: |
+        mkdir -p output
+        find ./output -mindepth 1 ! -name 'README.md' -delete
 
-    - name: Run Get_Channel.py
+    - name: Fetch channel data
       run: python Get_Channel.py
       working-directory: ./scripts
+      continue-on-error: true
 
-    - name: Run Make_EPG.py
-       run: |
-           sleep $((RANDOM % 30))
-           python Make_EPG.py
-       working-directory: ./scripts
+    - name: Generate EPG with random delay
+      run: |
+        python -c "import time, random; time.sleep(random.randint(0, 30))"
+        python Make_EPG.py
+      working-directory: ./scripts
+      continue-on-error: true
 
     - name: Commit and Push Changes
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git add output/*
-        git commit -m "Auto-update EPG data (output)"
+        git add output/
+        git diff-index --quiet HEAD || git commit -m "Auto-update EPG data"
         git push
