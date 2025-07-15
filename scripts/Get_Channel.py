@@ -14,6 +14,10 @@ BLOCKED_CHANNELS = [
     "芭樂直擊台"
 ]
 
+# 获取脚本所在目录的上级目录（仓库根目录）
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUTPUT_DIR = os.path.join(BASE_DIR, 'output')
+
 try:
     # 設置 Chrome 選項
     chrome_options = Options()
@@ -92,15 +96,14 @@ try:
         })
     
     # 建立輸出目錄
-    output_dir = os.path.join(os.path.dirname(__file__), '..', 'output')
-    os.makedirs(output_dir, exist_ok=True)
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
     
     # 寫入 JSON 文件
-    output_path = os.path.join(output_dir, 'fourgtv.json')
+    output_path = os.path.join(OUTPUT_DIR, 'fourgtv.json')
     with open(output_path, 'w', encoding='utf-8') as f:
-       json.dump(extracted_data, f, ensure_ascii=False, indent=2)
+        json.dump(extracted_data, f, ensure_ascii=False, indent=2)
     
-    print(f"成功生成 ./output/fourgtv.json ({len(extracted_data)} 條記錄)")
+    print(f"成功生成 {output_path} ({len(extracted_data)} 條記錄)")
     print(f"跳過頻道: {', '.join(BLOCKED_CHANNELS)}")
     print(f"最後更新時間: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
