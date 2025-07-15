@@ -7,6 +7,20 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 from loguru import logger
 
+def get_4gtv_epg():
+    logger.info("正在獲取 四季線上 電子節目表")
+    channels = get_4gtv_channels()
+    programs = []
+    
+    for channel in channels:
+        channel_id = channel['channelId']
+        channel_name = channel['channelName']
+        channel_programs = get_4gtv_programs(channel_id, channel_name)
+        if channel_programs:
+            programs.extend(channel_programs)
+    
+    return channels, programs
+
 def get_4gtv_channels():
     # 優先檢查本地文件是否存在
     local_file = "../output/fourgtv.json"
@@ -29,6 +43,11 @@ def get_4gtv_channels():
         
         except Exception as e:
             logger.error(f"讀取本地頻道文件失敗: {e}")
+    
+    # 本地文件不存在則從網絡獲取
+    logger.info("從網絡獲取頻道列表")
+    url = "https://raw.githubusercontent.com/myhomebox/tv/refs/heads/main/fourgtv.json"
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     
     try:
         response = requests.get(url, headers=headers)
@@ -119,8 +138,9 @@ def generate_xml(channels, programs, filename="../output/4g.xml"):
     logger.info(f"EPG文件已生成: {filename}")
 
 if __name__ == "__main__":
-	os.makedirs("output", exist_ok=True)
-	
+    # 確保輸出目錄存在
+    os.makedirs("output", exist_ok=True)
+    
     logger.add("./output/epg_generator.log", rotation="1 day", retention="7 days")
     try:
         channels, programs = get_4gtv_epg()
