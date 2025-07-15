@@ -88,97 +88,60 @@ def fetch_channels_with_selenium(driver):
         logger.error(f"獲取頻道數據失敗: {str(e)}")
         return []
 
-def get_programs_directly(driver, channel_id, channel_name):
-    """獲取頻道節目表"""
-    logger.info(f"正在獲取 {channel_name} 節目表")
-    tz = pytz.timezone('Asia/Taipei')
-    programs = []
+def get_4gtv_programs(channel_id, channel_name):
+    """直接獲取節目表數據"""
+    url = f"https://www.4gtv.tv/ProgList/{channel_id}.txt"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36"
+    }
     
     try:
-        # 執行 JavaScript 獲取節目數據
-        script = f"""
-            return fetch('https://www.4gtv.tv/ProgList/{channel_id}.txt', {{
-                method: 'GET',
-                headers: {{
-                    'Accept': 'application/json',
-                    'Referer': 'https://www.4gtv.tv/',
-                    'Origin': 'https://www.4gtv.tv',
-                    'User-Agent': navigator.userAgent
-                }},
-                credentials: 'include'
-            }})
-            .then(response => {{
-                if (!response.ok) {{
-                    throw new Error(`HTTP error! status: ${{response.status}}`);
-                }}
-                return response.json();
-            }})
-            .then(data => {{
-                return JSON.stringify(data);
-            }})
-            .catch(error => {{
-                console.error('Fetch error:', error);
-                return "ERROR:" + error.message;
-            }});
-        """
+        # 添加隨機延遲避免請求過快
+        time.sleep(random.uniform(0.5, 1.5))
         
-        logger.debug(f"正在執行 JavaScript 獲取 {channel_name} 節目數據")
-        result = driver.execute_script(script)
+        response = requests.get(url, headers=headers, verify=False, timeout=15)
+        response.encoding = "utf-8"
+        data = response.json()
         
-        # 處理 JavaScript 執行結果
-        if not result:
-            logger.error(f"{channel_name} 未返回任何數據")
-            return []
-            
-        if result.startswith("ERROR:"):
-            logger.error(f"{channel_name} JavaScript 執行錯誤: {result[6:]}")
-            return []
-        
-        try:
-            data = json.loads(result)
-        except json.JSONDecodeError as e:
-            logger.error(f"{channel_name} 節目數據解析失敗: {str(e)}")
-            logger.debug(f"原始數據: {result[:500]}")
-            return []
-        
-        # 解析節目數據
+        programs = []
         for item in data:
             try:
-                # 處理開始時間
                 start_time = datetime.strptime(
                     f"{item['sdate']} {item['stime']}", 
                     "%Y-%m-%d %H:%M:%S"
                 )
-                start_time = tz.localize(start_time)
-                
-                # 處理結束時間
                 end_time = datetime.strptime(
                     f"{item['edate']} {item['etime']}", 
                     "%Y-%m-%d %H:%M:%S"
                 )
+                
+                tz = pytz.timezone('Asia/Taipei')
+                start_time = tz.localize(start_time)
                 end_time = tz.localize(end_time)
                 
                 programs.append({
-                    "channelId": channel_id,
                     "channelName": channel_name,
+                    "channelId": channel_id,  # 添加頻道ID
                     "programName": item["title"],
-                    "description": item.get("sub_title", "") or item.get("description", ""),
+                    "description": item.get("subtitle", "") or item.get("title", ""),
                     "start": start_time,
                     "end": end_time
                 })
-                
             except Exception as e:
-                logger.warning(f"{channel_name} 節目解析錯誤: {str(e)}")
+                logger.warning(f"解析節目條目失敗: {str(e)}")
+                continue
         
-        logger.info(f"頻道 {channel_name} 成功獲取 {len(programs)} 個節目")
         return programs
     
-    except Exception as e:
-        logger.error(f"獲取 {channel_name} 節目表失敗: {str(e)}")
+    except requests.exceptions.RequestException as e:
+        logger.error(f"請求 {channel_name} 節目表失敗: {str(e)}")
         return []
-    finally:
-        # 添加隨機延遲避免請求過於頻繁
-        time.sleep(random.uniform(0.5, 2))
+    except json.JSONDecodeError as e:
+        logger.error(f"解析 {channel_name} 節目表 JSON 失敗: {str(e)}")
+        return []
+    except Exception as e:
+        logger.error(f"獲取 {channel_name} 節目表發生未知錯誤: {str(e)}")
+        return []
 
 def generate_epg_xml(channels, all_programs):
     """生成 EPG XML 文件"""
@@ -192,9 +155,15 @@ def generate_epg_xml(channels, all_programs):
     # 添加頻道信息
     for channel in channels:
         channel_elem = ET.SubElement(tv, "channel", id=channel["channelId"])
-        ET.SubElement(channel_elem, "display-name").text = channel["channelName"]
-        if channel["logo"]:
-            ET.SubElement(channel_elem, "icon", src=channel["logo"])
+        
+        # 頻道名稱
+        display_name = ET.SubElement(channel_elem, "display-name")
+        display_name.text = channel["channelName"]
+        
+        # 頻道圖標
+        if channel.get("logo"):
+            icon = ET.SubElement(channel_elem, "icon")
+            icon.set("src", channel["logo"])
     
     # 添加節目信息
     for programs in all_programs:
@@ -207,15 +176,16 @@ def generate_epg_xml(channels, all_programs):
                 stop=program["end"].strftime("%Y%m%d%H%M%S %z"),
                 channel=program["channelId"]
             )
+            
+            # 節目名稱
             title_elem = ET.SubElement(program_elem, "title")
             title_elem.text = program["programName"]
             title_elem.set("lang", "zh")
             
-            # 添加描述
-            if program["description"]:
-                desc_elem = ET.SubElement(program_elem, "desc")
-                desc_elem.text = program["description"]
-                desc_elem.set("lang", "zh")
+            # 節目描述
+            desc_elem = ET.SubElement(program_elem, "desc")
+            desc_elem.text = program["description"]
+            desc_elem.set("lang", "zh")
     
     # 生成 XML 字符串
     xml_str = ET.tostring(tv, encoding="utf-8")
@@ -227,12 +197,13 @@ def generate_epg_xml(channels, all_programs):
     dom = minidom.parseString(xml_with_declaration)
     pretty_xml = dom.toprettyxml(indent="  ", encoding="utf-8")
     
-    # 保存到文件
+    # 儲存到文件
     os.makedirs("output", exist_ok=True)
-    with open("output/4g.xml", "wb") as f:
+    output_path = os.path.join("output", "4g.xml")
+    with open(output_path, "wb") as f:
         f.write(pretty_xml)
     
-    logger.success("電子節目表單 生成完成，保存到 output/4g.xml")
+    logger.success(f"電子節目表單生成完成，儲存到 {output_path}")
     return True
 
 def main():
@@ -269,19 +240,29 @@ def main():
         # 第一步：獲取頻道數據
         channels = fetch_channels_with_selenium(driver)
         if not channels:
-            logger.error("無法獲取頻道數據，電子節目表單 生成終止")
+            logger.error("無法獲取頻道數據，電子節目表單生成終止")
             return
         
         # 第二步：獲取所有頻道的節目表
         all_programs = []
         total_channels = len(channels)
+        logger.info(f"開始獲取 {total_channels} 個頻道的節目表...")
+        
         for index, channel in enumerate(channels, 1):
             logger.info(f"正在處理頻道 ({index}/{total_channels}): {channel['channelName']}")
-            programs = get_programs_directly(driver, channel["channelId"], channel["channelName"])
-            all_programs.append(programs)
+            programs = get_4gtv_programs(channel["channelId"], channel["channelName"])
+            
+            if programs:
+                all_programs.append(programs)
+                logger.info(f"成功獲取 {len(programs)} 個節目")
+            else:
+                logger.warning(f"未獲取到節目數據")
         
-        # 第三步：生成 電子節目表單
-        generate_epg_xml(channels, all_programs)
+        # 第三步：生成 EPG
+        if all_programs:
+            generate_epg_xml(channels, all_programs)
+        else:
+            logger.error("未獲取到任何節目數據，無法生成EPG")
     
     except Exception as e:
         logger.error(f"主流程執行失敗: {str(e)}")
