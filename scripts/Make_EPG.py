@@ -10,9 +10,50 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 import time
 import random
+import cloudscraper
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
+from bs4 import BeautifulSoup
+
+# 配置瀏覽器選項
+def get_chrome_options():
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-gpu")
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_options.add_argument("--disable-extensions")
+    chrome_options.add_argument("--disable-infobars")
+    chrome_options.add_argument("--disable-notifications")
+    chrome_options.add_argument("--disable-popup-blocking")
+    chrome_options.add_argument("--disable-setuid-sandbox")
+    chrome_options.add_argument("--remote-debugging-port=9222")
+    chrome_options.add_argument("--disable-blink-features=AutomationControlled")
+    chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36")
+    return chrome_options
+
+# 建立瀏覽器實例
+def create_browser():
+    chrome_options = get_chrome_options()
+    service = Service(ChromeDriverManager().install())
+    browser = webdriver.Chrome(service=service, options=chrome_options)
+    browser.set_page_load_timeout(30)
+    return browser
+
+# 建立Cloudscraper實例
+def create_cloudscraper():
+    return cloudscraper.create_scraper(
+        browser={
+            'browser': 'chrome',
+            'platform': 'windows',
+            'desktop': True
+        }
+    )
 
 def create_session():
-    """创建带有重试机制的会话"""
+    """建立帶有重試機制的會話"""
     session = requests.Session()
     retry_strategy = Retry(
         total=3,
@@ -29,23 +70,52 @@ def get_4gtv_epg():
     channels = get_4gtv_channels()
     programs = []
     
+    # 建立Cloudscraper實例
+    scraper = create_cloudscraper()
+    
+    # 建立瀏覽器實例（備用）
+    browser = None
+    
     for channel in channels:
         channel_id = channel['channelId']
         channel_name = channel['channelName']
         
-        # 添加随机延迟减少请求频率
-        delay = random.uniform(0.5, 2.0)
+        # 添加隨機延遲減少請求頻率
+        delay = random.uniform(1.0, 3.0)
         logger.debug(f"等待 {delay:.2f} 秒後獲取 {channel_name} 節目表")
         time.sleep(delay)
         
-        channel_programs = get_4gtv_programs(channel_id, channel_name)
+        # 嘗試多種方法獲取節目表
+        channel_programs = None
+        methods = [
+            lambda: get_4gtv_programs_scraper(channel_id, channel_name, scraper),
+            lambda: get_4gtv_programs_selenium(channel_id, channel_name, browser)
+        ]
+        
+        for method in methods:
+            try:
+                channel_programs = method()
+                if channel_programs:
+                    break
+            except Exception as e:
+                logger.warning(f"方法失敗: {e}")
+                continue
+        
         if channel_programs:
             programs.extend(channel_programs)
+        else:
+            logger.error(f"所有方法都無法獲取 {channel_name} 節目表")
+    
+    # 關閉瀏覽器實例
+    if browser:
+        try:
+            browser.quit()
+        except:
+            pass
     
     return channels, programs
 
 def get_4gtv_channels():
-    # 優先檢查本地文件是否存在
     local_file = "./output/fourgtv.json"
     if os.path.exists(local_file):
         try:
@@ -66,7 +136,7 @@ def get_4gtv_channels():
         
         except Exception as e:
             logger.error(f"讀取本地頻道文件失敗: {e}")
-    
+
     try:
         session = create_session()
         response = session.get(url, headers=headers, timeout=10)
@@ -88,7 +158,8 @@ def get_4gtv_channels():
         logger.error(f"獲取頻道列表失敗: {e}")
         return []
 
-def get_4gtv_programs(channel_id, channel_name):
+def get_4gtv_programs_scraper(channel_id, channel_name, scraper):
+    """使用Cloudscraper獲取節目表（繞過Cloudflare防護）"""
     url = f"https://www.4gtv.tv/ProgList/{channel_id}.txt"
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
@@ -101,10 +172,14 @@ def get_4gtv_programs(channel_id, channel_name):
         "Sec-Fetch-Site": "same-origin"
     }
     
-    session = create_session()
     try:
-        response = session.get(url, headers=headers, timeout=10)
+        response = scraper.get(url, headers=headers, timeout=15)
         response.raise_for_status()
+        
+        # 檢查是否是有效的JSON
+        if not response.text.strip().startswith(('[', '{')):
+            raise ValueError("返回內容不是有效的JSON")
+        
         data = response.json()
         
         programs = []
@@ -129,13 +204,85 @@ def get_4gtv_programs(channel_id, channel_name):
                 "end": end_time
             })
         
-        logger.success(f"成功獲取 {channel_name} 節目表 ({len(programs)} 個節目)")
+        logger.success(f"[Cloudscraper] 成功獲取 {channel_name} 節目表 ({len(programs)} 個節目)")
         return programs
     
     except Exception as e:
         status_code = response.status_code if 'response' in locals() else 'N/A'
-        logger.error(f"獲取 {channel_name} 節目表失敗. URL: {url} 狀態碼: {status_code} 錯誤: {e}")
-        return []
+        logger.error(f"[Cloudscraper] 獲取 {channel_name} 節目表失敗. URL: {url} 狀態碼: {status_code} 錯誤: {e}")
+        return None
+
+def get_4gtv_programs_selenium(channel_id, channel_name, browser=None):
+    """獲取節目表"""
+    url = f"https://www.4gtv.tv/ProgList/{channel_id}.txt"
+    
+    # 如果未提供瀏覽器實例，則建立一個
+    create_new_browser = browser is None
+    if create_new_browser:
+        browser = create_browser()
+    
+    try:
+        logger.info(f"[Selenium] 正在訪問: {url}")
+        browser.get(url)
+        
+        # 等待頁面加載
+        time.sleep(2.5)
+        
+        # 獲取頁面內容
+        content = browser.page_source
+        
+        # 嘗試從pre標簽獲取JSON數據
+        if '<pre' in content:
+            pre_element = browser.find_element('tag name', 'pre')
+            json_text = pre_element.text
+        else:
+            # 直接獲取body內容
+            body_element = browser.find_element('tag name', 'body')
+            json_text = body_element.text
+        
+        # 檢查是否是有效的JSON
+        if not json_text.strip().startswith(('[', '{')):
+            raise ValueError("返回內容不是有效的JSON")
+        
+        # 解析JSON
+        data = json.loads(json_text)
+        
+        programs = []
+        tz = pytz.timezone('Asia/Taipei')
+        
+        for item in data:
+            start_time = tz.localize(datetime.strptime(
+                f"{item['sdate']} {item['stime']}", 
+                "%Y-%m-%d %H:%M:%S"
+            ))
+            end_time = tz.localize(datetime.strptime(
+                f"{item['edate']} {item['etime']}", 
+                "%Y-%m-%d %H:%M:%S"
+            ))
+            
+            programs.append({
+                "channelId": channel_id,
+                "channelName": channel_name,
+                "programName": item["title"],
+                "description": item.get("content", ""),
+                "start": start_time,
+                "end": end_time
+            })
+        
+        logger.success(f"[Selenium] 成功獲取 {channel_name} 節目表 ({len(programs)} 個節目)")
+        return programs
+    
+    except Exception as e:
+        logger.error(f"[Selenium] 獲取 {channel_name} 節目表失敗: {e}")
+        return None
+    
+    finally:
+        # 如果是新建立的瀏覽器，則關閉它
+        if create_new_browser and browser:
+            try:
+                browser.quit()
+            except:
+                pass
 
 def generate_xml(channels, programs, filename="./output/4g.xml"):
     tv = ET.Element("tv", attrib={
@@ -153,7 +300,7 @@ def generate_xml(channels, programs, filename="./output/4g.xml"):
     # 添加節目信息
     for program in programs:
         try:
-            # 格式化时区信息 (+0800)
+            # 格式化時區信息 (+0800)
             start_str = program["start"].strftime("%Y%m%d%H%M%S %z")
             end_str = program["end"].strftime("%Y%m%d%H%M%S %z")
             
@@ -162,25 +309,35 @@ def generate_xml(channels, programs, filename="./output/4g.xml"):
                 stop=end_str,
                 channel=program["channelId"]
             )
-            ET.SubElement(programme, "title").text = program["programName"]
+            title_elem = ET.SubElement(programme, "title")
+            title_elem.text = program["programName"]
+            
             if program.get("description"):
-                ET.SubElement(programme, "desc").text = program["description"]
+                desc_elem = ET.SubElement(programme, "desc")
+                desc_elem.text = program["description"]
         except Exception as e:
-            logger.error(f"生成節目 {program['programName']} XML 失敗: {e}")
+            logger.error(f"生成節目 {program.get('programName', '未知節目')} XML 失敗: {e}")
     
     # 生成XML文件
     tree = ET.ElementTree(tv)
     tree.write(filename, encoding="utf-8", xml_declaration=True)
-    logger.info(f"EPG文件已生成: {filename}")
+    logger.info(f"電子節目表單已生成: {filename}")
 
 if __name__ == "__main__":
     # 確保輸出目錄存在
     os.makedirs("output", exist_ok=True)
     
-    logger.add("./output/epg_generator.log", rotation="1 day", retention="7 days", encoding="utf-8")
+    logger.add(
+        "./output/epg_generator.log", 
+        rotation="1 day", 
+        retention="7 days", 
+        encoding="utf-8",
+        format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}"
+    )
+    
     try:
         logger.info("="*50)
-        logger.info("開始生成四季線上EPG")
+        logger.info("開始生成四季線上電子節目表單")
         logger.info(f"開始時間: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         
         channels, programs = get_4gtv_epg()
