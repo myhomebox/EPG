@@ -2,7 +2,7 @@ name: EPG Generator
 
 on:
   schedule:
-    - cron: '0 0 */2 * *'  # 每兩天 UTC 0 點運行
+    - cron: '0 0 */2 * *'
   workflow_dispatch:
 
 jobs:
@@ -36,19 +36,17 @@ jobs:
       run: mkdir -p output
 
     - name: Run Get_Channel.py
-      run: python scripts/Get_Channel.py
-
-      env:
-        PYTHONUNBUFFERED: 1
+      run: python scripts/Get_Channel.py  
 
     - name: Run Make_EPG.py
       run: |
-        # 隨機延遲減少並發檢測風險
         sleep $((RANDOM % 30))
-        python scripts/Make_EPG.py
-
+        python scripts/Make_EPG.py  
       env:
         PYTHONUNBUFFERED: 1
+
+    - name: Fix permissions
+      run: sudo chown -R $USER:$USER .  
 
     - name: Commit and Push Changes
       run: |
@@ -57,3 +55,9 @@ jobs:
         git add output/*
         git commit -m "Auto-update EPG data (output)"
         git push
+
+    - name: Verify output files
+      run: |
+        ls -la output
+        cat output/epg_generator.log
+      if: always()
