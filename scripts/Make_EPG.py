@@ -17,6 +17,7 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 
+# 获取仓库根目录路径
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUTPUT_DIR = os.path.join(BASE_DIR, 'output')
 
@@ -142,13 +143,14 @@ def get_4gtv_channels():
             logger.error(f"讀取本地頻道文件失敗: {e}")
 
     try:
-        # 如果本地文件不存在，嘗試從API獲取
+        # 如果本地文件不存在，尝试从API获取
         session = create_session()
         api_url = "https://api2.4gtv.tv/Channel/GetAllChannel/pc/L"
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
         }
         response = session.get(api_url, headers=headers, timeout=10)
+        response.encoding = 'utf-8'  # 强制使用UTF-8编码
         response.raise_for_status()
         data = response.json()
         
@@ -183,6 +185,7 @@ def get_4gtv_programs_scraper(channel_id, channel_name, scraper):
     
     try:
         response = scraper.get(url, headers=headers, timeout=15)
+        response.encoding = 'utf-8'
         response.raise_for_status()
         
         # 檢查是否是有效的JSON
@@ -294,6 +297,7 @@ def get_4gtv_programs_selenium(channel_id, channel_name, browser=None):
                 pass
 
 def generate_xml(channels, programs, filename):
+    # 創建XML樹
     tv = ET.Element("tv", attrib={
         "generator-info-name": "四季線上電子節目表單",
         "generator-info-url": "https://www.4gtv.tv"
@@ -327,9 +331,24 @@ def generate_xml(channels, programs, filename):
         except Exception as e:
             logger.error(f"生成節目 {program.get('programName', '未知節目')} XML 失敗: {e}")
     
-    # 生成XML文件
+    # 生成XML文件 - 確保正確處理UTF-8編碼
     tree = ET.ElementTree(tv)
-    tree.write(filename, encoding="utf-8", xml_declaration=True)
+    
+    # 手動寫入XML確保編碼正確
+    xml_str = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    xml_str += ET.tostring(tv, encoding="unicode")
+    
+    # 替換特殊字符
+    xml_str = xml_str.replace("&amp;", "&")
+    xml_str = xml_str.replace("&lt;", "<")
+    xml_str = xml_str.replace("&gt;", ">")
+    xml_str = xml_str.replace("&quot;", "\"")
+    xml_str = xml_str.replace("&apos;", "'")
+    
+    # 寫入文件
+    with open(filename, 'w', encoding='utf-8') as f:
+        f.write(xml_str)
+    
     logger.info(f"電子節目表單已生成: {filename}")
 
 if __name__ == "__main__":
@@ -341,7 +360,8 @@ if __name__ == "__main__":
         rotation="1 day", 
         retention="7 days", 
         encoding="utf-8",
-        format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}"
+        format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}",
+        errors="replace"
     )
     
     try:
@@ -353,11 +373,20 @@ if __name__ == "__main__":
         channels, programs = get_4gtv_epg()
         logger.info(f"共獲取 {len(channels)} 個頻道, {len(programs)} 個節目")
         
-        # 设置XML输出路径
         xml_file = os.path.join(OUTPUT_DIR, '4g.xml')
         generate_xml(channels, programs, xml_file)
+        
+        success_file = os.path.join(OUTPUT_DIR, 'SUCCESS')
+        with open(success_file, 'w', encoding='utf-8') as f:
+            f.write(f"EPG生成成功於 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        
         logger.success(f"EPG生成完成: {xml_file}")
     except Exception as e:
         logger.critical(f"EPG生成失敗: {str(e)}")
         logger.exception(e)
+        
+        error_file = os.path.join(OUTPUT_DIR, 'ERROR')
+        with open(error_file, 'w', encoding='utf-8') as f:
+            f.write(f"EPG生成失敗於 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n{str(e)}")
+        
         exit(1)
