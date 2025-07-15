@@ -9,10 +9,14 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 import requests
 from loguru import logger
 import urllib3
 import ssl
+import random
 
 # 禁用 SSL 警告
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -25,35 +29,10 @@ ssl_context.verify_mode = ssl.CERT_NONE
 # 配置日志
 logger.add("epg_generator.log", rotation="1 day", retention="7 days", level="INFO")
 
-def fetch_channels_with_selenium():
+def fetch_channels_with_selenium(driver):
     """獲取頻道數據"""
     logger.info("正在獲取頻道數據")
-    driver = None
     try:
-        # 設置 Chrome 選項
-        chrome_options = Options()
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--disable-gpu")
-        chrome_options.add_argument("--no-sandbox")
-        chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_options.add_argument("--disable-extensions")
-        chrome_options.add_argument("--disable-infobars")
-        chrome_options.add_argument("--disable-notifications")
-        chrome_options.add_argument("--disable-popup-blocking")
-        chrome_options.add_argument("--disable-setuid-sandbox")
-        chrome_options.add_argument("--remote-debugging-port=9222")
-        chrome_options.add_argument("--disable-blink-features=AutomationControlled")
-        chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36")
-        
-        # 使用 webdriver-manager 自動管理驅動
-        driver = webdriver.Chrome(
-            service=Service(ChromeDriverManager().install()),
-            options=chrome_options
-        )
-        
-        # 設置頁面加載超時時間
-        driver.set_page_load_timeout(30)
-        
         # 訪問 API URL
         api_url = "https://api2.4gtv.tv/Channel/GetAllChannel/pc/L"
         logger.info(f"正在訪問: {api_url}")
@@ -77,11 +56,11 @@ def fetch_channels_with_selenium():
             logger.warning(f"獲取到非 JSON 內容: {content[:200]}")
             # 嘗試從 pre 標簽獲取數據
             try:
-                pre_element = driver.find_element("tag name", "pre")
+                pre_element = driver.find_element(By.TAG_NAME, "pre")
                 content = pre_element.text
                 data = json.loads(content)
-            except:
-                logger.error("無法解析內容為 JSON")
+            except Exception as e:
+                logger.error(f"無法解析內容為 JSON: {str(e)}")
                 return []
         
         # 檢查數據結構
@@ -111,43 +90,62 @@ def fetch_channels_with_selenium():
     except Exception as e:
         logger.error(f"獲取頻道數據失敗: {str(e)}")
         return []
-    finally:
-        try:
-            if driver:
-                driver.quit()
-        except:
-            pass
 
-def get_programs_for_channel(channel_id, channel_name):
+def get_programs_with_selenium(driver, channel_id, channel_name):
     """獲取單個頻道的節目表"""
     logger.info(f"正在獲取 {channel_name} 節目表")
-    url = f"https://www.4gtv.tv/ProgList/{channel_id}.txt"
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
-        "Referer": f"https://www.4gtv.tv/channel.html?channel={channel_id}",
-        "Origin": "https://www.4gtv.tv"
-    }
+    tz = pytz.timezone('Asia/Taipei')
+    programs = []
     
     try:
-        # 使用自定義 SSL 上下文
-        response = requests.get(url, headers=headers, verify=False, timeout=30)
-        response.encoding = "utf-8"
+        # 打開頻道頁面
+        url = f"https://www.4gtv.tv/channel.html?channel={channel_id}"
+        logger.debug(f"正在訪問頻道頁面: {url}")
+        driver.get(url)
         
-        # 檢查響應狀態
-        if response.status_code != 200:
-            logger.warning(f"頻道 {channel_name} 節目表獲取失敗: HTTP {response.status_code}")
-            return []
-        
-        # 嘗試解析 JSON
+        # 等待節目表加載完成
         try:
-            data = response.json()
-        except json.JSONDecodeError:
-            logger.error(f"頻道 {channel_name} 節目表解析失敗: 無效 JSON")
+            WebDriverWait(driver, 15).until(
+                EC.presence_of_element_located((By.CLASS_NAME, "program-list"))
+            )
+            logger.debug(f"{channel_name} 節目表容器加載完成")
+        except Exception as e:
+            logger.warning(f"{channel_name} 節目表容器加載超時: {str(e)}")
+            # 即使超時也嘗試繼續獲取
+        
+        # 執行 JavaScript 獲取節目數據
+        script = f"""
+            return fetch('https://www.4gtv.tv/ProgList/{channel_id}.txt')
+                .then(response => {{
+                    if (!response.ok) {{
+                        throw new Error(`HTTP error! status: ${{response.status}}`);
+                    }}
+                    return response.json();
+                }})
+                .then(data => {{
+                    return JSON.stringify(data);
+                }})
+                .catch(error => {{
+                    console.error('Fetch error:', error);
+                    return "ERROR:" + error.message;
+                }});
+        """
+        
+        logger.debug(f"正在執行 JavaScript 獲取 {channel_name} 節目數據")
+        result = driver.execute_script(script)
+        
+        # 處理 JavaScript 執行結果
+        if result.startswith("ERROR:"):
+            logger.error(f"{channel_name} JavaScript 執行錯誤: {result[6:]}")
             return []
         
-        programs = []
-        tz = pytz.timezone('Asia/Taipei')
+        try:
+            data = json.loads(result)
+        except json.JSONDecodeError:
+            logger.error(f"{channel_name} 節目數據解析失敗")
+            return []
         
+        # 解析節目數據
         for item in data:
             try:
                 # 處理開始時間
@@ -174,14 +172,17 @@ def get_programs_for_channel(channel_id, channel_name):
                 })
                 
             except Exception as e:
-                logger.warning(f"頻道 {channel_name} 節目解析錯誤: {str(e)}")
+                logger.warning(f"{channel_name} 節目解析錯誤: {str(e)}")
         
-        logger.info(f"頻道 {channel_name} 獲取 {len(programs)} 個節目")
+        logger.info(f"頻道 {channel_name} 成功獲取 {len(programs)} 個節目")
         return programs
     
     except Exception as e:
-        logger.error(f"獲取 {channel_name} 節目表失敗: {str(e)}")
+        logger.error(f"Selenium 獲取 {channel_name} 節目表失敗: {str(e)}")
         return []
+    finally:
+        # 添加隨機延遲避免請求過於頻繁
+        time.sleep(random.uniform(1, 3))
 
 def generate_epg_xml(channels, all_programs):
     """生成 EPG XML 文件"""
@@ -230,29 +231,68 @@ def generate_epg_xml(channels, all_programs):
     dom = minidom.parseString(xml_with_declaration)
     pretty_xml = dom.toprettyxml(indent="  ", encoding="utf-8")
     
-    # 保存到文件
+    # 儲存到文件
     os.makedirs("output", exist_ok=True)
     with open("output/4g.xml", "wb") as f:
         f.write(pretty_xml)
     
-    logger.success("電子節目表單 生成完成，保存到 output/4g.xml")
+    logger.success("電子節目表單 生成完成，儲存到 output/4g.xml")
     return True
 
 def main():
-    # 第一步：獲取頻道數據
-    channels = fetch_channels_with_selenium()
-    if not channels:
-        logger.error("無法獲取頻道數據，電子節目表單 生成終止")
-        return
+    driver = None
+    try:
+        # 設置 Chrome 選項
+        chrome_options = Options()
+        chrome_options.add_argument("--headless=new")
+        chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--disable-extensions")
+        chrome_options.add_argument("--disable-infobars")
+        chrome_options.add_argument("--disable-notifications")
+        chrome_options.add_argument("--disable-popup-blocking")
+        chrome_options.add_argument("--disable-setuid-sandbox")
+        chrome_options.add_argument("--remote-debugging-port=9222")
+        chrome_options.add_argument("--disable-blink-features=AutomationControlled")
+        chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36")
+        
+        # 使用 webdriver-manager 自動管理驅動
+        driver = webdriver.Chrome(
+            service=Service(ChromeDriverManager().install()),
+            options=chrome_options
+        )
+        
+        # 設置頁面加載超時時間
+        driver.set_page_load_timeout(45)
+        driver.set_script_timeout(30)
+        
+        # 第一步：獲取頻道數據
+        channels = fetch_channels_with_selenium(driver)
+        if not channels:
+            logger.error("無法獲取頻道數據，電子節目表單 生成終止")
+            return
+        
+        # 第二步：獲取所有頻道的節目表
+        all_programs = []
+        total_channels = len(channels)
+        for index, channel in enumerate(channels, 1):
+            logger.info(f"正在處理頻道 ({index}/{total_channels}): {channel['channelName']}")
+            programs = get_programs_with_selenium(driver, channel["channelId"], channel["channelName"])
+            all_programs.append(programs)
+        
+        # 第三步：生成 電子節目表單
+        generate_epg_xml(channels, all_programs)
     
-    # 第二步：獲取所有頻道的節目表
-    all_programs = []
-    for channel in channels:
-        programs = get_programs_for_channel(channel["channelId"], channel["channelName"])
-        all_programs.append(programs)
-    
-    # 第三步：生成 電子節目表單
-    generate_epg_xml(channels, all_programs)
+    except Exception as e:
+        logger.error(f"主流程執行失敗: {str(e)}")
+    finally:
+        if driver:
+            try:
+                driver.quit()
+                logger.info("瀏覽器已關閉")
+            except Exception as e:
+                logger.error(f"關閉瀏覽器時出錯: {str(e)}")
 
 if __name__ == "__main__":
     main()
