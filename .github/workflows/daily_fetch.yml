@@ -2,8 +2,8 @@ name: Daily 4GTV Data Update
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # 每天 UTC 時間 00:00 執行 (台灣時間 08:00)
-  workflow_dispatch:     # 允許手動觸發
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
   fetch-and-update:
@@ -18,9 +18,13 @@ jobs:
       with:
         python-version: '3.x'
         
-    - name: Install dependencies
-      run: pip install requests
-      
+    - name: Install dependencies and update CA certificates
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ca-certificates
+        sudo update-ca-certificates
+        pip install requests
+        
     - name: Fetch 4GTV data
       run: python scripts/fetch_4gtv.py
       
@@ -29,5 +33,5 @@ jobs:
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
         git add output/fourgtv.json
-        git commit -m "自動更新 四季線上 頻道資料"
+        git commit -m "自動更新 4GTV 頻道資料"
         git push
