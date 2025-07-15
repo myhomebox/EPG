@@ -95,11 +95,11 @@ try:
     os.makedirs('output', exist_ok=True)
     
     # 寫入 JSON 文件
-    output_path = os.path.join('output', 'fourgtv.json')
+    output_path = os.path.join('../output', 'fourgtv.json')
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(extracted_data, f, ensure_ascii=False, indent=2)
     
-    print(f"成功生成 fourgtv.json ({len(extracted_data)} 條記錄)")
+    print(f"成功生成 ../output/fourgtv.json ({len(extracted_data)} 條記錄)")
     print(f"跳過頻道: {', '.join(BLOCKED_CHANNELS)}")
     print(f"最後更新時間: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
