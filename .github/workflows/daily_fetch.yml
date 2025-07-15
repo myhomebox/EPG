@@ -24,6 +24,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y chromium-browser chromium-chromedriver
+        sudo rm -f /usr/bin/google-chrome
         sudo ln -s /usr/bin/chromium-browser /usr/bin/google-chrome
 
     - name: Install Python dependencies
@@ -38,7 +39,7 @@ jobs:
       run: python Get_Channel.py
       working-directory: ./scripts
       env:
-        PYTHONUNBUFFERED: 1  # 確保日誌實時輸出
+        PYTHONUNBUFFERED: 1
 
     - name: Run Make_EPG.py
       run: |
@@ -47,7 +48,7 @@ jobs:
         python Make_EPG.py
       working-directory: ./scripts
       env:
-        PYTHONUNBUFFERED: 1  # 確保日誌實時輸出
+        PYTHONUNBUFFERED: 1
 
     - name: Commit and Push Changes
       run: |
