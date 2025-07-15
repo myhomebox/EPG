@@ -9,9 +9,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
 import requests
 from loguru import logger
 import urllib3
@@ -56,7 +53,7 @@ def fetch_channels_with_selenium(driver):
             logger.warning(f"獲取到非 JSON 內容: {content[:200]}")
             # 嘗試從 pre 標簽獲取數據
             try:
-                pre_element = driver.find_element(By.TAG_NAME, "pre")
+                pre_element = driver.find_element("tag name", "pre")
                 content = pre_element.text
                 data = json.loads(content)
             except Exception as e:
@@ -91,58 +88,57 @@ def fetch_channels_with_selenium(driver):
         logger.error(f"獲取頻道數據失敗: {str(e)}")
         return []
 
-def get_programs_with_selenium(driver, channel_id, channel_name):
-    """獲取單個頻道的節目表"""
+def get_programs_directly(driver, channel_id, channel_name):
+    """獲取頻道節目表"""
     logger.info(f"正在獲取 {channel_name} 節目表")
     tz = pytz.timezone('Asia/Taipei')
     programs = []
     
     try:
-        # 打開頻道頁面
-        url = f"https://www.4gtv.tv/channel.html?channel={channel_id}"
-        logger.debug(f"正在訪問頻道頁面: {url}")
-        driver.get(url)
-        
-        # 等待節目表加載完成
-        try:
-            WebDriverWait(driver, 15).until(
-                EC.presence_of_element_located((By.CLASS_NAME, "program-list"))
-            )
-            logger.debug(f"{channel_name} 節目表容器加載完成")
-        except Exception as e:
-            logger.warning(f"{channel_name} 節目表容器加載超時: {str(e)}")
-            # 即使超時也嘗試繼續獲取
-        
         # 執行 JavaScript 獲取節目數據
         script = f"""
-            return fetch('https://www.4gtv.tv/ProgList/{channel_id}.txt')
-                .then(response => {{
-                    if (!response.ok) {{
-                        throw new Error(`HTTP error! status: ${{response.status}}`);
-                    }}
-                    return response.json();
-                }})
-                .then(data => {{
-                    return JSON.stringify(data);
-                }})
-                .catch(error => {{
-                    console.error('Fetch error:', error);
-                    return "ERROR:" + error.message;
-                }});
+            return fetch('https://www.4gtv.tv/ProgList/{channel_id}.txt', {{
+                method: 'GET',
+                headers: {{
+                    'Accept': 'application/json',
+                    'Referer': 'https://www.4gtv.tv/',
+                    'Origin': 'https://www.4gtv.tv',
+                    'User-Agent': navigator.userAgent
+                }},
+                credentials: 'include'
+            }})
+            .then(response => {{
+                if (!response.ok) {{
+                    throw new Error(`HTTP error! status: ${{response.status}}`);
+                }}
+                return response.json();
+            }})
+            .then(data => {{
+                return JSON.stringify(data);
+            }})
+            .catch(error => {{
+                console.error('Fetch error:', error);
+                return "ERROR:" + error.message;
+            }});
         """
         
         logger.debug(f"正在執行 JavaScript 獲取 {channel_name} 節目數據")
         result = driver.execute_script(script)
         
         # 處理 JavaScript 執行結果
+        if not result:
+            logger.error(f"{channel_name} 未返回任何數據")
+            return []
+            
         if result.startswith("ERROR:"):
             logger.error(f"{channel_name} JavaScript 執行錯誤: {result[6:]}")
             return []
         
         try:
             data = json.loads(result)
-        except json.JSONDecodeError:
-            logger.error(f"{channel_name} 節目數據解析失敗")
+        except json.JSONDecodeError as e:
+            logger.error(f"{channel_name} 節目數據解析失敗: {str(e)}")
+            logger.debug(f"原始數據: {result[:500]}")
             return []
         
         # 解析節目數據
@@ -178,11 +174,11 @@ def get_programs_with_selenium(driver, channel_id, channel_name):
         return programs
     
     except Exception as e:
-        logger.error(f"Selenium 獲取 {channel_name} 節目表失敗: {str(e)}")
+        logger.error(f"獲取 {channel_name} 節目表失敗: {str(e)}")
         return []
     finally:
         # 添加隨機延遲避免請求過於頻繁
-        time.sleep(random.uniform(1, 3))
+        time.sleep(random.uniform(0.5, 2))
 
 def generate_epg_xml(channels, all_programs):
     """生成 EPG XML 文件"""
@@ -231,12 +227,12 @@ def generate_epg_xml(channels, all_programs):
     dom = minidom.parseString(xml_with_declaration)
     pretty_xml = dom.toprettyxml(indent="  ", encoding="utf-8")
     
-    # 儲存到文件
+    # 保存到文件
     os.makedirs("output", exist_ok=True)
     with open("output/4g.xml", "wb") as f:
         f.write(pretty_xml)
     
-    logger.success("電子節目表單 生成完成，儲存到 output/4g.xml")
+    logger.success("電子節目表單 生成完成，保存到 output/4g.xml")
     return True
 
 def main():
@@ -267,6 +263,9 @@ def main():
         driver.set_page_load_timeout(45)
         driver.set_script_timeout(30)
         
+        # 導航到空白頁以減少資源消耗
+        driver.get("about:blank")
+        
         # 第一步：獲取頻道數據
         channels = fetch_channels_with_selenium(driver)
         if not channels:
@@ -278,7 +277,7 @@ def main():
         total_channels = len(channels)
         for index, channel in enumerate(channels, 1):
             logger.info(f"正在處理頻道 ({index}/{total_channels}): {channel['channelName']}")
-            programs = get_programs_with_selenium(driver, channel["channelId"], channel["channelName"])
+            programs = get_programs_directly(driver, channel["channelId"], channel["channelName"])
             all_programs.append(programs)
         
         # 第三步：生成 電子節目表單
