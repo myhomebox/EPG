@@ -20,37 +20,39 @@ jobs:
       with:
         python-version: '3.10'
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install requests pytz loguru selenium webdriver-manager
-
-    - name: Install system dependencies
+    - name: Install Chrome dependencies
       run: |
         sudo apt-get update
         sudo apt-get install -y chromium-browser chromium-chromedriver
+        sudo ln -s /usr/bin/chromium-browser /usr/bin/google-chrome
 
-    - name: Prepare workspace
+    - name: Install Python dependencies
       run: |
-        mkdir -p output
-        find ./output -mindepth 1 ! -name 'README.md' -delete
+        python -m pip install --upgrade pip
+        pip install requests pytz loguru cloudscraper selenium webdriver-manager beautifulsoup4 xmltodict
 
-    - name: Fetch channel data
+    - name: Create output directory
+      run: mkdir -p output
+
+    - name: Run Get_Channel.py
       run: python Get_Channel.py
       working-directory: ./scripts
-      continue-on-error: true
+      env:
+        PYTHONUNBUFFERED: 1  # 確保日誌實時輸出
 
-    - name: Generate EPG with random delay
+    - name: Run Make_EPG.py
       run: |
-        python -c "import time, random; time.sleep(random.randint(0, 30))"
+        # 隨機延遲減少並發檢測風險
+        sleep $((RANDOM % 30))
         python Make_EPG.py
       working-directory: ./scripts
-      continue-on-error: true
+      env:
+        PYTHONUNBUFFERED: 1  # 確保日誌實時輸出
 
     - name: Commit and Push Changes
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git add output/
-        git diff-index --quiet HEAD || git commit -m "Auto-update EPG data"
+        git add output/*
+        git commit -m "Auto-update EPG data (output)"
         git push
