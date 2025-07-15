@@ -119,12 +119,12 @@ def generate_xml(channels, programs, filename="../output/4g.xml"):
     logger.info(f"EPG文件已生成: {filename}")
 
 if __name__ == "__main__":
-	os.makedirs("../output", exist_ok=True)
+	os.makedirs("output", exist_ok=True)
 	
-    logger.add("../output/epg_generator.log", rotation="1 day", retention="7 days")
+    logger.add("./output/epg_generator.log", rotation="1 day", retention="7 days")
     try:
         channels, programs = get_4gtv_epg()
-        generate_xml(channels, programs, "../output/4g.xml")
+        generate_xml(channels, programs, "./output/4g.xml")
         logger.success("EPG生成完成")
     except Exception as e:
         logger.critical(f"EPG生成失敗: {e}")
