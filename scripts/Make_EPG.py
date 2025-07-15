@@ -17,6 +17,14 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUTPUT_DIR = os.path.join(BASE_DIR, 'output')
+
+local_file = os.path.join(OUTPUT_DIR, 'fourgtv.json')
+logger.add(os.path.join(OUTPUT_DIR, 'epg_generator.log'), ...)
+generate_xml(..., filename=os.path.join(OUTPUT_DIR, '4g.xml'))
+
+
 # 配置瀏覽器選項
 def get_chrome_options():
     chrome_options = Options()
@@ -116,7 +124,7 @@ def get_4gtv_epg():
     return channels, programs
 
 def get_4gtv_channels():
-    local_file = "./output/fourgtv.json"
+    local_file = "../output/fourgtv.json"
     if os.path.exists(local_file):
         try:
             logger.info("從本地文件讀取頻道列表")
@@ -284,7 +292,7 @@ def get_4gtv_programs_selenium(channel_id, channel_name, browser=None):
             except:
                 pass
 
-def generate_xml(channels, programs, filename="./output/4g.xml"):
+def generate_xml(channels, programs, filename="../output/4g.xml"):
     tv = ET.Element("tv", attrib={
         "generator-info-name": "四季線上電子節目表單",
         "generator-info-url": "https://www.4gtv.tv"
@@ -328,7 +336,7 @@ if __name__ == "__main__":
     os.makedirs("output", exist_ok=True)
     
     logger.add(
-        "./output/epg_generator.log", 
+        "../output/epg_generator.log", 
         rotation="1 day", 
         retention="7 days", 
         encoding="utf-8",
@@ -347,4 +355,5 @@ if __name__ == "__main__":
         logger.success("EPG生成完成")
     except Exception as e:
         logger.critical(f"EPG生成失敗: {e}")
+        logger.exception(e)
         raise
