@@ -25,21 +25,23 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests pytz loguru selenium webdriver-manager
 
-    - name: Install Chrome dependencies (Ubuntu 24.04 compatible)
+    - name: Install Chrome dependencies
       run: |
         sudo apt-get update
         sudo apt-get install -y libnss3 libnspr4 libatk1.0-0 libatk-bridge2.0-0 \
         libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 \
-        libxrandr2 libgbm1 libasound2t64
+        libxrandr2 libgbm1 libasound2
 
     - name: Create output directory
       run: mkdir -p output
 
     - name: Run Get_Channel.py
-      run: python scripts/Get_Channel.py
+      run: python Get_Channel.py
+      working-directory: ./scripts
 
     - name: Run Make_EPG.py
-      run: python scripts/Make_EPG.py
+      run: python Make_EPG.py
+      working-directory: ./scripts
 
     - name: Commit and Push Changes
       run: |
