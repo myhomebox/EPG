@@ -20,11 +20,6 @@ from bs4 import BeautifulSoup
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUTPUT_DIR = os.path.join(BASE_DIR, 'output')
 
-local_file = os.path.join(OUTPUT_DIR, 'fourgtv.json')
-logger.add(os.path.join(OUTPUT_DIR, 'epg_generator.log'), ...)
-generate_xml(..., filename=os.path.join(OUTPUT_DIR, '4g.xml'))
-
-
 # 配置瀏覽器選項
 def get_chrome_options():
     chrome_options = Options()
@@ -124,10 +119,11 @@ def get_4gtv_epg():
     return channels, programs
 
 def get_4gtv_channels():
-    local_file = "../output/fourgtv.json"
+    # 使用新的输出路径
+    local_file = os.path.join(OUTPUT_DIR, 'fourgtv.json')
     if os.path.exists(local_file):
         try:
-            logger.info("從本地文件讀取頻道列表")
+            logger.info(f"從本地文件讀取頻道列表: {local_file}")
             with open(local_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
             
@@ -146,8 +142,13 @@ def get_4gtv_channels():
             logger.error(f"讀取本地頻道文件失敗: {e}")
 
     try:
+        # 如果本地文件不存在，嘗試從API獲取
         session = create_session()
-        response = session.get(url, headers=headers, timeout=10)
+        api_url = "https://api2.4gtv.tv/Channel/GetAllChannel/pc/L"
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+        }
+        response = session.get(api_url, headers=headers, timeout=10)
         response.raise_for_status()
         data = response.json()
         
@@ -292,7 +293,7 @@ def get_4gtv_programs_selenium(channel_id, channel_name, browser=None):
             except:
                 pass
 
-def generate_xml(channels, programs, filename="../output/4g.xml"):
+def generate_xml(channels, programs, filename):
     tv = ET.Element("tv", attrib={
         "generator-info-name": "四季線上電子節目表單",
         "generator-info-url": "https://www.4gtv.tv"
@@ -332,11 +333,11 @@ def generate_xml(channels, programs, filename="../output/4g.xml"):
     logger.info(f"電子節目表單已生成: {filename}")
 
 if __name__ == "__main__":
-    # 確保輸出目錄存在
-    os.makedirs("output", exist_ok=True)
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
     
+    log_file = os.path.join(OUTPUT_DIR, 'epg_generator.log')
     logger.add(
-        "../output/epg_generator.log", 
+        log_file,
         rotation="1 day", 
         retention="7 days", 
         encoding="utf-8",
@@ -347,13 +348,16 @@ if __name__ == "__main__":
         logger.info("="*50)
         logger.info("開始生成四季線上電子節目表單")
         logger.info(f"開始時間: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        logger.info(f"輸出目錄: {OUTPUT_DIR}")
         
         channels, programs = get_4gtv_epg()
         logger.info(f"共獲取 {len(channels)} 個頻道, {len(programs)} 個節目")
         
-        generate_xml(channels, programs, "./output/4g.xml")
-        logger.success("EPG生成完成")
+        # 设置XML输出路径
+        xml_file = os.path.join(OUTPUT_DIR, '4g.xml')
+        generate_xml(channels, programs, xml_file)
+        logger.success(f"EPG生成完成: {xml_file}")
     except Exception as e:
-        logger.critical(f"EPG生成失敗: {e}")
+        logger.critical(f"EPG生成失敗: {str(e)}")
         logger.exception(e)
-        raise
+        exit(1)
