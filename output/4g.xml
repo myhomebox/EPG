@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<tv generator-info-name="4GTV EPG Generator" generator-info-url="https://github.com/myhomebox/tv">
+<tv generator-info-name="四季線上電子節目表單" generator-info-url="https://www.4gtv.tv">
   <channel id="4gtv-4gtv003">
     <display-name>民視第一台</display-name>
     <icon src="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv003_mobile.png"/>
