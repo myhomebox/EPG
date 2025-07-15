@@ -2,8 +2,8 @@ name: Daily 4GTV Data Update
 
 on:
   schedule:
-    - cron: '0 0 * * *'
-  workflow_dispatch:
+    - cron: '0 0 * * *'  # 每天 UTC 時間 00:00 執行 (台灣時間 08:00)
+  workflow_dispatch:     # 允許手動觸發
 
 jobs:
   fetch-and-update:
@@ -18,12 +18,11 @@ jobs:
       with:
         python-version: '3.x'
         
-    - name: Install dependencies and update CA certificates
+    - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y ca-certificates
-        sudo update-ca-certificates
-        pip install requests
+        sudo apt-get install -y chromium-browser chromium-chromedriver
+        pip install selenium requests webdriver-manager
         
     - name: Fetch 4GTV data
       run: python scripts/fetch_4gtv.py
