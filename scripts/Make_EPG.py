@@ -1,3 +1,4 @@
+import os
 import json
 import requests
 import datetime
@@ -6,23 +7,28 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 from loguru import logger
 
-def get_4gtv_epg():
-    logger.info("正在獲取 四季線上 電子節目表")
-    channels = get_4gtv_channels()
-    programs = []
-    
-    for channel in channels:
-        channel_id = channel['channelId']
-        channel_name = channel['channelName']
-        channel_programs = get_4gtv_programs(channel_id, channel_name)
-        if channel_programs:
-            programs.extend(channel_programs)
-    
-    return channels, programs
-
 def get_4gtv_channels():
-    url = "https://raw.githubusercontent.com/myhomebox/tv/refs/heads/main/fourgtv.json"
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
+    # 優先檢查本地文件是否存在
+    local_file = "../output/fourgtv.json"
+    if os.path.exists(local_file):
+        try:
+            logger.info("從本地文件讀取頻道列表")
+            with open(local_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            
+            channels = [
+                {
+                    "channelName": item["fsNAME"],
+                    "channelId": item["fs4GTV_ID"],
+                    "logo": item["fsLOGO_MOBILE"],
+                    "description": item.get("fsDESCRIPTION", "")
+                }
+                for item in data
+            ]
+            return channels
+        
+        except Exception as e:
+            logger.error(f"讀取本地頻道文件失敗: {e}")
     
     try:
         response = requests.get(url, headers=headers)
@@ -83,10 +89,10 @@ def get_4gtv_programs(channel_id, channel_name):
         logger.error(f"獲取 {channel_name} 節目表失敗: {e}")
         return []
 
-def generate_xml(channels, programs, filename="4g.xml"):
+def generate_xml(channels, programs, filename="../output/4g.xml"):
     tv = ET.Element("tv", attrib={
-        "generator-info-name": "4gtv-epg",
-        "generator-info-url": "https://github.com/yourusername/yourrepo"
+        "generator-info-name": "四季線上電子節目表單",
+        "generator-info-url": "https://www.4gtv.tv"
     })
     
     # 添加頻道信息
@@ -113,10 +119,12 @@ def generate_xml(channels, programs, filename="4g.xml"):
     logger.info(f"EPG文件已生成: {filename}")
 
 if __name__ == "__main__":
-    logger.add("epg_generator.log", rotation="1 day", retention="7 days")
+	os.makedirs("../output", exist_ok=True)
+	
+    logger.add("../output/epg_generator.log", rotation="1 day", retention="7 days")
     try:
         channels, programs = get_4gtv_epg()
-        generate_xml(channels, programs, "4g.xml")
+        generate_xml(channels, programs, "../output/4g.xml")
         logger.success("EPG生成完成")
     except Exception as e:
         logger.critical(f"EPG生成失敗: {e}")
