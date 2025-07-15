@@ -39,8 +39,10 @@ jobs:
       working-directory: ./scripts
 
     - name: Run Make_EPG.py
-      run: python Make_EPG.py
-      working-directory: ./scripts
+       run: |
+           sleep $((RANDOM % 30))
+           python Make_EPG.py
+       working-directory: ./scripts
 
     - name: Commit and Push Changes
       run: |
