@@ -14,7 +14,7 @@ BLOCKED_CHANNELS = [
     "芭樂直擊台"
 ]
 
-# 获取脚本所在目录的上级目录（仓库根目录）
+# 獲取腳本所在目錄的上級目錄
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUTPUT_DIR = os.path.join(BASE_DIR, 'output')
 
