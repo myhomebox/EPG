@@ -295,56 +295,77 @@ def get_4gtv_programs_selenium(channel_id, channel_name, browser=None):
 
 def generate_xml(channels, programs, filename):
     tv = ET.Element("tv", attrib={
-        "generator-info-name": "四季線上電子節目表單",
-        "generator-info-url": "https://www.4gtv.tv"
+        "info-name": "四季線上電子節目表單",
+        "info-url": "https://www.4gtv.tv"
     })
     
-    # 按頻道ID分組節目
+    # 按頻道名稱分組節目
     programs_by_channel = {}
     for program in programs:
-        channel_id = program["channelId"]
-        if channel_id not in programs_by_channel:
-            programs_by_channel[channel_id] = []
-        programs_by_channel[channel_id].append(program)
+        channel_name = program["channelName"]
+        if channel_name not in programs_by_channel:
+            programs_by_channel[channel_name] = []
+        programs_by_channel[channel_name].append(program)
     
     # 按頻道排序節目
-    for channel in channels:
-        channel_id = channel["channelId"]
-        if channel_id in programs_by_channel:
-            programs_by_channel[channel_id].sort(key=lambda x: x["start"])
+    for channel_name in programs_by_channel:
+        # 確保節目按開始時間排序
+        programs_by_channel[channel_name].sort(key=lambda x: x["start"])
     
     # 添加頻道和節目信息（頻道和其節目連續排列）
     for channel in channels:
-        channel_id = channel["channelId"]
         channel_name = channel["channelName"]
         
-        # 添加頻道元素
-        channel_elem = ET.SubElement(tv, "channel", id=channel_id)
-        ET.SubElement(channel_elem, "display-name").text = channel_name
+        channel_elem = ET.SubElement(tv, "channel", id=channel_name)
+        display_name = ET.SubElement(channel_elem, "display-name")
+        display_name.text = channel_name
+        
         if channel.get("logo"):
-            ET.SubElement(channel_elem, "icon", src=channel["logo"])
+            icon = ET.SubElement(channel_elem, "icon")
+            icon.set("src", channel["logo"])
         
         # 添加該頻道的節目
-        if channel_id in programs_by_channel:
-            for program in programs_by_channel[channel_id]:
+        if channel_name in programs_by_channel:
+            for program in programs_by_channel[channel_name]:
                 try:
                     # 格式化時區信息 (+0800)
-                    start_str = program["start"].strftime("%Y%m%d%H%M%S %z")
-                    end_str = program["end"].strftime("%Y%m%d%H%M%S %z")
+                    start_str = program["start"].strftime("%Y%m%d%H%M%S %z").replace(" ", "")
+                    end_str = program["end"].strftime("%Y%m%d%H%M%S %z").replace(" ", "")
                     
-                    programme = ET.SubElement(tv, "programme", 
-                        start=start_str,
-                        stop=end_str,
-                        channel=channel_id
-                    )
-                    title_elem = ET.SubElement(programme, "title")
-                    title_elem.text = program["programName"]
+                    programme = ET.SubElement(tv, "programme")
+                    programme.set("channel", channel_name)
+                    programme.set("start", start_str)
+                    programme.set("stop", end_str)
+                    
+                    title = ET.SubElement(programme, "title")
+                    title.text = program["programName"]
+                    title.set("lang", "zh")
                     
                     if program.get("description"):
-                        desc_elem = ET.SubElement(programme, "desc")
-                        desc_elem.text = program["description"]
+                        desc = ET.SubElement(programme, "desc")
+                        desc.text = program["description"]
+                        desc.set("lang", "zh")
                 except Exception as e:
                     logger.error(f"生成節目 {program.get('programName', '未知節目')} XML 失敗: {e}")
+    
+    # 生成XML文件 - 確保使用UTF-8編碼
+    try:
+        # 建立XML
+        tree = ET.ElementTree(tv)
+        
+        # 添加XML聲明並設置編碼
+        xml_str = ET.tostring(tv, encoding="utf-8", xml_declaration=True)
+        
+        # 手動寫入文件以確保UTF-8編碼
+        with open(filename, "wb") as f:
+            f.write(b'<?xml version="1.0" encoding="UTF-8" ?>\n')
+            f.write(b'<!DOCTYPE tv SYSTEM "xmltv.dtd">\n')
+            f.write(xml_str)
+            
+        logger.info(f"電子節目表單已生成: {filename}")
+    except Exception as e:
+        logger.error(f"寫入XML文件失敗: {e}")
+        raise
     
     # 生成XML文件
     tree = ET.ElementTree(tv)
