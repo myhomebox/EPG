@@ -68,11 +68,10 @@ def get_4gtv_epg():
     return channels, programs
 
 def get_4gtv_channels():
-    # 使用新的輸出路徑
     local_file = os.path.join(OUTPUT_DIR, 'fourgtv.json')
     if os.path.exists(local_file):
         try:
-            logger.info(f"從本地檔案讀取頻道列表: {local_file}")
+            logger.info(f"從本地文件讀取頻道列表: {local_file}")
             with open(local_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
             
@@ -88,45 +87,10 @@ def get_4gtv_channels():
             return channels
         
         except Exception as e:
-            logger.error(f"讀取本地頻道檔案失敗: {e}")
-
-    try:
-        # 如果本地檔案不存在，嘗試從API獲取
-        session = create_session()
-        api_url = "https://api2.4gtv.tv/Channel/GetAllChannel/pc/L"
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
-        }
-        response = session.get(api_url, headers=headers, timeout=10)
-        response.raise_for_status()
-        data = response.json()
-        
-        channels = [
-            {
-                "channelName": item["fsNAME"],
-                "channelId": item["fs4GTV_ID"],
-                "logo": item["fsLOGO_MOBILE"],
-                "description": item.get("fsDESCRIPTION", "")
-            }
-            for item in data
-        ]
-        
-        # 儲存頻道信息到本地檔案
-        try:
-            with open(local_file, 'w', encoding='utf-8') as f:
-                json.dump(data, f, ensure_ascii=False, indent=2)
-            logger.info(f"頻道信息已儲存到本地: {local_file}")
-        except Exception as save_err:
-            logger.error(f"儲存頻道信息失敗: {save_err}")
-        
-        return channels
-    
-    except Exception as e:
-        logger.error(f"獲取頻道列表失敗: {e}")
-        return []
+            logger.error(f"讀取本地頻道文件失敗: {e}")
 
 def get_4gtv_programs_scraper(channel_id, channel_name, scraper):
-    """使用Cloudscraper獲取節目表（繞過Cloudflare防護）"""
+    """獲取節目表"""
     url = f"https://www.4gtv.tv/ProgList/{channel_id}.txt"
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
@@ -153,27 +117,25 @@ def get_4gtv_programs_scraper(channel_id, channel_name, scraper):
         tz = pytz.timezone('Asia/Taipei')
         
         for item in data:
-            try:
-                start_time = tz.localize(datetime.strptime(
-                    f"{item['sdate']} {item['stime']}", 
-                    "%Y-%m-%d %H:%M:%S"
-                ))
-                end_time = tz.localize(datetime.strptime(
-                    f"{item['edate']} {item['etime']}", 
-                    "%Y-%m-%d %H:%M:%S"
-                ))
-                
-                programs.append({
-                    "channelId": channel_id,
-                    "channelName": channel_name,
-                    "programName": item["title"],
-                    "description": item.get("content", ""),
-                    "start": start_time,
-                    "end": end_time
-                })
-            except Exception as e:
-                logger.warning(f"解析節目 {item.get('title', '未知節目')} 時間失敗: {e}")
+            start_time = tz.localize(datetime.strptime(
+                f"{item['sdate']} {item['stime']}", 
+                "%Y-%m-%d %H:%M:%S"
+            ))
+            end_time = tz.localize(datetime.strptime(
+                f"{item['edate']} {item['etime']}", 
+                "%Y-%m-%d %H:%M:%S"
+            ))
+            
+            programs.append({
+                "channelId": channel_id,
+                "channelName": channel_name,
+                "programName": item["title"],
+                "description": item.get("content", ""),
+                "start": start_time,
+                "end": end_time
+            })
         
+        logger.success(f"成功獲取 {channel_name} 節目表 ({len(programs)} 個節目)")
         return programs
     
     except Exception as e:
@@ -182,11 +144,10 @@ def get_4gtv_programs_scraper(channel_id, channel_name, scraper):
         return None
 
 def generate_xml(channels, programs, filename):
-    """生成XML格式的EPG數據"""
-    # 建立XML根元素
-    tv = ET.Element("tv")
-    tv.set("info-name", "四季線上電子節目表單")
-    tv.set("info-url", "https://www.4gtv.tv")
+    tv = ET.Element("tv", attrib={
+        "info-name": "四季線上電子節目表單",
+        "info-url": "https://www.4gtv.tv"
+    })
     
     # 按頻道名稱分組節目
     programs_by_channel = {}
@@ -200,7 +161,7 @@ def generate_xml(channels, programs, filename):
     for channel in channels:
         channel_name = channel["channelName"]
         
-        # 添加頻道元素，使用channelName作為id
+        # 使用channelName作為id
         channel_elem = ET.SubElement(tv, "channel", id=channel_name)
         display_name = ET.SubElement(channel_elem, "display-name")
         display_name.text = channel_name
@@ -210,7 +171,7 @@ def generate_xml(channels, programs, filename):
         
         # 添加該頻道的節目
         if channel_name in programs_by_channel:
-            # 確保節目按開始時間排序
+            # 節目按開始時間排序
             sorted_programs = sorted(programs_by_channel[channel_name], key=lambda x: x["start"])
             
             for program in sorted_programs:
@@ -233,25 +194,10 @@ def generate_xml(channels, programs, filename):
                 except Exception as e:
                     logger.error(f"生成節目 {program.get('programName', '未知節目')} XML 失敗: {e}")
     
-    # 生成XML檔案 - 確保使用UTF-8編碼
-    try:
-        # 建立XML樹
-        tree = ET.ElementTree(tv)
-        
-        # 手動構建XML字符串以確保正確編碼
-        xml_str = '<?xml version="1.0" encoding="UTF-8" ?>\n'
-        xml_str += '<!DOCTYPE tv SYSTEM "xmltv.dtd">\n'
-        xml_str += ET.tostring(tv, encoding="unicode")
-        
-        # 使用UTF-8編碼寫入檔案
-        with open(filename, "w", encoding="utf-8") as f:
-            f.write(xml_str)
-            
-        logger.info(f"電子節目表單已生成: {filename}")
-        return True
-    except Exception as e:
-        logger.error(f"寫入XML檔案失敗: {e}")
-        return False
+    # 生成XML文件
+    tree = ET.ElementTree(tv)
+    tree.write(filename, encoding="utf-8", xml_declaration=True)
+    logger.info(f"電子節目表單已生成: {filename}")
 
 if __name__ == "__main__":
     os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -276,11 +222,8 @@ if __name__ == "__main__":
         
         # 設置XML輸出路徑
         xml_file = os.path.join(OUTPUT_DIR, '4g.xml')
-        if generate_xml(channels, programs, xml_file):
-            logger.success(f"EPG生成完成: {xml_file}")
-        else:
-            logger.error("EPG生成失敗")
-            exit(1)
+        generate_xml(channels, programs, xml_file)
+        logger.success(f"EPG生成完成: {xml_file}")
     except Exception as e:
         logger.critical(f"EPG生成失敗: {str(e)}")
         logger.exception(e)
