@@ -196,7 +196,7 @@ def generate_xml(channels, programs, filename):
     
     # 生成XML文件
     tree = ET.ElementTree(tv)
-    tree.write(filename, encoding="utf-8", xml_declaration=True)
+    tree.write(filename, encoding="utf-8", decode="utf-8", xml_declaration=True)
     logger.info(f"電子節目表單已生成: {filename}")
 
 if __name__ == "__main__":
