@@ -123,7 +123,7 @@ def get_4gtv_channels():
     local_file = os.path.join(OUTPUT_DIR, 'fourgtv.json')
     if os.path.exists(local_file):
         try:
-            logger.info(f"從本地文件讀取頻道列表: {local_file}")
+            logger.info(f"從本地檔案讀取頻道列表: {local_file}")
             with open(local_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
             
@@ -139,10 +139,10 @@ def get_4gtv_channels():
             return channels
         
         except Exception as e:
-            logger.error(f"讀取本地頻道文件失敗: {e}")
+            logger.error(f"讀取本地頻道檔案失敗: {e}")
 
     try:
-        # 如果本地文件不存在，嘗試從API獲取
+        # 如果本地檔案不存在，嘗試從API獲取
         session = create_session()
         api_url = "https://api2.4gtv.tv/Channel/GetAllChannel/pc/L"
         headers = {
@@ -348,7 +348,7 @@ def generate_xml(channels, programs, filename):
                 except Exception as e:
                     logger.error(f"生成節目 {program.get('programName', '未知節目')} XML 失敗: {e}")
     
-    # 生成XML文件 - 確保使用UTF-8編碼
+    # 生成XML檔案 - 確保使用UTF-8編碼
     try:
         # 建立XML
         tree = ET.ElementTree(tv)
@@ -356,7 +356,7 @@ def generate_xml(channels, programs, filename):
         # 添加XML聲明並設置編碼
         xml_str = ET.tostring(tv, encoding="utf-8", xml_declaration=True)
         
-        # 手動寫入文件以確保UTF-8編碼
+        # 手動寫入檔案以確保UTF-8編碼
         with open(filename, "wb") as f:
             f.write(b'<?xml version="1.0" encoding="UTF-8" ?>\n')
             f.write(b'<!DOCTYPE tv SYSTEM "xmltv.dtd">\n')
@@ -364,10 +364,10 @@ def generate_xml(channels, programs, filename):
             
         logger.info(f"電子節目表單已生成: {filename}")
     except Exception as e:
-        logger.error(f"寫入XML文件失敗: {e}")
+        logger.error(f"寫入XML檔案失敗: {e}")
         raise
     
-    # 生成XML文件
+    # 生成XML檔案
     tree = ET.ElementTree(tv)
     tree.write(filename, encoding="utf-8", xml_declaration=True)
     logger.info(f"電子節目表單已生成: {filename}")
