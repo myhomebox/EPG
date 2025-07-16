@@ -17,7 +17,7 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 
-# 获取仓库根目录路径
+# 獲取倉庫根目錄路徑
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUTPUT_DIR = os.path.join(BASE_DIR, 'output')
 
@@ -120,7 +120,7 @@ def get_4gtv_epg():
     return channels, programs
 
 def get_4gtv_channels():
-    # 使用新的输出路径
+    # 使用新的輸出路徑
     local_file = os.path.join(OUTPUT_DIR, 'fourgtv.json')
     if os.path.exists(local_file):
         try:
@@ -143,14 +143,14 @@ def get_4gtv_channels():
             logger.error(f"讀取本地頻道文件失敗: {e}")
 
     try:
-        # 如果本地文件不存在，尝试从API获取
+        # 如果本地文件不存在，嘗試從API獲取
         session = create_session()
         api_url = "https://api2.4gtv.tv/Channel/GetAllChannel/pc/L"
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
         }
         response = session.get(api_url, headers=headers, timeout=10)
-        response.encoding = 'utf-8'  # 强制使用UTF-8编码
+        response.encoding = 'utf-8'  # 強制使用UTF-8編碼
         response.raise_for_status()
         data = response.json()
         
@@ -170,7 +170,7 @@ def get_4gtv_channels():
         return []
 
 def get_4gtv_programs_scraper(channel_id, channel_name, scraper):
-    """使用Cloudscraper獲取節目表（繞過Cloudflare防護）"""
+    """獲取節目表（繞過Cloudflare防護）"""
     url = f"https://www.4gtv.tv/ProgList/{channel_id}.txt"
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
@@ -297,7 +297,7 @@ def get_4gtv_programs_selenium(channel_id, channel_name, browser=None):
                 pass
 
 def generate_xml(channels, programs, filename):
-    # 創建XML樹
+    # 創建XML
     tv = ET.Element("tv", attrib={
         "generator-info-name": "四季線上電子節目表單",
         "generator-info-url": "https://www.4gtv.tv"
