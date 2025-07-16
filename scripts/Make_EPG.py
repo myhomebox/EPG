@@ -17,7 +17,6 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 
-# 獲取倉庫根目錄路徑
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUTPUT_DIR = os.path.join(BASE_DIR, 'output')
 
@@ -120,7 +119,7 @@ def get_4gtv_epg():
     return channels, programs
 
 def get_4gtv_channels():
-    # 使用新的輸出路徑
+    # 使用新的输出路径
     local_file = os.path.join(OUTPUT_DIR, 'fourgtv.json')
     if os.path.exists(local_file):
         try:
@@ -150,7 +149,6 @@ def get_4gtv_channels():
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
         }
         response = session.get(api_url, headers=headers, timeout=10)
-        response.encoding = 'utf-8'  # 強制使用UTF-8編碼
         response.raise_for_status()
         data = response.json()
         
@@ -170,7 +168,7 @@ def get_4gtv_channels():
         return []
 
 def get_4gtv_programs_scraper(channel_id, channel_name, scraper):
-    """獲取節目表（繞過Cloudflare防護）"""
+    """獲取節目表(繞過Cloudflare防護)"""
     url = f"https://www.4gtv.tv/ProgList/{channel_id}.txt"
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
@@ -185,7 +183,6 @@ def get_4gtv_programs_scraper(channel_id, channel_name, scraper):
     
     try:
         response = scraper.get(url, headers=headers, timeout=15)
-        response.encoding = 'utf-8'
         response.raise_for_status()
         
         # 檢查是否是有效的JSON
@@ -216,12 +213,12 @@ def get_4gtv_programs_scraper(channel_id, channel_name, scraper):
                 "end": end_time
             })
         
-        logger.success(f"[Cloudscraper] 成功獲取 {channel_name} 節目表 ({len(programs)} 個節目)")
+        logger.success(f"成功獲取 {channel_name} 節目表 ({len(programs)} 個節目)")
         return programs
     
     except Exception as e:
         status_code = response.status_code if 'response' in locals() else 'N/A'
-        logger.error(f"[Cloudscraper] 獲取 {channel_name} 節目表失敗. URL: {url} 狀態碼: {status_code} 錯誤: {e}")
+        logger.error(f"獲取 {channel_name} 節目表失敗. URL: {url} 狀態碼: {status_code} 錯誤: {e}")
         return None
 
 def get_4gtv_programs_selenium(channel_id, channel_name, browser=None):
@@ -234,7 +231,7 @@ def get_4gtv_programs_selenium(channel_id, channel_name, browser=None):
         browser = create_browser()
     
     try:
-        logger.info(f"[Selenium] 正在訪問: {url}")
+        logger.info(f"正在訪問: {url}")
         browser.get(url)
         
         # 等待頁面加載
@@ -281,11 +278,11 @@ def get_4gtv_programs_selenium(channel_id, channel_name, browser=None):
                 "end": end_time
             })
         
-        logger.success(f"[Selenium] 成功獲取 {channel_name} 節目表 ({len(programs)} 個節目)")
+        logger.success(f"成功獲取 {channel_name} 節目表 ({len(programs)} 個節目)")
         return programs
     
     except Exception as e:
-        logger.error(f"[Selenium] 獲取 {channel_name} 節目表失敗: {e}")
+        logger.error(f"獲取 {channel_name} 節目表失敗: {e}")
         return None
     
     finally:
@@ -297,58 +294,61 @@ def get_4gtv_programs_selenium(channel_id, channel_name, browser=None):
                 pass
 
 def generate_xml(channels, programs, filename):
-    # 創建XML
     tv = ET.Element("tv", attrib={
         "generator-info-name": "四季線上電子節目表單",
         "generator-info-url": "https://www.4gtv.tv"
     })
     
-    # 添加頻道信息
+    # 按頻道ID分組節目
+    programs_by_channel = {}
+    for program in programs:
+        channel_id = program["channelId"]
+        if channel_id not in programs_by_channel:
+            programs_by_channel[channel_id] = []
+        programs_by_channel[channel_id].append(program)
+    
+    # 按頻道排序節目
     for channel in channels:
-        channel_elem = ET.SubElement(tv, "channel", id=channel["channelId"])
-        ET.SubElement(channel_elem, "display-name").text = channel["channelName"]
+        channel_id = channel["channelId"]
+        if channel_id in programs_by_channel:
+            programs_by_channel[channel_id].sort(key=lambda x: x["start"])
+    
+    # 添加頻道和節目信息（頻道和其節目連續排列）
+    for channel in channels:
+        channel_id = channel["channelId"]
+        channel_name = channel["channelName"]
+        
+        # 添加頻道元素
+        channel_elem = ET.SubElement(tv, "channel", id=channel_id)
+        ET.SubElement(channel_elem, "display-name").text = channel_name
         if channel.get("logo"):
             ET.SubElement(channel_elem, "icon", src=channel["logo"])
+        
+        # 添加該頻道的節目
+        if channel_id in programs_by_channel:
+            for program in programs_by_channel[channel_id]:
+                try:
+                    # 格式化時區信息 (+0800)
+                    start_str = program["start"].strftime("%Y%m%d%H%M%S %z")
+                    end_str = program["end"].strftime("%Y%m%d%H%M%S %z")
+                    
+                    programme = ET.SubElement(tv, "programme", 
+                        start=start_str,
+                        stop=end_str,
+                        channel=channel_id
+                    )
+                    title_elem = ET.SubElement(programme, "title")
+                    title_elem.text = program["programName"]
+                    
+                    if program.get("description"):
+                        desc_elem = ET.SubElement(programme, "desc")
+                        desc_elem.text = program["description"]
+                except Exception as e:
+                    logger.error(f"生成節目 {program.get('programName', '未知節目')} XML 失敗: {e}")
     
-    # 添加節目信息
-    for program in programs:
-        try:
-            # 格式化時區信息 (+0800)
-            start_str = program["start"].strftime("%Y%m%d%H%M%S %z")
-            end_str = program["end"].strftime("%Y%m%d%H%M%S %z")
-            
-            programme = ET.SubElement(tv, "programme", 
-                start=start_str,
-                stop=end_str,
-                channel=program["channelId"]
-            )
-            title_elem = ET.SubElement(programme, "title")
-            title_elem.text = program["programName"]
-            
-            if program.get("description"):
-                desc_elem = ET.SubElement(programme, "desc")
-                desc_elem.text = program["description"]
-        except Exception as e:
-            logger.error(f"生成節目 {program.get('programName', '未知節目')} XML 失敗: {e}")
-    
-    # 生成XML文件 - 確保正確處理UTF-8編碼
+    # 生成XML文件
     tree = ET.ElementTree(tv)
-    
-    # 手動寫入XML確保編碼正確
-    xml_str = '<?xml version="1.0" encoding="UTF-8"?>\n'
-    xml_str += ET.tostring(tv, encoding="unicode")
-    
-    # 替換特殊字符
-    xml_str = xml_str.replace("&amp;", "&")
-    xml_str = xml_str.replace("&lt;", "<")
-    xml_str = xml_str.replace("&gt;", ">")
-    xml_str = xml_str.replace("&quot;", "\"")
-    xml_str = xml_str.replace("&apos;", "'")
-    
-    # 寫入文件
-    with open(filename, 'w', encoding='utf-8') as f:
-        f.write(xml_str)
-    
+    tree.write(filename, encoding="utf-8", xml_declaration=True)
     logger.info(f"電子節目表單已生成: {filename}")
 
 if __name__ == "__main__":
@@ -360,8 +360,7 @@ if __name__ == "__main__":
         rotation="1 day", 
         retention="7 days", 
         encoding="utf-8",
-        format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}",
-        errors="replace"
+        format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}"
     )
     
     try:
@@ -373,20 +372,11 @@ if __name__ == "__main__":
         channels, programs = get_4gtv_epg()
         logger.info(f"共獲取 {len(channels)} 個頻道, {len(programs)} 個節目")
         
+        # 設置XML輸出路徑
         xml_file = os.path.join(OUTPUT_DIR, '4g.xml')
         generate_xml(channels, programs, xml_file)
-        
-        success_file = os.path.join(OUTPUT_DIR, 'SUCCESS')
-        with open(success_file, 'w', encoding='utf-8') as f:
-            f.write(f"EPG生成成功於 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-        
         logger.success(f"EPG生成完成: {xml_file}")
     except Exception as e:
         logger.critical(f"EPG生成失敗: {str(e)}")
         logger.exception(e)
-        
-        error_file = os.path.join(OUTPUT_DIR, 'ERROR')
-        with open(error_file, 'w', encoding='utf-8') as f:
-            f.write(f"EPG生成失敗於 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n{str(e)}")
-        
         exit(1)
