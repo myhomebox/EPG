@@ -164,7 +164,7 @@ def generate_xml(channels, programs, filename):
         
         # 使用channelName作為id
         channel_elem = ET.SubElement(tv, "channel", id=channel_name)
-        display_name = ET.SubElement(channel_elem, "display-name")
+        display_name = ET.SubElement(channel_elem, "display-name", lang="zh"))
         display_name.text = channel_name
         
         if channel.get("logo"):
