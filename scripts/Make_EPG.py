@@ -71,7 +71,7 @@ def get_4gtv_channels():
     local_file = os.path.join(OUTPUT_DIR, 'fourgtv.json')
     if os.path.exists(local_file):
         try:
-            logger.info(f"從本地文件讀取頻道列表: {local_file}")
+            logger.info(f"從本地檔案讀取頻道列表: {local_file}")
             with open(local_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
             
@@ -87,7 +87,7 @@ def get_4gtv_channels():
             return channels
         
         except Exception as e:
-            logger.error(f"讀取本地頻道文件失敗: {e}")
+            logger.error(f"讀取本地頻道檔案失敗: {e}")
 
 def get_4gtv_programs_scraper(channel_id, channel_name, scraper):
     """獲取節目表"""
@@ -195,7 +195,7 @@ def generate_xml(channels, programs, filename):
                 except Exception as e:
                     logger.error(f"生成節目 {program.get('programName', '未知節目')} XML 失敗: {e}")
     
-    # 生成XML文件
+    # 生成XML檔案
     tree = ET.ElementTree(tv)
     tree.write(filename, encoding="utf-8", xml_declaration=True)
     logger.info(f"電子節目表單已生成: {filename}")
