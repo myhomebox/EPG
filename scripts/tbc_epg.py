@@ -90,7 +90,7 @@ async def get_epg_data():
 
 async def generate_epg_xml(channels, programs):
     """生成EPG XML檔案"""
-    tv = ET.Element("tv", {"generator-info-name": "TBC EPG Generator"})
+    tv = ET.Element("tv", {"info-name": "TBC電子節目表", "info-url": "https://www.tbc.net.tw/EPG"})
     
     # 建立頻道元素
     for channel_info in channels:
