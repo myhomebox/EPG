@@ -31,7 +31,7 @@ jobs:
     - name: Generate EPG
       run: |
         echo "開始生成EPG數據..."
-        python scripts/ofiii_epg.py
+        python scripts/ofiii_epg.py --output output/ofiii.xml
         echo "EPG生成完成"
         
     - name: Debug - List files
