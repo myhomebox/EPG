@@ -256,7 +256,7 @@ def generate_xmltv(channels, programs, output_file="ofiii.xml"):
     print(f"\n生成XMLTV文件: {output_file}")
     
     # 創建XML根元素
-    root = ET.Element("tv", info-name="OFIII EPG", info-url="www.ofiii.com")
+    root = ET.Element("tv", generator="OFIII EPG", source="www.ofiii.com")
     
     # 添加頻道信息
     for channel in channels:
