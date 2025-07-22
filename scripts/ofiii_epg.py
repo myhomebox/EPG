@@ -1,4 +1,5 @@
 import os
+import sys
 import re
 import json
 import time
@@ -18,7 +19,7 @@ HEADERS = {
 }
 
 def parse_channel_list():
-    """解析頻道列表檔案內容"""
+    """解析頻道列表文件內容"""
     channels = []
     channel_list = [
         "中天新聞台 ==> 4gtv-4gtv009",
@@ -73,17 +74,32 @@ def fetch_epg_data(channel_id, max_retries=3):
             response = requests.get(url, headers=HEADERS, timeout=30)
             response.raise_for_status()
             
+            # 檢查響應內容
+            if not response.text.strip():
+                print(f"⚠️ 響應內容為空: {channel_id}")
+                continue
+                
             soup = BeautifulSoup(response.text, 'html.parser')
             script_tag = soup.find('script', id='__NEXT_DATA__')
             
             if script_tag:
-                json_data = json.loads(script_tag.string)
-                return json_data
+                try:
+                    json_data = json.loads(script_tag.string)
+                    return json_data
+                except json.JSONDecodeError as e:
+                    print(f"⚠️ JSON解析失敗: {channel_id}, {str(e)}")
+                    # 保存錯誤響應用於調試
+                    with open(f"error_{channel_id}.html", "w", encoding="utf-8") as f:
+                        f.write(response.text)
+                    continue
             else:
-                print(f"❌ 未找到__NEXT_DATA__標簽: {channel_id}")
-                return None
+                print(f"⚠️ 未找到__NEXT_DATA__標簽: {channel_id}")
+                # 保存錯誤響應用於調試
+                with open(f"error_{channel_id}.html", "w", encoding="utf-8") as f:
+                    f.write(response.text)
+                continue
                 
-        except (requests.RequestException, json.JSONDecodeError) as e:
+        except requests.RequestException as e:
             wait_time = random.uniform(1, 3) * (attempt + 1)
             print(f"⚠️ 請求失敗 (嘗試 {attempt+1}/{max_retries}), 等待 {wait_time:.2f}秒: {str(e)}")
             time.sleep(wait_time)
@@ -126,6 +142,9 @@ def parse_epg_data(json_data, channel_name):
             
     except (KeyError, TypeError, ValueError) as e:
         print(f"❌ 解析EPG數據失敗: {str(e)}")
+        # 保存錯誤數據用於調試
+        with open(f"error_{channel_name}.json", "w", encoding="utf-8") as f:
+            json.dump(json_data, f, ensure_ascii=False, indent=2)
     
     return programs
 
@@ -143,6 +162,7 @@ def get_ofiii_epg():
     
     all_channels = []
     all_programs = []
+    failed_channels = []
     
     # 遍歷所有頻道
     for idx, (channel_name, channel_id) in enumerate(channels_info):
@@ -151,6 +171,7 @@ def get_ofiii_epg():
         # 獲取EPG數據
         json_data = fetch_epg_data(channel_id)
         if not json_data:
+            failed_channels.append(channel_name)
             continue
             
         # 解析節目數據
@@ -174,10 +195,12 @@ def get_ofiii_epg():
                 "url": f"https://www.ofiii.com/channel/watch/{channel_id}",
                 "source": "ofiii",
                 "logo": logo,
-                "desc": json_data['props']['pageProps']['introduction'].get('description', '')
+                "desc": json_data['props']['pageProps']['introduction'].get('description', ''),
+                "sort": "海外"
             })
         except (KeyError, TypeError) as e:
             print(f"❌ 解析頻道信息失敗: {channel_name}, {str(e)}")
+            failed_channels.append(channel_name)
             continue
             
         # 添加節目數據
@@ -194,6 +217,9 @@ def get_ofiii_epg():
     print(f"✅ 成功獲取 {len(all_channels)} 個頻道")
     print(f"✅ 成功獲取 {len(all_programs)} 個節目")
     
+    if failed_channels:
+        print(f"⚠️ 失敗頻道 ({len(failed_channels)}): {', '.join(failed_channels)}")
+    
     # 按頻道名稱分組顯示節目數量
     channel_counts = {}
     for program in all_programs:
@@ -207,9 +233,9 @@ def get_ofiii_epg():
 
 def generate_xmltv(channels, programs, output_file="ofiii.xml"):
     """生成XMLTV格式的EPG數據"""
-    print(f"\n生成XMLTV檔案: {output_file}")
+    print(f"\n生成XMLTV文件: {output_file}")
     
-    # 建立XML根元素
+    # 創建XML根元素
     root = ET.Element("tv", generator="OFIII-EPG-Generator", source="www.ofiii.com")
     
     # 添加頻道信息
@@ -231,7 +257,7 @@ def generate_xmltv(channels, programs, output_file="ofiii.xml"):
         start_time = program['start'].strftime('%Y%m%d%H%M%S %z')
         end_time = program['end'].strftime('%Y%m%d%H%M%S %z')
         
-        # 建立節目元素
+        # 創建節目元素
         program_elem = ET.SubElement(
             root, 
             "programme", 
@@ -256,34 +282,51 @@ def generate_xmltv(channels, programs, output_file="ofiii.xml"):
     parsed = minidom.parseString(xml_str)
     pretty_xml = parsed.toprettyxml(indent="  ", encoding='utf-8')
     
-    # 儲存到檔案
-    with open(output_file, 'wb') as f:
-        f.write(pretty_xml)
-    
-    print(f"✅ XMLTV檔案已生成: {output_file}")
-    print(f"📺 頻道數: {len(channels)}")
-    print(f"📺 節目數: {len(programs)}")
-    print(f"💾 檔案大小: {os.path.getsize(output_file) / 1024:.2f} KB")
+    # 保存到文件
+    try:
+        with open(output_file, 'wb') as f:
+            f.write(pretty_xml)
+        
+        print(f"✅ XMLTV文件已生成: {output_file}")
+        print(f"📺 頻道數: {len(channels)}")
+        print(f"📺 節目數: {len(programs)}")
+        print(f"💾 文件大小: {os.path.getsize(output_file) / 1024:.2f} KB")
+        return True
+    except Exception as e:
+        print(f"❌ 保存XML文件失敗: {str(e)}")
+        return False
 
 def main():
     """主函數，處理命令行參數"""
     parser = argparse.ArgumentParser(description='OFIII EPG 生成器')
     parser.add_argument('--output', type=str, default='output/ofiii.xml', 
-                       help='輸出XML檔案路徑 (默認: output/ofiii.xml)')
+                       help='輸出XML文件路徑 (默認: output/ofiii.xml)')
     
     args = parser.parse_args()
     
     # 確保輸出目錄存在
     output_dir = os.path.dirname(args.output)
     if output_dir and not os.path.exists(output_dir):
-        os.makedirs(output_dir)
-        print(f"建立輸出目錄: {output_dir}")
+        os.makedirs(output_dir, exist_ok=True)
+        print(f"創建輸出目錄: {output_dir}")
     
-    # 獲取EPG數據
-    channels, programs = get_ofiii_epg()
-    
-    # 生成XMLTV檔案
-    generate_xmltv(channels, programs, args.output)
+    try:
+        # 獲取EPG數據
+        channels, programs = get_ofiii_epg()
+        
+        if not channels or not programs:
+            print("❌ 未獲取到有效EPG數據，無法生成XML")
+            sys.exit(1)
+            
+        # 生成XMLTV文件
+        if not generate_xmltv(channels, programs, args.output):
+            sys.exit(1)
+            
+    except Exception as e:
+        print(f"❌ 主程序錯誤: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
