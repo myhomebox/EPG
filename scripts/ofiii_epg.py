@@ -19,7 +19,7 @@ HEADERS = {
 }
 
 def parse_channel_list():
-    """解析頻道列表檔案內容"""
+    """解析頻道列表文件內容"""
     channels = []
     channel_list = [
         "中天新聞台 ==> 4gtv-4gtv009",
@@ -214,7 +214,8 @@ def get_ofiii_epg():
                 "url": f"https://www.ofiii.com/channel/watch/{channel_id}",
                 "source": "ofiii",
                 "logo": logo,
-                "desc": channel_desc
+                "desc": channel_desc,
+                "sort": "海外"
             })
             
             # 添加節目數據
@@ -252,10 +253,10 @@ def get_ofiii_epg():
 
 def generate_xmltv(channels, programs, output_file="ofiii.xml"):
     """生成XMLTV格式的EPG數據"""
-    print(f"\n生成XMLTV檔案: {output_file}")
+    print(f"\n生成XMLTV文件: {output_file}")
     
-    # 建立XML根元素
-    root = ET.Element("tv", generator="OFIII-EPG-Generator", source="www.ofiii.com")
+    # 創建XML根元素
+    root = ET.Element("tv", info-name="OFIII EPG", info-url="www.ofiii.com")
     
     # 添加頻道信息
     for channel in channels:
@@ -267,6 +268,10 @@ def generate_xmltv(channels, programs, output_file="ofiii.xml"):
         if channel.get('logo'):
             ET.SubElement(channel_elem, "icon", src=channel['logo'])
     
+    # 創建節目容器元素
+    programs_container = ET.SubElement(root, "programs")
+    
+    # 按照第六點要求：頻道1的所有節目 -> 頻道2的所有節目 -> ...
     program_count = 0
     for channel in channels:
         channel_name = channel['name']
@@ -281,6 +286,10 @@ def generate_xmltv(channels, programs, output_file="ofiii.xml"):
         # 按開始時間排序
         channel_programs.sort(key=lambda p: p['start'])
         
+        # 添加頻道標題元素（用於視覺分隔）
+        channel_header = ET.SubElement(programs_container, "channel-header")
+        channel_header.text = f"--- {channel_name} 節目表 ---"
+        
         # 添加該頻道的所有節目
         for program in channel_programs:
             try:
@@ -288,9 +297,9 @@ def generate_xmltv(channels, programs, output_file="ofiii.xml"):
                 start_time = program['start'].strftime('%Y%m%d%H%M%S %z')
                 end_time = program['end'].strftime('%Y%m%d%H%M%S %z')
                 
-                # 建立節目元素
+                # 創建節目元素
                 program_elem = ET.SubElement(
-                    root, 
+                    programs_container, 
                     "programme", 
                     start=start_time, 
                     stop=end_time, 
@@ -323,25 +332,25 @@ def generate_xmltv(channels, programs, output_file="ofiii.xml"):
         print(f"⚠️ XML美化失敗, 使用原始XML: {str(e)}")
         pretty_xml = xml_str.encode('utf-8')
     
-    # 保存到檔案
+    # 保存到文件
     try:
         with open(output_file, 'wb') as f:
             f.write(pretty_xml)
         
-        print(f"✅ XMLTV檔案已生成: {output_file}")
+        print(f"✅ XMLTV文件已生成: {output_file}")
         print(f"📺 頻道數: {len(channels)}")
         print(f"📺 節目數: {program_count}")
-        print(f"💾 檔案大小: {os.path.getsize(output_file) / 1024:.2f} KB")
+        print(f"💾 文件大小: {os.path.getsize(output_file) / 1024:.2f} KB")
         return True
     except Exception as e:
-        print(f"❌ 保存XML檔案失敗: {str(e)}")
+        print(f"❌ 保存XML文件失敗: {str(e)}")
         return False
 
 def main():
     """主函數，處理命令行參數"""
     parser = argparse.ArgumentParser(description='OFIII EPG 生成器')
     parser.add_argument('--output', type=str, default='output/ofiii.xml', 
-                       help='輸出XML檔案路徑 (默認: output/ofiii.xml)')
+                       help='輸出XML文件路徑 (默認: output/ofiii.xml)')
     
     args = parser.parse_args()
     
@@ -349,7 +358,7 @@ def main():
     output_dir = os.path.dirname(args.output)
     if output_dir and not os.path.exists(output_dir):
         os.makedirs(output_dir, exist_ok=True)
-        print(f"建立輸出目錄: {output_dir}")
+        print(f"創建輸出目錄: {output_dir}")
     
     try:
         # 獲取EPG數據
@@ -359,7 +368,7 @@ def main():
             print("❌ 未獲取到有效EPG數據，無法生成XML")
             sys.exit(1)
             
-        # 生成XMLTV檔案
+        # 生成XMLTV文件
         if not generate_xmltv(channels, programs, args.output):
             sys.exit(1)
             
