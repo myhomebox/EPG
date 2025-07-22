@@ -213,7 +213,7 @@ def get_ofiii_epg():
                 "id": channel_id,
                 "url": f"https://www.ofiii.com/channel/watch/{channel_id}",
                 "source": "ofiii",
-                "icon": logo,
+                "logo": logo,
                 "desc": channel_desc
             })
             
