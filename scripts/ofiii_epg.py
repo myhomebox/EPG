@@ -77,27 +77,25 @@ def fetch_epg_data(channel_id, max_retries=3):
             # 檢查響應內容
             if not response.text.strip():
                 print(f"⚠️ 響應內容為空: {channel_id}")
-                continue
+                return None
                 
             soup = BeautifulSoup(response.text, 'html.parser')
             script_tag = soup.find('script', id='__NEXT_DATA__')
             
-            if script_tag:
+            if script_tag and script_tag.string:
                 try:
-                    json_data = json.loads(script_tag.string)
-                    return json_data
+                    return json.loads(script_tag.string)
                 except json.JSONDecodeError as e:
                     print(f"⚠️ JSON解析失敗: {channel_id}, {str(e)}")
                     # 保存錯誤響應用於調試
                     with open(f"error_{channel_id}.html", "w", encoding="utf-8") as f:
                         f.write(response.text)
-                    continue
             else:
                 print(f"⚠️ 未找到__NEXT_DATA__標簽: {channel_id}")
                 # 保存錯誤響應用於調試
                 with open(f"error_{channel_id}.html", "w", encoding="utf-8") as f:
                     f.write(response.text)
-                continue
+            return None
                 
         except requests.RequestException as e:
             wait_time = random.uniform(1, 3) * (attempt + 1)
@@ -114,20 +112,33 @@ def parse_epg_data(json_data, channel_name):
     
     programs = []
     try:
-        schedule = json_data['props']['pageProps']['channel']['Schedule']
+        # 添加安全檢查
+        if not json_data.get('props') or not json_data['props'].get('pageProps') or not json_data['props']['pageProps'].get('channel'):
+            print(f"❌ JSON結構無效: {channel_name}")
+            return []
+        
+        schedule = json_data['props']['pageProps']['channel'].get('Schedule', [])
         
         for item in schedule:
             # 解析開始時間 (UTC時間)
-            start_utc = datetime.datetime.strptime(
-                item['AirDateTime'], "%Y-%m-%dT%H:%M:%SZ"
-            ).replace(tzinfo=pytz.utc)
-            
+            try:
+                start_utc = datetime.datetime.strptime(
+                    item['AirDateTime'], "%Y-%m-%dT%H:%M:%SZ"
+                ).replace(tzinfo=pytz.utc)
+            except (KeyError, ValueError):
+                print(f"⚠️ 跳過無效的時間格式: {channel_name}")
+                continue
+                
             # 轉換為台北時區
             start_taipei = start_utc.astimezone(TAIPEI_TZ)
             
             # 計算結束時間
-            duration = datetime.timedelta(seconds=item['Duration'])
-            end_taipei = start_taipei + duration
+            try:
+                duration = datetime.timedelta(seconds=item.get('Duration', 0))
+                end_taipei = start_taipei + duration
+            except TypeError:
+                print(f"⚠️ 跳過無效的持續時間: {channel_name}")
+                continue
             
             program_info = item.get('program', {})
             
@@ -179,14 +190,30 @@ def get_ofiii_epg():
         
         # 添加頻道信息
         try:
-            channel_data = json_data['props']['pageProps']['channel']
+            # 添加多層安全檢查
+            if not json_data.get('props') or not json_data['props'].get('pageProps'):
+                print(f"❌ 跳過無效的JSON結構: {channel_name}")
+                failed_channels.append(channel_name)
+                continue
+                
+            page_props = json_data['props']['pageProps']
+            
+            # 獲取頻道數據
+            channel_data = page_props.get('channel', {})
+            introduction = page_props.get('introduction', {})
+            
             logo = channel_data.get('picture', '')
             if not logo:
-                logo = json_data['props']['pageProps']['introduction'].get('image', '')
+                logo = introduction.get('image', '')
             
             # 確保logo是完整URL
             if logo and not logo.startswith('http'):
                 logo = f"https://p-cdnstatic.svc.litv.tv/pics/{logo}"
+            
+            # 添加頻道描述
+            channel_desc = introduction.get('description', '')
+            if not channel_desc:
+                channel_desc = channel_data.get('description', '')
             
             all_channels.append({
                 "name": channel_name,
@@ -195,10 +222,10 @@ def get_ofiii_epg():
                 "url": f"https://www.ofiii.com/channel/watch/{channel_id}",
                 "source": "ofiii",
                 "logo": logo,
-                "desc": json_data['props']['pageProps']['introduction'].get('description', ''),
+                "desc": channel_desc,
                 "sort": "海外"
             })
-        except (KeyError, TypeError) as e:
+        except Exception as e:
             print(f"❌ 解析頻道信息失敗: {channel_name}, {str(e)}")
             failed_channels.append(channel_name)
             continue
@@ -240,47 +267,66 @@ def generate_xmltv(channels, programs, output_file="ofiii.xml"):
     
     # 添加頻道信息
     for channel in channels:
-        channel_elem = ET.SubElement(root, "channel", id=channel['id'])
+        # 確保ID不為空
+        channel_id = channel.get('id', f"channel-{channel['name']}")
+        channel_elem = ET.SubElement(root, "channel", id=channel_id)
         ET.SubElement(channel_elem, "display-name").text = channel['name']
         
-        if channel['logo']:
+        if channel.get('logo'):
             ET.SubElement(channel_elem, "icon", src=channel['logo'])
     
     # 添加節目信息
+    program_count = 0
     for program in programs:
-        # XMLTV要求頻道ID作為屬性
-        channel_id = next((ch['id'] for ch in channels if ch['name'] == program['channelName']), None)
+        # 查找匹配的頻道ID
+        channel_id = None
+        for ch in channels:
+            if ch['name'] == program['channelName']:
+                channel_id = ch.get('id', f"channel-{ch['name']}")
+                break
+        
         if not channel_id:
             continue
             
-        # 格式化時間 (XMLTV格式: YYYYMMDDHHMMSS +TZ)
-        start_time = program['start'].strftime('%Y%m%d%H%M%S %z')
-        end_time = program['end'].strftime('%Y%m%d%H%M%S %z')
-        
-        # 創建節目元素
-        program_elem = ET.SubElement(
-            root, 
-            "programme", 
-            start=start_time, 
-            stop=end_time, 
-            channel=channel_id
-        )
-        
-        # 添加節目信息
-        ET.SubElement(program_elem, "title", lang="zh").text = program['programName']
-        
-        if program.get('subtitle'):
-            ET.SubElement(program_elem, "sub-title", lang="zh").text = program['subtitle']
-        
-        if program.get('description'):
-            ET.SubElement(program_elem, "desc", lang="zh").text = program['description']
+        try:
+            # 格式化時間 (XMLTV格式: YYYYMMDDHHMMSS +TZ)
+            start_time = program['start'].strftime('%Y%m%d%H%M%S %z')
+            end_time = program['end'].strftime('%Y%m%d%H%M%S %z')
+            
+            # 創建節目元素
+            program_elem = ET.SubElement(
+                root, 
+                "programme", 
+                start=start_time, 
+                stop=end_time, 
+                channel=channel_id
+            )
+            
+            # 添加節目信息
+            title = program.get('programName', '未知節目')
+            ET.SubElement(program_elem, "title", lang="zh").text = title
+            
+            if program.get('subtitle'):
+                ET.SubElement(program_elem, "sub-title", lang="zh").text = program['subtitle']
+            
+            if program.get('description'):
+                ET.SubElement(program_elem, "desc", lang="zh").text = program['description']
+            
+            program_count += 1
+        except Exception as e:
+            print(f"⚠️ 跳過無效的節目數據: {str(e)}")
+            continue
     
     # 生成XML字符串
     xml_str = ET.tostring(root, encoding='utf-8').decode('utf-8')
     
     # 美化XML格式
-    parsed = minidom.parseString(xml_str)
-    pretty_xml = parsed.toprettyxml(indent="  ", encoding='utf-8')
+    try:
+        parsed = minidom.parseString(xml_str)
+        pretty_xml = parsed.toprettyxml(indent="  ", encoding='utf-8')
+    except Exception as e:
+        print(f"⚠️ XML美化失敗, 使用原始XML: {str(e)}")
+        pretty_xml = xml_str.encode('utf-8')
     
     # 保存到文件
     try:
@@ -289,7 +335,7 @@ def generate_xmltv(channels, programs, output_file="ofiii.xml"):
         
         print(f"✅ XMLTV文件已生成: {output_file}")
         print(f"📺 頻道數: {len(channels)}")
-        print(f"📺 節目數: {len(programs)}")
+        print(f"📺 節目數: {program_count}")
         print(f"💾 文件大小: {os.path.getsize(output_file) / 1024:.2f} KB")
         return True
     except Exception as e:
