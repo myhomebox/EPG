@@ -1,14 +1,14 @@
-name: Daily ofiii EPG Update
+name: EPG Generator
 
 on:
   schedule:
-    # 每天淩晨2點運行 (UTC時間)
     - cron: '0 18 * * *'
   workflow_dispatch:
 
 jobs:
   generate-epg:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     
     steps:
     - name: Checkout repository
@@ -23,16 +23,36 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install requests beautifulsoup4 pytz
+        pip list
         
+    - name: Create output directory
+      run: mkdir -p output
+      
     - name: Generate EPG
       run: |
-        mkdir -p output
+        echo "開始生成EPG數據..."
         python scripts/ofiii_epg.py
+        echo "EPG生成完成"
+        
+    - name: Debug - List files
+      run: |
+        echo "當前目錄內容:"
+        ls -la
+        echo "輸出目錄內容:"
+        ls -la output
         
     - name: Commit and push changes
+      if: success()
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local user.name "GitHub Actions"
+        
+        # 檢查是否有變化
         git add output/ofiii.xml
-        git commit -m "自動更新EPG數據: $(date +'%Y-%m-%d %H:%M:%S')"
-        git push
+        
+        if git diff-index --quiet HEAD --; then
+          echo "沒有變化可提交"
+        else
+          git commit -m "自動更新EPG數據: $(date -u +'%Y-%m-%d %H:%M:%S')"
+          git push
+        fi
