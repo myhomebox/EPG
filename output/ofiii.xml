@@ -2,123 +2,93 @@
 <tv generator="OFIII-EPG-Generator" source="www.ofiii.com">
   <channel id="4gtv-4gtv009">
     <display-name>中天新聞台</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_4gtv-4gtv009_tv.png"/>
   </channel>
   <channel id="4gtv-4gtv066">
     <display-name>台視</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_4gtv-4gtv066_tv.png"/>
   </channel>
   <channel id="4gtv-4gtv040">
     <display-name>中視</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_4gtv-4gtv040_tv.png"/>
   </channel>
   <channel id="4gtv-4gtv041">
     <display-name>華視</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_4gtv-4gtv041_tv.png"/>
   </channel>
   <channel id="4gtv-4gtv051">
     <display-name>台視新聞</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_4gtv-4gtv051_tv.png"/>
   </channel>
   <channel id="4gtv-4gtv052">
     <display-name>華視新聞</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_4gtv-4gtv052_tv.png"/>
   </channel>
   <channel id="4gtv-4gtv074">
     <display-name>中視新聞</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_4gtv-4gtv074_tv.png"/>
   </channel>
   <channel id="4gtv-4gtv084">
     <display-name>國會頻道1台</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_4gtv-4gtv084_tv.png"/>
   </channel>
   <channel id="4gtv-4gtv085">
     <display-name>國會頻道2台</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_4gtv-4gtv085_tv.png"/>
   </channel>
   <channel id="4gtv-4gtv076">
     <display-name>亞洲旅遊台</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_4gtv_litv-longturn17_tv.png"/>
   </channel>
   <channel id="4gtv-4gtv102">
     <display-name>東森購物1台</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_4gtv-4gtv102_tv.png"/>
   </channel>
   <channel id="4gtv-4gtv103">
     <display-name>東森購物2台</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_4gtv-4gtv103_tv.png"/>
   </channel>
   <channel id="4gtv-4gtv104">
     <display-name>第1商業台</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_4gtv-4gtv104_tv.png"/>
   </channel>
   <channel id="4gtv-4gtv156">
     <display-name>寰宇新聞台灣台</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_litv-longturn15_tv.png"/>
   </channel>
   <channel id="4gtv-4gtv158">
     <display-name>寰宇財經台</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_litv-longturn23_tv.png"/>
   </channel>
   <channel id="litv-ftv16">
     <display-name>好消息</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_litv-ftv16_tv.png"/>
   </channel>
   <channel id="litv-ftv17">
     <display-name>好消息2台</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_litv-ftv17_tv.png"/>
   </channel>
   <channel id="litv-longturn01">
     <display-name>龍華卡通台</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_4gtv_litv-longturn01_tv.png"/>
   </channel>
   <channel id="litv-longturn02">
     <display-name>龍華洋片台</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_litv-longturn02_tv.png"/>
   </channel>
   <channel id="litv-longturn03">
     <display-name>龍華電影台</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_litv-longturn03_tv.png"/>
   </channel>
   <channel id="litv-longturn11">
     <display-name>龍華日韓台</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_litv-longturn11_tv.png"/>
   </channel>
   <channel id="litv-longturn12">
     <display-name>龍華偶像台</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_litv-longturn12_tv.png"/>
   </channel>
   <channel id="litv-longturn14">
     <display-name>寰宇新聞台</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_litv-longturn14_tv.png"/>
   </channel>
   <channel id="litv-longturn18">
     <display-name>龍華戲劇台</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_litv-longturn18_tv.png"/>
   </channel>
   <channel id="litv-longturn19">
     <display-name>Smart知識台</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_litv-longturn19_tv.png"/>
   </channel>
   <channel id="litv-longturn20">
     <display-name>ELTV生活英語台</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_litv-longturn20_tv.png"/>
   </channel>
   <channel id="litv-longturn21">
     <display-name>龍華經典台</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_litv-longturn21_tv.png"/>
   </channel>
   <channel id="litv-longturn22">
     <display-name>台灣戲劇台</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_litv-longturn22_tv.png"/>
   </channel>
   <channel id="iNEWS">
     <display-name>三立新聞iNEWS</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_iNEWS_tv.png"/>
   </channel>
   <channel id="nnews-zh">
     <display-name>倪珍播新聞</display-name>
-    <icon src="https://p-cdnstatic.svc.litv.tv/pics/pics/logo_litv_nnews_tv.png"/>
   </channel>
   <programme start="20250723010000 +0800" stop="20250723020000 +0800" channel="4gtv-4gtv009">
     <title lang="zh">中天辣晚報</title>
