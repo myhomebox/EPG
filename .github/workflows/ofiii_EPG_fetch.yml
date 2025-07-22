@@ -1,4 +1,4 @@
-name: Daily ofiii EPG Generator
+name: Daily ofiii EPG Update
 
 on:
   schedule:
