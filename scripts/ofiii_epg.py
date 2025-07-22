@@ -256,26 +256,19 @@ def generate_xmltv(channels, programs, output_file="ofiii.xml"):
     print(f"\n生成XMLTV文件: {output_file}")
     
     # 創建XML根元素
-    root = ET.Element("tv", generator="OFIII EPG", source="www.ofiii.com")
+    root = ET.Element("tv", generator="OFIII-EPG-Generator", source="www.ofiii.com")
     
-    # 添加頻道信息
-    for channel in channels:
-        # 確保ID不為空
-        channel_id = channel.get('id', f"channel-{channel['name']}")
-        channel_elem = ET.SubElement(root, "channel", id=channel_id)
-        ET.SubElement(channel_elem, "display-name").text = channel['name']
-        
-        if channel.get('logo'):
-            ET.SubElement(channel_elem, "icon", src=channel['logo'])
-    
-    # 創建節目容器元素
-    programs_container = ET.SubElement(root, "programs")
-    
-    # 按照第六點要求：頻道1的所有節目 -> 頻道2的所有節目 -> ...
+    # 按照第六點要求：頻道1定義 -> 頻道1節目 -> 頻道2定義 -> 頻道2節目 -> ...
     program_count = 0
     for channel in channels:
         channel_name = channel['name']
-        channel_id = channel['id']
+        
+        # 添加頻道定義
+        channel_elem = ET.SubElement(root, "channel", id=channel_name)
+        ET.SubElement(channel_elem, "display-name", lang="zh").text = channel_name
+        
+        if channel.get('logo'):
+            ET.SubElement(channel_elem, "icon", src=channel['logo'])
         
         # 獲取該頻道的所有節目
         channel_programs = [p for p in programs if p['channelName'] == channel_name]
@@ -286,10 +279,6 @@ def generate_xmltv(channels, programs, output_file="ofiii.xml"):
         # 按開始時間排序
         channel_programs.sort(key=lambda p: p['start'])
         
-        # 添加頻道標題元素（用於視覺分隔）
-        channel_header = ET.SubElement(programs_container, "channel-header")
-        channel_header.text = f"--- {channel_name} 節目表 ---"
-        
         # 添加該頻道的所有節目
         for program in channel_programs:
             try:
@@ -299,11 +288,11 @@ def generate_xmltv(channels, programs, output_file="ofiii.xml"):
                 
                 # 創建節目元素
                 program_elem = ET.SubElement(
-                    programs_container, 
+                    root, 
                     "programme", 
+                    channel=channel_name,
                     start=start_time, 
-                    stop=end_time, 
-                    channel=channel_id
+                    stop=end_time
                 )
                 
                 # 添加節目信息
