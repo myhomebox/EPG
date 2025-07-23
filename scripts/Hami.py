@@ -180,9 +180,11 @@ def generate_xml_epg(channels, programs):
 async def main():
     print("開始生成Hami電視節目表...")
     
-    # 建立輸出目錄
-    output_dir = os.path.join(os.path.dirname(__file__), "..", "output")
-    os.makedirs(output_dir, exist_ok=True)
+    # 確保輸出目錄存在
+    output_dir = os.path.dirname(args.output)
+    if output_dir and not os.path.exists(output_dir):
+        os.makedirs(output_dir, exist_ok=True)
+        print(f"建立輸出目錄: {output_dir}")
     
     # 獲取頻道和節目數據
     channels, programs = await request_all_epg()
