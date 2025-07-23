@@ -1,13 +1,14 @@
 name: Daily Hami EPG Update
-
 on:
   schedule:
-    - cron: '0 0 * * *'  # 每天UTC時間00:00執行
-  workflow_dispatch:     # 允許手動觸發
+    - cron: '0 0 * * *'  # 每天UTC時間00:00執行（台北時間08:00）
+  workflow_dispatch:
 
 jobs:
   generate-epg:
     runs-on: ubuntu-latest
+    timeout-minutes: 30  # 設置超時時間
+    
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -20,16 +21,21 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r scripts/requirements.txt
+          pip install requests pytz loguru
           
       - name: Run EPG Generator
         run: python scripts/Hami.py
-        working-directory: ./
         
-      - name: Commit and Push Output
+      - name: Upload EPG file
+        uses: actions/upload-artifact@v3
+        with:
+          name: hami-epg
+          path: output/hami.xml
+          
+      - name: Commit and push EPG
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add output/*
-          git commit -m "Auto-generated EPG update" || echo "No changes to commit"
+          git add output/hami.xml
+          git commit -m "Auto-update Hami EPG"
           git push
