@@ -140,8 +140,8 @@ def hami_time_to_datetime(time_range: str):
 def generate_xml_epg(channels, programs):
     # 創建XML結構
     root = ET.Element("tv")
-    root.set("generator-info-name", "Hami EPG Generator")
-    root.set("generator-info-url", "https://github.com/your-repo")
+    root.set("info-name", "Hami電視節目表")
+    root.set("info-url", "https://hamivideo.hinet.net/")
     
     # 添加頻道信息
     channel_id_map = {}
@@ -178,7 +178,7 @@ def generate_xml_epg(channels, programs):
     return tree
 
 async def main():
-    logger.info("開始生成Hami EPG...")
+    logger.info("開始生成Hami電視節目表...")
     
     # 創建輸出目錄
     output_dir = os.path.join(os.path.dirname(__file__), "..", "output")
@@ -192,7 +192,7 @@ async def main():
     output_file = os.path.join(output_dir, "hami.xml")
     xml_tree.write(output_file, encoding="utf-8", xml_declaration=True)
     
-    logger.success(f"EPG已成功生成: {output_file}")
+    logger.success(f"電視節目表已成功生成: {output_file}")
 
 if __name__ == '__main__':
     asyncio.run(main())
