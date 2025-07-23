@@ -143,26 +143,35 @@ def generate_xml_epg(channels, programs):
     root.set("info-name", "Hami電視節目表")
     root.set("info-url", "https://hamivideo.hinet.net/")
     
-    # 添加頻道信息
-    channel_id_map = {}
+    channel_name_map = {}
     for channel in channels:
-        channel_id = channel["channelId"]
-        channel_id_map[channel_id] = channel["channelName"]
+        channel_name_map[channel["contentPk"]] = channel["channelName"]
+    
+    # 按頻道順序處理
+    for channel in channels:
+        # 使用頻道名稱作為ID
+        channel_id = channel["channelName"]
         
+        # 添加頻道元素
         channel_elem = ET.SubElement(root, "channel")
         channel_elem.set("id", channel_id)
         
         display_name = ET.SubElement(channel_elem, "display-name")
         display_name.text = channel["channelName"]
-    
-    # 添加節目信息
-    for program in programs:
-        # 只處理有對應頻道的節目
-        if program["channelId"] in channel_id_map:
+        
+        channel_programs = [
+            p for p in programs 
+            if p["channelId"] == channel["contentPk"]
+        ]
+        
+        # 按開始時間排序
+        channel_programs.sort(key=lambda p: p["start"])
+        
+        for program in channel_programs:
             programme = ET.SubElement(root, "programme")
             programme.set("start", program["start"].strftime("%Y%m%d%H%M%S %z"))
             programme.set("stop", program["end"].strftime("%Y%m%d%H%M%S %z"))
-            programme.set("channel", program["channelId"])
+            programme.set("channel", channel_id)
             
             title = ET.SubElement(programme, "title")
             title.set("lang", "zh")
@@ -192,11 +201,11 @@ async def main():
     channels, programs = await request_all_epg()
     
     # 生成XML EPG
-    xml_tree = generate_xml_epg(channels, programs)  # 重命名變量以反映其類型
+    xml_tree = generate_xml_epg(channels, programs)
     output_file = os.path.join(output_dir, "hami.xml")
     
     # 正確寫入XML文件
-    xml_tree.write(output_file, encoding="utf-8", xml_declaration=True)  # 使用ElementTree的write方法
+    xml_tree.write(output_file, encoding="utf-8", xml_declaration=True)
     
     print(f"電視節目表已成功生成: {output_file}")
     print(f"檔案大小: {os.path.getsize(output_file) / 1024:.2f} KB")
