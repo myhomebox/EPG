@@ -4,12 +4,6 @@
     <display-name lang="zh">倪珍越南語新聞</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_nnews_tv.png"/>
   </channel>
-  <programme channel="倪珍越南語新聞" start="20250723120000 +0800" stop="20250723180000 +0800">
-    <title lang="zh">午安新聞</title>
-  </programme>
-  <programme channel="倪珍越南語新聞" start="20250723180000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">晚安新聞</title>
-  </programme>
   <programme channel="倪珍越南語新聞" start="20250724000000 +0800" stop="20250724060000 +0800">
     <title lang="zh">晚安新聞</title>
   </programme>
@@ -71,12 +65,6 @@
     <display-name lang="zh">倪珍報氣象</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_nnews_tv.png"/>
   </channel>
-  <programme channel="倪珍報氣象" start="20250723120000 +0800" stop="20250723180000 +0800">
-    <title lang="zh">24小時播氣象</title>
-  </programme>
-  <programme channel="倪珍報氣象" start="20250723180000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">24小時播氣象</title>
-  </programme>
   <programme channel="倪珍報氣象" start="20250724000000 +0800" stop="20250724060000 +0800">
     <title lang="zh">24小時播氣象</title>
   </programme>
@@ -138,49 +126,6 @@
     <display-name lang="zh">中天新聞台</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv009_tv.png"/>
   </channel>
-  <programme channel="中天新聞台" start="20250723150000 +0800" stop="20250723160000 +0800">
-    <title lang="zh">15大新聞大爆卦</title>
-    <desc lang="zh">每周一到周五《大新聞大爆卦》中天主播陪你一起來解卦！！！</desc>
-  </programme>
-  <programme channel="中天新聞台" start="20250723160000 +0800" stop="20250723170000 +0800">
-    <title lang="zh">中天新聞 1600整點新聞</title>
-    <desc lang="zh">收看中天新聞帶給你最即時、最完整、最專業的新聞報導。</desc>
-  </programme>
-  <programme channel="中天新聞台" start="20250723170000 +0800" stop="20250723180000 +0800">
-    <title lang="zh">中天新聞 1700整點新聞</title>
-    <desc lang="zh">收看中天新聞帶給你最即時、最完整、最專業的新聞報導。</desc>
-  </programme>
-  <programme channel="中天新聞台" start="20250723180000 +0800" stop="20250723190000 +0800">
-    <title lang="zh">中天辣晚報</title>
-    <desc lang="zh">提供國內、兩岸、國際頭條焦點，掌握時事脈動，觀察新聞背後的真正意義，帶領觀眾知曉天下事。有最深度的內容、最專業的追蹤、最需要的資訊，收視率領先各台，具有高度影響力！</desc>
-  </programme>
-  <programme channel="中天新聞台" start="20250723190000 +0800" stop="20250723200000 +0800">
-    <title lang="zh">中天辣晚報</title>
-    <desc lang="zh">提供國內、兩岸、國際頭條焦點，掌握時事脈動，觀察新聞背後的真正意義，帶領觀眾知曉天下事。有最深度的內容、最專業的追蹤、最需要的資訊，收視率領先各台，具有高度影響力！</desc>
-  </programme>
-  <programme channel="中天新聞台" start="20250723200000 +0800" stop="20250723210000 +0800">
-    <title lang="zh">頭條開講</title>
-    <desc lang="zh">中天新聞為服務廣大觀眾，提供多元論述平台，發揮媒體第四權的社會責任，於十月五日起，週一至週五晚間八點同一時段，接檔推出《頭條開講》談話節目，由主播周玉琴及政治中心主任林嘉源共同主持，敬請支持中天的觀眾朋友準時鎖定！</desc>
-  </programme>
-  <programme channel="中天新聞台" start="20250723210000 +0800" stop="20250723220000 +0800">
-    <title lang="zh">頭條開講</title>
-    <desc lang="zh">中天新聞為服務廣大觀眾，提供多元論述平台，發揮媒體第四權的社會責任，於十月五日起，週一至週五晚間八點同一時段，接檔推出《頭條開講》談話節目，由主播周玉琴及政治中心主任林嘉源共同主持，敬請支持中天的觀眾朋友準時鎖定！</desc>
-  </programme>
-  <programme channel="中天新聞台" start="20250723220000 +0800" stop="20250723230000 +0800">
-    <title lang="zh">中天SUPER夜線</title>
-  </programme>
-  <programme channel="中天新聞台" start="20250723230000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">全球大視野</title>
-    <desc lang="zh">美中，印太，到兩岸。全球新聞不漏接</desc>
-  </programme>
-  <programme channel="中天新聞台" start="20250724000000 +0800" stop="20250724010000 +0800">
-    <title lang="zh">中天辣晚報</title>
-    <desc lang="zh">提供國內、兩岸、國際頭條焦點，掌握時事脈動，觀察新聞背後的真正意義，帶領觀眾知曉天下事。有最深度的內容、最專業的追蹤、最需要的資訊，收視率領先各台，具有高度影響力！</desc>
-  </programme>
-  <programme channel="中天新聞台" start="20250724010000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">中天辣晚報</title>
-    <desc lang="zh">提供國內、兩岸、國際頭條焦點，掌握時事脈動，觀察新聞背後的真正意義，帶領觀眾知曉天下事。有最深度的內容、最專業的追蹤、最需要的資訊，收視率領先各台，具有高度影響力！</desc>
-  </programme>
   <programme channel="中天新聞台" start="20250724020000 +0800" stop="20250724030000 +0800">
     <title lang="zh">頭條開講</title>
     <desc lang="zh">中天新聞為服務廣大觀眾，提供多元論述平台，發揮媒體第四權的社會責任，於十月五日起，週一至週五晚間八點同一時段，接檔推出《頭條開講》談話節目，由主播周玉琴及政治中心主任林嘉源共同主持，敬請支持中天的觀眾朋友準時鎖定！</desc>
@@ -575,73 +520,6 @@
     <display-name lang="zh">台視</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv066_tv.png"/>
   </channel>
-  <programme channel="台視" start="20250723150000 +0800" stop="20250723153000 +0800">
-    <title lang="zh">消費情報讚</title>
-    <desc lang="zh">邀請各領域的專家達人，為大家過濾篩選最健康與安心無慮的生活用品，讓《消費情報讚》站在最前線，幫您一起為食衣住行把關，建造全家人優質與天然的生活品質！ 呼你生活有GO讚！</desc>
-  </programme>
-  <programme channel="台視" start="20250723153000 +0800" stop="20250723163000 +0800">
-    <title lang="zh">生活情報通</title>
-    <desc lang="zh">邀請各領域的專家達人，為大家過濾篩選最健康與安心無慮的生活用品， 讓生活情報通站在最前線，幫您一起為食衣住行把關，建造全家人優質與天然的生活品質！</desc>
-  </programme>
-  <programme channel="台視" start="20250723163000 +0800" stop="20250723165800 +0800">
-    <title lang="zh">神奇故事屋</title>
-    <sub-title lang="zh">蝴蝶遇見公主</sub-title>
-    <desc lang="zh">一直致力推廣兒童閱讀的 GOOD TV，再次與劉清彥老師（阿達叔叔）攜手，推出結合兒童閱讀和行腳的節目《神奇故事屋》，期盼打開兒童視野，讓閱讀走進生活，越讀越有趣。</desc>
-  </programme>
-  <programme channel="台視" start="20250723165800 +0800" stop="20250723172800 +0800">
-    <title lang="zh">我們這一家</title>
-    <sub-title lang="zh">あたしンち</sub-title>
-    <desc lang="zh">好笑的橘子、神經大條的花媽、憨厚的花爸加上悶騷的柚子組成的我們這一家，每天都發生許多爆笑有趣的事情，充滿歡樂的生活化情節，貼近你我的生活，你一定要收看。</desc>
-  </programme>
-  <programme channel="台視" start="20250723172800 +0800" stop="20250723175800 +0800">
-    <title lang="zh">我們這一家</title>
-    <sub-title lang="zh">あたしンち</sub-title>
-    <desc lang="zh">好笑的橘子、神經大條的花媽、憨厚的花爸加上悶騷的柚子組成的我們這一家，每天都發生許多爆笑有趣的事情，充滿歡樂的生活化情節，貼近你我的生活，你一定要收看。</desc>
-  </programme>
-  <programme channel="台視" start="20250723175800 +0800" stop="20250723182800 +0800">
-    <title lang="zh">蠟筆小新</title>
-    <sub-title lang="zh">Crayon Shin-chan</sub-title>
-    <desc lang="zh">主角是個年僅5歲的幼稚園小男孩新之助，作者臼井儀人從日常生活中取材，敘述在小新生活周遭所發生的事情，在他小小的腦袋裡有一些大人的想法，而經過他表現出來的動作，常令人大笑不已。《蠟筆小新》會帶給您意想不到的輕鬆感受。</desc>
-  </programme>
-  <programme channel="台視" start="20250723182800 +0800" stop="20250723185800 +0800">
-    <title lang="zh">蠟筆小新</title>
-    <sub-title lang="zh">Crayon Shin-chan</sub-title>
-    <desc lang="zh">主角是個年僅5歲的幼稚園小男孩新之助，作者臼井儀人從日常生活中取材，敘述在小新生活周遭所發生的事情，在他小小的腦袋裡有一些大人的想法，而經過他表現出來的動作，常令人大笑不已。《蠟筆小新》會帶給您意想不到的輕鬆感受。</desc>
-  </programme>
-  <programme channel="台視" start="20250723185800 +0800" stop="20250723200000 +0800">
-    <title lang="zh">台視晚間新聞</title>
-    <desc lang="zh">由最專業的台視主播，每日為觀眾提供即時新聞與專業的追蹤報導。</desc>
-  </programme>
-  <programme channel="台視" start="20250723200000 +0800" stop="20250723210000 +0800">
-    <title lang="zh">寶島西米樂</title>
-    <sub-title lang="zh">#37</sub-title>
-    <desc lang="zh">台灣首部以「女西裝師」為主角的職人劇。背景設於五、六○年代，描繪女性在當時男性主導的西裝產業中，如何克服重重挑戰、成為優秀的西裝師。期盼觀眾在欣賞劇中精湛演繹之餘，也能體會這份深具職人精神的動人故事。</desc>
-  </programme>
-  <programme channel="台視" start="20250723210000 +0800" stop="20250723220000 +0800">
-    <title lang="zh">寶島西米樂</title>
-    <sub-title lang="zh">#37</sub-title>
-    <desc lang="zh">台灣首部以「女西裝師」為主角的職人劇。背景設於五、六○年代，描繪女性在當時男性主導的西裝產業中，如何克服重重挑戰、成為優秀的西裝師。期盼觀眾在欣賞劇中精湛演繹之餘，也能體會這份深具職人精神的動人故事。</desc>
-  </programme>
-  <programme channel="台視" start="20250723220000 +0800" stop="20250723230000 +0800">
-    <title lang="zh">美麗人生</title>
-    <sub-title lang="zh">S5壯志高飛,#245</sub-title>
-    <desc lang="zh">台視60周年台慶大戲，以旗津半島的產業由盛到衰，到後來發展重啟、居民返鄉為背景，展開兩代人糾纏的恩怨情仇與奮鬥故事。透過王樂仙（王樂妍）、張玉琴（邱琦雯）、和許勉（方馨）三位個性迥異的女人，看台灣女人如何走過那個美好年代…</desc>
-  </programme>
-  <programme channel="台視" start="20250723230000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">寶島西米樂</title>
-    <sub-title lang="zh">#37</sub-title>
-    <desc lang="zh">台灣首部以「女西裝師」為主角的職人劇。背景設於五、六○年代，描繪女性在當時男性主導的西裝產業中，如何克服重重挑戰、成為優秀的西裝師。期盼觀眾在欣賞劇中精湛演繹之餘，也能體會這份深具職人精神的動人故事。</desc>
-  </programme>
-  <programme channel="台視" start="20250724000000 +0800" stop="20250724010000 +0800">
-    <title lang="zh">美麗人生</title>
-    <sub-title lang="zh">S5壯志高飛,#245</sub-title>
-    <desc lang="zh">台視60周年台慶大戲，以旗津半島的產業由盛到衰，到後來發展重啟、居民返鄉為背景，展開兩代人糾纏的恩怨情仇與奮鬥故事。透過王樂仙（王樂妍）、張玉琴（邱琦雯）、和許勉（方馨）三位個性迥異的女人，看台灣女人如何走過那個美好年代…</desc>
-  </programme>
-  <programme channel="台視" start="20250724010000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">360行向前衝</title>
-    <sub-title lang="zh">360 Work</sub-title>
-    <desc lang="zh">360行，行行都可以出狀元，節目中介紹各行各業的專業達人和達人們畢生努力的過程。</desc>
-  </programme>
   <programme channel="台視" start="20250724020000 +0800" stop="20250724030000 +0800">
     <title lang="zh">益起看世界</title>
     <sub-title lang="zh">仁勳訪中 H20銷售解禁</sub-title>
@@ -1141,57 +1019,6 @@
     <display-name lang="zh">中視</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv040_tv.png"/>
   </channel>
-  <programme channel="中視" start="20250723150000 +0800" stop="20250723153000 +0800">
-    <title lang="zh">價值型投資</title>
-    <desc lang="zh">當行情出現震盪、盤勢不明時，相信投資人一定會開始轉向價值型投資，節目中將推薦適合的標的，提供投資人參考。</desc>
-  </programme>
-  <programme channel="中視" start="20250723153000 +0800" stop="20250723160000 +0800">
-    <title lang="zh">股市薇積分</title>
-  </programme>
-  <programme channel="中視" start="20250723160000 +0800" stop="20250723170000 +0800">
-    <title lang="zh">繞著幸福轉</title>
-  </programme>
-  <programme channel="中視" start="20250723170000 +0800" stop="20250723172800 +0800">
-    <title lang="zh">中視新聞</title>
-  </programme>
-  <programme channel="中視" start="20250723172800 +0800" stop="20250723175800 +0800">
-    <title lang="zh">中視新聞</title>
-  </programme>
-  <programme channel="中視" start="20250723175800 +0800" stop="20250723185800 +0800">
-    <title lang="zh">中視新聞</title>
-  </programme>
-  <programme channel="中視" start="20250723185800 +0800" stop="20250723200000 +0800">
-    <title lang="zh">中視新聞全球報導</title>
-    <desc lang="zh">中視每晚七點由主播哈遠儀為全國觀眾最專業、準確的新聞報導。</desc>
-  </programme>
-  <programme channel="中視" start="20250723200000 +0800" stop="20250723210000 +0800">
-    <title lang="zh">祕書俱樂部</title>
-    <sub-title lang="zh">Who's The Boss</sub-title>
-    <desc lang="zh">Cindy王是個事業心強，對自己嚴格的狠人，她希望35歲前升官成為總監，幸運的她終於贏來機會，沒想到卻因為得罪人遭到陷害，不僅總監的位子拱手讓給死對頭高双芸，還淪落到成為她的祕書！Cindy王忍氣吞聲準備利用祕書的職務，找出陷害她的人，一步步爬回屬於她的位子。</desc>
-  </programme>
-  <programme channel="中視" start="20250723210000 +0800" stop="20250723220000 +0800">
-    <title lang="zh">祕書俱樂部</title>
-    <sub-title lang="zh">Who's The Boss</sub-title>
-    <desc lang="zh">Cindy王是個事業心強，對自己嚴格的狠人，她希望35歲前升官成為總監，幸運的她終於贏來機會，沒想到卻因為得罪人遭到陷害，不僅總監的位子拱手讓給死對頭高双芸，還淪落到成為她的祕書！Cindy王忍氣吞聲準備利用祕書的職務，找出陷害她的人，一步步爬回屬於她的位子。</desc>
-  </programme>
-  <programme channel="中視" start="20250723220000 +0800" stop="20250723230000 +0800">
-    <title lang="zh">MIT台灣誌</title>
-    <desc lang="zh">「MIT台灣誌」以發現台灣、寫真台灣、紀錄台灣為主旨，走遍台灣的每寸土地，介紹台灣的人文環境、大自然地理等…</desc>
-  </programme>
-  <programme channel="中視" start="20250723230000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">大陸尋奇</title>
-    <desc lang="zh">您不必跋山涉水就可以將奇峰峻嶺壯闊山河盡收眼底，「大陸尋奇」不惜巨資的大製作足跡踏遍各現代城市，窮鄉僻壤，深入各民族村落，記錄了外人難得一見的生活情況，以準確的地理、歷史定位、用現代化思維，把中華文化忠實的呈現。</desc>
-  </programme>
-  <programme channel="中視" start="20250724000000 +0800" stop="20250724010000 +0800">
-    <title lang="zh">祕書俱樂部</title>
-    <sub-title lang="zh">Who's The Boss</sub-title>
-    <desc lang="zh">Cindy王是個事業心強，對自己嚴格的狠人，她希望35歲前升官成為總監，幸運的她終於贏來機會，沒想到卻因為得罪人遭到陷害，不僅總監的位子拱手讓給死對頭高双芸，還淪落到成為她的祕書！Cindy王忍氣吞聲準備利用祕書的職務，找出陷害她的人，一步步爬回屬於她的位子。</desc>
-  </programme>
-  <programme channel="中視" start="20250724010000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">祕書俱樂部</title>
-    <sub-title lang="zh">Who's The Boss</sub-title>
-    <desc lang="zh">Cindy王是個事業心強，對自己嚴格的狠人，她希望35歲前升官成為總監，幸運的她終於贏來機會，沒想到卻因為得罪人遭到陷害，不僅總監的位子拱手讓給死對頭高双芸，還淪落到成為她的祕書！Cindy王忍氣吞聲準備利用祕書的職務，找出陷害她的人，一步步爬回屬於她的位子。</desc>
-  </programme>
   <programme channel="中視" start="20250724020000 +0800" stop="20250724030000 +0800">
     <title lang="zh">中視新聞</title>
   </programme>
@@ -1583,60 +1410,6 @@
     <display-name lang="zh">華視</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv041_tv.png"/>
   </channel>
-  <programme channel="華視" start="20250723140000 +0800" stop="20250723160000 +0800">
-    <title lang="zh">警世劇場</title>
-    <sub-title lang="zh">#93_愛再驚聲尖叫時(上)</sub-title>
-    <desc lang="zh">社會寫實單元劇，劇情效法《X檔案》，以現代辦案的角度來切入鬼神之說，用以警惕世人。篤信科學辦案精神的刑警尚智（謝祖武）有心理學博士學位，他與先天具有陰陽眼的搭檔王玉芳（趙英華），共同調查各種無法用科學解釋的案件，為死者伸冤…</desc>
-  </programme>
-  <programme channel="華視" start="20250723160000 +0800" stop="20250723165300 +0800">
-    <title lang="zh">華視在地新聞</title>
-    <desc lang="zh">以台語發音，提供觀眾朋友不一樣的國內外新聞。</desc>
-  </programme>
-  <programme channel="華視" start="20250723165300 +0800" stop="20250723165800 +0800">
-    <title lang="zh">華視生活廣場</title>
-    <desc lang="zh">華視生活廣場。</desc>
-  </programme>
-  <programme channel="華視" start="20250723165800 +0800" stop="20250723185800 +0800">
-    <title lang="zh">華視新聞晚報</title>
-    <desc lang="zh">華視新聞部每天整理當天重大國內外新聞事件，為觀眾做最快、最即時的播報。</desc>
-  </programme>
-  <programme channel="華視" start="20250723185800 +0800" stop="20250723200000 +0800">
-    <title lang="zh">華視晚間新聞</title>
-    <desc lang="zh">以最客觀的角度，最專業的主播，為觀眾完整報導國內外重要新聞。</desc>
-  </programme>
-  <programme channel="華視" start="20250723200000 +0800" stop="20250723210000 +0800">
-    <title lang="zh">我的婆婆怎麼那麼可愛2</title>
-    <sub-title lang="zh">#15</sub-title>
-    <desc lang="zh">知名鳳梨酥店老闆娘蘇林彩香（鍾欣凌）如今財富自由、身體堪用、愛情穩定，還有小鷗（黃姵嘉）和發貴（張書偉）承歡膝下，生活快意。從未經歷婆媳關係的彩香將面對一哥（洪都拉斯）的媽媽（丁也恬），小鷗將以過來人身分助她跨越重重考驗…</desc>
-  </programme>
-  <programme channel="華視" start="20250723210000 +0800" stop="20250723220000 +0800">
-    <title lang="zh">我的婆婆怎麼那麼可愛2</title>
-    <sub-title lang="zh">#16</sub-title>
-    <desc lang="zh">知名鳳梨酥店老闆娘蘇林彩香（鍾欣凌）如今財富自由、身體堪用、愛情穩定，還有小鷗（黃姵嘉）和發貴（張書偉）承歡膝下，生活快意。從未經歷婆媳關係的彩香將面對一哥（洪都拉斯）的媽媽（丁也恬），小鷗將以過來人身分助她跨越重重考驗…</desc>
-  </programme>
-  <programme channel="華視" start="20250723220000 +0800" stop="20250723230000 +0800">
-    <title lang="zh">第一世家</title>
-    <sub-title lang="zh">#32</sub-title>
-    <desc lang="zh">本劇描述賴水泉家庭三位子女的婚姻及家族興衰史，表現該家族如何與鄉里共存共榮，並描繪出台灣五十年來的成長過程及族群融合的軌跡。</desc>
-  </programme>
-  <programme channel="華視" start="20250723230000 +0800" stop="20250723235500 +0800">
-    <title lang="zh">華視夜間新聞</title>
-    <desc lang="zh">提供觀眾朋友重要的國內外大事。</desc>
-  </programme>
-  <programme channel="華視" start="20250723235500 +0800" stop="20250724000000 +0800">
-    <title lang="zh">華視生活廣場</title>
-    <desc lang="zh">華視生活廣場。</desc>
-  </programme>
-  <programme channel="華視" start="20250724000000 +0800" stop="20250724010000 +0800">
-    <title lang="zh">我的婆婆怎麼那麼可愛2</title>
-    <sub-title lang="zh">#15</sub-title>
-    <desc lang="zh">知名鳳梨酥店老闆娘蘇林彩香（鍾欣凌）如今財富自由、身體堪用、愛情穩定，還有小鷗（黃姵嘉）和發貴（張書偉）承歡膝下，生活快意。從未經歷婆媳關係的彩香將面對一哥（洪都拉斯）的媽媽（丁也恬），小鷗將以過來人身分助她跨越重重考驗…</desc>
-  </programme>
-  <programme channel="華視" start="20250724010000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">我的婆婆怎麼那麼可愛2</title>
-    <sub-title lang="zh">#16</sub-title>
-    <desc lang="zh">知名鳳梨酥店老闆娘蘇林彩香（鍾欣凌）如今財富自由、身體堪用、愛情穩定，還有小鷗（黃姵嘉）和發貴（張書偉）承歡膝下，生活快意。從未經歷婆媳關係的彩香將面對一哥（洪都拉斯）的媽媽（丁也恬），小鷗將以過來人身分助她跨越重重考驗…</desc>
-  </programme>
   <programme channel="華視" start="20250724020000 +0800" stop="20250724030000 +0800">
     <title lang="zh">第一世家</title>
     <sub-title lang="zh">#32</sub-title>
@@ -2069,50 +1842,6 @@
     <display-name lang="zh">台視新聞</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv051_tv.png"/>
   </channel>
-  <programme channel="台視新聞" start="20250723150000 +0800" stop="20250723160000 +0800">
-    <title lang="zh">台視1500整點新聞</title>
-    <desc lang="zh">台視整點新聞播報。</desc>
-  </programme>
-  <programme channel="台視新聞" start="20250723160000 +0800" stop="20250723170000 +0800">
-    <title lang="zh">台視1600整點新聞</title>
-    <desc lang="zh">台視整點新聞播報。</desc>
-  </programme>
-  <programme channel="台視新聞" start="20250723170000 +0800" stop="20250723175500 +0800">
-    <title lang="zh">台視1700整點新聞</title>
-    <desc lang="zh">台視頻道整點新聞播報。</desc>
-  </programme>
-  <programme channel="台視新聞" start="20250723175500 +0800" stop="20250723185800 +0800">
-    <title lang="zh">台視新聞全球現場</title>
-    <desc lang="zh">由台視主播為觀眾帶來的國際間新聞，帶給各位最專業、完整、深入的新聞報導。</desc>
-  </programme>
-  <programme channel="台視新聞" start="20250723185800 +0800" stop="20250723195900 +0800">
-    <title lang="zh">台視晚間新聞</title>
-    <desc lang="zh">由最專業的台視主播，每日為觀眾提供即時新聞與專業的追蹤報導。</desc>
-  </programme>
-  <programme channel="台視新聞" start="20250723195900 +0800" stop="20250723210000 +0800">
-    <title lang="zh">台視2000整點新聞</title>
-    <desc lang="zh">台視頻道整點新聞播報。</desc>
-  </programme>
-  <programme channel="台視新聞" start="20250723210000 +0800" stop="20250723220000 +0800">
-    <title lang="zh">台視新聞世界報導</title>
-    <desc lang="zh">由台視主播從您的觀點看新聞，提供今日世界新聞，拓展觀眾視野。</desc>
-  </programme>
-  <programme channel="台視新聞" start="20250723220000 +0800" stop="20250723230000 +0800">
-    <title lang="zh">晚安台灣</title>
-    <desc lang="zh">台視新聞團隊整合當天即時新聞，讓觀眾掌握時事脈動。</desc>
-  </programme>
-  <programme channel="台視新聞" start="20250723230000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">台視夜線新聞</title>
-    <desc lang="zh">台視新聞團隊整合當天即時新聞，讓觀眾掌握時事脈動。</desc>
-  </programme>
-  <programme channel="台視新聞" start="20250724000000 +0800" stop="20250724010000 +0800">
-    <title lang="zh">晚安台灣</title>
-    <desc lang="zh">台視新聞團隊整合當天即時新聞，讓觀眾掌握時事脈動。</desc>
-  </programme>
-  <programme channel="台視新聞" start="20250724010000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">台視新聞世界報導</title>
-    <desc lang="zh">由台視主播從您的觀點看新聞，提供今日世界新聞，拓展觀眾視野。</desc>
-  </programme>
   <programme channel="台視新聞" start="20250724020000 +0800" stop="20250724030000 +0800">
     <title lang="zh">台視晚間新聞</title>
     <desc lang="zh">由最專業的台視主播，每日為觀眾提供即時新聞與專業的追蹤報導。</desc>
@@ -2612,44 +2341,6 @@
     <display-name lang="zh">華視新聞</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv052_tv.png"/>
   </channel>
-  <programme channel="華視新聞" start="20250723150000 +0800" stop="20250723160000 +0800">
-    <title lang="zh">華視1500整點新聞</title>
-    <desc lang="zh">以最客觀的角度，最專業的主播，為觀眾完整報導上午發生之重大國內外重要新聞。</desc>
-  </programme>
-  <programme channel="華視新聞" start="20250723160000 +0800" stop="20250723165300 +0800">
-    <title lang="zh">華視在地新聞</title>
-    <desc lang="zh">以台語發音，提供觀眾朋友不一樣的國內外新聞。</desc>
-  </programme>
-  <programme channel="華視新聞" start="20250723165300 +0800" stop="20250723200000 +0800">
-    <title lang="zh">華視新聞晚報</title>
-    <desc lang="zh">華視新聞部每天整理當天重大國內外新聞事件，為觀眾做最快、最即時的播報。</desc>
-  </programme>
-  <programme channel="華視新聞" start="20250723200000 +0800" stop="20250723210000 +0800">
-    <title lang="zh">華視2000整點新聞</title>
-    <desc lang="zh">以最客觀的角度，最專業的主播，為觀眾完整報導國內外重要新聞。</desc>
-  </programme>
-  <programme channel="華視新聞" start="20250723210000 +0800" stop="20250723220000 +0800">
-    <title lang="zh">World News 9</title>
-    <sub-title lang="zh">世界新聞9</sub-title>
-    <desc lang="zh">華視新聞製作，帶給觀眾最公正客觀的新聞視野，由優質主播與新聞團隊聯手打造，每日提供最新最即時的各種國際新聞。</desc>
-  </programme>
-  <programme channel="華視新聞" start="20250723220000 +0800" stop="20250723230000 +0800">
-    <title lang="zh">52政經點</title>
-    <desc lang="zh">由莊惠琪主播，每週一至五晚間十點，不論政治、財經或國際時事，帶你乾淨聆聽世界，看進新聞最深處，讀懂世界變化。幕後由華視新聞團隊的資深記者群以數據、學者解析與多元觀點，理性客觀分析政治經濟時事，給您一個小時滿滿含金量！</desc>
-  </programme>
-  <programme channel="華視新聞" start="20250723230000 +0800" stop="20250723235500 +0800">
-    <title lang="zh">華視夜間新聞</title>
-    <desc lang="zh">提供觀眾朋友重要的國內外大事。</desc>
-  </programme>
-  <programme channel="華視新聞" start="20250723235500 +0800" stop="20250724010000 +0800">
-    <title lang="zh">華視2400夜間新聞</title>
-    <desc lang="zh">由專業華視主播帶來最即時、最完整、最專業的新聞報導。</desc>
-  </programme>
-  <programme channel="華視新聞" start="20250724010000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">World News 9</title>
-    <sub-title lang="zh">世界新聞9</sub-title>
-    <desc lang="zh">華視新聞製作，帶給觀眾最公正客觀的新聞視野，由優質主播與新聞團隊聯手打造，每日提供最新最即時的各種國際新聞。</desc>
-  </programme>
   <programme channel="華視新聞" start="20250724020000 +0800" stop="20250724030000 +0800">
     <title lang="zh">華視2400夜間新聞</title>
     <desc lang="zh">由專業華視主播帶來最即時、最完整、最專業的新聞報導。</desc>
@@ -3069,45 +2760,6 @@
     <display-name lang="zh">中視新聞</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv074_tv.png"/>
   </channel>
-  <programme channel="中視新聞" start="20250723150000 +0800" stop="20250723160000 +0800">
-    <title lang="zh">中視新聞即時現場</title>
-    <desc lang="zh">由主播蕭惠文播報，以SNG車讓觀眾看到最即時的新聞報導，並以最客觀的角度，為觀眾完整報導上午發生之重要新聞。</desc>
-  </programme>
-  <programme channel="中視新聞" start="20250723160000 +0800" stop="20250723170000 +0800">
-    <title lang="zh">庶民大頭家</title>
-  </programme>
-  <programme channel="中視新聞" start="20250723170000 +0800" stop="20250723180000 +0800">
-    <title lang="zh">庶民大頭家</title>
-  </programme>
-  <programme channel="中視新聞" start="20250723180000 +0800" stop="20250723185800 +0800">
-    <title lang="zh">中視新聞全球報導</title>
-    <desc lang="zh">中視每晚七點由主播哈遠儀為全國觀眾最專業、準確的新聞報導。</desc>
-  </programme>
-  <programme channel="中視新聞" start="20250723185800 +0800" stop="20250723200000 +0800">
-    <title lang="zh">中視新聞全球報導</title>
-    <desc lang="zh">中視每晚七點由主播哈遠儀為全國觀眾最專業、準確的新聞報導。</desc>
-  </programme>
-  <programme channel="中視新聞" start="20250723200000 +0800" stop="20250723210000 +0800">
-    <title lang="zh">庶民大頭家</title>
-  </programme>
-  <programme channel="中視新聞" start="20250723210000 +0800" stop="20250723220000 +0800">
-    <title lang="zh">庶民大頭家</title>
-  </programme>
-  <programme channel="中視新聞" start="20250723220000 +0800" stop="20250723230000 +0800">
-    <title lang="zh">中視新聞即時現場</title>
-    <desc lang="zh">由主播蕭惠文播報，以SNG車讓觀眾看到最即時的新聞報導，並以最客觀的角度，為觀眾完整報導上午發生之重要新聞。</desc>
-  </programme>
-  <programme channel="中視新聞" start="20250723230000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">中視新聞全球報導</title>
-    <desc lang="zh">中視每晚七點由主播哈遠儀為全國觀眾最專業、準確的新聞報導。</desc>
-  </programme>
-  <programme channel="中視新聞" start="20250724000000 +0800" stop="20250724010000 +0800">
-    <title lang="zh">中視新聞即時現場</title>
-    <desc lang="zh">由主播蕭惠文播報，以SNG車讓觀眾看到最即時的新聞報導，並以最客觀的角度，為觀眾完整報導上午發生之重要新聞。</desc>
-  </programme>
-  <programme channel="中視新聞" start="20250724010000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">庶民大頭家</title>
-  </programme>
   <programme channel="中視新聞" start="20250724020000 +0800" stop="20250724030000 +0800">
     <title lang="zh">庶民大頭家</title>
   </programme>
@@ -3503,12 +3155,6 @@
     <display-name lang="zh">國會頻道1台</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv084_tv.png"/>
   </channel>
-  <programme channel="國會頻道1台" start="20250723090000 +0800" stop="20250723180000 +0800">
-    <title lang="zh">立法院會議直播</title>
-  </programme>
-  <programme channel="國會頻道1台" start="20250723180000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">當日立法院會議轉播</title>
-  </programme>
   <programme channel="國會頻道1台" start="20250724000000 +0800" stop="20250724050000 +0800">
     <title lang="zh">前日立法院會議轉播</title>
   </programme>
@@ -3591,12 +3237,6 @@
     <display-name lang="zh">國會頻道2台</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv085_tv.png"/>
   </channel>
-  <programme channel="國會頻道2台" start="20250723090000 +0800" stop="20250723180000 +0800">
-    <title lang="zh">立法院會議直播</title>
-  </programme>
-  <programme channel="國會頻道2台" start="20250723180000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">當日立法院會議轉播</title>
-  </programme>
   <programme channel="國會頻道2台" start="20250724000000 +0800" stop="20250724050000 +0800">
     <title lang="zh">前日立法院會議轉播</title>
   </programme>
@@ -3679,61 +3319,6 @@
     <display-name lang="zh">亞洲旅遊台</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_4gtv_litv-longturn17_tv.png"/>
   </channel>
-  <programme channel="亞洲旅遊台" start="20250723150000 +0800" stop="20250723160000 +0800">
-    <title lang="zh">嗨 Let’s Go</title>
-    <sub-title lang="zh">#6_動漫瘋闖關 玩轉海世界</sub-title>
-    <desc lang="zh">旅行該怎麼玩呢？有人喜歡吃美食、看風景、體驗人文與歷史；也有人只想瘋血拼、追潮流、享奢華；更有人愛自然、愛冒險，當起背包客最逍遙！其實，無論哪種旅遊方式和玩法，只要懂門道，都能玩出最精彩！</desc>
-  </programme>
-  <programme channel="亞洲旅遊台" start="20250723160000 +0800" stop="20250723170000 +0800">
-    <title lang="zh">食在有健康</title>
-    <sub-title lang="zh">#83</sub-title>
-    <desc lang="zh">跟著詹姆士和潘懷宗博士就能輕鬆學料理！只是品嚐美食之餘，身體健康也要懂得把關，每集都會傳授生活健康資訊，破除一般飲食迷思，讓大家吃得美味、活得健康！</desc>
-  </programme>
-  <programme channel="亞洲旅遊台" start="20250723170000 +0800" stop="20250723180000 +0800">
-    <title lang="zh">智富食代</title>
-    <sub-title lang="zh">#99</sub-title>
-    <desc lang="zh">顛覆傳統旅遊節目，而是以全新新聞性、知識性旅遊資訊節目，呈現觀眾眼前。輕鬆有趣的內容中，將觀光經濟數字、各地房價、消費指數及各地風土民情融入結合。要學怎麼贏、先學怎麼玩！女漢子兩條路線PK旅行大挑戰。</desc>
-  </programme>
-  <programme channel="亞洲旅遊台" start="20250723180000 +0800" stop="20250723190000 +0800">
-    <title lang="zh">驚奇大冒險</title>
-    <sub-title lang="zh">#10_驚心樹蟲─泰國（三）</sub-title>
-    <desc lang="zh">帶您深入各國體驗在地文化，貼近當地人民的生活，真實呈現秘境探險、 尋找奇景的過程，讓您知道怎麼玩才好玩，怎麼玩才刺激！</desc>
-  </programme>
-  <programme channel="亞洲旅遊台" start="20250723190000 +0800" stop="20250723200000 +0800">
-    <title lang="zh">33廚房</title>
-    <sub-title lang="zh">#54</sub-title>
-    <desc lang="zh">電影圈的大明星林美秀首度跨足綜藝接主持棒，即將大展廚藝與觀眾們一起美味上菜！</desc>
-  </programme>
-  <programme channel="亞洲旅遊台" start="20250723200000 +0800" stop="20250723210000 +0800">
-    <title lang="zh">王子的移動城堡</title>
-    <sub-title lang="zh">S2,#3</sub-title>
-    <desc lang="zh">以介紹露營車旅遊行程的節目，第二季將加入新的元素，還邀請混血名模Akemi與錦榮一同主持。帶觀眾深度了解當地文化，隨當地農民進入他們的生活，並體驗他們的日常工作，快跟著錦榮與Akemi一起開著露營車去旅行！</desc>
-  </programme>
-  <programme channel="亞洲旅遊台" start="20250723210000 +0800" stop="20250723220000 +0800">
-    <title lang="zh">嗨 Let’s Go</title>
-    <sub-title lang="zh">#6_動漫瘋闖關 玩轉海世界</sub-title>
-    <desc lang="zh">旅行該怎麼玩呢？有人喜歡吃美食、看風景、體驗人文與歷史；也有人只想瘋血拼、追潮流、享奢華；更有人愛自然、愛冒險，當起背包客最逍遙！其實，無論哪種旅遊方式和玩法，只要懂門道，都能玩出最精彩！</desc>
-  </programme>
-  <programme channel="亞洲旅遊台" start="20250723220000 +0800" stop="20250723230000 +0800">
-    <title lang="zh">食在有健康</title>
-    <sub-title lang="zh">#83</sub-title>
-    <desc lang="zh">跟著詹姆士和潘懷宗博士就能輕鬆學料理！只是品嚐美食之餘，身體健康也要懂得把關，每集都會傳授生活健康資訊，破除一般飲食迷思，讓大家吃得美味、活得健康！</desc>
-  </programme>
-  <programme channel="亞洲旅遊台" start="20250723230000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">智富食代</title>
-    <sub-title lang="zh">#99</sub-title>
-    <desc lang="zh">顛覆傳統旅遊節目，而是以全新新聞性、知識性旅遊資訊節目，呈現觀眾眼前。輕鬆有趣的內容中，將觀光經濟數字、各地房價、消費指數及各地風土民情融入結合。要學怎麼贏、先學怎麼玩！女漢子兩條路線PK旅行大挑戰。</desc>
-  </programme>
-  <programme channel="亞洲旅遊台" start="20250724000000 +0800" stop="20250724010000 +0800">
-    <title lang="zh">驚奇大冒險</title>
-    <sub-title lang="zh">#11_天體營瀑布─泰國（四）</sub-title>
-    <desc lang="zh">帶您深入各國體驗在地文化，貼近當地人民的生活，真實呈現秘境探險、 尋找奇景的過程，讓您知道怎麼玩才好玩，怎麼玩才刺激！</desc>
-  </programme>
-  <programme channel="亞洲旅遊台" start="20250724010000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">智富食代</title>
-    <sub-title lang="zh">#100</sub-title>
-    <desc lang="zh">顛覆傳統旅遊節目，而是以全新新聞性、知識性旅遊資訊節目，呈現觀眾眼前。輕鬆有趣的內容中，將觀光經濟數字、各地房價、消費指數及各地風土民情融入結合。要學怎麼贏、先學怎麼玩！女漢子兩條路線PK旅行大挑戰。</desc>
-  </programme>
   <programme channel="亞洲旅遊台" start="20250724020000 +0800" stop="20250724030000 +0800">
     <title lang="zh">33廚房</title>
     <sub-title lang="zh">#55</sub-title>
@@ -4293,51 +3878,6 @@
     <display-name lang="zh">東森購物1台</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv102_tv.png"/>
   </channel>
-  <programme channel="東森購物1台" start="20250723160000 +0800" stop="20250723164000 +0800">
-    <title lang="zh">7/1-7/31滿5000元回饋300E幣，滿1萬元升級回饋1000E幣</title>
-  </programme>
-  <programme channel="東森購物1台" start="20250723164000 +0800" stop="20250723172000 +0800">
-    <title lang="zh">快到CH.43、CH.49選購</title>
-  </programme>
-  <programme channel="東森購物1台" start="20250723172000 +0800" stop="20250723180000 +0800">
-    <title lang="zh">7/1-7/31滿5000元回饋300E幣，滿1萬元升級回饋1000E幣</title>
-  </programme>
-  <programme channel="東森購物1台" start="20250723180000 +0800" stop="20250723184000 +0800">
-    <title lang="zh">快到CH.43、CH.49選購</title>
-  </programme>
-  <programme channel="東森購物1台" start="20250723184000 +0800" stop="20250723192000 +0800">
-    <title lang="zh">7/1-7/31滿5000元回饋300E幣，滿1萬元升級回饋1000E幣</title>
-  </programme>
-  <programme channel="東森購物1台" start="20250723192000 +0800" stop="20250723200000 +0800">
-    <title lang="zh">快到CH.43、CH.49選購</title>
-  </programme>
-  <programme channel="東森購物1台" start="20250723200000 +0800" stop="20250723204000 +0800">
-    <title lang="zh">7/1-7/31滿5000元回饋300E幣，滿1萬元升級回饋1000E幣</title>
-  </programme>
-  <programme channel="東森購物1台" start="20250723204000 +0800" stop="20250723212000 +0800">
-    <title lang="zh">快到CH.43、CH.49選購</title>
-  </programme>
-  <programme channel="東森購物1台" start="20250723212000 +0800" stop="20250723220000 +0800">
-    <title lang="zh">7/1-7/31滿5000元回饋300E幣，滿1萬元升級回饋1000E幣</title>
-  </programme>
-  <programme channel="東森購物1台" start="20250723220000 +0800" stop="20250723224000 +0800">
-    <title lang="zh">快到CH.43、CH.49選購</title>
-  </programme>
-  <programme channel="東森購物1台" start="20250723224000 +0800" stop="20250723232000 +0800">
-    <title lang="zh">7/1-7/31滿5000元回饋300E幣，滿1萬元升級回饋1000E幣</title>
-  </programme>
-  <programme channel="東森購物1台" start="20250723232000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">快到CH.43、CH.49選購</title>
-  </programme>
-  <programme channel="東森購物1台" start="20250724000000 +0800" stop="20250724004000 +0800">
-    <title lang="zh">7/1-7/31滿5000元回饋300E幣，滿1萬元升級回饋1000E幣</title>
-  </programme>
-  <programme channel="東森購物1台" start="20250724004000 +0800" stop="20250724012000 +0800">
-    <title lang="zh">快到CH.43、CH.49選購</title>
-  </programme>
-  <programme channel="東森購物1台" start="20250724012000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">7/1-7/31滿5000元回饋300E幣，滿1萬元升級回饋1000E幣</title>
-  </programme>
   <programme channel="東森購物1台" start="20250724020000 +0800" stop="20250724024000 +0800">
     <title lang="zh">快到CH.43、CH.49選購</title>
   </programme>
@@ -4840,57 +4380,6 @@
     <display-name lang="zh">東森購物2台</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv103_tv.png"/>
   </channel>
-  <programme channel="東森購物2台" start="20250723144000 +0800" stop="20250723152000 +0800">
-    <title lang="zh">7/1-7/31滿5000元回饋300E幣，滿1萬元升級回饋1000E幣</title>
-  </programme>
-  <programme channel="東森購物2台" start="20250723152000 +0800" stop="20250723160000 +0800">
-    <title lang="zh">快到CH.43、CH.49選購</title>
-  </programme>
-  <programme channel="東森購物2台" start="20250723160000 +0800" stop="20250723164000 +0800">
-    <title lang="zh">7/1-7/31滿5000元回饋300E幣，滿1萬元升級回饋1000E幣</title>
-  </programme>
-  <programme channel="東森購物2台" start="20250723164000 +0800" stop="20250723172000 +0800">
-    <title lang="zh">快到CH.43、CH.49選購</title>
-  </programme>
-  <programme channel="東森購物2台" start="20250723172000 +0800" stop="20250723180000 +0800">
-    <title lang="zh">7/1-7/31滿5000元回饋300E幣，滿1萬元升級回饋1000E幣</title>
-  </programme>
-  <programme channel="東森購物2台" start="20250723180000 +0800" stop="20250723184000 +0800">
-    <title lang="zh">快到CH.43、CH.49選購</title>
-  </programme>
-  <programme channel="東森購物2台" start="20250723184000 +0800" stop="20250723192000 +0800">
-    <title lang="zh">7/1-7/31滿5000元回饋300E幣，滿1萬元升級回饋1000E幣</title>
-  </programme>
-  <programme channel="東森購物2台" start="20250723192000 +0800" stop="20250723200000 +0800">
-    <title lang="zh">快到CH.43、CH.49選購</title>
-  </programme>
-  <programme channel="東森購物2台" start="20250723200000 +0800" stop="20250723204000 +0800">
-    <title lang="zh">7/1-7/31滿5000元回饋300E幣，滿1萬元升級回饋1000E幣</title>
-  </programme>
-  <programme channel="東森購物2台" start="20250723204000 +0800" stop="20250723212000 +0800">
-    <title lang="zh">快到CH.43、CH.49選購</title>
-  </programme>
-  <programme channel="東森購物2台" start="20250723212000 +0800" stop="20250723220000 +0800">
-    <title lang="zh">7/1-7/31滿5000元回饋300E幣，滿1萬元升級回饋1000E幣</title>
-  </programme>
-  <programme channel="東森購物2台" start="20250723220000 +0800" stop="20250723224000 +0800">
-    <title lang="zh">快到CH.43、CH.49選購</title>
-  </programme>
-  <programme channel="東森購物2台" start="20250723224000 +0800" stop="20250723232000 +0800">
-    <title lang="zh">7/1-7/31滿5000元回饋300E幣，滿1萬元升級回饋1000E幣</title>
-  </programme>
-  <programme channel="東森購物2台" start="20250723232000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">快到CH.43、CH.49選購</title>
-  </programme>
-  <programme channel="東森購物2台" start="20250724000000 +0800" stop="20250724004000 +0800">
-    <title lang="zh">7/1-7/31滿5000元回饋300E幣，滿1萬元升級回饋1000E幣</title>
-  </programme>
-  <programme channel="東森購物2台" start="20250724004000 +0800" stop="20250724012000 +0800">
-    <title lang="zh">快到CH.43、CH.49選購</title>
-  </programme>
-  <programme channel="東森購物2台" start="20250724012000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">7/1-7/31滿5000元回饋300E幣，滿1萬元升級回饋1000E幣</title>
-  </programme>
   <programme channel="東森購物2台" start="20250724020000 +0800" stop="20250724024000 +0800">
     <title lang="zh">快到CH.43、CH.49選購</title>
   </programme>
@@ -5393,66 +4882,6 @@
     <display-name lang="zh">第1商業台</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv104_tv.png"/>
   </channel>
-  <programme channel="第1商業台" start="20250723160000 +0800" stop="20250723163000 +0800">
-    <title lang="zh">股市全攻略-豐銀投顧-龔鴻彬分析師</title>
-  </programme>
-  <programme channel="第1商業台" start="20250723163000 +0800" stop="20250723170000 +0800">
-    <title lang="zh">汪海華_操盤的智慧</title>
-  </programme>
-  <programme channel="第1商業台" start="20250723170000 +0800" stop="20250723173000 +0800">
-    <title lang="zh">股市第一線-顧德投顧-李冠嶔分析師</title>
-  </programme>
-  <programme channel="第1商業台" start="20250723173000 +0800" stop="20250723180000 +0800">
-    <title lang="zh">贏家應對-顧德投顧-林泓橡分析師</title>
-  </programme>
-  <programme channel="第1商業台" start="20250723180000 +0800" stop="20250723183000 +0800">
-    <title lang="zh">阪田戰法-寶得富-顧奎國分析師</title>
-  </programme>
-  <programme channel="第1商業台" start="20250723183000 +0800" stop="20250723190000 +0800">
-    <title lang="zh">股市強強滾-亞洲投顧-鄭偉群分析師</title>
-  </programme>
-  <programme channel="第1商業台" start="20250723190000 +0800" stop="20250723193000 +0800">
-    <title lang="zh">旗開得勝-顧德投顧-張家豪分析師</title>
-  </programme>
-  <programme channel="第1商業台" start="20250723193000 +0800" stop="20250723200000 +0800">
-    <title lang="zh">期股衝衝衝-寶得富-翁士峻分析師</title>
-  </programme>
-  <programme channel="第1商業台" start="20250723200000 +0800" stop="20250723203000 +0800">
-    <title lang="zh">國家寶藏-啟發投顧-林國寶分析師</title>
-  </programme>
-  <programme channel="第1商業台" start="20250723203000 +0800" stop="20250723210000 +0800">
-    <title lang="zh">股市強強滾-亞洲投顧-鄭偉群分析師</title>
-  </programme>
-  <programme channel="第1商業台" start="20250723210000 +0800" stop="20250723213000 +0800">
-    <title lang="zh">台股Lunchtime-亞洲投顧-王兆立分析師</title>
-  </programme>
-  <programme channel="第1商業台" start="20250723213000 +0800" stop="20250723220000 +0800">
-    <title lang="zh">股市吳限鑽-寶得富-吳曉松分析師</title>
-  </programme>
-  <programme channel="第1商業台" start="20250723220000 +0800" stop="20250723223000 +0800">
-    <title lang="zh">啟發投顧精選</title>
-  </programme>
-  <programme channel="第1商業台" start="20250723223000 +0800" stop="20250723230000 +0800">
-    <title lang="zh">王博賺錢策略室-顧德投顧-王建文分析師</title>
-  </programme>
-  <programme channel="第1商業台" start="20250723230000 +0800" stop="20250723233000 +0800">
-    <title lang="zh">阪田戰法-寶得富-顧奎國分析師</title>
-  </programme>
-  <programme channel="第1商業台" start="20250723233000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">期股衝衝衝-寶得富-翁士俊分析師</title>
-  </programme>
-  <programme channel="第1商業台" start="20250724000000 +0800" stop="20250724003000 +0800">
-    <title lang="zh">股市吳限鑽-寶得富-吳曉松分析師</title>
-  </programme>
-  <programme channel="第1商業台" start="20250724003000 +0800" stop="20250724010000 +0800">
-    <title lang="zh">阪田戰法-寶得富-顧奎國分析師</title>
-  </programme>
-  <programme channel="第1商業台" start="20250724010000 +0800" stop="20250724013000 +0800">
-    <title lang="zh">期股衝衝衝-寶得富-翁士峻分析師</title>
-  </programme>
-  <programme channel="第1商業台" start="20250724013000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">股市吳限鑽-寶得富-吳曉松分析師</title>
-  </programme>
   <programme channel="第1商業台" start="20250724020000 +0800" stop="20250724023000 +0800">
     <title lang="zh">股市第一線-顧德投顧-李冠嶔分析師</title>
   </programme>
@@ -6060,42 +5489,6 @@
     <display-name lang="zh">寰宇新聞台灣台</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn15_tv.png"/>
   </channel>
-  <programme channel="寰宇新聞台灣台" start="20250723155500 +0800" stop="20250723165500 +0800">
-    <title lang="zh">寰宇晚間新聞</title>
-    <desc lang="zh">寰宇晚間新聞給你最在地的台灣新聞、最深入的兩岸焦點，掌握國際情勢帶您了解社會脈動。</desc>
-  </programme>
-  <programme channel="寰宇新聞台灣台" start="20250723165500 +0800" stop="20250723175500 +0800">
-    <title lang="zh">寰宇晚間新聞</title>
-    <desc lang="zh">寰宇晚間新聞給你最在地的台灣新聞、最深入的兩岸焦點，掌握國際情勢帶您了解社會脈動。</desc>
-  </programme>
-  <programme channel="寰宇新聞台灣台" start="20250723175500 +0800" stop="20250723185500 +0800">
-    <title lang="zh">寰宇晚間新聞</title>
-    <desc lang="zh">寰宇晚間新聞給你最在地的台灣新聞、最深入的兩岸焦點，掌握國際情勢帶您了解社會脈動。</desc>
-  </programme>
-  <programme channel="寰宇新聞台灣台" start="20250723185500 +0800" stop="20250723195500 +0800">
-    <title lang="zh">寰宇晚間新聞</title>
-    <desc lang="zh">寰宇晚間新聞給你最在地的台灣新聞、最深入的兩岸焦點，掌握國際情勢帶您了解社會脈動。</desc>
-  </programme>
-  <programme channel="寰宇新聞台灣台" start="20250723195500 +0800" stop="20250723205500 +0800">
-    <title lang="zh">寰宇焦點新聞</title>
-  </programme>
-  <programme channel="寰宇新聞台灣台" start="20250723205500 +0800" stop="20250723215500 +0800">
-    <title lang="zh">寰宇焦點新聞</title>
-  </programme>
-  <programme channel="寰宇新聞台灣台" start="20250723215500 +0800" stop="20250723225500 +0800">
-    <title lang="zh">寰宇焦點新聞</title>
-  </programme>
-  <programme channel="寰宇新聞台灣台" start="20250723225500 +0800" stop="20250723235500 +0800">
-    <title lang="zh">寰宇晚間新聞</title>
-    <desc lang="zh">寰宇晚間新聞給你最在地的台灣新聞、最深入的兩岸焦點，掌握國際情勢帶您了解社會脈動。</desc>
-  </programme>
-  <programme channel="寰宇新聞台灣台" start="20250723235500 +0800" stop="20250724005500 +0800">
-    <title lang="zh">寰宇晚間新聞</title>
-    <desc lang="zh">寰宇晚間新聞給你最在地的台灣新聞、最深入的兩岸焦點，掌握國際情勢帶您了解社會脈動。</desc>
-  </programme>
-  <programme channel="寰宇新聞台灣台" start="20250724005500 +0800" stop="20250724015500 +0800">
-    <title lang="zh">寰宇焦點新聞</title>
-  </programme>
   <programme channel="寰宇新聞台灣台" start="20250724015500 +0800" stop="20250724025500 +0800">
     <title lang="zh">寰宇焦點新聞</title>
   </programme>
@@ -6498,40 +5891,6 @@
     <display-name lang="zh">寰宇財經台</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn23_tv.png"/>
   </channel>
-  <programme channel="寰宇財經台" start="20250723160000 +0800" stop="20250723170000 +0800">
-    <title lang="zh">全台呷透透</title>
-  </programme>
-  <programme channel="寰宇財經台" start="20250723170000 +0800" stop="20250723180000 +0800">
-    <title lang="zh">搜查事件簿</title>
-  </programme>
-  <programme channel="寰宇財經台" start="20250723180000 +0800" stop="20250723190000 +0800">
-    <title lang="zh">寰宇頭條新聞</title>
-  </programme>
-  <programme channel="寰宇財經台" start="20250723190000 +0800" stop="20250723200000 +0800">
-    <title lang="zh">寰宇頭條新聞</title>
-  </programme>
-  <programme channel="寰宇財經台" start="20250723200000 +0800" stop="20250723210000 +0800">
-    <title lang="zh">理財達人秀</title>
-    <desc lang="zh">全台灣最精采好懂的理財影片！保險、股市、房地產、基金、投資觀念，最實用的知識一看就通！投資新手到專家的討論園地。</desc>
-  </programme>
-  <programme channel="寰宇財經台" start="20250723210000 +0800" stop="20250723220000 +0800">
-    <title lang="zh">理財達人秀</title>
-    <desc lang="zh">全台灣最精采好懂的理財影片！保險、股市、房地產、基金、投資觀念，最實用的知識一看就通！投資新手到專家的討論園地。</desc>
-  </programme>
-  <programme channel="寰宇財經台" start="20250723220000 +0800" stop="20250723230000 +0800">
-    <title lang="zh">關鍵時刻</title>
-    <desc lang="zh">行政院勞工委員會勞工安全衛生研究所製作的3D立體動畫「關鍵時刻」，於第十八屆世界職業安全衛生大會榮獲國際安全衛生影片首獎，大會並以「非常創新的手法」盛讚得獎單位-行政院勞委會勞工安全衛生研究所，對於職場安全衛生教育宣導所做出的貢獻。</desc>
-  </programme>
-  <programme channel="寰宇財經台" start="20250723230000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">關鍵時刻</title>
-    <desc lang="zh">行政院勞工委員會勞工安全衛生研究所製作的3D立體動畫「關鍵時刻」，於第十八屆世界職業安全衛生大會榮獲國際安全衛生影片首獎，大會並以「非常創新的手法」盛讚得獎單位-行政院勞委會勞工安全衛生研究所，對於職場安全衛生教育宣導所做出的貢獻。</desc>
-  </programme>
-  <programme channel="寰宇財經台" start="20250724000000 +0800" stop="20250724010000 +0800">
-    <title lang="zh">搜查事件簿</title>
-  </programme>
-  <programme channel="寰宇財經台" start="20250724010000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">全台呷透透</title>
-  </programme>
   <programme channel="寰宇財經台" start="20250724020000 +0800" stop="20250724030000 +0800">
     <title lang="zh">美食打卡趣</title>
   </programme>
@@ -6884,98 +6243,6 @@
     <display-name lang="zh">好消息</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-ftv16_tv.png"/>
   </channel>
-  <programme channel="好消息" start="20250723160000 +0800" stop="20250723163000 +0800">
-    <title lang="zh">健康新煮流</title>
-    <desc lang="zh">開創夫妻同廚同煮潮流的KC夫婦，繼《健康醫食代》後，走出攝影棚，帶大家全台走透透，發掘上帝賞賜的美味食材，內容融合新加坡南洋風和客家純樸味，加上台灣獨特的閩南風情，互相激盪交織出的火花，打造出獨一無二的美食節目。</desc>
-  </programme>
-  <programme channel="好消息" start="20250723163000 +0800" stop="20250723170000 +0800">
-    <title lang="zh">愛＋好醫生</title>
-    <desc lang="zh">結合醫療專業及全人關懷的新型態節目，主持人黃瑽寧醫師親訪家庭，跨領域醫療顧問團全方位檢視，提供最完整、實用和正確的資訊來守護孩子的健康。</desc>
-  </programme>
-  <programme channel="好消息" start="20250723170000 +0800" stop="20250723173000 +0800">
-    <title lang="zh">大家說英語</title>
-    <desc lang="zh">將最受歡迎的美語生活會話雜誌《大家說英語》內容製作成電視教學節目，教學輕鬆活潑，以生活實用會話為單元主題，是新聞局推薦的優質節目。不僅能幫助您輕鬆開口說英語，更提供許多實用的英語語彙與技巧，讓您用簡單的單字，就能說一口漂亮英語。</desc>
-  </programme>
-  <programme channel="好消息" start="20250723173000 +0800" stop="20250723174500 +0800">
-    <title lang="zh">派特森與芬達貓</title>
-    <desc lang="zh">派特森是一位頑固的老頭，他不喜歡和人相處，直到小貓芬達斯的出現；芬達貓是隻淘氣又自以為是的小貓，不過這卻為派森的生活及農場帶來了更多的歡樂...</desc>
-  </programme>
-  <programme channel="好消息" start="20250723174500 +0800" stop="20250723180000 +0800">
-    <title lang="zh">派特森與芬達貓</title>
-    <desc lang="zh">派特森是一位頑固的老頭，他不喜歡和人相處，直到小貓芬達斯的出現；芬達貓是隻淘氣又自以為是的小貓，不過這卻為派森的生活及農場帶來了更多的歡樂...</desc>
-  </programme>
-  <programme channel="好消息" start="20250723180000 +0800" stop="20250723181500 +0800">
-    <title lang="zh">小珍珠與阿達叔叔</title>
-    <desc lang="zh">好消息電視台製播的兒少節目，由充滿人生智慧的阿達叔叔劉清彥主持，精力十足又問題多多的的小珍珠每次都要來找阿達叔叔的麻煩…不，是請阿達叔叔幫她解決層出不窮的各種麻煩，透過兩人的趣味互動，讓小朋友輕鬆學習做人的道理。</desc>
-  </programme>
-  <programme channel="好消息" start="20250723181500 +0800" stop="20250723183000 +0800">
-    <title lang="zh">小珍珠與阿達叔叔</title>
-    <desc lang="zh">好消息電視台製播的兒少節目，由充滿人生智慧的阿達叔叔劉清彥主持，精力十足又問題多多的的小珍珠每次都要來找阿達叔叔的麻煩…不，是請阿達叔叔幫她解決層出不窮的各種麻煩，透過兩人的趣味互動，讓小朋友輕鬆學習做人的道理。</desc>
-  </programme>
-  <programme channel="好消息" start="20250723183000 +0800" stop="20250723190000 +0800">
-    <title lang="zh">福氣人生</title>
-    <desc lang="zh">如何才能擁有福氣人生?看牧師們以台語分享聖經的真理，讓你領受天國滿滿的福氣與祝福。</desc>
-  </programme>
-  <programme channel="好消息" start="20250723190000 +0800" stop="20250723191500 +0800">
-    <title lang="zh">共享觀點</title>
-    <desc lang="zh">連結社群、分享、行動的特色，藉著媒體平台將聖經教導、基要真理落實在生活中。兩位主持人將在節目中以輕鬆對談的方式，討論年輕人關注的話題。</desc>
-  </programme>
-  <programme channel="好消息" start="20250723191500 +0800" stop="20250723193000 +0800">
-    <title lang="zh">共享觀點</title>
-    <desc lang="zh">連結社群、分享、行動的特色，藉著媒體平台將聖經教導、基要真理落實在生活中。兩位主持人將在節目中以輕鬆對談的方式，討論年輕人關注的話題。</desc>
-  </programme>
-  <programme channel="好消息" start="20250723193000 +0800" stop="20250723200000 +0800">
-    <title lang="zh">愛＋好醫生</title>
-    <desc lang="zh">結合醫療專業及全人關懷的新型態節目，主持人黃瑽寧醫師親訪家庭，跨領域醫療顧問團全方位檢視，提供最完整、實用和正確的資訊來守護孩子的健康。</desc>
-  </programme>
-  <programme channel="好消息" start="20250723200000 +0800" stop="20250723205000 +0800">
-    <title lang="zh">家庭８點檔轉轉發現愛</title>
-  </programme>
-  <programme channel="好消息" start="20250723205000 +0800" stop="20250723210000 +0800">
-    <title lang="zh">機智青年生活</title>
-    <desc lang="zh">這不是韓劇，而是正上演的一齣充滿血淚與美好友誼的熱血植堂連續劇 ！旌旗好生活邀請到三對青年牧師CP，來聊聊由上帝導演，引領青年教會及一群青年團隊，經歷瘋狂又精彩的植堂人生！</desc>
-  </programme>
-  <programme channel="好消息" start="20250723210000 +0800" stop="20250723210500 +0800">
-    <title lang="zh">遇見祝福</title>
-  </programme>
-  <programme channel="好消息" start="20250723210500 +0800" stop="20250723220000 +0800">
-    <title lang="zh">真情部落格</title>
-    <desc lang="zh">廣受海內外觀眾歡迎的真情部落格，由知名主播夏嘉璐主持，莊信德牧師回應，透過每位來賓的生命見證幫助許多人走出低谷。相信神繼續透過真情部落格祝福這世代的華人。</desc>
-  </programme>
-  <programme channel="好消息" start="20250723220000 +0800" stop="20250723223000 +0800">
-    <title lang="zh">救恩之光</title>
-    <desc lang="zh">紐約救贖主長老教會的主任牧師「提姆凱勒」，迄今已於35個城市協助創辦170間教會，其敏銳的證道、犀利的護教學與事工，讓許多神的兒女得著幫助。</desc>
-  </programme>
-  <programme channel="好消息" start="20250723223000 +0800" stop="20250723230000 +0800">
-    <title lang="zh">天堂敬拜</title>
-    <desc lang="zh">敬拜與禱告是基督徒生命中不可少的兩件事。新的一年，讓我們用敬拜與禱告翻開得勝的新篇章。</desc>
-  </programme>
-  <programme channel="好消息" start="20250723230000 +0800" stop="20250723234500 +0800">
-    <title lang="zh">家庭８點檔轉轉發現愛</title>
-  </programme>
-  <programme channel="好消息" start="20250723234500 +0800" stop="20250724000000 +0800">
-    <title lang="zh">機智青年生活</title>
-    <desc lang="zh">這不是韓劇，而是正上演的一齣充滿血淚與美好友誼的熱血植堂連續劇 ！旌旗好生活邀請到三對青年牧師CP，來聊聊由上帝導演，引領青年教會及一群青年團隊，經歷瘋狂又精彩的植堂人生！</desc>
-  </programme>
-  <programme channel="好消息" start="20250724000000 +0800" stop="20250724003000 +0800">
-    <title lang="zh">700俱樂部</title>
-    <desc lang="zh">精彩、真實的生命見證故事，透過短劇、訪談重現故事現場，請看他們如何走過黑暗洪流、渡過驚濤駭浪、飛越頹廢萎靡，進到豐富、彩色、充滿希望的新生活，得著新生命。</desc>
-  </programme>
-  <programme channel="好消息" start="20250724003000 +0800" stop="20250724003500 +0800">
-    <title lang="zh">遇見祝福</title>
-  </programme>
-  <programme channel="好消息" start="20250724003500 +0800" stop="20250724013000 +0800">
-    <title lang="zh">真情部落格</title>
-    <desc lang="zh">廣受海內外觀眾歡迎的真情部落格，由知名主播夏嘉璐主持，莊信德牧師回應，透過每位來賓的生命見證幫助許多人走出低谷。相信神繼續透過真情部落格祝福這世代的華人。</desc>
-  </programme>
-  <programme channel="好消息" start="20250724013000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">福氣人生</title>
-    <desc lang="zh">如何才能擁有福氣人生?看牧師們以台語分享聖經的真理，讓你領受天國滿滿的福氣與祝福。</desc>
-  </programme>
-  <programme channel="好消息" start="20250724020000 +0800" stop="20250724020500 +0800">
-    <title lang="zh">恩典365</title>
-    <desc lang="zh">跟著寇紹恩牧師，每天五分鐘，領受上帝的話語，在實際生活中行出來，讓我們天天浸泡在上帝的愛和恩典裡面。</desc>
-  </programme>
   <programme channel="好消息" start="20250724020500 +0800" stop="20250724023000 +0800">
     <title lang="zh">天堂敬拜</title>
     <desc lang="zh">敬拜與禱告是基督徒生命中不可少的兩件事。新的一年，讓我們用敬拜與禱告翻開得勝的新篇章。</desc>
@@ -7800,88 +7067,6 @@
     <display-name lang="zh">好消息2台</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-ftv17_tv.png"/>
   </channel>
-  <programme channel="好消息2台" start="20250723160000 +0800" stop="20250723161500 +0800">
-    <title lang="zh">歐爺爺說故事</title>
-    <sub-title lang="zh">Theo: Teaching Children God's Word</sub-title>
-    <desc lang="zh">和藹可親，博學多聞的老牧師歐爺爺，與動物好友們住在鄉間小鎮，對上帝的話語充滿熱情，立志傳遞教導聖經真理。每當歐爺爺開始烤餅乾或是說故事，可愛的老鼠路路和小貝就會出現，和他一起面對難題和挑戰，並發揮創意提出解決辦法…</desc>
-  </programme>
-  <programme channel="好消息2台" start="20250723161500 +0800" stop="20250723163000 +0800">
-    <title lang="zh">歐爺爺說故事</title>
-    <sub-title lang="zh">Theo: Teaching Children God's Word</sub-title>
-    <desc lang="zh">和藹可親，博學多聞的老牧師歐爺爺，與動物好友們住在鄉間小鎮，對上帝的話語充滿熱情，立志傳遞教導聖經真理。每當歐爺爺開始烤餅乾或是說故事，可愛的老鼠路路和小貝就會出現，和他一起面對難題和挑戰，並發揮創意提出解決辦法…</desc>
-  </programme>
-  <programme channel="好消息2台" start="20250723163000 +0800" stop="20250723170000 +0800">
-    <title lang="zh">空中聖經學院</title>
-    <desc lang="zh">由GOOD TV和中華福音神學院共同製作推出。這是歷史性的一刻，神的話語要透過衛星傳送至全世界，實現平信徒神學教育之夢。</desc>
-  </programme>
-  <programme channel="好消息2台" start="20250723170000 +0800" stop="20250723180000 +0800">
-    <title lang="zh">大衛鮑森講座</title>
-    <desc lang="zh">聖經權威大衛鮑森牧師，帶你以宏觀的神學角度，觀看神偉大的神性與恩典，並從其中明白救恩計畫的重要。</desc>
-  </programme>
-  <programme channel="好消息2台" start="20250723180000 +0800" stop="20250723183000 +0800">
-    <title lang="zh">共享觀點</title>
-    <desc lang="zh">連結社群、分享、行動的特色，藉著媒體平台將聖經教導、基要真理落實在生活中。兩位主持人將在節目中以輕鬆對談的方式，討論年輕人關注的話題。</desc>
-  </programme>
-  <programme channel="好消息2台" start="20250723183000 +0800" stop="20250723190000 +0800">
-    <title lang="zh">愛＋好醫生</title>
-    <desc lang="zh">結合醫療專業及全人關懷的新型態節目，主持人黃瑽寧醫師親訪家庭，跨領域醫療顧問團全方位檢視，提供最完整、實用和正確的資訊來守護孩子的健康。</desc>
-  </programme>
-  <programme channel="好消息2台" start="20250723190000 +0800" stop="20250723195000 +0800">
-    <title lang="zh">家庭８點檔轉轉發現愛</title>
-  </programme>
-  <programme channel="好消息2台" start="20250723195000 +0800" stop="20250723200000 +0800">
-    <title lang="zh">愛我們的家</title>
-  </programme>
-  <programme channel="好消息2台" start="20250723200000 +0800" stop="20250723200500 +0800">
-    <title lang="zh">遇見祝福</title>
-  </programme>
-  <programme channel="好消息2台" start="20250723200500 +0800" stop="20250723210000 +0800">
-    <title lang="zh">真情部落格</title>
-    <desc lang="zh">廣受海內外觀眾歡迎的真情部落格，由知名主播夏嘉璐主持，莊信德牧師回應，透過每位來賓的生命見證幫助許多人走出低谷。相信神繼續透過真情部落格祝福這世代的華人。</desc>
-  </programme>
-  <programme channel="好消息2台" start="20250723210000 +0800" stop="20250723220000 +0800">
-    <title lang="zh">道在人間(國)</title>
-    <desc lang="zh">節目中邀請趙鏞基、葉光明、傑克海福德、喬依絲邁爾等，國內外知名牧長，以豐富的服事經歷與紮實的神學裝備，教導、傳講聖經真道，堅固信徒並警醒人心。</desc>
-  </programme>
-  <programme channel="好消息2台" start="20250723220000 +0800" stop="20250723223000 +0800">
-    <title lang="zh">陸可鐸時間</title>
-  </programme>
-  <programme channel="好消息2台" start="20250723223000 +0800" stop="20250723230000 +0800">
-    <title lang="zh">豐盛人生</title>
-    <desc lang="zh">基督徒必看節目，特邀國內外講員，為教友帶來精闢信息，傳達神的信息。</desc>
-  </programme>
-  <programme channel="好消息2台" start="20250723230000 +0800" stop="20250723232000 +0800">
-    <title lang="zh">經典音樂河</title>
-    <desc lang="zh">古典聖詩具有歷久彌新、感人至深的迷人特質。即使經過百年，這些詩歌所蘊含的生命力，仍繼續向人們訴說上帝的榮耀作為和救贖恩典。</desc>
-  </programme>
-  <programme channel="好消息2台" start="20250723232000 +0800" stop="20250723233000 +0800">
-    <title lang="zh">愛我們的家</title>
-  </programme>
-  <programme channel="好消息2台" start="20250723233000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">愛＋好醫生</title>
-    <desc lang="zh">結合醫療專業及全人關懷的新型態節目，主持人黃瑽寧醫師親訪家庭，跨領域醫療顧問團全方位檢視，提供最完整、實用和正確的資訊來守護孩子的健康。</desc>
-  </programme>
-  <programme channel="好消息2台" start="20250724000000 +0800" stop="20250724001500 +0800">
-    <title lang="zh">經典音樂河</title>
-    <desc lang="zh">古典聖詩具有歷久彌新、感人至深的迷人特質。即使經過百年，這些詩歌所蘊含的生命力，仍繼續向人們訴說上帝的榮耀作為和救贖恩典。</desc>
-  </programme>
-  <programme channel="好消息2台" start="20250724001500 +0800" stop="20250724004500 +0800">
-    <title lang="zh">禱告大軍迎接復興</title>
-    <desc lang="zh">好消息電視台為全球信徒提供一個大家共同禱告的園地，由來自各地的牧師帶領觀眾進行禱告，節選聖經中切合人生際遇的章節，為各位教友傳達神的旨意，灌溉心靈園地。</desc>
-  </programme>
-  <programme channel="好消息2台" start="20250724004500 +0800" stop="20250724005500 +0800">
-    <title lang="zh">恩典365</title>
-    <desc lang="zh">跟著寇紹恩牧師，每天五分鐘，領受上帝的話語，在實際生活中行出來，讓我們天天浸泡在上帝的愛和恩典裡面。</desc>
-  </programme>
-  <programme channel="好消息2台" start="20250724005500 +0800" stop="20250724010000 +0800">
-    <title lang="zh">遇見祝福</title>
-  </programme>
-  <programme channel="好消息2台" start="20250724010000 +0800" stop="20250724015000 +0800">
-    <title lang="zh">家庭８點檔轉轉發現愛</title>
-  </programme>
-  <programme channel="好消息2台" start="20250724015000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">愛我們的家</title>
-  </programme>
   <programme channel="好消息2台" start="20250724020000 +0800" stop="20250724030000 +0800">
     <title lang="zh">道在人間(國)</title>
     <desc lang="zh">節目中邀請趙鏞基、葉光明、傑克海福德、喬依絲邁爾等，國內外知名牧長，以豐富的服事經歷與紮實的神學裝備，教導、傳講聖經真道，堅固信徒並警醒人心。</desc>
@@ -8682,86 +7867,6 @@
     <display-name lang="zh">龍華卡通台</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_4gtv_litv-longturn01_tv.png"/>
   </channel>
-  <programme channel="龍華卡通台" start="20250723160000 +0800" stop="20250723163000 +0800">
-    <title lang="zh">豆小鴨神奇小分隊</title>
-    <desc lang="zh">單純直率的豆小鴨總是不小心闖禍，還好他有最棒的好朋友－－善解人意的袋熊沃蓓，和熱愛發明的小豬奇姆！只要三個人在一起，不管遇到任何困難，都能運用創意找到有趣的方法解決，把日常生活的所有危機，變成精彩好玩的大冒險！快快快，一起來山谷洞玩吧！</desc>
-  </programme>
-  <programme channel="龍華卡通台" start="20250723163000 +0800" stop="20250723170000 +0800">
-    <title lang="zh">豆小鴨神奇小分隊</title>
-    <desc lang="zh">單純直率的豆小鴨總是不小心闖禍，還好他有最棒的好朋友－－善解人意的袋熊沃蓓，和熱愛發明的小豬奇姆！只要三個人在一起，不管遇到任何困難，都能運用創意找到有趣的方法解決，把日常生活的所有危機，變成精彩好玩的大冒險！快快快，一起來山谷洞玩吧！</desc>
-  </programme>
-  <programme channel="龍華卡通台" start="20250723170000 +0800" stop="20250723173000 +0800">
-    <title lang="zh">淘氣鼠兄弟</title>
-    <desc lang="zh">小唐是一隻擬人化的粉紅色小狗，與莫圖、蘭布、喬圖三隻鼠兄弟合住一個房子。小唐時常被老鼠們惹惱，吵吵鬧鬧的生活讓相看兩厭的他們會產生什麼火花呢</desc>
-  </programme>
-  <programme channel="龍華卡通台" start="20250723173000 +0800" stop="20250723180000 +0800">
-    <title lang="zh">淘氣鼠兄弟</title>
-    <desc lang="zh">小唐是一隻擬人化的粉紅色小狗，與莫圖、蘭布、喬圖三隻鼠兄弟合住一個房子。小唐時常被老鼠們惹惱，吵吵鬧鬧的生活讓相看兩厭的他們會產生什麼火花呢</desc>
-  </programme>
-  <programme channel="龍華卡通台" start="20250723180000 +0800" stop="20250723183000 +0800">
-    <title lang="zh">巴塔木特攻隊</title>
-    <desc lang="zh">英國Calm Island公司出品，知名少兒頻道同時段收視冠軍寶座！在寧靜美麗的巴塔王國裏，巴塔和小夥伴們一起守衞巴塔木世界的和平。在巴塔木之外的黑暗森林裏，出現了新的對抗者，他們需要集結所有隊員的勇氣才能阻止黑暗勢力。</desc>
-  </programme>
-  <programme channel="龍華卡通台" start="20250723183000 +0800" stop="20250723190000 +0800">
-    <title lang="zh">巴塔木特攻隊</title>
-    <desc lang="zh">英國Calm Island公司出品，知名少兒頻道同時段收視冠軍寶座！在寧靜美麗的巴塔王國裏，巴塔和小夥伴們一起守衞巴塔木世界的和平。在巴塔木之外的黑暗森林裏，出現了新的對抗者，他們需要集結所有隊員的勇氣才能阻止黑暗勢力。</desc>
-  </programme>
-  <programme channel="龍華卡通台" start="20250723190000 +0800" stop="20250723193000 +0800">
-    <title lang="zh">豆小鴨神奇小分隊</title>
-    <desc lang="zh">單純直率的豆小鴨總是不小心闖禍，還好他有最棒的好朋友－－善解人意的袋熊沃蓓，和熱愛發明的小豬奇姆！只要三個人在一起，不管遇到任何困難，都能運用創意找到有趣的方法解決，把日常生活的所有危機，變成精彩好玩的大冒險！快快快，一起來山谷洞玩吧！</desc>
-  </programme>
-  <programme channel="龍華卡通台" start="20250723193000 +0800" stop="20250723200000 +0800">
-    <title lang="zh">豆小鴨神奇小分隊</title>
-    <desc lang="zh">單純直率的豆小鴨總是不小心闖禍，還好他有最棒的好朋友－－善解人意的袋熊沃蓓，和熱愛發明的小豬奇姆！只要三個人在一起，不管遇到任何困難，都能運用創意找到有趣的方法解決，把日常生活的所有危機，變成精彩好玩的大冒險！快快快，一起來山谷洞玩吧！</desc>
-  </programme>
-  <programme channel="龍華卡通台" start="20250723200000 +0800" stop="20250723203000 +0800">
-    <title lang="zh">淘氣鼠兄弟</title>
-    <desc lang="zh">小唐是一隻擬人化的粉紅色小狗，與莫圖、蘭布、喬圖三隻鼠兄弟合住一個房子。小唐時常被老鼠們惹惱，吵吵鬧鬧的生活讓相看兩厭的他們會產生什麼火花呢</desc>
-  </programme>
-  <programme channel="龍華卡通台" start="20250723203000 +0800" stop="20250723210000 +0800">
-    <title lang="zh">淘氣鼠兄弟</title>
-    <desc lang="zh">小唐是一隻擬人化的粉紅色小狗，與莫圖、蘭布、喬圖三隻鼠兄弟合住一個房子。小唐時常被老鼠們惹惱，吵吵鬧鬧的生活讓相看兩厭的他們會產生什麼火花呢</desc>
-  </programme>
-  <programme channel="龍華卡通台" start="20250723210000 +0800" stop="20250723213000 +0800">
-    <title lang="zh">巴塔木特攻隊</title>
-    <desc lang="zh">英國Calm Island公司出品，知名少兒頻道同時段收視冠軍寶座！在寧靜美麗的巴塔王國裏，巴塔和小夥伴們一起守衞巴塔木世界的和平。在巴塔木之外的黑暗森林裏，出現了新的對抗者，他們需要集結所有隊員的勇氣才能阻止黑暗勢力。</desc>
-  </programme>
-  <programme channel="龍華卡通台" start="20250723213000 +0800" stop="20250723220000 +0800">
-    <title lang="zh">巴塔木特攻隊</title>
-    <desc lang="zh">英國Calm Island公司出品，知名少兒頻道同時段收視冠軍寶座！在寧靜美麗的巴塔王國裏，巴塔和小夥伴們一起守衞巴塔木世界的和平。在巴塔木之外的黑暗森林裏，出現了新的對抗者，他們需要集結所有隊員的勇氣才能阻止黑暗勢力。</desc>
-  </programme>
-  <programme channel="龍華卡通台" start="20250723220000 +0800" stop="20250723223000 +0800">
-    <title lang="zh">豆小鴨神奇小分隊</title>
-    <desc lang="zh">單純直率的豆小鴨總是不小心闖禍，還好他有最棒的好朋友－－善解人意的袋熊沃蓓，和熱愛發明的小豬奇姆！只要三個人在一起，不管遇到任何困難，都能運用創意找到有趣的方法解決，把日常生活的所有危機，變成精彩好玩的大冒險！快快快，一起來山谷洞玩吧！</desc>
-  </programme>
-  <programme channel="龍華卡通台" start="20250723223000 +0800" stop="20250723230000 +0800">
-    <title lang="zh">豆小鴨神奇小分隊</title>
-    <desc lang="zh">單純直率的豆小鴨總是不小心闖禍，還好他有最棒的好朋友－－善解人意的袋熊沃蓓，和熱愛發明的小豬奇姆！只要三個人在一起，不管遇到任何困難，都能運用創意找到有趣的方法解決，把日常生活的所有危機，變成精彩好玩的大冒險！快快快，一起來山谷洞玩吧！</desc>
-  </programme>
-  <programme channel="龍華卡通台" start="20250723230000 +0800" stop="20250723233000 +0800">
-    <title lang="zh">淘氣鼠兄弟</title>
-    <desc lang="zh">小唐是一隻擬人化的粉紅色小狗，與莫圖、蘭布、喬圖三隻鼠兄弟合住一個房子。小唐時常被老鼠們惹惱，吵吵鬧鬧的生活讓相看兩厭的他們會產生什麼火花呢</desc>
-  </programme>
-  <programme channel="龍華卡通台" start="20250723233000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">淘氣鼠兄弟</title>
-    <desc lang="zh">小唐是一隻擬人化的粉紅色小狗，與莫圖、蘭布、喬圖三隻鼠兄弟合住一個房子。小唐時常被老鼠們惹惱，吵吵鬧鬧的生活讓相看兩厭的他們會產生什麼火花呢</desc>
-  </programme>
-  <programme channel="龍華卡通台" start="20250724000000 +0800" stop="20250724003000 +0800">
-    <title lang="zh">巴塔木特攻隊</title>
-    <desc lang="zh">英國Calm Island公司出品，知名少兒頻道同時段收視冠軍寶座！在寧靜美麗的巴塔王國裏，巴塔和小夥伴們一起守衞巴塔木世界的和平。在巴塔木之外的黑暗森林裏，出現了新的對抗者，他們需要集結所有隊員的勇氣才能阻止黑暗勢力。</desc>
-  </programme>
-  <programme channel="龍華卡通台" start="20250724003000 +0800" stop="20250724010000 +0800">
-    <title lang="zh">巴塔木特攻隊</title>
-    <desc lang="zh">英國Calm Island公司出品，知名少兒頻道同時段收視冠軍寶座！在寧靜美麗的巴塔王國裏，巴塔和小夥伴們一起守衞巴塔木世界的和平。在巴塔木之外的黑暗森林裏，出現了新的對抗者，他們需要集結所有隊員的勇氣才能阻止黑暗勢力。</desc>
-  </programme>
-  <programme channel="龍華卡通台" start="20250724010000 +0800" stop="20250724013000 +0800">
-    <title lang="zh">豆小鴨神奇小分隊</title>
-    <desc lang="zh">單純直率的豆小鴨總是不小心闖禍，還好他有最棒的好朋友－－善解人意的袋熊沃蓓，和熱愛發明的小豬奇姆！只要三個人在一起，不管遇到任何困難，都能運用創意找到有趣的方法解決，把日常生活的所有危機，變成精彩好玩的大冒險！快快快，一起來山谷洞玩吧！</desc>
-  </programme>
-  <programme channel="龍華卡通台" start="20250724013000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">豆小鴨神奇小分隊</title>
-    <desc lang="zh">單純直率的豆小鴨總是不小心闖禍，還好他有最棒的好朋友－－善解人意的袋熊沃蓓，和熱愛發明的小豬奇姆！只要三個人在一起，不管遇到任何困難，都能運用創意找到有趣的方法解決，把日常生活的所有危機，變成精彩好玩的大冒險！快快快，一起來山谷洞玩吧！</desc>
-  </programme>
   <programme channel="龍華卡通台" start="20250724020000 +0800" stop="20250724023000 +0800">
     <title lang="zh">淘氣鼠兄弟</title>
     <desc lang="zh">小唐是一隻擬人化的粉紅色小狗，與莫圖、蘭布、喬圖三隻鼠兄弟合住一個房子。小唐時常被老鼠們惹惱，吵吵鬧鬧的生活讓相看兩厭的他們會產生什麼火花呢</desc>
@@ -9640,26 +8745,6 @@
     <display-name lang="zh">龍華洋片台</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn02_tv.png"/>
   </channel>
-  <programme channel="龍華洋片台" start="20250723155500 +0800" stop="20250723173500 +0800">
-    <title lang="zh">森林特攻隊：大腳丫家族</title>
-    <desc lang="zh">平凡的亞當，和母親、大腳怪父親以及他們的朋友一起在森林裡定居。某天動保團體找上父親，打算阻止石油公司汙染環境，沒想到父親在追查的過程中竟然失蹤了！亞當和他的動物家人，決定聯手找出大腳怪父親的下落，並揭發石油公司的邪惡陰謀，他們一家人還有機會再次團聚嗎？</desc>
-  </programme>
-  <programme channel="龍華洋片台" start="20250723173500 +0800" stop="20250723192000 +0800">
-    <title lang="zh">下一站，托斯卡尼</title>
-    <sub-title lang="zh">Made in Italy</sub-title>
-    <desc lang="zh">一位畫家帶著兒子回到義大利，想賣掉多年前與亡妻一起住過的老屋。然而房子年久失修，還有一片難以理解的壁畫，導致沒人想買這房子，父子倆只好自己動手修繕老屋。但他們卻萬萬沒想到當遠離繁忙生活，兩人似乎也開始找到屬於自己的未來…</desc>
-  </programme>
-  <programme channel="龍華洋片台" start="20250723192000 +0800" stop="20250723210000 +0800">
-    <title lang="zh">諜戰巴黎</title>
-    <sub-title lang="zh">From Paris with Love</sub-title>
-    <desc lang="zh">駐法情報員詹姆士（強納森萊斯梅爾）一心想成為超級特務，但夢想卻遲遲無法實現，直到上級派他協助調查局的反恐探員查理（約翰屈伏塔）辦案。正經八百的詹姆士與不走正規辦案途徑的火爆查理，成了巴黎街頭一對不可能的特務拍檔…</desc>
-  </programme>
-  <programme channel="龍華洋片台" start="20250723210000 +0800" stop="20250723222500 +0800">
-    <title lang="zh">【星光首映場】猛鯊2：危機四伏</title>
-  </programme>
-  <programme channel="龍華洋片台" start="20250723222500 +0800" stop="20250724001500 +0800">
-    <title lang="zh">藍波：最後一滴血</title>
-  </programme>
   <programme channel="龍華洋片台" start="20250724001500 +0800" stop="20250724022000 +0800">
     <title lang="zh">新兵正傳(首)</title>
   </programme>
@@ -9901,29 +8986,6 @@
     <display-name lang="zh">龍華電影台</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn03_tv.png"/>
   </channel>
-  <programme channel="龍華電影台" start="20250723150000 +0800" stop="20250723170000 +0800">
-    <title lang="zh">決戰食神</title>
-    <sub-title lang="zh">Cook Up A Storm</sub-title>
-    <desc lang="zh">天才廚神高天賜（謝霆鋒）和師傅、師妹在春風里經營七記大牌檔，怎料來自法國的米其林三星名廚安保羅（鄭容和）和女友美優卻在七記正對面開餐廳！此時，國際美食擂台大賽即將舉辦，自始一場街坊廚神與星級大廚的決戰，便由春風里火拼至國際。然而，兩人參加比賽的背後卻各自隱藏了不為人所知的原因…</desc>
-  </programme>
-  <programme channel="龍華電影台" start="20250723170000 +0800" stop="20250723190000 +0800">
-    <title lang="zh">嚦咕嚦咕新年財</title>
-    <desc lang="zh">麻雀大俠德華（劉德華）天生喜愛打麻將，以致多年前債台高築，與弟弟天樂（古天樂）反目成仇。多年後德華決心負起責任，並以麻將治療老人痴呆症的母親，但卻遭到前女友詠琪（梁詠琪）的百般糾纏。青雲（劉青雲）與采兒（應采兒）是利用麻將騙人的老千，為了奪得麻將俠的稱號而向德華設下圈套…</desc>
-  </programme>
-  <programme channel="龍華電影台" start="20250723190000 +0800" stop="20250723210000 +0800">
-    <title lang="zh">鹿鼎記2神龍教</title>
-    <sub-title lang="zh">Royal Tramp II</sub-title>
-    <desc lang="zh">故事承接上集。假太后潛入宮，謀奪皇位計劃失敗，返回神龍教壇向教主請罪，後來教主令假太后變回龍兒（林青霞）接掌神龍教主之位，輔助平西王吳三桂登上皇位！另一方面，韋小寶（周星馳）護送建寧公主嫁到雲南，卻遇到獨臂女尼刺殺…</desc>
-  </programme>
-  <programme channel="龍華電影台" start="20250723210000 +0800" stop="20250723232000 +0800">
-    <title lang="zh">我的婆婆怎麼把OO搞丟了</title>
-    <sub-title lang="zh">U Motherbaker – The Movie</sub-title>
-    <desc lang="zh">蘇家婆婆彩香（鍾欣凌）不小心搞丟神祕「OO」引來警察的關切，蘇家子女們紛紛傻眼，兒子秉仁（楊銘威）不負責落跑、女兒秉愛（蘇晏霈）揮刀逼問、秉忠（邱凱偉）不孝提議報警，最後竟連小鷗（黃姵嘉）、大美都一起上銬送警局！蘇家婆婆究竟捅出什麼婁子？這家人又會搞出什麼名堂？</desc>
-  </programme>
-  <programme channel="龍華電影台" start="20250723232000 +0800" stop="20250724012000 +0800">
-    <title lang="zh">天師鬥殭屍</title>
-    <desc lang="zh">古惑仔烏蠅(鄭中基)與好友奶油豬受AKTV老板周阿強 (關楚耀)之命，恐嚇一代玄學大師蔣天機(元彪)為周太公搬棺。而奶油豬的心儀女星Balla亦被殭屍所咬。烏蠅及奶油豬求助天機及其徒弟靈心，四人組成滅屍敢死隊殺入電視台，便被一眾「喪屍兵團」包圍了！</desc>
-  </programme>
   <programme channel="龍華電影台" start="20250724012000 +0800" stop="20250724033500 +0800">
     <title lang="zh">寒蟬效應</title>
     <desc lang="zh">都會女孩白白（郭采潔）來到東部大學攻讀音樂研究所，很快就認識個性純真的同學木宏並順利加入學校樂團演奏，在與木宏快樂相處的同時，意外捲入與指導老師（戴立忍）的情感陷阱中無法自拔。這個事件將多年后不見后的三個女強人：方律師（徐若瑄）、林律師（賈靜雯）與王老師（周幼婷）聚在一起。</desc>
@@ -10209,54 +9271,6 @@
     <display-name lang="zh">龍華日韓台</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn11_tv.png"/>
   </channel>
-  <programme channel="龍華日韓台" start="20250723160000 +0800" stop="20250723170000 +0800">
-    <title lang="zh">能成為陌生人嗎</title>
-    <sub-title lang="zh">#6</sub-title>
-  </programme>
-  <programme channel="龍華日韓台" start="20250723170000 +0800" stop="20250723180000 +0800">
-    <title lang="zh">人偶之家</title>
-    <sub-title lang="zh">#56</sub-title>
-    <desc lang="zh">洪世妍（朴荷娜）在母親再婚後擁有了完整的家庭，但高中時繼父生意失敗而令她黯然離家獨自生活。後來她發現自己被所愛的人背叛和拋棄後，為了找回自己的生活，決定改名換姓回來向他們復仇，並且揭開所有人隱藏在背後之秘密的故事。</desc>
-  </programme>
-  <programme channel="龍華日韓台" start="20250723180000 +0800" stop="20250723190000 +0800">
-    <title lang="zh">人偶之家</title>
-    <sub-title lang="zh">#57</sub-title>
-    <desc lang="zh">洪世妍（朴荷娜）在母親再婚後擁有了完整的家庭，但高中時繼父生意失敗而令她黯然離家獨自生活。後來她發現自己被所愛的人背叛和拋棄後，為了找回自己的生活，決定改名換姓回來向他們復仇，並且揭開所有人隱藏在背後之秘密的故事。</desc>
-  </programme>
-  <programme channel="龍華日韓台" start="20250723190000 +0800" stop="20250723200000 +0800">
-    <title lang="zh">男朋友</title>
-    <sub-title lang="zh">#17</sub-title>
-    <desc lang="zh">首爾市長之女車秀賢（宋慧喬）從小因父母的關係，無法活得自在，就連婚姻都是迫於母親的堅持，後來雖和集團二代離婚，仍與前夫的集團無法脫鉤。勇於追求真愛的金振赫（朴寶劍）成為飯店CEO秀賢的下屬，兩人相戀後面臨麵包與愛情的抉擇…</desc>
-  </programme>
-  <programme channel="龍華日韓台" start="20250723200000 +0800" stop="20250723210000 +0800">
-    <title lang="zh">粉紅色口紅</title>
-    <sub-title lang="zh">#57</sub-title>
-    <desc lang="zh">佳恩（朴恩惠）是個像百合般純潔的女人，但卻在感情路上不順遂。她經歷了三個男人、三段婚姻，在尋找愛情的過程中，她是否能幸福並得到真愛？</desc>
-  </programme>
-  <programme channel="龍華日韓台" start="20250723210000 +0800" stop="20250723220000 +0800">
-    <title lang="zh">粉紅色口紅</title>
-    <sub-title lang="zh">#58</sub-title>
-    <desc lang="zh">佳恩（朴恩惠）是個像百合般純潔的女人，但卻在感情路上不順遂。她經歷了三個男人、三段婚姻，在尋找愛情的過程中，她是否能幸福並得到真愛？</desc>
-  </programme>
-  <programme channel="龍華日韓台" start="20250723220000 +0800" stop="20250723230000 +0800">
-    <title lang="zh">男朋友</title>
-    <sub-title lang="zh">#17</sub-title>
-    <desc lang="zh">首爾市長之女車秀賢（宋慧喬）從小因父母的關係，無法活得自在，就連婚姻都是迫於母親的堅持，後來雖和集團二代離婚，仍與前夫的集團無法脫鉤。勇於追求真愛的金振赫（朴寶劍）成為飯店CEO秀賢的下屬，兩人相戀後面臨麵包與愛情的抉擇…</desc>
-  </programme>
-  <programme channel="龍華日韓台" start="20250723230000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">能成為陌生人嗎</title>
-    <sub-title lang="zh">#6</sub-title>
-  </programme>
-  <programme channel="龍華日韓台" start="20250724000000 +0800" stop="20250724010000 +0800">
-    <title lang="zh">沒關係，是一家人</title>
-    <sub-title lang="zh">#4</sub-title>
-    <desc lang="zh">因厭倦與脾氣火爆的父親同居，母親突然宣佈要「卒婚」，父親委屈一度想輕生，卻失敗導致失憶回到22歲，意外揭露大女兒並非親生。大女兒恩珠發現丈夫是同性戀，內心崩潰，而二女兒恩熙則陷入複雜的感情糾葛，被劈腿後又成上司的情人。「像外人一樣的家人」間產生誤會，不斷磨合理解的家庭劇。</desc>
-  </programme>
-  <programme channel="龍華日韓台" start="20250724010000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">沒關係，是一家人</title>
-    <sub-title lang="zh">#5</sub-title>
-    <desc lang="zh">因厭倦與脾氣火爆的父親同居，母親突然宣佈要「卒婚」，父親委屈一度想輕生，卻失敗導致失憶回到22歲，意外揭露大女兒並非親生。大女兒恩珠發現丈夫是同性戀，內心崩潰，而二女兒恩熙則陷入複雜的感情糾葛，被劈腿後又成上司的情人。「像外人一樣的家人」間產生誤會，不斷磨合理解的家庭劇。</desc>
-  </programme>
   <programme channel="龍華日韓台" start="20250724020000 +0800" stop="20250724030000 +0800">
     <title lang="zh">男朋友</title>
     <sub-title lang="zh">#17</sub-title>
@@ -10808,66 +9822,6 @@
     <display-name lang="zh">龍華偶像台</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn12_tv.png"/>
   </channel>
-  <programme channel="龍華偶像台" start="20250723160000 +0800" stop="20250723164000 +0800">
-    <title lang="zh">愛情來了</title>
-    <sub-title lang="zh">#10</sub-title>
-    <desc lang="zh">講述了一個女子戰勝逆境，尋找真正幸福的感人故事。</desc>
-  </programme>
-  <programme channel="龍華偶像台" start="20250723164000 +0800" stop="20250723172000 +0800">
-    <title lang="zh">愛情來了</title>
-    <sub-title lang="zh">#11</sub-title>
-    <desc lang="zh">講述了一個女子戰勝逆境，尋找真正幸福的感人故事。</desc>
-  </programme>
-  <programme channel="龍華偶像台" start="20250723172000 +0800" stop="20250723180000 +0800">
-    <title lang="zh">愛情來了</title>
-    <sub-title lang="zh">#12</sub-title>
-    <desc lang="zh">講述了一個女子戰勝逆境，尋找真正幸福的感人故事。</desc>
-  </programme>
-  <programme channel="龍華偶像台" start="20250723180000 +0800" stop="20250723190000 +0800">
-    <title lang="zh">秦時明月</title>
-    <sub-title lang="zh">#21</sub-title>
-    <desc lang="zh">該劇將故事主要放在荊軻刺秦之後，講述了荊軻之子荊天明、墨家巨子之女高月與楚國項氏一族少主項少羽三位少年的傳奇和在他們周圍圍繞著劍聖蓋聶、醫仙端木蓉、大野心家衛莊、墨家、聚散流沙、陰陽家各門派諸多人物的種種故事。</desc>
-  </programme>
-  <programme channel="龍華偶像台" start="20250723190000 +0800" stop="20250723200000 +0800">
-    <title lang="zh">秦時明月</title>
-    <sub-title lang="zh">#22</sub-title>
-    <desc lang="zh">該劇將故事主要放在荊軻刺秦之後，講述了荊軻之子荊天明、墨家巨子之女高月與楚國項氏一族少主項少羽三位少年的傳奇和在他們周圍圍繞著劍聖蓋聶、醫仙端木蓉、大野心家衛莊、墨家、聚散流沙、陰陽家各門派諸多人物的種種故事。</desc>
-  </programme>
-  <programme channel="龍華偶像台" start="20250723200000 +0800" stop="20250723210000 +0800">
-    <title lang="zh">聖水洞之吻</title>
-    <sub-title lang="zh">#4</sub-title>
-    <desc lang="zh">▲ MZ 世代浪漫奇幻劇-意外之吻展開愛戀 ▲靈魂交換「以下犯上」展開爆笑羅曼史 ▲朴所羅門化身暖男實習生愛上傲嬌上司 【年下實習生朴所羅門戀年上工作狂金智恩，吻出姊弟戀化學效應！！】</desc>
-  </programme>
-  <programme channel="龍華偶像台" start="20250723210000 +0800" stop="20250723220000 +0800">
-    <title lang="zh">戀人的謊言</title>
-    <sub-title lang="zh">#9</sub-title>
-    <desc lang="zh">舒菲和林菲從小一起長大，不僅是好姐妹更是好閨蜜。奇然學長喜歡林菲，但林菲對奇然沒有感覺，暗戀奇然的舒菲悄悄借用林菲的名字和奇然書信來往，畢業後，姐妹兩個同事同時進入購物電視台上班，意外發現自己的上司居然是學長奇然，奇然依然鍾情於林菲，舒菲暗戀的心情破碎...</desc>
-  </programme>
-  <programme channel="龍華偶像台" start="20250723220000 +0800" stop="20250723230000 +0800">
-    <title lang="zh">秦時明月</title>
-    <sub-title lang="zh">#21</sub-title>
-    <desc lang="zh">該劇將故事主要放在荊軻刺秦之後，講述了荊軻之子荊天明、墨家巨子之女高月與楚國項氏一族少主項少羽三位少年的傳奇和在他們周圍圍繞著劍聖蓋聶、醫仙端木蓉、大野心家衛莊、墨家、聚散流沙、陰陽家各門派諸多人物的種種故事。</desc>
-  </programme>
-  <programme channel="龍華偶像台" start="20250723230000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">秦時明月</title>
-    <sub-title lang="zh">#22</sub-title>
-    <desc lang="zh">該劇將故事主要放在荊軻刺秦之後，講述了荊軻之子荊天明、墨家巨子之女高月與楚國項氏一族少主項少羽三位少年的傳奇和在他們周圍圍繞著劍聖蓋聶、醫仙端木蓉、大野心家衛莊、墨家、聚散流沙、陰陽家各門派諸多人物的種種故事。</desc>
-  </programme>
-  <programme channel="龍華偶像台" start="20250724000000 +0800" stop="20250724004000 +0800">
-    <title lang="zh">愛情來了</title>
-    <sub-title lang="zh">#10</sub-title>
-    <desc lang="zh">講述了一個女子戰勝逆境，尋找真正幸福的感人故事。</desc>
-  </programme>
-  <programme channel="龍華偶像台" start="20250724004000 +0800" stop="20250724012000 +0800">
-    <title lang="zh">愛情來了</title>
-    <sub-title lang="zh">#11</sub-title>
-    <desc lang="zh">講述了一個女子戰勝逆境，尋找真正幸福的感人故事。</desc>
-  </programme>
-  <programme channel="龍華偶像台" start="20250724012000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">愛情來了</title>
-    <sub-title lang="zh">#12</sub-title>
-    <desc lang="zh">講述了一個女子戰勝逆境，尋找真正幸福的感人故事。</desc>
-  </programme>
   <programme channel="龍華偶像台" start="20250724020000 +0800" stop="20250724030000 +0800">
     <title lang="zh">聖水洞之吻</title>
     <sub-title lang="zh">#4</sub-title>
@@ -11489,40 +10443,6 @@
     <display-name lang="zh">寰宇新聞台</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn14_tv.png"/>
   </channel>
-  <programme channel="寰宇新聞台" start="20250723155500 +0800" stop="20250723165500 +0800">
-    <title lang="zh">寰宇全球新聞</title>
-    <desc lang="zh">搶先揭露全球各地政經、社會、娛樂的第一手新聞訊息，讓觀眾不漏接關鍵的世界大事。</desc>
-  </programme>
-  <programme channel="寰宇新聞台" start="20250723165500 +0800" stop="20250723175500 +0800">
-    <title lang="zh">寰宇全球新聞</title>
-    <desc lang="zh">搶先揭露全球各地政經、社會、娛樂的第一手新聞訊息，讓觀眾不漏接關鍵的世界大事。</desc>
-  </programme>
-  <programme channel="寰宇新聞台" start="20250723175500 +0800" stop="20250723185500 +0800">
-    <title lang="zh">寰宇全球新聞</title>
-    <desc lang="zh">搶先揭露全球各地政經、社會、娛樂的第一手新聞訊息，讓觀眾不漏接關鍵的世界大事。</desc>
-  </programme>
-  <programme channel="寰宇新聞台" start="20250723185500 +0800" stop="20250723195500 +0800">
-    <title lang="zh">寰宇全球新聞</title>
-    <desc lang="zh">搶先揭露全球各地政經、社會、娛樂的第一手新聞訊息，讓觀眾不漏接關鍵的世界大事。</desc>
-  </programme>
-  <programme channel="寰宇新聞台" start="20250723195500 +0800" stop="20250723205500 +0800">
-    <title lang="zh">寰宇世界通</title>
-  </programme>
-  <programme channel="寰宇新聞台" start="20250723205500 +0800" stop="20250723215500 +0800">
-    <title lang="zh">寰宇世界通</title>
-  </programme>
-  <programme channel="寰宇新聞台" start="20250723215500 +0800" stop="20250723225500 +0800">
-    <title lang="zh">寰宇世界通</title>
-  </programme>
-  <programme channel="寰宇新聞台" start="20250723225500 +0800" stop="20250723235500 +0800">
-    <title lang="zh">寰宇世界通</title>
-  </programme>
-  <programme channel="寰宇新聞台" start="20250723235500 +0800" stop="20250724005500 +0800">
-    <title lang="zh">寰宇世界通</title>
-  </programme>
-  <programme channel="寰宇新聞台" start="20250724005500 +0800" stop="20250724015500 +0800">
-    <title lang="zh">寰宇世界通</title>
-  </programme>
   <programme channel="寰宇新聞台" start="20250724015500 +0800" stop="20250724025500 +0800">
     <title lang="zh">寰宇世界通</title>
   </programme>
@@ -11916,56 +10836,6 @@
     <display-name lang="zh">龍華戲劇台</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn18_tv.png"/>
   </channel>
-  <programme channel="龍華戲劇台" start="20250723160000 +0800" stop="20250723170000 +0800">
-    <title lang="zh">風起洛陽</title>
-    <sub-title lang="zh">#18</sub-title>
-    <desc lang="zh">是一部中國大陸古裝劇，講述武周時期古都洛陽發生的事情，由愛奇藝、留白影視聯合出品。改編自馬伯庸《洛陽》小說，由黃軒、王一博、宋茜領銜主演，宋軼特別主演</desc>
-  </programme>
-  <programme channel="龍華戲劇台" start="20250723170000 +0800" stop="20250723180000 +0800">
-    <title lang="zh">風起洛陽</title>
-    <sub-title lang="zh">#19</sub-title>
-    <desc lang="zh">是一部中國大陸古裝劇，講述武周時期古都洛陽發生的事情，由愛奇藝、留白影視聯合出品。改編自馬伯庸《洛陽》小說，由黃軒、王一博、宋茜領銜主演，宋軼特別主演</desc>
-  </programme>
-  <programme channel="龍華戲劇台" start="20250723180000 +0800" stop="20250723190000 +0800">
-    <title lang="zh">錦衣夜行</title>
-    <sub-title lang="zh">#21</sub-title>
-    <desc lang="zh">明太祖朱元璋過世，皇孫朱允炆登基後為鞏固帝位著手削藩，作為太祖四子的燕王朱棣首當其衝。貧民夏潯陰錯陽差成為錦了衣衛並效力燕王，為燕王日後發動「靖難之役」成功篡位作出巨大貢獻，開啟了傳奇人生。</desc>
-  </programme>
-  <programme channel="龍華戲劇台" start="20250723190000 +0800" stop="20250723200000 +0800">
-    <title lang="zh">錦衣夜行</title>
-    <sub-title lang="zh">#22</sub-title>
-    <desc lang="zh">明太祖朱元璋過世，皇孫朱允炆登基後為鞏固帝位著手削藩，作為太祖四子的燕王朱棣首當其衝。貧民夏潯陰錯陽差成為錦了衣衛並效力燕王，為燕王日後發動「靖難之役」成功篡位作出巨大貢獻，開啟了傳奇人生。</desc>
-  </programme>
-  <programme channel="龍華戲劇台" start="20250723200000 +0800" stop="20250723210000 +0800">
-    <title lang="zh">雍正王朝</title>
-    <sub-title lang="zh">#17</sub-title>
-    <desc lang="zh">西元1722年清康熙六十一年，康熙（焦晃）駕崩，舉國震驚。繼位者不是當了近四十年太子的二阿哥，也不是深受康熙鍾愛的十四阿哥，而是素有冷面王之稱的四阿哥胤禎（唐國強）。胤禎的皇位不是篡來的，更不是改遺詔或毒父奪來的，而是康熙傳授，選擇了胤禎當皇帝，自此，清朝進入了雍正王朝的時代…</desc>
-  </programme>
-  <programme channel="龍華戲劇台" start="20250723210000 +0800" stop="20250723220000 +0800">
-    <title lang="zh">雍正王朝</title>
-    <sub-title lang="zh">#18</sub-title>
-    <desc lang="zh">西元1722年清康熙六十一年，康熙（焦晃）駕崩，舉國震驚。繼位者不是當了近四十年太子的二阿哥，也不是深受康熙鍾愛的十四阿哥，而是素有冷面王之稱的四阿哥胤禎（唐國強）。胤禎的皇位不是篡來的，更不是改遺詔或毒父奪來的，而是康熙傳授，選擇了胤禎當皇帝，自此，清朝進入了雍正王朝的時代…</desc>
-  </programme>
-  <programme channel="龍華戲劇台" start="20250723220000 +0800" stop="20250723230000 +0800">
-    <title lang="zh">山河月明</title>
-    <sub-title lang="zh">#7</sub-title>
-    <desc lang="zh">劇情明太祖朱元璋（陳寶國）的第四子朱棣（成毅、馮紹峰）從年少起就喋血沙場，歷經戰爭等磨練，終於成長為合格的軍事統帥和成熟政治家，最後成就一番偉業的故事。</desc>
-  </programme>
-  <programme channel="龍華戲劇台" start="20250723230000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">山河月明</title>
-    <sub-title lang="zh">#8</sub-title>
-    <desc lang="zh">劇情明太祖朱元璋（陳寶國）的第四子朱棣（成毅、馮紹峰）從年少起就喋血沙場，歷經戰爭等磨練，終於成長為合格的軍事統帥和成熟政治家，最後成就一番偉業的故事。</desc>
-  </programme>
-  <programme channel="龍華戲劇台" start="20250724000000 +0800" stop="20250724010000 +0800">
-    <title lang="zh">錦衣夜行</title>
-    <sub-title lang="zh">#21</sub-title>
-    <desc lang="zh">明太祖朱元璋過世，皇孫朱允炆登基後為鞏固帝位著手削藩，作為太祖四子的燕王朱棣首當其衝。貧民夏潯陰錯陽差成為錦了衣衛並效力燕王，為燕王日後發動「靖難之役」成功篡位作出巨大貢獻，開啟了傳奇人生。</desc>
-  </programme>
-  <programme channel="龍華戲劇台" start="20250724010000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">錦衣夜行</title>
-    <sub-title lang="zh">#22</sub-title>
-    <desc lang="zh">明太祖朱元璋過世，皇孫朱允炆登基後為鞏固帝位著手削藩，作為太祖四子的燕王朱棣首當其衝。貧民夏潯陰錯陽差成為錦了衣衛並效力燕王，為燕王日後發動「靖難之役」成功篡位作出巨大貢獻，開啟了傳奇人生。</desc>
-  </programme>
   <programme channel="龍華戲劇台" start="20250724020000 +0800" stop="20250724030000 +0800">
     <title lang="zh">上古英雄</title>
     <sub-title lang="zh">#25</sub-title>
@@ -12508,45 +11378,6 @@
     <display-name lang="zh">Smart知識台</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn19_tv.png"/>
   </channel>
-  <programme channel="Smart知識台" start="20250723160000 +0800" stop="20250723170000 +0800">
-    <title lang="zh">全民星攻略</title>
-    <sub-title lang="zh">Super Night</sub-title>
-    <desc lang="zh">東森綜合台全新益智實境節目，「全民星攻略」，由館長曾國城擔任把關者，考驗著每個來挑戰九宮格益智遊戲藝人明星。想要攻略九宮格關卡，透過創意聯想、邏輯推理、理想分析，才有機會獲取智慧星幣，帶走夢幻大獎。</desc>
-  </programme>
-  <programme channel="Smart知識台" start="20250723170000 +0800" stop="20250723180000 +0800">
-    <title lang="zh">健康2.0【首】</title>
-  </programme>
-  <programme channel="Smart知識台" start="20250723180000 +0800" stop="20250723190000 +0800">
-    <title lang="zh">全民星攻略【首】</title>
-  </programme>
-  <programme channel="Smart知識台" start="20250723190000 +0800" stop="20250723200000 +0800">
-    <title lang="zh">論政天下之鬥而不破【新】</title>
-  </programme>
-  <programme channel="Smart知識台" start="20250723200000 +0800" stop="20250723210000 +0800">
-    <title lang="zh">健康2.0</title>
-    <desc lang="zh">主持人鄭凱云在節目中，將以各種深入淺出的方式，檢測時下流行的健康產品的效用，示範健康烹調與運動方法，並與觀眾分享照顧家人的健康資訊與心得。</desc>
-  </programme>
-  <programme channel="Smart知識台" start="20250723210000 +0800" stop="20250723220000 +0800">
-    <title lang="zh">論政天下之鬥而不破</title>
-  </programme>
-  <programme channel="Smart知識台" start="20250723220000 +0800" stop="20250723230000 +0800">
-    <title lang="zh">全民星攻略</title>
-    <sub-title lang="zh">Super Night</sub-title>
-    <desc lang="zh">東森綜合台全新益智實境節目，「全民星攻略」，由館長曾國城擔任把關者，考驗著每個來挑戰九宮格益智遊戲藝人明星。想要攻略九宮格關卡，透過創意聯想、邏輯推理、理想分析，才有機會獲取智慧星幣，帶走夢幻大獎。</desc>
-  </programme>
-  <programme channel="Smart知識台" start="20250723230000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">健康2.0</title>
-    <desc lang="zh">主持人鄭凱云在節目中，將以各種深入淺出的方式，檢測時下流行的健康產品的效用，示範健康烹調與運動方法，並與觀眾分享照顧家人的健康資訊與心得。</desc>
-  </programme>
-  <programme channel="Smart知識台" start="20250724000000 +0800" stop="20250724010000 +0800">
-    <title lang="zh">全民星攻略</title>
-    <sub-title lang="zh">Super Night</sub-title>
-    <desc lang="zh">東森綜合台全新益智實境節目，「全民星攻略」，由館長曾國城擔任把關者，考驗著每個來挑戰九宮格益智遊戲藝人明星。想要攻略九宮格關卡，透過創意聯想、邏輯推理、理想分析，才有機會獲取智慧星幣，帶走夢幻大獎。</desc>
-  </programme>
-  <programme channel="Smart知識台" start="20250724010000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">健康2.0</title>
-    <desc lang="zh">主持人鄭凱云在節目中，將以各種深入淺出的方式，檢測時下流行的健康產品的效用，示範健康烹調與運動方法，並與觀眾分享照顧家人的健康資訊與心得。</desc>
-  </programme>
   <programme channel="Smart知識台" start="20250724020000 +0800" stop="20250724030000 +0800">
     <title lang="zh">全民星攻略</title>
     <sub-title lang="zh">Super Night</sub-title>
@@ -12995,44 +11826,6 @@
     <display-name lang="zh">ELTV生活英語台</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn20_tv.png"/>
   </channel>
-  <programme channel="ELTV生活英語台" start="20250723160000 +0800" stop="20250723170000 +0800">
-    <title lang="zh">Badanamu說故事</title>
-  </programme>
-  <programme channel="ELTV生活英語台" start="20250723170000 +0800" stop="20250723180000 +0800">
-    <title lang="zh">歡迎來到Wiggle Town</title>
-  </programme>
-  <programme channel="ELTV生活英語台" start="20250723180000 +0800" stop="20250723190000 +0800">
-    <title lang="zh">森林偵探</title>
-    <sub-title lang="zh">#9</sub-title>
-  </programme>
-  <programme channel="ELTV生活英語台" start="20250723190000 +0800" stop="20250723200000 +0800">
-    <title lang="zh">歡唱小浣熊</title>
-  </programme>
-  <programme channel="ELTV生活英語台" start="20250723200000 +0800" stop="20250723210000 +0800">
-    <title lang="zh">Badanamu說故事</title>
-  </programme>
-  <programme channel="ELTV生活英語台" start="20250723210000 +0800" stop="20250723213000 +0800">
-    <title lang="zh">歡迎來到Wiggle Town</title>
-  </programme>
-  <programme channel="ELTV生活英語台" start="20250723213000 +0800" stop="20250723220000 +0800">
-    <title lang="zh">歡迎來到Wiggle Town</title>
-  </programme>
-  <programme channel="ELTV生活英語台" start="20250723220000 +0800" stop="20250723223000 +0800">
-    <title lang="zh">快樂DoReMi</title>
-  </programme>
-  <programme channel="ELTV生活英語台" start="20250723223000 +0800" stop="20250723230000 +0800">
-    <title lang="zh">森林偵探</title>
-    <sub-title lang="zh">#9</sub-title>
-  </programme>
-  <programme channel="ELTV生活英語台" start="20250723230000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">看動畫學英語﹘Rainbow故事屋</title>
-  </programme>
-  <programme channel="ELTV生活英語台" start="20250724000000 +0800" stop="20250724010000 +0800">
-    <title lang="zh">童話任意門雙語版</title>
-  </programme>
-  <programme channel="ELTV生活英語台" start="20250724010000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">跳舞童樂會</title>
-  </programme>
   <programme channel="ELTV生活英語台" start="20250724020000 +0800" stop="20250724030000 +0800">
     <title lang="zh">跟外國人學英語﹘城市文法通</title>
   </programme>
@@ -13422,28 +12215,6 @@
     <display-name lang="zh">龍華經典台</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn21_tv.png"/>
   </channel>
-  <programme channel="龍華經典台" start="20250723153500 +0800" stop="20250723171000 +0800">
-    <title lang="zh">靈犬與我：極地生存</title>
-  </programme>
-  <programme channel="龍華經典台" start="20250723171000 +0800" stop="20250723190000 +0800">
-    <title lang="zh">聯合縮小軍</title>
-  </programme>
-  <programme channel="龍華經典台" start="20250723190000 +0800" stop="20250723210000 +0800">
-    <title lang="zh">善德女王(55-56)</title>
-  </programme>
-  <programme channel="龍華經典台" start="20250723210000 +0800" stop="20250723224000 +0800">
-    <title lang="zh">花田囍事(首)</title>
-  </programme>
-  <programme channel="龍華經典台" start="20250723224000 +0800" stop="20250724003000 +0800">
-    <title lang="zh">荒野大鏢客</title>
-    <sub-title lang="zh">A Fistful of Dollars</sub-title>
-    <desc lang="zh">墨西哥邊境小鎮來了一位大鏢客，他得知鎮上勢不兩立的兩大幫派廝殺已久，便決定與兩派斡旋，除去鎮上惡勢力，恢復小鎮的平靜。</desc>
-  </programme>
-  <programme channel="龍華經典台" start="20250724003000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">九尾狐與飛天貓</title>
-    <sub-title lang="zh">Flying Dagger(aka:大小飛刀)</sub-title>
-    <desc lang="zh">富商雷員外高價誘捕天下第一大盜九尾狐（張學友），但卻不知雷員外實乃東廠首腦雷天敵，他不惜一切追捕九尾狐實因九尾狐盜取他私通賣國的證據。最後在大醉俠（吳孟達）的幫助下，眾人終於擊敗雷天敵。</desc>
-  </programme>
   <programme channel="龍華經典台" start="20250724020000 +0800" stop="20250724060000 +0800">
     <title lang="zh">收播</title>
     <sub-title lang="zh">aka:系統測試</sub-title>
@@ -13626,56 +12397,6 @@
     <display-name lang="zh">台灣戲劇台</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn22_tv.png"/>
   </channel>
-  <programme channel="台灣戲劇台" start="20250723160000 +0800" stop="20250723170000 +0800">
-    <title lang="zh">包青天</title>
-    <desc lang="zh">仁宗皇帝在位期間，包拯（金超群）升任開封府府尹執掌京畿，剛直耿介、鐵面無私、明察秋毫、斷案如神，百姓愛戴敬仰尊稱為“包青天”。並有公孫策（范鴻軒）與南俠展昭（何家勁）一文一武兩員大將，使得包拯屢破奇案屢建奇功。</desc>
-  </programme>
-  <programme channel="台灣戲劇台" start="20250723170000 +0800" stop="20250723173000 +0800">
-    <title lang="zh">親戚不計較</title>
-    <desc lang="zh">由卓勝利、李鑼等人主演，本劇雖以喜劇的方式呈現，但笑中有淚，淚中有悟，悟中有得，令人深思！</desc>
-  </programme>
-  <programme channel="台灣戲劇台" start="20250723173000 +0800" stop="20250723180000 +0800">
-    <title lang="zh">親戚不計較</title>
-    <desc lang="zh">由卓勝利、李鑼等人主演，本劇雖以喜劇的方式呈現，但笑中有淚，淚中有悟，悟中有得，令人深思！</desc>
-  </programme>
-  <programme channel="台灣戲劇台" start="20250723180000 +0800" stop="20250723183000 +0800">
-    <title lang="zh">親戚不計較</title>
-    <desc lang="zh">由卓勝利、李鑼等人主演，本劇雖以喜劇的方式呈現，但笑中有淚，淚中有悟，悟中有得，令人深思！</desc>
-  </programme>
-  <programme channel="台灣戲劇台" start="20250723183000 +0800" stop="20250723190000 +0800">
-    <title lang="zh">親戚不計較</title>
-    <desc lang="zh">由卓勝利、李鑼等人主演，本劇雖以喜劇的方式呈現，但笑中有淚，淚中有悟，悟中有得，令人深思！</desc>
-  </programme>
-  <programme channel="台灣戲劇台" start="20250723190000 +0800" stop="20250723200000 +0800">
-    <title lang="zh">台灣龍捲風</title>
-    <sub-title lang="zh">#293</sub-title>
-    <desc lang="zh">超聯集團的接班人黃志中（陳昭榮），為了一樁刑事案件的宣判，宴請關檢察官（楊懷民），黃志中拿出美金五百萬，要他高抬貴手，放他親信一條生路。想不到關檢察官當下責備了黃志中，斷然拒絕賄賂，憤然離開深夜的高速公路，關檢察官遭攔阻，被黃志中手下拖出車外痛毆，盛怒之下，手下竟誤殺關檢察官…</desc>
-  </programme>
-  <programme channel="台灣戲劇台" start="20250723200000 +0800" stop="20250723210000 +0800">
-    <title lang="zh">台灣龍捲風</title>
-    <sub-title lang="zh">#293</sub-title>
-    <desc lang="zh">超聯集團的接班人黃志中（陳昭榮），為了一樁刑事案件的宣判，宴請關檢察官（楊懷民），黃志中拿出美金五百萬，要他高抬貴手，放他親信一條生路。想不到關檢察官當下責備了黃志中，斷然拒絕賄賂，憤然離開深夜的高速公路，關檢察官遭攔阻，被黃志中手下拖出車外痛毆，盛怒之下，手下竟誤殺關檢察官…</desc>
-  </programme>
-  <programme channel="台灣戲劇台" start="20250723210000 +0800" stop="20250723223000 +0800">
-    <title lang="zh">藍色水玲瓏</title>
-    <desc lang="zh">推出全新三大系列，分別為陰陽有情天、夜迷離及神秘記事簿，劇情有動人的人世間的親情，至死不渝的男女情愛，天理報應的因果事件等，這些充斥在社會上的愛恨情仇，令人匪夷所思的事件，帶來另一種不同的詮釋角度。</desc>
-  </programme>
-  <programme channel="台灣戲劇台" start="20250723223000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">藍色水玲瓏</title>
-    <desc lang="zh">推出全新三大系列，分別為陰陽有情天、夜迷離及神秘記事簿，劇情有動人的人世間的親情，至死不渝的男女情愛，天理報應的因果事件等，這些充斥在社會上的愛恨情仇，令人匪夷所思的事件，帶來另一種不同的詮釋角度。</desc>
-  </programme>
-  <programme channel="台灣戲劇台" start="20250724000000 +0800" stop="20250724003000 +0800">
-    <title lang="zh">親戚不計較</title>
-    <desc lang="zh">由卓勝利、李鑼等人主演，本劇雖以喜劇的方式呈現，但笑中有淚，淚中有悟，悟中有得，令人深思！</desc>
-  </programme>
-  <programme channel="台灣戲劇台" start="20250724003000 +0800" stop="20250724010000 +0800">
-    <title lang="zh">親戚不計較</title>
-    <desc lang="zh">由卓勝利、李鑼等人主演，本劇雖以喜劇的方式呈現，但笑中有淚，淚中有悟，悟中有得，令人深思！</desc>
-  </programme>
-  <programme channel="台灣戲劇台" start="20250724010000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">包青天</title>
-    <desc lang="zh">仁宗皇帝在位期間，包拯（金超群）升任開封府府尹執掌京畿，剛直耿介、鐵面無私、明察秋毫、斷案如神，百姓愛戴敬仰尊稱為“包青天”。並有公孫策（范鴻軒）與南俠展昭（何家勁）一文一武兩員大將，使得包拯屢破奇案屢建奇功。</desc>
-  </programme>
   <programme channel="台灣戲劇台" start="20250724020000 +0800" stop="20250724030000 +0800">
     <title lang="zh">包青天</title>
     <desc lang="zh">仁宗皇帝在位期間，包拯（金超群）升任開封府府尹執掌京畿，剛直耿介、鐵面無私、明察秋毫、斷案如神，百姓愛戴敬仰尊稱為“包青天”。並有公孫策（范鴻軒）與南俠展昭（何家勁）一文一武兩員大將，使得包拯屢破奇案屢建奇功。</desc>
@@ -14162,30 +12883,6 @@
     <display-name lang="zh">三立新聞iNEWS</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_iNEWS_tv.png"/>
   </channel>
-  <programme channel="三立新聞iNEWS" start="20250723160000 +0800" stop="20250723170000 +0800">
-    <title lang="zh">醫點不誇張(重)</title>
-  </programme>
-  <programme channel="三立新聞iNEWS" start="20250723170000 +0800" stop="20250723175500 +0800">
-    <title lang="zh">1700iNEWS整點新聞(首)</title>
-  </programme>
-  <programme channel="三立新聞iNEWS" start="20250723175500 +0800" stop="20250723195500 +0800">
-    <title lang="zh">1819錢進大頭條(首)</title>
-  </programme>
-  <programme channel="三立新聞iNEWS" start="20250723195500 +0800" stop="20250723203000 +0800">
-    <title lang="zh">iNEWS大世界(首)</title>
-  </programme>
-  <programme channel="三立新聞iNEWS" start="20250723203000 +0800" stop="20250723210000 +0800">
-    <title lang="zh">全民i彩券(首)</title>
-  </programme>
-  <programme channel="三立新聞iNEWS" start="20250723210000 +0800" stop="20250723230000 +0800">
-    <title lang="zh">關我什麼事(首)</title>
-  </programme>
-  <programme channel="三立新聞iNEWS" start="20250723230000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">2300iNEWS財經夜世界(首)</title>
-  </programme>
-  <programme channel="三立新聞iNEWS" start="20250724000000 +0800" stop="20250724020000 +0800">
-    <title lang="zh">關我什麼事(重)</title>
-  </programme>
   <programme channel="三立新聞iNEWS" start="20250724020000 +0800" stop="20250724030000 +0800">
     <title lang="zh">2300iNEWS財經夜世界(重)</title>
   </programme>
@@ -14501,12 +13198,6 @@
     <display-name lang="zh">倪珍播新聞</display-name>
     <icon src="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_nnews_tv.png"/>
   </channel>
-  <programme channel="倪珍播新聞" start="20250723120000 +0800" stop="20250723180000 +0800">
-    <title lang="zh">午安新聞</title>
-  </programme>
-  <programme channel="倪珍播新聞" start="20250723180000 +0800" stop="20250724000000 +0800">
-    <title lang="zh">晚安新聞</title>
-  </programme>
   <programme channel="倪珍播新聞" start="20250724000000 +0800" stop="20250724060000 +0800">
     <title lang="zh">晚安新聞</title>
   </programme>
