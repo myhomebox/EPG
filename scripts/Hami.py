@@ -45,7 +45,7 @@ async def request_channel_list():
                     "contentPk": element.get('contentPk', '')
                 })
     except Exception as e:
-        logger.error(f"獲取頻道列表時出錯: {e}")
+        print(f"獲取頻道列表時出錯: {e}")
     
     return channel_list
 
@@ -58,17 +58,17 @@ async def get_programs_with_retry(channel):
             return programs
         except Exception as e:
             retries += 1
-            logger.error(f"請求 {channel['channelName']} 的EPG時出錯: {e}")
-            logger.info(f"將在 {RETRY_DELAY} 秒後重試 ({retries}/{MAX_RETRIES})")
+            print(f"請求 {channel['channelName']} 的EPG時出錯: {e}")
+            print(f"將在 {RETRY_DELAY} 秒後重試 ({retries}/{MAX_RETRIES})")
             await asyncio.sleep(RETRY_DELAY)
     
     logger.warning(f"{channel['channelName']} 達到最大重試次數，跳過...")
     return []
 
 async def request_all_epg():
-    logger.info("開始獲取頻道列表...")
+    print("開始獲取頻道列表...")
     rawChannels = await request_channel_list()
-    logger.info(f"找到 {len(rawChannels)} 個頻道")
+    print(f"找到 {len(rawChannels)} 個頻道")
     
     all_programs = []
     
@@ -83,12 +83,12 @@ async def request_all_epg():
         if programs:
             all_programs.extend(programs)
     
-    logger.info(f"共獲取 {len(all_programs)} 個節目")
+    print(f"共獲取 {len(all_programs)} 個節目")
     return rawChannels, all_programs
 
 async def request_epg(channel_name: str, content_pk: str):
     url = "https://apl-hamivideo.cdn.hinet.net/HamiVideo/getEpgByContentIdAndDate.php"
-    logger.info(f"獲取 {channel_name} 的節目表...")
+    print(f"獲取 {channel_name} 的節目表...")
     
     epgResult = []
     today = datetime.now(pytz.timezone('Asia/Taipei'))
@@ -124,7 +124,7 @@ async def request_epg(channel_name: str, content_pk: str):
                                 "end": end_time
                             })
         except Exception as e:
-            logger.error(f"獲取 {channel_name} 在 {formatted_date} 的節目表時出錯: {e}")
+            print(f"獲取 {channel_name} 在 {formatted_date} 的節目表時出錯: {e}")
     
     return epgResult
 
@@ -138,7 +138,7 @@ def hami_time_to_datetime(time_range: str):
     return start_time_shanghai, end_time_shanghai
 
 def generate_xml_epg(channels, programs):
-    # 創建XML結構
+    # 建立XML結構
     root = ET.Element("tv")
     root.set("info-name", "Hami電視節目表")
     root.set("info-url", "https://hamivideo.hinet.net/")
@@ -173,14 +173,14 @@ def generate_xml_epg(channels, programs):
                 desc.set("lang", "zh")
                 desc.text = program["description"]
     
-    # 創建XML樹
+    # 建立XML樹
     tree = ET.ElementTree(root)
     return tree
 
 async def main():
-    logger.info("開始生成Hami電視節目表...")
+    print("開始生成Hami電視節目表...")
     
-    # 創建輸出目錄
+    # 建立輸出目錄
     output_dir = os.path.join(os.path.dirname(__file__), "..", "output")
     os.makedirs(output_dir, exist_ok=True)
     
@@ -192,7 +192,7 @@ async def main():
     output_file = os.path.join(output_dir, "hami.xml")
     xml_tree.write(output_file, encoding="utf-8", xml_declaration=True)
     
-    logger.success(f"電視節目表已成功生成: {output_file}")
+    print(f"電視節目表已成功生成: {output_file}")
 
 if __name__ == '__main__':
     asyncio.run(main())
