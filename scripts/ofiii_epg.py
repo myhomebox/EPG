@@ -22,6 +22,8 @@ def parse_channel_list():
     """解析頻道列表文件內容"""
     channels = []
     channel_list = [
+        "倪珍越南語新聞 ==> nnews-vn",
+        "倪珍報氣象 ==> nnews-wf",
         "中天新聞台 ==> 4gtv-4gtv009",
         "台視 ==> 4gtv-4gtv066",
         "中視 ==> 4gtv-4gtv040",
@@ -51,9 +53,7 @@ def parse_channel_list():
         "龍華經典台 ==> litv-longturn21",
         "台灣戲劇台 ==> litv-longturn22",
         "三立新聞iNEWS ==> iNEWS",
-        "倪珍播新聞 ==> nnews-zh",
-        "倪珍報氣象 ==> nnews-wf",
-        "倪珍越南語新聞 ==> nnews-vn"
+        "倪珍播新聞 ==> nnews-zh"
     ]
     
     for line in channel_list:
