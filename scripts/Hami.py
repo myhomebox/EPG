@@ -180,9 +180,9 @@ def generate_xml_epg(channels, programs):
 async def main():
     print("開始生成Hami電視節目表...")
     
-    # 建立輸出目錄 - 直接在根目錄下建立output
+    # 建立輸出目錄
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.dirname(current_dir)  # 獲取項目根目錄
+    project_root = os.path.dirname(current_dir)
     output_dir = os.path.join(project_root, "output")
     os.makedirs(output_dir, exist_ok=True)
     
@@ -192,12 +192,11 @@ async def main():
     channels, programs = await request_all_epg()
     
     # 生成XML EPG
-    xml_str = generate_xml_epg(channels, programs)
+    xml_tree = generate_xml_epg(channels, programs)  # 重命名變量以反映其類型
     output_file = os.path.join(output_dir, "hami.xml")
     
-    # 儲存到檔案
-    with open(output_file, "w", encoding="utf-8") as f:
-        f.write(xml_str)
+    # 正確寫入XML文件
+    xml_tree.write(output_file, encoding="utf-8", xml_declaration=True)  # 使用ElementTree的write方法
     
     print(f"電視節目表已成功生成: {output_file}")
     print(f"檔案大小: {os.path.getsize(output_file) / 1024:.2f} KB")
