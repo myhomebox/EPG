@@ -19,7 +19,7 @@ HEADERS = {
 }
 
 def parse_channel_list():
-    """解析頻道列表文件內容"""
+    """解析頻道清單檔案內容"""
     channels = []
     channel_list = [
         "倪珍越南語新聞 ==> nnews-vn",
@@ -66,7 +66,7 @@ def parse_channel_list():
     return channels
 
 def fetch_epg_data(channel_id, max_retries=3):
-    """獲取指定頻道的EPG數據"""
+    """獲取指定頻道的電視節目表數據"""
     url = f"https://www.ofiii.com/channel/watch/{channel_id}"
     
     for attempt in range(max_retries):
@@ -97,11 +97,11 @@ def fetch_epg_data(channel_id, max_retries=3):
             print(f"⚠️ 請求失敗 (嘗試 {attempt+1}/{max_retries}), 等待 {wait_time:.2f}秒: {str(e)}")
             time.sleep(wait_time)
     
-    print(f"❌ 無法獲取EPG數據: {channel_id}")
+    print(f"❌ 無法獲取 電視節目表 數據: {channel_id}")
     return None
 
 def parse_epg_data(json_data, channel_name):
-    """解析EPG JSON數據"""
+    """解析電視節目表 JSON數據"""
     if not json_data:
         return []
     
@@ -147,20 +147,20 @@ def parse_epg_data(json_data, channel_name):
             })
             
     except (KeyError, TypeError, ValueError) as e:
-        print(f"❌ 解析EPG數據失敗: {str(e)}")
+        print(f"❌ 解析電視節目表數據失敗: {str(e)}")
     
     return programs
 
 def get_ofiii_epg():
-    """獲取OFIII的EPG數據"""
+    """獲取歐飛電視節目表"""
     print("="*50)
-    print("開始獲取OFIII EPG數據")
+    print("開始獲取歐飛電視節目表")
     print("="*50)
     
-    # 獲取頻道列表
+    # 獲取頻道清單
     channels_info = parse_channel_list()
     if not channels_info:
-        print("❌ 無法解析頻道列表")
+        print("❌ 無法解析頻道清單")
         return [], []
     
     all_channels = []
@@ -180,49 +180,45 @@ def get_ofiii_epg():
         # 解析節目數據
         programs = parse_epg_data(json_data, channel_name)
         
-        # 添加頻道信息
         try:
-            # 添加多層安全檢查
-            if not json_data.get('props') or not json_data['props'].get('pageProps'):
-                print(f"❌ 跳過無效的JSON結構: {channel_name}")
+            # 保險起見，先安全取得 pageProps
+            page_props = json_data.get('props', {}).get('pageProps', {})
+            channel_data = page_props.get('channel')
+            introduction = page_props.get('introduction', {}) or {}
+
+            if not isinstance(channel_data, dict):
+                print(f"❌ channel_data 不是字典: {channel_name}")
                 failed_channels.append(channel_name)
                 continue
-                
-            page_props = json_data['props']['pageProps']
-            
-            # 獲取頻道數據
-            channel_data = page_props.get('channel', {})
-            introduction = page_props.get('introduction', {})
-            
-            logo = channel_data.get('picture', '')
-            if not logo:
-                logo = introduction.get('image', '')
-            
-            # 確保logo是完整URL
-            if logo and not logo.startswith('http'):
-                logo = f"https://p-cdnstatic.svc.litv.tv/pics/{logo}"
-            
-            # 添加頻道描述
-            channel_desc = introduction.get('description', '')
-            if not channel_desc:
-                channel_desc = channel_data.get('description', '')
-            
-            all_channels.append({
+
+            # 處理 logo（允許為 None）
+            logo = channel_data.get('picture') or introduction.get('image')
+            if logo and not logo.startswith("http"):
+                logo = f"https://p-cdnstatic.svc.litv.tv/{logo}"
+
+            # 處理描述
+            desc = introduction.get('description', '') or channel_data.get('description', '')
+
+            # 組裝頻道資料
+            channel_info = {
                 "name": channel_name,
                 "channelName": channel_name,
                 "id": channel_id,
                 "url": f"https://www.ofiii.com/channel/watch/{channel_id}",
                 "source": "ofiii",
-                "logo": logo,
-                "desc": channel_desc,
+                "desc": desc,
                 "sort": "海外"
-            })
-            
-            # 添加節目數據
+            }
+            if logo:
+                channel_info["logo"] = logo
+
+            all_channels.append(channel_info)
             all_programs.extend(programs)
-            
+
         except Exception as e:
             print(f"❌ 解析頻道信息失敗: {channel_name}, {str(e)}")
+            import traceback
+            traceback.print_exc()
             failed_channels.append(channel_name)
             continue
             
@@ -251,14 +247,15 @@ def get_ofiii_epg():
     print("="*50)
     return all_channels, all_programs
 
+
 def generate_xmltv(channels, programs, output_file="ofiii.xml"):
     """生成XMLTV格式的EPG數據"""
-    print(f"\n生成XMLTV文件: {output_file}")
+    print(f"\n生成XMLTV檔案: {output_file}")
     
-    # 創建XML根元素
+    # 建立XML根元素
     root = ET.Element("tv", generator="OFIII-EPG-Generator", source="www.ofiii.com")
     
-    # 按照第六點要求：頻道1定義 -> 頻道1節目 -> 頻道2定義 -> 頻道2節目 -> ...
+    # 頻道1 -> 頻道1節目 -> 頻道2-> 頻道2節目 -> ...
     program_count = 0
     for channel in channels:
         channel_name = channel['name']
@@ -282,11 +279,9 @@ def generate_xmltv(channels, programs, output_file="ofiii.xml"):
         # 添加該頻道的所有節目
         for program in channel_programs:
             try:
-                # 格式化時間 (XMLTV格式: YYYYMMDDHHMMSS +TZ)
                 start_time = program['start'].strftime('%Y%m%d%H%M%S %z')
                 end_time = program['end'].strftime('%Y%m%d%H%M%S %z')
                 
-                # 創建節目元素
                 program_elem = ET.SubElement(
                     root, 
                     "programme", 
@@ -295,7 +290,6 @@ def generate_xmltv(channels, programs, output_file="ofiii.xml"):
                     stop=end_time
                 )
                 
-                # 添加節目信息
                 title = program.get('programName', '未知節目')
                 ET.SubElement(program_elem, "title", lang="zh").text = title
                 
@@ -321,25 +315,25 @@ def generate_xmltv(channels, programs, output_file="ofiii.xml"):
         print(f"⚠️ XML美化失敗, 使用原始XML: {str(e)}")
         pretty_xml = xml_str.encode('utf-8')
     
-    # 保存到文件
+    # 儲存到檔案
     try:
         with open(output_file, 'wb') as f:
             f.write(pretty_xml)
         
-        print(f"✅ XMLTV文件已生成: {output_file}")
+        print(f"✅ XMLTV檔案已生成: {output_file}")
         print(f"📺 頻道數: {len(channels)}")
         print(f"📺 節目數: {program_count}")
-        print(f"💾 文件大小: {os.path.getsize(output_file) / 1024:.2f} KB")
+        print(f"💾 檔案大小: {os.path.getsize(output_file) / 1024:.2f} KB")
         return True
     except Exception as e:
-        print(f"❌ 保存XML文件失敗: {str(e)}")
+        print(f"❌ 儲存XML檔案失敗: {str(e)}")
         return False
 
 def main():
     """主函數，處理命令行參數"""
-    parser = argparse.ArgumentParser(description='OFIII EPG 生成器')
+    parser = argparse.ArgumentParser(description='歐飛電視節目表')
     parser.add_argument('--output', type=str, default='output/ofiii.xml', 
-                       help='輸出XML文件路徑 (默認: output/ofiii.xml)')
+                       help='輸出XML檔案路徑 (默認: output/ofiii.xml)')
     
     args = parser.parse_args()
     
@@ -347,7 +341,7 @@ def main():
     output_dir = os.path.dirname(args.output)
     if output_dir and not os.path.exists(output_dir):
         os.makedirs(output_dir, exist_ok=True)
-        print(f"創建輸出目錄: {output_dir}")
+        print(f"建立輸出目錄: {output_dir}")
     
     try:
         # 獲取EPG數據
@@ -357,7 +351,7 @@ def main():
             print("❌ 未獲取到有效EPG數據，無法生成XML")
             sys.exit(1)
             
-        # 生成XMLTV文件
+        # 生成XMLTV檔案
         if not generate_xmltv(channels, programs, args.output):
             sys.exit(1)
             
