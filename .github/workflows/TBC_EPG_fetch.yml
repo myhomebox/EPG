@@ -1,4 +1,4 @@
-name: TBC EPG Daily Update
+name: Daily TBC EPG Update
 
 on:
   schedule:
@@ -8,6 +8,7 @@ on:
 jobs:
   update_epg:
     runs-on: ubuntu-latest
+    timeout-minutes: 30  # 設置超時時間
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
@@ -20,7 +21,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install requests beautifulsoup4 pytz loguru
+        pip install requests beautifulsoup4 pytz urllib3
         
     - name: Run EPG Scraper
       run: |
@@ -32,5 +33,5 @@ jobs:
         git config --global user.name 'GitHub Actions'
         git config --global user.email 'actions@github.com'
         git add output/tbc.xml
-        git commit -m "自動更新TBC EPG數據"
+        git commit -m "自動更新TBC EPG數據 [skip ci]" || echo "無變更可提交"
         git push
