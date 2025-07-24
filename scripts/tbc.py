@@ -6,18 +6,36 @@ import os
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 from datetime import datetime, timedelta
+import time
 
 import pytz
 import requests
 from bs4 import BeautifulSoup as bs
-
-from loguru import logger
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 # 全局時區設置
 TAIPEI_TZ = pytz.timezone('Asia/Taipei')
 headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+    'Accept-Language': 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+    'Connection': 'keep-alive',
+    'Referer': 'https://www.tbc.net.tw/EPG'
 }
+
+def create_session_with_retry():
+    """建立帶有重試機制的會話"""
+    session = requests.Session()
+    retry_strategy = Retry(
+        total=5,  # 最大重試次數
+        backoff_factor=1,  # 重試等待時間因子
+        status_forcelist=[429, 500, 502, 503, 504],  # 需要重試的HTTP狀態碼
+        allowed_methods=["GET", "POST"]  # 需要重試的HTTP方法
+    )
+    adapter = HTTPAdapter(max_retries=retry_strategy)
+    session.mount("http://", adapter)
+    session.mount("https://", adapter)
+    return session
 
 async def get_tbc_epg():
     """獲取台灣大寬頻所有頻道的電視節目表 (跳過頻道ID 300-329)"""
@@ -31,7 +49,6 @@ async def get_tbc_epg():
     
     # 需要跳過的頻道ID列表（包括300-329和其他指定ID）
     skip_ids = [str(i) for i in range(300, 330)]  # 300-329
-    #skip_ids.extend(['662', '941', '914'])  # 額外指定的ID
     
     # 獲取今天和未來6天的節目表
     total_days = 6
@@ -107,15 +124,16 @@ async def get_epgs_tbc(channel_id, date_str, channel_name, channel_real_id):
     programs = []
     
     try:
-        # 建立新會話
-        with requests.Session() as session:
-            # 一次性獲取所有節目資料
-            response = await asyncio.to_thread(
-                session.get, url, 
-                headers=headers, 
-                timeout=30
-            )
-            
+        # 建立新會話（帶重試機制）
+        session = create_session_with_retry()
+        
+        # 一次性獲取所有節目資料
+        response = await asyncio.to_thread(
+            session.get, url, 
+            headers=headers, 
+            timeout=30
+        )
+        
         if response.status_code != 200:
             print(f"❌錯誤:頻道 {channel_id} 請求失敗: HTTP {response.status_code}")
             return programs
@@ -167,7 +185,7 @@ async def get_epgs_tbc(channel_id, date_str, channel_name, channel_real_id):
                     # 獲取節目名稱
                     # 對於特殊頻道ID (404-420) 直接使用data-name屬性
                     if channel_id in special_channel_ids:
-                        title = li.get("data.name", "").strip()
+                        title = li.get("data-name", "").strip()
                     else:
                         title = li.get("title", "").strip()
                     
@@ -208,27 +226,23 @@ async def get_channels_tbc():
     channels = []
     
     try:
-        # 使用會話管理獲取動態Session ID
-        with requests.Session() as session:
-            # 首次訪問獲取Session Cookie
-            init_url = "https://www.tbc.net.tw/EPG"
-            init_response = await asyncio.to_thread(
-                session.get, init_url, 
-                headers=headers, 
-                timeout=10
-            )
-            
-            if init_response.status_code != 200:
-                print(f"❌錯誤:頻道清單請求失敗: HTTP {init_response.status_code}")
-                return []
-            
-            # 使用同會話獲取頻道列表
-            response = await asyncio.to_thread(
-                session.get, init_url, 
-                headers=headers, 
-                timeout=10
-            )
-            
+        # 建立帶重試機制的會話
+        session = create_session_with_retry()
+        
+        # 首次訪問獲取Session Cookie
+        init_url = "https://www.tbc.net.tw/EPG"
+        
+        # 使用異步線程執行請求
+        response = await asyncio.to_thread(
+            session.get, init_url, 
+            headers=headers, 
+            timeout=15
+        )
+        
+        if response.status_code != 200:
+            print(f"❌錯誤:頻道清單請求失敗: HTTP {response.status_code}")
+            return []
+        
         response.encoding = "utf-8"
         soup = bs(response.text, "html.parser")
         
@@ -266,7 +280,7 @@ async def get_channels_tbc():
 
 def generate_xmltv(channels, programs, output_path):
     """生成XMLTV格式的EPG數據"""
-    # 創建XML根元素
+    # 建立XML根元素
     root = ET.Element("tv")
     root.set("generator-info-name", "tbc_epg")
     root.set("source-info-name", "tbc.net.tw")
@@ -303,7 +317,7 @@ def generate_xmltv(channels, programs, output_path):
         # 添加該頻道的節目
         if channel_id in channel_programs:
             for program in channel_programs[channel_id]:
-                # 創建programme元素
+                # 建立programme元素
                 programme = ET.SubElement(root, "programme")
                 programme.set("channel", channel_id)
                 programme.set("start", program['start'].strftime("%Y%m%d%H%M%S %z"))
@@ -312,7 +326,7 @@ def generate_xmltv(channels, programs, output_path):
                 # 添加標題
                 title = ET.SubElement(programme, "title")
                 title.set("lang", "zh")
-                title.text = program['programName']
+                title.text = program['programName'] or "未知節目"
                 
                 # 添加描述
                 desc = ET.SubElement(programme, "desc")
@@ -324,12 +338,12 @@ def generate_xmltv(channels, programs, output_path):
     reparsed = minidom.parseString(rough_string)
     pretty_xml = reparsed.toprettyxml(indent="  ", encoding="utf-8")
     
-    # 寫入文件
+    # 寫入檔案
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, 'wb') as f:
         f.write(pretty_xml)
     
-    print(f"XMLTV文件已生成: {output_path}")
+    print(f"XMLTV檔案已生成: {output_path}")
 
 async def main():
     """主函數，用於自動化執行"""
@@ -341,15 +355,30 @@ async def main():
     
     print(f"🎬 開始執行台灣大寬頻EPG抓取，輸出位置: {output_path}")
     
+    # 添加隨機延遲，避免請求過於頻繁
+    delay = random.uniform(0.5, 2.0)
+    print(f"⏳ 隨機延遲 {delay:.2f} 秒以降低服務器壓力...")
+    await asyncio.sleep(delay)
+    
     # 獲取EPG數據
-    channels, programs = await get_tbc_epg()
+    try:
+        channels, programs = await get_tbc_epg()
+    except Exception as e:
+        print(f"❌ EPG抓取失敗: {str(e)}")
+        # 嘗試建立空XML檔案
+        if not os.path.exists(output_path):
+            empty_channels = []
+            empty_programs = []
+            generate_xmltv(empty_channels, empty_programs, output_path)
+        return
     
     if channels and programs:
-        # 生成XMLTV文件
+        # 生成XMLTV檔案
         generate_xmltv(channels, programs, output_path)
-        print("✅ EPG抓取完成並已生成XML文件")
+        print("✅ 電視節目表抓取完成並已生成XML檔案")
     else:
-        print("❌ EPG抓取失敗，未生成XML文件")
+        print("⚠️ 未獲取到有效數據，生成空XML檔案")
+        generate_xmltv([], [], output_path)
 
 if __name__ == '__main__':
     asyncio.run(main())
