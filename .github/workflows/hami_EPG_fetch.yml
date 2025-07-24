@@ -1,4 +1,4 @@
-name: Hami EPG Generator
+name: Daily Hani EPG Update
 
 on:
   schedule:
