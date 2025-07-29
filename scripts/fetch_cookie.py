@@ -4,7 +4,7 @@ import os
 
 def main():
     scraper = cloudscraper.create_scraper()
-    resp = scraper.get("https://www.4gtv.tv/")
+    resp = scraper.get("https://api2.4gtv.tv/ ")
 
     cookie_dict = scraper.cookies.get_dict()
 
