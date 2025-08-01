@@ -6,6 +6,18 @@
     "fsDESCRIPTION": "每周一到周五播出全國第一名八點檔大戲《市井豪門》，每周六日播出《綜藝新時代》、《最強綜藝秀》與《綜藝大集合》，熱播中的經典戲劇《風水世家》、《親戚不計較》也非常受歡迎。除了優質節目，《晨間新聞》、《午間新聞》、《晚間新聞》，也可以隨時掌握最新最重要的國內外大事與最權威的觀點。"
   },
   {
+    "fsNAME": "民視第一台",
+    "fs4GTV_ID": "media-live003",
+    "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv003_pc.webp",
+    "fsDESCRIPTION": "每周一到周五播出全國第一名八點檔大戲《市井豪門》，每周六日播出《綜藝新時代》、《最強綜藝秀》與《綜藝大集合》，熱播中的經典戲劇《風水世家》、《親戚不計較》也非常受歡迎。除了優質節目，《晨間新聞》、《午間新聞》、《晚間新聞》，也可以隨時掌握最新最重要的國內外大事與最權威的觀點。"
+  },
+  {
+    "fsNAME": "民視台灣台",
+    "fs4GTV_ID": "media-live001",
+    "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv001_pc.webp",
+    "fsDESCRIPTION": "民視台灣台高畫質頻道，播出節目內容包含最新即時新聞、政論節目及專題報導等，也有該頻道自製節目和大型活動及體育賽事的現場直播。推薦的節目有《辣新聞 》、《青春異言堂》、《財經周末趴》、《決策者》、《想像台灣》、《名醫妙方》、《唱誦台灣  暢song世界》、《台灣趴趴走》。"
+  },
+  {
     "fsNAME": "民視台灣台",
     "fs4GTV_ID": "4gtv-4gtv001",
     "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv001_mobile.png",
@@ -15,6 +27,12 @@
     "fsNAME": "民視",
     "fs4GTV_ID": "4gtv-4gtv002",
     "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv002_mobile.png",
+    "fsDESCRIPTION": "民視於1997年開播，是台灣第四家無線電視頻道。節目類型多元且收視率高，擁有廣大收視族群。近期熱播節目包含：《市井豪門》、《綜藝大集合》、《決勝的揮拍》、《最強綜藝秀》、《綜藝新時代》、《醫學大聯盟》、《姐妹亮起來》…等，皆可免費看。"
+  },
+  {
+    "fsNAME": "民視",
+    "fs4GTV_ID": "media-live002",
+    "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv002_pc.webp",
     "fsDESCRIPTION": "民視於1997年開播，是台灣第四家無線電視頻道。節目類型多元且收視率高，擁有廣大收視族群。近期熱播節目包含：《市井豪門》、《綜藝大集合》、《決勝的揮拍》、《最強綜藝秀》、《綜藝新時代》、《醫學大聯盟》、《姐妹亮起來》…等，皆可免費看。"
   },
   {
@@ -201,6 +219,12 @@
     "fsNAME": "民視新聞台",
     "fs4GTV_ID": "litv-ftv13",
     "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-ftv13_mobile.png",
+    "fsDESCRIPTION": "提供政治、選舉、國際、財經、生活、社會、地方、娛樂最新最多元的新聞內容，亦製作節目深入探討各類議題。熱播節目包含：《台灣最前線》、《台灣向前行》、《挑戰新聞》、《台灣演義》、《新聞觀測站》、《民視異言堂》、《科學再發現》…等，皆可免費看。"
+  },
+  {
+    "fsNAME": "民視新聞台",
+    "fs4GTV_ID": "media-live013",
+    "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-ftv13_pc.webp",
     "fsDESCRIPTION": "提供政治、選舉、國際、財經、生活、社會、地方、娛樂最新最多元的新聞內容，亦製作節目深入探討各類議題。熱播節目包含：《台灣最前線》、《台灣向前行》、《挑戰新聞》、《台灣演義》、《新聞觀測站》、《民視異言堂》、《科學再發現》…等，皆可免費看。"
   },
   {
