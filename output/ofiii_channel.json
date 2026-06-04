@@ -29,6 +29,11 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4056_ofiii26_tv_20260325.png",
     "卡通‧兒童"
   ],
+  "ofiii30": [
+    "永慶AI特助",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3930_ofiii30_mobile_20251205.png",
+    "綜合"
+  ],
   "ofiii32": [
     "東森娛樂台",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2985_ofiii32_mobile_20230720.png",
@@ -269,11 +274,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2591_ofiii116_mobile_20250220.png",
     "熱門收視頻道"
   ],
-  "ofiii117": [
-    "雙軌",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3780_ofiii117_mobile_20250626.png",
-    "戲劇"
-  ],
   "ofiii119": [
     "以家人之名",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3023_ofiii119_mobile_20250220.png",
@@ -414,11 +414,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3358_ofiii157_mobile_20250220.png",
     "戲劇"
   ],
-  "ofiii159": [
-    "雖然等級只有1級但固有技能是最強的",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3359_ofiii159_mobile_20250220.png",
-    "動漫"
-  ],
   "ofiii162": [
     "在異世界獲得超強能力的我，在現實世界照樣無敵～等級提升改變人生命運～",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3303_ofiii162_mobile_20250220.png",
@@ -457,6 +452,11 @@
   "ofiii169": [
     "隊長小翼(中文版)",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3125_ofiii169_mobile_20250220.png",
+    "動漫"
+  ],
+  "ofiii170": [
+    "SPY X FAMILY 間諜家家酒",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3304_ofiii170_mobile_20250220.png",
     "動漫"
   ],
   "ofiii171": [
@@ -502,11 +502,6 @@
   "ofiii179": [
     "葬送的芙莉蓮",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3268_ofiii179_mobile_20250220.png",
-    "動漫"
-  ],
-  "ofiii180": [
-    "史上最強弟子兼一(中文版)",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3479_ofiii180_mobile_20250220.png",
     "動漫"
   ],
   "ofiii181": [
