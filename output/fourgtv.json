@@ -5372,6 +5372,44 @@
       "fnORDER": 12
     },
     {
+      "fnID": 498,
+      "fsTYPE": "01;02;03;05;06",
+      "fsCDN_ROUTE": "B",
+      "fsTYPE_NAME": "綜合,新聞財經,生活旅遊時尚,戲劇、電影與紀錄片,運動健康生活",
+      "fsNAME": "ABC Australia 澳洲公廣頻道",
+      "fs4GTV_ID": "4gtv-live167",
+      "fnCHANNEL_NO": 167,
+      "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-live167.jpg",
+      "fsPICTURE_LOGO": null,
+      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-live167.png",
+      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live167.png",
+      "fcOVERSEAS": true,
+      "lstEXCEPT_COUNTRY": [
+        ""
+      ],
+      "lstALL_BITRATE": null,
+      "fsFREE_PROFILE": null,
+      "lstSETs": [
+        1,
+        2,
+        4,
+        10
+      ],
+      "fcFREE": true,
+      "fsQUALITY": "HD",
+      "fnCHAT_ID": 0,
+      "fcHAS_PROGLIST": true,
+      "fdLIKE_BEG_DATE": null,
+      "fcLIKE": false,
+      "fcRISTRICT": false,
+      "fsEXPIRE_DATE": "",
+      "fnGRADED": 0,
+      "fsVENDOR": "杰德",
+      "fsDESCRIPTION": "ABC Australia 由澳大利亞廣播公司ABC為您精心打造提供，集合來自澳大利亞最熱門的新聞、體育、生活、電視劇和娛樂等精彩節目。",
+      "fsSCHEDULE_DATE": null,
+      "fnORDER": 99
+    },
+    {
       "fnID": 461,
       "fsTYPE": "02",
       "fsCDN_ROUTE": "B",
