@@ -52403,3 +52403,678 @@
 2026-06-09 23:02:10.670 | INFO     | __main__:get_tbc_epg:292 - 總計獲取 32262 個節目
 2026-06-09 23:02:13.976 | INFO     | __main__:main:361 - EPG 已儲存到 ./output/epg_tbc.xml
 2026-06-09 23:02:13.976 | INFO     | __main__:main:363 - ========== 抓取完成 ==========
+2026-06-10 03:34:26 | INFO | ==================================================
+2026-06-10 03:34:26 | INFO | 開始生成四季線上電子節目單
+2026-06-10 03:34:26 | INFO | 輸出目錄: /home/runner/work/EPG/EPG/output
+2026-06-10 03:34:26 | ERROR | 通過 API 獲取頻道列表失敗: Cannot connect to host api2.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:26 | WARNING | API 獲取失敗，嘗試讀取本地檔案
+2026-06-10 03:34:26 | SUCCESS | 從本地檔案讀取到 133 個頻道
+2026-06-10 03:34:26 | INFO | 成功加載 133 個頻道
+2026-06-10 03:34:27 | WARNING | 大愛電視 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:27 | WARNING | 民視台灣台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:27 | WARNING | 民視第一台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:27 | WARNING | 民視 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:27 | WARNING | 中視 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:28 | WARNING | 大愛電視 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:28 | WARNING | 民視台灣台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:28 | WARNING | 民視第一台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:28 | WARNING | 民視 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:28 | WARNING | 中視 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:30 | WARNING | 大愛電視 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:30 | ERROR | 大愛電視 最終獲取失敗
+2026-06-10 03:34:30 | WARNING | 民視台灣台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:30 | ERROR | 民視台灣台 最終獲取失敗
+2026-06-10 03:34:30 | WARNING | 民視第一台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:30 | ERROR | 民視第一台 最終獲取失敗
+2026-06-10 03:34:30 | WARNING | 民視 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:30 | ERROR | 民視 最終獲取失敗
+2026-06-10 03:34:30 | WARNING | 中視 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:30 | ERROR | 中視 最終獲取失敗
+2026-06-10 03:34:30 | WARNING | 客家電視台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:30 | WARNING | 八大綜藝台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:30 | WARNING | 八大綜藝台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:30 | WARNING | 華視 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:30 | WARNING | 三立綜合台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:31 | WARNING | 客家電視台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:31 | WARNING | 八大綜藝台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:31 | WARNING | 八大綜藝台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:31 | WARNING | 華視 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:31 | WARNING | 三立綜合台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:33 | WARNING | 客家電視台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:33 | ERROR | 客家電視台 最終獲取失敗
+2026-06-10 03:34:33 | WARNING | 八大綜藝台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:33 | ERROR | 八大綜藝台 最終獲取失敗
+2026-06-10 03:34:33 | WARNING | 八大綜藝台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:33 | ERROR | 八大綜藝台 最終獲取失敗
+2026-06-10 03:34:33 | WARNING | 愛爾達寵物運動台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:33 | WARNING | 華視 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:33 | ERROR | 華視 最終獲取失敗
+2026-06-10 03:34:33 | WARNING | 三立綜合台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:33 | ERROR | 三立綜合台 最終獲取失敗
+2026-06-10 03:34:33 | WARNING | TVBS精采台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:33 | WARNING | 靖天綜合台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:33 | WARNING | 靖天日本台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:33 | WARNING | 新唐人亞太台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:34 | WARNING | 愛爾達寵物運動台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:34 | WARNING | TVBS精采台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:34 | WARNING | 靖天綜合台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:34 | WARNING | 靖天日本台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:35 | WARNING | 新唐人亞太台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:36 | WARNING | 愛爾達寵物運動台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:36 | ERROR | 愛爾達寵物運動台 最終獲取失敗
+2026-06-10 03:34:36 | WARNING | TVBS精采台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:36 | ERROR | TVBS精采台 最終獲取失敗
+2026-06-10 03:34:36 | WARNING | 靖天綜合台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:36 | ERROR | 靖天綜合台 最終獲取失敗
+2026-06-10 03:34:36 | WARNING | 靖天日本台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:36 | ERROR | 靖天日本台 最終獲取失敗
+2026-06-10 03:34:36 | WARNING | Global Trekker 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:36 | WARNING | ARIRANG阿里郎頻道 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:37 | WARNING | 新唐人亞太台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:37 | ERROR | 新唐人亞太台 最終獲取失敗
+2026-06-10 03:34:37 | WARNING | LiveABC互動英語頻道 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:37 | WARNING | 原住民族電視台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:37 | WARNING | 東森購物四台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:37 | WARNING | Global Trekker 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:37 | WARNING | ARIRANG阿里郎頻道 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:38 | WARNING | LiveABC互動英語頻道 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:38 | WARNING | 原住民族電視台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:38 | WARNING | 東森購物四台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:39 | WARNING | Global Trekker 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:39 | ERROR | Global Trekker 最終獲取失敗
+2026-06-10 03:34:39 | WARNING | ARIRANG阿里郎頻道 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:39 | ERROR | ARIRANG阿里郎頻道 最終獲取失敗
+2026-06-10 03:34:40 | WARNING | LiveABC互動英語頻道 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:40 | ERROR | LiveABC互動英語頻道 最終獲取失敗
+2026-06-10 03:34:40 | WARNING | ELTV生活英語台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:40 | WARNING | 原住民族電視台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:40 | ERROR | 原住民族電視台 最終獲取失敗
+2026-06-10 03:34:40 | WARNING | 東森購物四台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:40 | ERROR | 東森購物四台 最終獲取失敗
+2026-06-10 03:34:40 | WARNING | 達文西頻道 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:40 | WARNING | 尼克兒童頻道 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:40 | WARNING | Nick Jr. 兒童頻道 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:40 | WARNING | DreamWorks 夢工廠動畫 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:41 | WARNING | ELTV生活英語台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:41 | WARNING | 達文西頻道 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:41 | WARNING | 尼克兒童頻道 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:41 | WARNING | Nick Jr. 兒童頻道 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:41 | WARNING | DreamWorks 夢工廠動畫 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:43 | WARNING | ELTV生活英語台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:43 | ERROR | ELTV生活英語台 最終獲取失敗
+2026-06-10 03:34:43 | WARNING | 達文西頻道 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:43 | ERROR | 達文西頻道 最終獲取失敗
+2026-06-10 03:34:43 | WARNING | 尼克兒童頻道 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:43 | ERROR | 尼克兒童頻道 最終獲取失敗
+2026-06-10 03:34:43 | WARNING | Nick Jr. 兒童頻道 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:43 | ERROR | Nick Jr. 兒童頻道 最終獲取失敗
+2026-06-10 03:34:43 | WARNING | 靖天卡通台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:43 | WARNING | 東森購物一台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:43 | WARNING | DreamWorks 夢工廠動畫 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:43 | ERROR | DreamWorks 夢工廠動畫 最終獲取失敗
+2026-06-10 03:34:43 | WARNING | 靖洋卡通Nice Bingo 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:44 | WARNING | 鏡電視新聞台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:44 | WARNING | MOMO親子台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:44 | WARNING | 靖天卡通台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:44 | WARNING | 東森購物一台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:44 | WARNING | 靖洋卡通Nice Bingo 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:45 | WARNING | 鏡電視新聞台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:45 | WARNING | MOMO親子台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:46 | WARNING | 靖天卡通台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:46 | ERROR | 靖天卡通台 最終獲取失敗
+2026-06-10 03:34:46 | WARNING | 東森購物一台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:46 | ERROR | 東森購物一台 最終獲取失敗
+2026-06-10 03:34:46 | WARNING | 靖洋卡通Nice Bingo 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:46 | ERROR | 靖洋卡通Nice Bingo 最終獲取失敗
+2026-06-10 03:34:47 | WARNING | 鏡電視新聞台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:47 | ERROR | 鏡電視新聞台 最終獲取失敗
+2026-06-10 03:34:47 | WARNING | 東森新聞台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:47 | WARNING | MOMO親子台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:47 | ERROR | MOMO親子台 最終獲取失敗
+2026-06-10 03:34:47 | WARNING | 華視新聞 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:47 | WARNING | 東森新聞台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:47 | WARNING | 華視新聞 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:47 | WARNING | 民視新聞台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:48 | WARNING | 東森新聞台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:48 | WARNING | 華視新聞 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:48 | WARNING | 東森新聞台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:48 | WARNING | 華視新聞 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:48 | WARNING | 民視新聞台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:50 | WARNING | 東森新聞台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:50 | ERROR | 東森新聞台 最終獲取失敗
+2026-06-10 03:34:50 | WARNING | 華視新聞 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:50 | ERROR | 華視新聞 最終獲取失敗
+2026-06-10 03:34:50 | WARNING | 東森新聞台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:50 | ERROR | 東森新聞台 最終獲取失敗
+2026-06-10 03:34:50 | WARNING | 華視新聞 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:50 | ERROR | 華視新聞 最終獲取失敗
+2026-06-10 03:34:50 | WARNING | TVBS新聞 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:50 | WARNING | TVBS新聞 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:50 | WARNING | 三立新聞iNEWS 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:50 | WARNING | 民視新聞台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:50 | ERROR | 民視新聞台 最終獲取失敗
+2026-06-10 03:34:50 | WARNING | 東森財經新聞台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:50 | WARNING | 東森財經新聞台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:51 | WARNING | TVBS新聞 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:51 | WARNING | TVBS新聞 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:51 | WARNING | 三立新聞iNEWS 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:51 | WARNING | 東森財經新聞台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:51 | WARNING | 東森財經新聞台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:53 | WARNING | TVBS新聞 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:53 | ERROR | TVBS新聞 最終獲取失敗
+2026-06-10 03:34:53 | WARNING | TVBS新聞 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:53 | ERROR | TVBS新聞 最終獲取失敗
+2026-06-10 03:34:53 | WARNING | 三立新聞iNEWS 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:53 | ERROR | 三立新聞iNEWS 最終獲取失敗
+2026-06-10 03:34:53 | WARNING | 中視新聞 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:53 | WARNING | 中視新聞 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:53 | WARNING | 東森財經新聞台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:53 | ERROR | 東森財經新聞台 最終獲取失敗
+2026-06-10 03:34:53 | WARNING | 中天新聞台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:54 | WARNING | 東森財經新聞台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:54 | ERROR | 東森財經新聞台 最終獲取失敗
+2026-06-10 03:34:54 | WARNING | 中天新聞台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:54 | WARNING | Bloomberg TV 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:54 | WARNING | 中視新聞 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:54 | WARNING | 中視新聞 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:54 | WARNING | 中天新聞台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:55 | WARNING | 中天新聞台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:55 | WARNING | Bloomberg TV 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:56 | WARNING | 中視新聞 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:56 | ERROR | 中視新聞 最終獲取失敗
+2026-06-10 03:34:56 | WARNING | 中視新聞 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:56 | ERROR | 中視新聞 最終獲取失敗
+2026-06-10 03:34:56 | WARNING | 中天新聞台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:56 | ERROR | 中天新聞台 最終獲取失敗
+2026-06-10 03:34:56 | WARNING | 寰宇新聞台灣台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:57 | WARNING | 寰宇新聞台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:57 | WARNING | 寰宇新聞台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:57 | WARNING | 中天新聞台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:57 | ERROR | 中天新聞台 最終獲取失敗
+2026-06-10 03:34:57 | WARNING | Bloomberg TV 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:57 | ERROR | Bloomberg TV 最終獲取失敗
+2026-06-10 03:34:57 | WARNING | SBN全球財經台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:57 | WARNING | 寰宇新聞台灣台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:57 | WARNING | TVBS 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:58 | WARNING | 寰宇新聞台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:58 | WARNING | 寰宇新聞台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:58 | WARNING | SBN全球財經台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:59 | WARNING | TVBS 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:59 | WARNING | 寰宇新聞台灣台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:34:59 | ERROR | 寰宇新聞台灣台 最終獲取失敗
+2026-06-10 03:35:00 | WARNING | 寰宇新聞台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:00 | ERROR | 寰宇新聞台 最終獲取失敗
+2026-06-10 03:35:00 | WARNING | 東森購物二台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:00 | WARNING | 寰宇新聞台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:00 | ERROR | 寰宇新聞台 最終獲取失敗
+2026-06-10 03:35:00 | WARNING | TVBS 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:00 | WARNING | 民視綜藝台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:00 | WARNING | SBN全球財經台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:00 | ERROR | SBN全球財經台 最終獲取失敗
+2026-06-10 03:35:01 | WARNING | TVBS 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:01 | ERROR | TVBS 最終獲取失敗
+2026-06-10 03:35:01 | WARNING | 豬哥亮歌廳秀 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:01 | WARNING | 東森購物二台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:01 | WARNING | 靖天育樂台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:01 | WARNING | TVBS 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:01 | WARNING | 民視綜藝台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:02 | WARNING | 豬哥亮歌廳秀 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:02 | WARNING | 靖天育樂台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:03 | WARNING | 東森購物二台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:03 | ERROR | 東森購物二台 最終獲取失敗
+2026-06-10 03:35:03 | WARNING | TVBS 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:03 | ERROR | TVBS 最終獲取失敗
+2026-06-10 03:35:03 | WARNING | KLT-靖天國際台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:03 | WARNING | 民視綜藝台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:03 | ERROR | 民視綜藝台 最終獲取失敗
+2026-06-10 03:35:03 | WARNING | 靖天資訊台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:03 | WARNING | Nice TV 靖天歡樂台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:04 | WARNING | 豬哥亮歌廳秀 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:04 | ERROR | 豬哥亮歌廳秀 最終獲取失敗
+2026-06-10 03:35:04 | WARNING | TVBS歡樂台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:04 | WARNING | 靖天育樂台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:04 | ERROR | 靖天育樂台 最終獲取失敗
+2026-06-10 03:35:04 | WARNING | KLT-靖天國際台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:04 | WARNING | 韓國娛樂台 KMTV 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:04 | WARNING | 靖天資訊台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:04 | WARNING | Nice TV 靖天歡樂台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:05 | WARNING | TVBS歡樂台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:05 | WARNING | 韓國娛樂台 KMTV 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:06 | WARNING | KLT-靖天國際台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:06 | ERROR | KLT-靖天國際台 最終獲取失敗
+2026-06-10 03:35:06 | WARNING | ROCK Entertainment 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:06 | WARNING | 靖天資訊台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:06 | ERROR | 靖天資訊台 最終獲取失敗
+2026-06-10 03:35:06 | WARNING | Nice TV 靖天歡樂台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:06 | ERROR | Nice TV 靖天歡樂台 最終獲取失敗
+2026-06-10 03:35:06 | WARNING | Lifetime 娛樂頻道 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:07 | WARNING | TVBS歡樂台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:07 | ERROR | TVBS歡樂台 最終獲取失敗
+2026-06-10 03:35:07 | WARNING | 電影原聲台CMusic 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:07 | WARNING | TRACE Urban 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:07 | WARNING | 韓國娛樂台 KMTV 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:07 | ERROR | 韓國娛樂台 KMTV 最終獲取失敗
+2026-06-10 03:35:07 | WARNING | ROCK Entertainment 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:07 | WARNING | Mezzo Live HD 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:08 | WARNING | Lifetime 娛樂頻道 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:08 | WARNING | 電影原聲台CMusic 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:08 | WARNING | TRACE Urban 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:08 | WARNING | Mezzo Live HD 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:09 | WARNING | ROCK Entertainment 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:09 | ERROR | ROCK Entertainment 最終獲取失敗
+2026-06-10 03:35:10 | WARNING | Lifetime 娛樂頻道 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:10 | ERROR | Lifetime 娛樂頻道 最終獲取失敗
+2026-06-10 03:35:10 | WARNING | CLASSICA 古典樂 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:10 | WARNING | 東森購物三台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:10 | WARNING | 電影原聲台CMusic 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:10 | ERROR | 電影原聲台CMusic 最終獲取失敗
+2026-06-10 03:35:10 | WARNING | TRACE Urban 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:10 | ERROR | TRACE Urban 最終獲取失敗
+2026-06-10 03:35:10 | WARNING |  Getwin Sports運動台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:11 | WARNING | INULTRA 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:11 | WARNING | Mezzo Live HD 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:11 | ERROR | Mezzo Live HD 最終獲取失敗
+2026-06-10 03:35:11 | WARNING | 博斯高球台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:11 | WARNING | CLASSICA 古典樂 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:11 | WARNING | 東森購物三台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:11 | WARNING |  Getwin Sports運動台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:12 | WARNING | INULTRA 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:12 | WARNING | 博斯高球台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:13 | WARNING | CLASSICA 古典樂 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:13 | ERROR | CLASSICA 古典樂 最終獲取失敗
+2026-06-10 03:35:13 | WARNING | 東森購物三台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:13 | ERROR | 東森購物三台 最終獲取失敗
+2026-06-10 03:35:13 | WARNING | 博斯高球二台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:13 | WARNING |  Getwin Sports運動台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:13 | ERROR |  Getwin Sports運動台 最終獲取失敗
+2026-06-10 03:35:13 | WARNING | 博斯高球台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:14 | WARNING | INULTRA 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:14 | ERROR | INULTRA 最終獲取失敗
+2026-06-10 03:35:14 | WARNING | 博斯運動一台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:14 | WARNING | 博斯高球台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:14 | ERROR | 博斯高球台 最終獲取失敗
+2026-06-10 03:35:14 | WARNING | 博斯運動一台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:14 | WARNING | 博斯無限台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:14 | WARNING | 博斯高球二台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:14 | WARNING | 博斯高球台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:15 | WARNING | 博斯運動一台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:15 | WARNING | 博斯運動一台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:15 | WARNING | 博斯無限台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:16 | WARNING | 博斯高球二台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:16 | ERROR | 博斯高球二台 最終獲取失敗
+2026-06-10 03:35:16 | WARNING | 博斯高球台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:16 | ERROR | 博斯高球台 最終獲取失敗
+2026-06-10 03:35:16 | WARNING | 博斯無限台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:17 | WARNING | 博斯網球台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:17 | WARNING | 博斯運動一台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:17 | ERROR | 博斯運動一台 最終獲取失敗
+2026-06-10 03:35:17 | WARNING | 博斯運動一台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:17 | ERROR | 博斯運動一台 最終獲取失敗
+2026-06-10 03:35:17 | WARNING | 博斯網球台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:17 | WARNING | 博斯無限台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:17 | ERROR | 博斯無限台 最終獲取失敗
+2026-06-10 03:35:17 | WARNING | 博斯運動二台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:17 | WARNING | 博斯無限台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:18 | WARNING | 博斯魅力台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:18 | WARNING | 博斯網球台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:18 | WARNING | 博斯網球台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:18 | WARNING | 博斯運動二台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:19 | WARNING | 博斯魅力台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:19 | WARNING | 博斯無限台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:19 | ERROR | 博斯無限台 最終獲取失敗
+2026-06-10 03:35:20 | WARNING | 博斯網球台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:20 | ERROR | 博斯網球台 最終獲取失敗
+2026-06-10 03:35:20 | WARNING | 博斯無限二台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:20 | WARNING | 博斯網球台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:20 | ERROR | 博斯網球台 最終獲取失敗
+2026-06-10 03:35:20 | WARNING | TRACE Sport Stars 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:20 | WARNING | 博斯運動二台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:20 | ERROR | 博斯運動二台 最終獲取失敗
+2026-06-10 03:35:20 | WARNING | 智林體育台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:21 | WARNING | 博斯魅力台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:21 | ERROR | 博斯魅力台 最終獲取失敗
+2026-06-10 03:35:21 | WARNING | 時尚運動X 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:21 | WARNING | 時尚運動X 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:21 | WARNING | 博斯無限二台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:21 | WARNING | TRACE Sport Stars 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:21 | WARNING | 智林體育台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:22 | WARNING | 時尚運動X 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:22 | WARNING | 時尚運動X 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:23 | WARNING | 博斯無限二台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:23 | ERROR | 博斯無限二台 最終獲取失敗
+2026-06-10 03:35:23 | WARNING | TRACE Sport Stars 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:23 | ERROR | TRACE Sport Stars 最終獲取失敗
+2026-06-10 03:35:23 | WARNING | 車迷TV 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:23 | WARNING | 智林體育台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:23 | ERROR | 智林體育台 最終獲取失敗
+2026-06-10 03:35:24 | WARNING | GINX Esports TV 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:24 | WARNING | 時尚運動X 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:24 | ERROR | 時尚運動X 最終獲取失敗
+2026-06-10 03:35:24 | WARNING | 時尚運動X 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:24 | ERROR | 時尚運動X 最終獲取失敗
+2026-06-10 03:35:24 | WARNING | 民視旅遊台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:24 | WARNING | Pet Club TV 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:24 | WARNING | 滾動力rollor 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:24 | WARNING | 車迷TV 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:25 | WARNING | GINX Esports TV 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:25 | WARNING | 民視旅遊台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:25 | WARNING | Pet Club TV 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:25 | WARNING | 滾動力rollor 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:26 | WARNING | 車迷TV 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:26 | ERROR | 車迷TV 最終獲取失敗
+2026-06-10 03:35:26 | WARNING | 亞洲旅遊台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:27 | WARNING | GINX Esports TV 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:27 | ERROR | GINX Esports TV 最終獲取失敗
+2026-06-10 03:35:27 | WARNING | 亞洲旅遊台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:27 | WARNING | 民視旅遊台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:27 | ERROR | 民視旅遊台 最終獲取失敗
+2026-06-10 03:35:27 | WARNING | Pet Club TV 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:27 | ERROR | Pet Club TV 最終獲取失敗
+2026-06-10 03:35:27 | WARNING | fun探索娛樂台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:27 | WARNING | 滾動力rollor 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:27 | ERROR | 滾動力rollor 最終獲取失敗
+2026-06-10 03:35:27 | WARNING | 幸福空間居家台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:27 | WARNING | Love Nature 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:27 | WARNING | 亞洲旅遊台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:28 | WARNING | 亞洲旅遊台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:28 | WARNING | fun探索娛樂台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:28 | WARNING | 幸福空間居家台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:28 | WARNING | Love Nature 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:30 | WARNING | 亞洲旅遊台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:30 | ERROR | 亞洲旅遊台 最終獲取失敗
+2026-06-10 03:35:30 | WARNING | History 歷史頻道 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:30 | WARNING | 亞洲旅遊台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:30 | ERROR | 亞洲旅遊台 最終獲取失敗
+2026-06-10 03:35:30 | WARNING | 愛爾達生活旅遊台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:30 | WARNING | fun探索娛樂台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:30 | ERROR | fun探索娛樂台 最終獲取失敗
+2026-06-10 03:35:30 | WARNING | 幸福空間居家台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:30 | ERROR | 幸福空間居家台 最終獲取失敗
+2026-06-10 03:35:30 | WARNING | LUXE TV Channel 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:30 | WARNING | Love Nature 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:30 | ERROR | Love Nature 最終獲取失敗
+2026-06-10 03:35:31 | WARNING | TV5MONDE STYLE HD 生活時尚 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:31 | WARNING | History 歷史頻道 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:31 | WARNING | MagellanTV頻道 (麥哲倫頻道)  第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:31 | WARNING | 愛爾達生活旅遊台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:31 | WARNING | LUXE TV Channel 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:32 | WARNING | TV5MONDE STYLE HD 生活時尚 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:32 | WARNING | MagellanTV頻道 (麥哲倫頻道)  第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:33 | WARNING | History 歷史頻道 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:33 | ERROR | History 歷史頻道 最終獲取失敗
+2026-06-10 03:35:33 | WARNING | ROCK Xstream搖滾極限頻道 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:33 | WARNING | 愛爾達生活旅遊台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:33 | ERROR | 愛爾達生活旅遊台 最終獲取失敗
+2026-06-10 03:35:33 | WARNING | 公視戲劇 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:33 | WARNING | LUXE TV Channel 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:33 | ERROR | LUXE TV Channel 最終獲取失敗
+2026-06-10 03:35:34 | WARNING | 民視影劇台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:34 | WARNING | TV5MONDE STYLE HD 生活時尚 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:34 | ERROR | TV5MONDE STYLE HD 生活時尚 最終獲取失敗
+2026-06-10 03:35:34 | WARNING | MagellanTV頻道 (麥哲倫頻道)  第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:34 | ERROR | MagellanTV頻道 (麥哲倫頻道)  最終獲取失敗
+2026-06-10 03:35:34 | WARNING | HITS頻道 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:34 | WARNING | ROCK Xstream搖滾極限頻道 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:34 | WARNING | 八大精彩台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:34 | WARNING | 公視戲劇 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:35 | WARNING | 民視影劇台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:35 | WARNING | HITS頻道 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:35 | WARNING | 八大精彩台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:36 | WARNING | ROCK Xstream搖滾極限頻道 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:36 | ERROR | ROCK Xstream搖滾極限頻道 最終獲取失敗
+2026-06-10 03:35:36 | WARNING | 靖天戲劇台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:37 | WARNING | 公視戲劇 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:37 | ERROR | 公視戲劇 最終獲取失敗
+2026-06-10 03:35:37 | WARNING | 民視影劇台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:37 | ERROR | 民視影劇台 最終獲取失敗
+2026-06-10 03:35:37 | WARNING | CI 罪案偵查頻道 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:37 | WARNING | 靖洋戲劇台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:37 | WARNING | HITS頻道 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:37 | ERROR | HITS頻道 最終獲取失敗
+2026-06-10 03:35:37 | WARNING | 八大精彩台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:37 | ERROR | 八大精彩台 最終獲取失敗
+2026-06-10 03:35:37 | WARNING | 靖天戲劇台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:37 | WARNING | 視納華仁紀實頻道 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:38 | WARNING | 影迷數位紀實台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:38 | WARNING | CI 罪案偵查頻道 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:38 | WARNING | 靖洋戲劇台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:38 | WARNING | 視納華仁紀實頻道 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:39 | WARNING | 影迷數位紀實台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:39 | WARNING | 靖天戲劇台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:39 | ERROR | 靖天戲劇台 最終獲取失敗
+2026-06-10 03:35:40 | WARNING | 金光布袋戲 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:40 | WARNING | CI 罪案偵查頻道 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:40 | ERROR | CI 罪案偵查頻道 最終獲取失敗
+2026-06-10 03:35:40 | WARNING | 靖洋戲劇台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:40 | ERROR | 靖洋戲劇台 最終獲取失敗
+2026-06-10 03:35:40 | WARNING | ROCK Action 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:40 | WARNING | 視納華仁紀實頻道 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:40 | ERROR | 視納華仁紀實頻道 最終獲取失敗
+2026-06-10 03:35:40 | WARNING | 采昌影劇台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:41 | WARNING | 影迷數位紀實台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:41 | ERROR | 影迷數位紀實台 最終獲取失敗
+2026-06-10 03:35:41 | WARNING | 靖天映畫 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:41 | WARNING | 靖天電影台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:41 | WARNING | 金光布袋戲 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:41 | WARNING | ROCK Action 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:41 | WARNING | 采昌影劇台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:42 | WARNING | 靖天映畫 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:42 | WARNING | 靖天電影台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:43 | WARNING | 金光布袋戲 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:43 | ERROR | 金光布袋戲 最終獲取失敗
+2026-06-10 03:35:43 | WARNING | 影迷數位電影台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:43 | WARNING | ROCK Action 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:43 | ERROR | ROCK Action 最終獲取失敗
+2026-06-10 03:35:43 | WARNING | amc電影台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:44 | WARNING | 采昌影劇台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:44 | ERROR | 采昌影劇台 最終獲取失敗
+2026-06-10 03:35:44 | WARNING | 靖天映畫 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:44 | ERROR | 靖天映畫 最終獲取失敗
+2026-06-10 03:35:44 | WARNING | 靖天電影台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:44 | ERROR | 靖天電影台 最終獲取失敗
+2026-06-10 03:35:44 | WARNING | My Cinema Europe HD 我的歐洲電影 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:44 | WARNING | CinemaWorld 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:44 | WARNING | 影迷數位電影台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:44 | WARNING | 好消息 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:45 | WARNING | amc電影台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:45 | WARNING | My Cinema Europe HD 我的歐洲電影 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:45 | WARNING | CinemaWorld 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:45 | WARNING | 好消息 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:46 | WARNING | 影迷數位電影台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:46 | ERROR | 影迷數位電影台 最終獲取失敗
+2026-06-10 03:35:47 | WARNING | amc電影台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:47 | ERROR | amc電影台 最終獲取失敗
+2026-06-10 03:35:47 | WARNING | 好消息2台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:47 | WARNING | 大愛二台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:47 | WARNING | My Cinema Europe HD 我的歐洲電影 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:47 | ERROR | My Cinema Europe HD 我的歐洲電影 最終獲取失敗
+2026-06-10 03:35:47 | WARNING | CinemaWorld 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:47 | ERROR | CinemaWorld 最終獲取失敗
+2026-06-10 03:35:47 | WARNING | 好消息 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:47 | ERROR | 好消息 最終獲取失敗
+2026-06-10 03:35:47 | WARNING | 人間衛視 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:47 | WARNING | FRANCE24 英文台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:47 | WARNING | NHK WORLD-JAPAN 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:48 | WARNING | 好消息2台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:48 | WARNING | 大愛二台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:48 | WARNING | 人間衛視 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:48 | WARNING | FRANCE24 英文台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:48 | WARNING | NHK WORLD-JAPAN 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:50 | WARNING | 好消息2台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:50 | ERROR | 好消息2台 最終獲取失敗
+2026-06-10 03:35:50 | WARNING | 半島國際新聞台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:50 | WARNING | 大愛二台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:50 | ERROR | 大愛二台 最終獲取失敗
+2026-06-10 03:35:50 | WARNING | CNBC Asia 財經台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:50 | WARNING | 人間衛視 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:50 | ERROR | 人間衛視 最終獲取失敗
+2026-06-10 03:35:50 | WARNING | FRANCE24 英文台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:50 | ERROR | FRANCE24 英文台 最終獲取失敗
+2026-06-10 03:35:50 | WARNING | NHK WORLD-JAPAN 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:50 | ERROR | NHK WORLD-JAPAN 最終獲取失敗
+2026-06-10 03:35:51 | WARNING | 國會頻道2 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:51 | WARNING | DW德國之聲 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:51 | WARNING | 國會頻道1 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:51 | WARNING | 半島國際新聞台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:51 | WARNING | CNBC Asia 財經台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:52 | WARNING | 國會頻道2 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:52 | WARNING | DW德國之聲 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:52 | WARNING | 國會頻道1 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:53 | WARNING | 半島國際新聞台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:53 | ERROR | 半島國際新聞台 最終獲取失敗
+2026-06-10 03:35:53 | WARNING | 經典電影台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:53 | WARNING | CNBC Asia 財經台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:53 | ERROR | CNBC Asia 財經台 最終獲取失敗
+2026-06-10 03:35:54 | WARNING | 國會頻道2 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:54 | ERROR | 國會頻道2 最終獲取失敗
+2026-06-10 03:35:54 | WARNING | DW德國之聲 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:54 | ERROR | DW德國之聲 最終獲取失敗
+2026-06-10 03:35:54 | WARNING | 國會頻道1 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:54 | ERROR | 國會頻道1 最終獲取失敗
+2026-06-10 03:35:54 | WARNING | 經典卡通台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:54 | WARNING | 精選動漫台 第 1 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:54 | WARNING | 經典電影台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:55 | WARNING | 經典卡通台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:55 | WARNING | 精選動漫台 第 2 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:56 | WARNING | 經典電影台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:56 | ERROR | 經典電影台 最終獲取失敗
+2026-06-10 03:35:57 | WARNING | 經典卡通台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:57 | ERROR | 經典卡通台 最終獲取失敗
+2026-06-10 03:35:57 | WARNING | 精選動漫台 第 3 次嘗試失敗: Cannot connect to host www.4gtv.tv:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2026-06-10 03:35:57 | ERROR | 精選動漫台 最終獲取失敗
+2026-06-10 03:35:57 | WARNING | 未能獲取 民視第一台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 民視台灣台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 民視 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 大愛電視 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 中視 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 華視 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 三立綜合台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 客家電視台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 八大綜藝台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 八大綜藝台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 TVBS精采台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 愛爾達寵物運動台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 靖天綜合台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 靖天日本台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 新唐人亞太台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 ARIRANG阿里郎頻道 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 Global Trekker 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 原住民族電視台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 東森購物四台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 LiveABC互動英語頻道 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 達文西頻道 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 ELTV生活英語台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 Nick Jr. 兒童頻道 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 尼克兒童頻道 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 DreamWorks 夢工廠動畫 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 靖天卡通台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 靖洋卡通Nice Bingo 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 MOMO親子台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 東森購物一台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 鏡電視新聞台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 東森新聞台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 東森新聞台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 華視新聞 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 華視新聞 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 民視新聞台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 三立新聞iNEWS 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 TVBS新聞 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 TVBS新聞 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 東森財經新聞台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 東森財經新聞台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 中視新聞 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 中視新聞 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 中天新聞台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 中天新聞台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 Bloomberg TV 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 寰宇新聞台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 寰宇新聞台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 寰宇新聞台灣台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 SBN全球財經台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 TVBS 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 TVBS 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 東森購物二台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 民視綜藝台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 豬哥亮歌廳秀 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 靖天育樂台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 KLT-靖天國際台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 Nice TV 靖天歡樂台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 靖天資訊台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 TVBS歡樂台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 韓國娛樂台 KMTV 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 ROCK Entertainment 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 Lifetime 娛樂頻道 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 電影原聲台CMusic 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 TRACE Urban 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 Mezzo Live HD 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 CLASSICA 古典樂 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 東森購物三台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取  Getwin Sports運動台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 INULTRA 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 博斯高球台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 博斯高球台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 博斯高球二台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 博斯運動一台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 博斯運動一台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 博斯無限台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 博斯無限台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 博斯網球台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 博斯網球台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 博斯運動二台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 博斯魅力台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 博斯無限二台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 TRACE Sport Stars 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 智林體育台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 時尚運動X 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 時尚運動X 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 車迷TV 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 GINX Esports TV 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 Pet Club TV 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 民視旅遊台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 滾動力rollor 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 亞洲旅遊台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 亞洲旅遊台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 fun探索娛樂台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 幸福空間居家台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 Love Nature 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 History 歷史頻道 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 愛爾達生活旅遊台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 LUXE TV Channel 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 TV5MONDE STYLE HD 生活時尚 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 MagellanTV頻道 (麥哲倫頻道)  的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 ROCK Xstream搖滾極限頻道 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 公視戲劇 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 民視影劇台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 HITS頻道 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 八大精彩台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 靖天戲劇台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 靖洋戲劇台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 CI 罪案偵查頻道 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 視納華仁紀實頻道 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 影迷數位紀實台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 金光布袋戲 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 ROCK Action 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 采昌影劇台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 靖天映畫 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 靖天電影台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 影迷數位電影台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 amc電影台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 CinemaWorld 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 My Cinema Europe HD 我的歐洲電影 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 好消息 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 好消息2台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 大愛二台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 人間衛視 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 NHK WORLD-JAPAN 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 FRANCE24 英文台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 半島國際新聞台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 CNBC Asia 財經台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 DW德國之聲 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 國會頻道1 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 國會頻道2 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 經典電影台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 經典卡通台 的節目單
+2026-06-10 03:35:57 | WARNING | 未能獲取 精選動漫台 的節目單
+2026-06-10 03:35:57 | INFO | 共獲取 0 個節目
+2026-06-10 03:35:57 | INFO | 電子節目單已生成: /home/runner/work/EPG/EPG/output/4g.xml
+2026-06-10 03:35:57 | SUCCESS | EPG 生成完成
