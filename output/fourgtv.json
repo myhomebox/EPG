@@ -13,7 +13,7 @@
       "fsPICTURE_LOGO": null,
       "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-4gtv003_pc.png",
       "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv003_mobile.png",
-      "fcOVERSEAS": true,
+      "fcOVERSEAS": false,
       "lstEXCEPT_COUNTRY": [
         ""
       ],
@@ -61,7 +61,7 @@
       "fsPICTURE_LOGO": null,
       "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-4gtv001_pc.png",
       "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv001_mobile.png",
-      "fcOVERSEAS": true,
+      "fcOVERSEAS": false,
       "lstEXCEPT_COUNTRY": [
         ""
       ],
@@ -107,7 +107,7 @@
       "fsPICTURE_LOGO": null,
       "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-4gtv002_pc.png",
       "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv002_mobile.png",
-      "fcOVERSEAS": true,
+      "fcOVERSEAS": false,
       "lstEXCEPT_COUNTRY": [
         ""
       ],
@@ -1538,7 +1538,7 @@
       "fsPICTURE_LOGO": null,
       "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_litv-ftv13_pc.png",
       "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-ftv13_mobile.png",
-      "fcOVERSEAS": true,
+      "fcOVERSEAS": false,
       "lstEXCEPT_COUNTRY": [
         ""
       ],
@@ -2310,7 +2310,7 @@
       "fsPICTURE_LOGO": null,
       "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-4gtv004_pc.png",
       "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv004_mobile.png",
-      "fcOVERSEAS": true,
+      "fcOVERSEAS": false,
       "lstEXCEPT_COUNTRY": [
         ""
       ],
@@ -3816,7 +3816,7 @@
       "fsPICTURE_LOGO": null,
       "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_litv-ftv07_pc.png",
       "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-ftv07_mobile.png",
-      "fcOVERSEAS": true,
+      "fcOVERSEAS": false,
       "lstEXCEPT_COUNTRY": [
         ""
       ],
@@ -4427,7 +4427,7 @@
       "fsPICTURE_LOGO": null,
       "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_litv-ftv09_pc.png",
       "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-ftv09_mobile.png",
-      "fcOVERSEAS": true,
+      "fcOVERSEAS": false,
       "lstEXCEPT_COUNTRY": [
         ""
       ],
