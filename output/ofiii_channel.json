@@ -664,11 +664,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3965_ofiii232_mobile_20251216.png",
     "綜藝"
   ],
-  "ofiii233": [
-    "大胃王來了！",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4059_ofiii233_tv_20260325.png",
-    "綜藝"
-  ],
   "ofiii234": [
     "非凡大探索",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3553_ofiii234_mobile_20250220.png",
@@ -888,6 +883,11 @@
     "龍華戲劇台",
     "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn18_mobile.png",
     "戲劇"
+  ],
+  "litv-xinchuang19": [
+    "Smart知識台",
+    "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn19_mobile.png",
+    "綜合"
   ],
   "litv-xinchuang20": [
     "ELTV生活英語台",
