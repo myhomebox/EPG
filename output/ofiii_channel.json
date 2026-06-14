@@ -59,11 +59,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_litv-playout50_mobile_20211124.png",
     "新聞‧財經"
   ],
-  "ofiii55": [
-    "國際大小事",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3560_ofiii55_mobile_20241202.png",
-    "新聞‧財經"
-  ],
   "ofiii64": [
     "第1財經",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_ofiii64_mobile_20221110.png",
@@ -299,6 +294,11 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3953_ofiii124_mobile_20251216.png",
     "戲劇"
   ],
+  "ofiii125": [
+    "綜藝大集合",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3809_ofiii125_mobile_20250729.png",
+    "綜藝"
+  ],
   "ofiii126": [
     "豬哥壹級棒",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3356_ofiii126_mobile_20250220.png",
@@ -469,6 +469,11 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3128_ofiii172_mobile_20250220.png",
     "動漫"
   ],
+  "ofiii173": [
+    "一拳超人(中文版)",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3925_ofiii173_mobile_20251126.png",
+    "動漫"
+  ],
   "ofiii174": [
     "夏目友人帳",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3171_ofiii174_mobile_20250220.png",
@@ -557,6 +562,11 @@
   "ofiii196": [
     "出境事務所",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4033_ofiii196_tv_20260303.png",
+    "戲劇"
+  ],
+  "ofiii198": [
+    "白袍之戀",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3926_ofiii198_mobile_20251126.png",
     "戲劇"
   ],
   "ofiii199": [
