@@ -49,11 +49,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3689_ofiii39_mobile_20250328.png",
     "戲劇"
   ],
-  "ofiii47": [
-    "Yes娛樂",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_ofiii47_mobile_20230707.png",
-    "新聞‧財經"
-  ],
   "ofiii50": [
     "掏掏新聞",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_litv-playout50_mobile_20211124.png",
@@ -122,6 +117,11 @@
   "ofiii83": [
     "鄉民大學問",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3407_ofiii83_mobile_20250220.png",
+    "綜合"
+  ],
+  "ofiii84": [
+    "地球檔案庫",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3902_ofiii84_mobile_20251028.png",
     "綜合"
   ],
   "ofiii85": [
@@ -419,11 +419,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3303_ofiii162_mobile_20250220.png",
     "動漫"
   ],
-  "ofiii163": [
-    "第一神拳",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3266_ofiii163_mobile_20250220.png",
-    "動漫"
-  ],
   "ofiii164": [
     "刀劍神域(中文版)",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3267_ofiii164_mobile_20250220.png",
@@ -649,11 +644,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3963_ofiii230_mobile_20251216.png",
     "綜藝"
   ],
-  "ofiii231": [
-    "咱的城 咱的市 咱台灣的味",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3964_ofiii231_mobile_20251216.png",
-    "綜藝"
-  ],
   "ofiii232": [
     "舌尖之福",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3965_ofiii232_mobile_20251216.png",
@@ -702,6 +692,11 @@
   "ofiii241": [
     "台灣真善美",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3635_ofiii241_mobile_20250220.png",
+    "綜藝"
+  ],
+  "ofiii242": [
+    "請問今晚住誰家",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3636_ofiii242_mobile_20250220.png",
     "綜藝"
   ],
   "ofiii243": [
@@ -765,7 +760,7 @@
     "綜合"
   ],
   "nnews-zh": [
-    "倪珍播新聞",
+    "倪珍播新聞《6/24即將下架》",
     "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_nnews_mobile.png",
     "新聞‧財經"
   ],
