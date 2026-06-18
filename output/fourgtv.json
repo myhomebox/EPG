@@ -13,7 +13,7 @@
       "fsPICTURE_LOGO": null,
       "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-4gtv003_pc.png",
       "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv003_mobile.png",
-      "fcOVERSEAS": false,
+      "fcOVERSEAS": true,
       "lstEXCEPT_COUNTRY": [
         ""
       ],
@@ -819,17 +819,17 @@
       "fnORDER": 20
     },
     {
-      "fnID": 286,
+      "fnID": 499,
       "fsTYPE": "01",
       "fsCDN_ROUTE": "B",
       "fsTYPE_NAME": "綜合",
-      "fsNAME": "東森購物四台",
+      "fsNAME": "東森購物二台",
       "fs4GTV_ID": "4gtv-live049",
       "fnCHANNEL_NO": 29,
       "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-live049.jpg",
       "fsPICTURE_LOGO": null,
-      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-live047_pc.png",
-      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live047_mobile.png",
+      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-live047_mobile.webp",
+      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live047_mobile.webp",
       "fcOVERSEAS": false,
       "lstEXCEPT_COUNTRY": [
         ""
@@ -851,7 +851,7 @@
       "fdLIKE_BEG_DATE": null,
       "fcLIKE": false,
       "fcRISTRICT": false,
-      "fsEXPIRE_DATE": "2026/06/18 00:00:00",
+      "fsEXPIRE_DATE": "",
       "fnGRADED": 0,
       "fsVENDOR": "東森得易購",
       "fsDESCRIPTION": "",
@@ -1355,42 +1355,6 @@
       "fnORDER": 23
     },
     {
-      "fnID": 234,
-      "fsTYPE": "02",
-      "fsCDN_ROUTE": "B",
-      "fsTYPE_NAME": "新聞財經",
-      "fsNAME": "東森新聞台",
-      "fs4GTV_ID": "4gtv-live114",
-      "fnCHANNEL_NO": 51,
-      "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-live114.jpg",
-      "fsPICTURE_LOGO": null,
-      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-live114_pc.png",
-      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live114_mobile.png",
-      "fcOVERSEAS": false,
-      "lstEXCEPT_COUNTRY": [
-        ""
-      ],
-      "lstALL_BITRATE": null,
-      "fsFREE_PROFILE": null,
-      "lstSETs": [
-        29,
-        44
-      ],
-      "fcFREE": true,
-      "fsQUALITY": "HD",
-      "fnCHAT_ID": 0,
-      "fcHAS_PROGLIST": true,
-      "fdLIKE_BEG_DATE": null,
-      "fcLIKE": false,
-      "fcRISTRICT": false,
-      "fsEXPIRE_DATE": "",
-      "fnGRADED": 0,
-      "fsVENDOR": "鳳梨傳媒",
-      "fsDESCRIPTION": "",
-      "fsSCHEDULE_DATE": null,
-      "fnORDER": 23
-    },
-    {
       "fnID": 292,
       "fsTYPE": "02",
       "fsCDN_ROUTE": "A",
@@ -1438,6 +1402,42 @@
       "fsDESCRIPTION": "強調新聞在哪裡東森就在哪裡，提供最熱門、即時、完整的全方位新聞。熱播節目包含《關鍵時刻》、《台灣啟示錄》、《台灣1001個故事》、《銅板美食呷透透》...等，皆可免費看。",
       "fsSCHEDULE_DATE": null,
       "fnORDER": 99
+    },
+    {
+      "fnID": 234,
+      "fsTYPE": "02",
+      "fsCDN_ROUTE": "B",
+      "fsTYPE_NAME": "新聞財經",
+      "fsNAME": "東森新聞台",
+      "fs4GTV_ID": "4gtv-live114",
+      "fnCHANNEL_NO": 51,
+      "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-live114.jpg",
+      "fsPICTURE_LOGO": null,
+      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-live114_pc.png",
+      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live114_mobile.png",
+      "fcOVERSEAS": false,
+      "lstEXCEPT_COUNTRY": [
+        ""
+      ],
+      "lstALL_BITRATE": null,
+      "fsFREE_PROFILE": null,
+      "lstSETs": [
+        29,
+        44
+      ],
+      "fcFREE": true,
+      "fsQUALITY": "HD",
+      "fnCHAT_ID": 0,
+      "fcHAS_PROGLIST": true,
+      "fdLIKE_BEG_DATE": null,
+      "fcLIKE": false,
+      "fcRISTRICT": false,
+      "fsEXPIRE_DATE": "",
+      "fnGRADED": 0,
+      "fsVENDOR": "鳳梨傳媒",
+      "fsDESCRIPTION": "",
+      "fsSCHEDULE_DATE": null,
+      "fnORDER": 23
     },
     {
       "fnID": 256,
@@ -2250,17 +2250,17 @@
       "fnORDER": 67
     },
     {
-      "fnID": 174,
+      "fnID": 500,
       "fsTYPE": "01",
       "fsCDN_ROUTE": "B",
       "fsTYPE_NAME": "綜合",
-      "fsNAME": "東森購物二台",
+      "fsNAME": "東森購物四台",
       "fs4GTV_ID": "4gtv-live046",
       "fnCHANNEL_NO": 69,
       "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-live046.jpg",
       "fsPICTURE_LOGO": null,
-      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-live046_pc.png",
-      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live046_mobile.png",
+      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-live047_mobile.webp",
+      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live047_mobile.webp",
       "fcOVERSEAS": false,
       "lstEXCEPT_COUNTRY": [
         ""
@@ -2269,8 +2269,8 @@
       "fsFREE_PROFILE": null,
       "lstSETs": [
         1,
+        3,
         4,
-        8,
         10,
         16,
         17,
@@ -2291,7 +2291,7 @@
       "fdLIKE_BEG_DATE": null,
       "fcLIKE": false,
       "fcRISTRICT": false,
-      "fsEXPIRE_DATE": "2026/06/18 00:00:00",
+      "fsEXPIRE_DATE": "",
       "fnGRADED": 0,
       "fsVENDOR": "東森得易購",
       "fsDESCRIPTION": "",
