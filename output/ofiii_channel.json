@@ -164,11 +164,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3691_ofiii94_mobile_20250328.png",
     "綜合"
   ],
-  "ofiii95": [
-    "Freeman @台灣",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3204_ofiii111_mobile_20240105.png",
-    "綜合"
-  ],
   "ofiii96": [
     "饕客揪愛吃",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2989_ofiii96_mobile_20230906.png",
@@ -309,11 +304,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3356_ofiii126_mobile_20250220.png",
     "綜藝"
   ],
-  "ofiii127": [
-    "鬼話連篇",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3782_ofiii127_mobile_20250626.png",
-    "綜藝"
-  ],
   "ofiii128": [
     "醫師好辣",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3633_ofiii128_mobile_20250220.png",
@@ -427,11 +417,6 @@
   "ofiii163": [
     "第一神拳",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3266_ofiii163_mobile_20250220.png",
-    "動漫"
-  ],
-  "ofiii164": [
-    "刀劍神域(中文版)",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3267_ofiii164_mobile_20250220.png",
     "動漫"
   ],
   "ofiii165": [
@@ -572,6 +557,11 @@
   "ofiii198": [
     "白袍之戀",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3926_ofiii198_mobile_20251126.png",
+    "戲劇"
+  ],
+  "ofiii199": [
+    "我的老師叫小賀",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3960_ofiii199_mobile_20251216.png",
     "戲劇"
   ],
   "ofiii201": [
@@ -873,6 +863,11 @@
     "龍華偶像台",
     "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn12_mobile.png",
     "戲劇"
+  ],
+  "litv-longturn14": [
+    "寰宇新聞台",
+    "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn14_mobile.png",
+    "新聞‧財經"
   ],
   "litv-xinchuang18": [
     "龍華戲劇台",
