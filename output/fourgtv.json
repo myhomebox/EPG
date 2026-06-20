@@ -13,7 +13,7 @@
       "fsPICTURE_LOGO": null,
       "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-4gtv003_pc.png",
       "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv003_mobile.png",
-      "fcOVERSEAS": false,
+      "fcOVERSEAS": true,
       "lstEXCEPT_COUNTRY": [
         ""
       ],
@@ -61,7 +61,7 @@
       "fsPICTURE_LOGO": null,
       "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-4gtv001_pc.png",
       "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv001_mobile.png",
-      "fcOVERSEAS": false,
+      "fcOVERSEAS": true,
       "lstEXCEPT_COUNTRY": [
         ""
       ],
@@ -107,7 +107,7 @@
       "fsPICTURE_LOGO": null,
       "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-4gtv002_pc.png",
       "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv002_mobile.png",
-      "fcOVERSEAS": false,
+      "fcOVERSEAS": true,
       "lstEXCEPT_COUNTRY": [
         ""
       ],
