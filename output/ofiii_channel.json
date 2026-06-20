@@ -79,11 +79,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3202_ofiii73_mobile_20240105.png",
     "電影"
   ],
-  "ofiii74": [
-    "歐飛電影台",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2748_ofiii74_mobile_20240315.png",
-    "電影"
-  ],
   "ofiii75": [
     "歐飛動作電影台",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3203_ofiii75_mobile_20240315.png",
@@ -162,6 +157,11 @@
   "ofiii94": [
     "ASMR行車紀錄",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3691_ofiii94_mobile_20250328.png",
+    "綜合"
+  ],
+  "ofiii95": [
+    "Freeman @台灣",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3204_ofiii111_mobile_20240105.png",
     "綜合"
   ],
   "ofiii96": [
@@ -304,6 +304,11 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3356_ofiii126_mobile_20250220.png",
     "綜藝"
   ],
+  "ofiii127": [
+    "鬼話連篇",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3782_ofiii127_mobile_20250626.png",
+    "綜藝"
+  ],
   "ofiii128": [
     "醫師好辣",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3633_ofiii128_mobile_20250220.png",
@@ -417,6 +422,11 @@
   "ofiii163": [
     "第一神拳",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3266_ofiii163_mobile_20250220.png",
+    "動漫"
+  ],
+  "ofiii164": [
+    "刀劍神域(中文版)",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3267_ofiii164_mobile_20250220.png",
     "動漫"
   ],
   "ofiii165": [
@@ -758,11 +768,6 @@
     "大自然流水聲",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3785_ofiii255_mobile_20250703.png",
     "綜合"
-  ],
-  "nnews-zh": [
-    "倪珍播新聞《6/24即將下架》",
-    "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_nnews_mobile.png",
-    "新聞‧財經"
   ],
   "4gtv-4gtv009": [
     "中天新聞台",
