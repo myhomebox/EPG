@@ -779,9 +779,9 @@
     },
     {
       "fnID": 124,
-      "fsTYPE": "01;02;03",
+      "fsTYPE": "01;03",
       "fsCDN_ROUTE": "A",
-      "fsTYPE_NAME": "綜合,新聞財經,生活旅遊時尚",
+      "fsTYPE_NAME": "綜合,生活旅遊時尚",
       "fsNAME": "原住民族電視台",
       "fs4GTV_ID": "4gtv-4gtv080",
       "fnCHANNEL_NO": 25,
