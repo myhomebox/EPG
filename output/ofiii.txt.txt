@@ -609,6 +609,13 @@ WTO姐妹會,#genre#
 第3462集 網友點名最雷日本景點 這些打卡熱點全上榜?!,http://localhost:5000/ofiii129/index.m3u8?episode_id=vod9985-003462M001
 第3463集 外國人口袋名單不藏私!! 各國必買好物超吸睛!!,http://localhost:5000/ofiii129/index.m3u8?episode_id=vod9985-003463M001
 Yes娛樂,#genre#
+王安宇回應走秀名場面：撲進李現懷裏內心尷尬 坦言如今更加沉穩,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84944-000000M001
+周杰倫攜兒女低調抵京備戰演唱會 單手抱女盡顯溫柔父愛,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84943-000000M001
+吳尊控訴國泰航空行李丟失 巴黎苦等三天未獲任何答復,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84942-000000M001
+A-Lin認了「上台前小酌」：右手在抖 典禮超時凸槌？公開點名Lulu！,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84941-000000M001
+連晨翔走心女兒被說「還好不像爸爸」 不認是女兒傻瓜曝：有父親的威嚴！,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84940-000000M001
+自爆趁凡凡睡著偷溜出門？！ 婁峻碩認計劃二胎：她滿希望,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84939-000000M001
+又失言！金希澈驚吐「女友會自己跪下」網秒聯想Momo 氣炸：還好分手了,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84938-000000M001
 金世佳坦言盼與趙又廷持續搭檔 稱讚《問心》劇組志同道合,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84892-000000M001
 袁詠儀回應兒子進娛樂圈 直言兒子張慕童無表演天賦,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84891-000000M001
 大S離世近一年半 具俊曄無意復工 小S计划為其開辦畫展,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84890-000000M001
@@ -637,13 +644,6 @@ FTISLAND信義區新歌搶先唱？ 李洪基突擊訓粉：拍子錯了XD,http:
 溫柔雙向奔赴！劉亦菲兩度精準認出20年老粉 主動握手致謝獲贊,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84817-000000M001
 小貝家族矛盾再升級 布魯克林拒見妹妹哈珀並指責其探訪作秀,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84816-000000M001
 羅志祥「自撞重錘」原地登出 又遭男粉襲胸：拉到我X頭！,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84815-000000M001
-王淨突喊張孝全「大哥」尷尬了！ 李沐演女兒她演老婆：...怪怪的XD,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84814-000000M001
-世足南韓門將致命失誤！ 珉豪 昌珉大傻眼 斗俊瞬間靜音,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84813-000000M001
-FTISLAND突襲信義街頭！ 驚見超巨芒果 李洪基現場開嗑,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84812-000000M001
-李連傑回應“不幫謝苗”多年傳聞：功夫演員沉澱到位，終會自帶光芒,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84811-000000M001
-劉芮麟回應健身房偷拍風波：妻子因隱私被拍缺乏安全感致反應過激,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84810-000000M001
-SHE久違合體為Ella慶生 二十載姐妹情掀起全網回憶殺,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84809-000000M001
-阮經天遭怪男連按4天門鈴！ 親還原「沒那麼單純」：想聊一聊,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84808-000000M001
 一拳超人(中文版),#genre#
 第1集 最強的男人,http://localhost:5000/ofiii173/index.m3u8?episode_id=vod52612-010001M001
 第2集 孤傲的生化人,http://localhost:5000/ofiii173/index.m3u8?episode_id=vod52612-010002M001
@@ -1398,57 +1398,6 @@ Re:從零開始的異世界生活Season 4,http://localhost:5000/ofiii97/index.m3
 第8集,http://localhost:5000/ofiii157/index.m3u8?episode_id=vod39293-000008M001
 第9集,http://localhost:5000/ofiii157/index.m3u8?episode_id=vod39293-000009M001
 第10集,http://localhost:5000/ofiii157/index.m3u8?episode_id=vod39293-000010M001
-倚天屠龍記 2019,#genre#
-第1集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000001M001
-第2集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000002M001
-第3集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000003M001
-第4集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000004M001
-第5集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000005M001
-第6集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000006M001
-第7集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000007M001
-第8集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000008M001
-第9集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000009M001
-第10集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000010M001
-第11集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000011M001
-第12集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000012M001
-第13集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000013M001
-第14集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000014M001
-第15集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000015M001
-第16集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000016M001
-第17集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000017M001
-第18集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000018M001
-第19集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000019M001
-第20集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000020M001
-第21集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000021M001
-第22集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000022M001
-第23集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000023M001
-第24集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000024M001
-第25集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000025M001
-第26集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000026M001
-第27集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000027M001
-第28集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000028M001
-第29集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000029M001
-第30集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000030M001
-第31集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000031M001
-第32集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000032M001
-第33集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000033M001
-第34集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000034M001
-第35集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000035M001
-第36集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000036M001
-第37集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000037M001
-第38集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000038M001
-第39集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000039M001
-第40集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000040M001
-第41集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000041M001
-第42集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000042M001
-第43集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000043M001
-第44集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000044M001
-第45集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000045M001
-第46集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000046M001
-第47集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000047M001
-第48集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000048M001
-第49集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000049M001
-第50集,http://localhost:5000/ofiii111/index.m3u8?episode_id=vod43061-000050M001
 健康問良醫,#genre#
 第11集 長新冠,http://localhost:5000/ofiii92/index.m3u8?episode_id=vod63397-000011M001
 第12集 抗發炎,http://localhost:5000/ofiii92/index.m3u8?episode_id=vod63397-000012M001
@@ -3972,9 +3921,6 @@ AI股「漲幅、本益比、估值」三高！美股費半狂摔驚動全球 �
 第100集,http://localhost:5000/ofiii199/index.m3u8?episode_id=vod11066-000100M001
 掏掏新聞,#genre#
 大大平評理-阿帕契墜海屬交通事故？怕擦槍走火 美伊報復演很大？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69896-000403M001
-幸福空間-豪宅保養升級 度假宅美型機能兼具,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod70063-000117M001
-2026大車拚-邱義仁罕見出山！賴清德事情大條了？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod83720-000021M001
-台灣1001個故事-第二十二集-棉花糖麻荖,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod64567-000022M001
 幸福空間-第八十九集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod70063-000089M001
 2026大車拚-神秘1000塊拖垮民調？蘇家煉金術害慘蘇巧慧？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod83720-000022M001
 政治琳龍SAY-高虹安條款?藍白表決通過選罷法修正案 緩刑也可以選,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod70083-000084M001
@@ -3991,6 +3937,9 @@ AI股「漲幅、本益比、估值」三高！美股費半狂摔驚動全球 �
 健康大錢線-褪黑激素與白內障,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod79599-000005M001
 【52直播間｜黃揚明】-第115集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69643-010115M001
 大雲時堂-李家裝滿故事的傳家美宴 李崗 陳煥華,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod51575-000321M001
+健康大錢線-洛桑加參醫師-壓力毒 + 陳俊旭博士-粒線體,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod79599-000013M001
+【52直播間｜歷史哥】-第112集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69643-020112M001
+健康大錢線-鄭鴻強醫師-中醫養生 + 江守山醫師-不吃藥控三高,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod79599-000015M001
 放鬆的爵士午後,#genre#
 【咖啡館爵士樂】,http://localhost:5000/ofiii252/index.m3u8?episode_id=vod73052-000001M001
 【咖啡館爵士樂-動態版】,http://localhost:5000/ofiii252/index.m3u8?episode_id=vod73052-000002M001
@@ -4666,21 +4615,6 @@ AI醫療外交開創新局！台美、台歐、邦交現況？外交部長林佳
 正義刑事-Invisible Cop,http://localhost:5000/ofiii75/index.m3u8?episode_id=vod65293-000000M001
 罪惡交鋒-At the Frontera,http://localhost:5000/ofiii75/index.m3u8?episode_id=vod75104-000000M001
 孤狼特警-Wolf,http://localhost:5000/ofiii75/index.m3u8?episode_id=vod41323-000000M001
-歐飛電影台,#genre#
-超能玩很大-Absolutely Anything,http://localhost:5000/ofiii74/index.m3u8?episode_id=vod69123-000000M001
-臨時家族-We are Family,http://localhost:5000/ofiii74/index.m3u8?episode_id=vod81835-000000M001
-鼠王-Evil of the Rat,http://localhost:5000/ofiii74/index.m3u8?episode_id=vod80213-000000M001
-來自星星的傻瓜索普-THORP,http://localhost:5000/ofiii74/index.m3u8?episode_id=vod81334-000000M001
-龍嶺迷窟-Longling Mystery Grotto,http://localhost:5000/ofiii74/index.m3u8?episode_id=vod71662-000000M001
-大上海-The Last Tycoon,http://localhost:5000/ofiii74/index.m3u8?episode_id=vod82256-000000M001
-絕命追殺-Bad Days,http://localhost:5000/ofiii74/index.m3u8?episode_id=vod76851-000000M001
-絕代天后黛莉達-Dalida,http://localhost:5000/ofiii74/index.m3u8?episode_id=vod38636-000000M001
-三少爺的劍-Sword Master,http://localhost:5000/ofiii74/index.m3u8?episode_id=vod82251-000000M001
-法庭遊戲-The Innocent Game,http://localhost:5000/ofiii74/index.m3u8?episode_id=vod72683-000000M001
-只想看見你-Influencia,http://localhost:5000/ofiii74/index.m3u8?episode_id=vod47637-000000M001
-不能錯過的只有你-Nobody But You,http://localhost:5000/ofiii74/index.m3u8?episode_id=vod67926-000000M001
-極速甩尾-ALIVEHOON,http://localhost:5000/ofiii74/index.m3u8?episode_id=vod60896-000000M001
-畢業忌念冊-Departing Seniors,http://localhost:5000/ofiii74/index.m3u8?episode_id=vod76853-000000M001
 歡迎光琳,#genre#
 第1集 機不可失 人夫群組的秘密,http://localhost:5000/ofiii230/index.m3u8?episode_id=vod80454-000001M001
 第2集 惡女復仇 威廉沈的贖罪餐,http://localhost:5000/ofiii230/index.m3u8?episode_id=vod80454-000002M001
@@ -5970,15 +5904,13 @@ M3 Touring，我們終於等到你了...(淚流滿面）,http://localhost:5000/o
 第4季第16集 日本：日本美食之都大阪 體驗茶道文化,http://localhost:5000/ofiii248/index.m3u8?episode_id=vod20116-040016M001
 空中英語教室HD頻道,#genre#
 空中英語教室-Gaudí’s Works and Life  高第的作品 & 人生（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-260625M001
-Calendar Phrase,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-191119M001
+Info Cloud,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-240511M001
+大家說英語-Beauty All Around You  被美麗環繞,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260626M001
+Calendar Phrase,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-191120M001
 空中英語教室-Gaudí’s Works and Life  高第的作品 & 人生（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-260626M001
+大家說英語-Saturday Review本週課程複習,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260627M001
 空中英語教室-Chill Out With Cold Noodles  用冷麵清涼一夏,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-260624M001
 大家說英語-Gaming Is Fun!  玩電玩很有趣！（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260625M001
-Info Cloud,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-240510M001
-大家說英語-Beauty All Around You  被美麗環繞,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260626M001
-大家說英語-Saturday Review本週課程複習,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260627M001
-Info Cloud,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-240511M001
-Calendar Phrase,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-191120M001
 空中英語教室-Surrounded by Idiots  被白癡包圍（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-260629M001
 Info Cloud,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-240513M001
 大家說英語-Need Help? Just Ask!  需要幫助嗎？開口問就對了！（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260629M001
@@ -6140,12 +6072,6 @@ Calendar Phrase,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-191
 【白噪音系列，雷雨聲】,http://localhost:5000/ofiii250/index.m3u8?episode_id=vod73056-000001M001
 【白噪音系列，雷雨聲－房間版】,http://localhost:5000/ofiii250/index.m3u8?episode_id=vod73056-000002M001
 經典劇場,#genre#
-宮心計-第2集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod72350-000002M001
-宮心計-第3集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod72350-000003M001
-一代大商孟洛川-第20集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod60261-000020M001
-一代大商孟洛川-第21集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod60261-000021M001
-中國式關係-第5集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod66358-000005M001
-中國式關係-第6集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod66358-000006M001
 宮心計-第4集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod72350-000004M001
 宮心計-第5集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod72350-000005M001
 一代大商孟洛川-第22集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod60261-000022M001
@@ -6176,6 +6102,12 @@ Calendar Phrase,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-191
 一代大商孟洛川-第31集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod60261-000031M001
 中國式關係-第15集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod66358-000015M001
 中國式關係-第16集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod66358-000016M001
+宮心計-第14集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod72350-000014M001
+宮心計-第15集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod72350-000015M001
+一代大商孟洛川-第32集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod60261-000032M001
+一代大商孟洛川-第33集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod60261-000033M001
+中國式關係-第17集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod66358-000017M001
+中國式關係-第18集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod66358-000018M001
 綜藝大集合,#genre#
 第1179集 瓜哥被替身攻擊！撞擊一個比一個兇猛！？連阿翔都投懷送抱！？籃籃不簡單？出手就是命中紅心！瓜哥 林可 冼迪琦 錄影開始還在玩水？(南投名間),http://localhost:5000/ofiii125/index.m3u8?episode_id=vod9838-001179M001
 第1180集 火車快飛瓜哥想當火車頭！？臭魚爛蝦 拐瓜劣棗 大家爭著當！？直排輪VS大隊接力太精采！！！毛很多是比賽優勢！？(屏東潮州),http://localhost:5000/ofiii125/index.m3u8?episode_id=vod9838-001180M001
