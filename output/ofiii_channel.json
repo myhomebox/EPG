@@ -79,6 +79,11 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3202_ofiii73_mobile_20240105.png",
     "電影"
   ],
+  "ofiii74": [
+    "歐飛電影台",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2748_ofiii74_mobile_20240315.png",
+    "電影"
+  ],
   "ofiii75": [
     "歐飛動作電影台",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3203_ofiii75_mobile_20240315.png",
@@ -209,6 +214,16 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4029_ofiii105_mobile_20260303.png",
     "戲劇"
   ],
+  "ofiii106": [
+    "軍師聯盟",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3070_ofiii106_mobile_20250220.png",
+    "戲劇"
+  ],
+  "ofiii107": [
+    "軍師聯盟2 虎嘯龍吟",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3071_ofiii107_mobile_20250220.png",
+    "戲劇"
+  ],
   "ofiii108": [
     "國色芳華",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3692_ofiii108_mobile_20250328.png",
@@ -222,6 +237,11 @@
   "ofiii110": [
     "大生意人",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4022_ofiii110_mobile_20260123.png",
+    "戲劇"
+  ],
+  "ofiii111": [
+    "倚天屠龍記 2019",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3206_ofiii111_mobile_20250220.png",
     "戲劇"
   ],
   "ofiii112": [
@@ -412,11 +432,6 @@
   "ofiii164": [
     "刀劍神域(中文版)",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3267_ofiii164_mobile_20250220.png",
-    "動漫"
-  ],
-  "ofiii165": [
-    "蠟筆小新(中文版)",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3079_ofiii165_mobile_20250220.png",
     "動漫"
   ],
   "ofiii166": [
