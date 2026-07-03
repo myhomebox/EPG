@@ -324,12 +324,6 @@
     "description": ""
   },
   {
-    "channelName": "社會NOW什麼《7/3即將下架》",
-    "id": "ofiii85",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3409_ofiii85_mobile_20250221.png",
-    "description": ""
-  },
-  {
     "channelName": "徐海莉 Hailey",
     "id": "ofiii86",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3922_ofiii86_mobile_20251126.png",
@@ -390,9 +384,9 @@
     "description": ""
   },
   {
-    "channelName": "長安十二時辰《7/3即將下架》",
+    "channelName": "良陳美錦",
     "id": "ofiii100",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3808_ofiii100_mobile_20250729.png",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4131_ofiii100_mobile_20260626.png",
     "description": ""
   },
   {
@@ -498,9 +492,21 @@
     "description": ""
   },
   {
+    "channelName": "有你的時光裡",
+    "id": "ofiii118",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4132_ofiii118_mobile_20260626.png",
+    "description": ""
+  },
+  {
     "channelName": "以家人之名",
     "id": "ofiii119",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3023_ofiii119_mobile_20250221.png",
+    "description": ""
+  },
+  {
+    "channelName": "以愛為營",
+    "id": "ofiii120",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4133_ofiii120_mobile_20260626.png",
     "description": ""
   },
   {
@@ -510,21 +516,15 @@
     "description": ""
   },
   {
-    "channelName": "不眠日《7/3即將下架》",
+    "channelName": "女神蒙上眼",
     "id": "ofiii122",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3904_ofiii122_mobile_20251028.png",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4134_ofiii122_mobile_20260626.png",
     "description": ""
   },
   {
     "channelName": "三十而已",
     "id": "ofiii123",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3748_ofiii123_mobile_20250529.png",
-    "description": ""
-  },
-  {
-    "channelName": "小丈夫《7/3即將下架》",
-    "id": "ofiii124",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3953_ofiii124_mobile_20251216.png",
     "description": ""
   },
   {
@@ -555,12 +555,6 @@
     "channelName": "WTO姐妹會",
     "id": "ofiii129",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3301_ofiii129_mobile_20250221.png",
-    "description": ""
-  },
-  {
-    "channelName": "金頭腦《7/3即將下架》",
-    "id": "ofiii130",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3954_ofiii130_mobile_20251216.png",
     "description": ""
   },
   {
@@ -744,21 +738,9 @@
     "description": ""
   },
   {
-    "channelName": "夏目友人帳《7/3即將下架》",
-    "id": "ofiii174",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3171_ofiii174_mobile_20250221.png",
-    "description": ""
-  },
-  {
     "channelName": "怪醫黑傑克TV(中文版)",
     "id": "ofiii175",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3811_ofiii175_mobile_20250729.png",
-    "description": ""
-  },
-  {
-    "channelName": "惡魔奶爸(中文版)《7/3即將下架》",
-    "id": "ofiii176",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3905_ofiii176_mobile_20251028.png",
     "description": ""
   },
   {
@@ -810,12 +792,6 @@
     "description": ""
   },
   {
-    "channelName": "城市獵人《7/3即將下架》",
-    "id": "ofiii186",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3751_ofiii186_mobile_20250529.png",
-    "description": ""
-  },
-  {
     "channelName": "超人力霸王台",
     "id": "ofiii187",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3843_ofiii187_mobile_20250827.png",
@@ -843,18 +819,6 @@
     "channelName": "生命的贏家",
     "id": "ofiii192",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_ofiii192_mobile_20230329.png",
-    "description": ""
-  },
-  {
-    "channelName": "出境事務所《7/3即將下架》",
-    "id": "ofiii196",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4033_ofiii196_mobile_20260303.png",
-    "description": ""
-  },
-  {
-    "channelName": "白袍之戀《7/3即將下架》",
-    "id": "ofiii198",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3926_ofiii198_mobile_20251126.png",
     "description": ""
   },
   {
