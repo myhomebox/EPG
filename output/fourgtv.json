@@ -1859,7 +1859,7 @@
       "fdLIKE_BEG_DATE": null,
       "fcLIKE": false,
       "fcRISTRICT": false,
-      "fsEXPIRE_DATE": "",
+      "fsEXPIRE_DATE": "2026/08/01 00:00:00",
       "fnGRADED": 0,
       "fsVENDOR": "中天",
       "fsDESCRIPTION": "中天新聞台於2020年12月12日零時起下架有線電視，轉型為網路電視，但仍維持新聞頻道規模，主播也更加強與觀眾的互動，並製播新聞政論節目，例如《頭條開講》、《大新聞大爆卦》、《全球大視野》...等皆可免費看。",
@@ -1907,12 +1907,12 @@
       "fdLIKE_BEG_DATE": null,
       "fcLIKE": false,
       "fcRISTRICT": false,
-      "fsEXPIRE_DATE": "",
+      "fsEXPIRE_DATE": "2026/07/26 00:00:00",
       "fnGRADED": 0,
       "fsVENDOR": "中天",
       "fsDESCRIPTION": "中天新聞台於2020年12月12日零時起下架有線電視，轉型為網路電視，但仍維持新聞頻道規模，主播也更加強與觀眾的互動，並製播新聞政論節目，例如《頭條開講》、《大新聞大爆卦》、《全球大視野》...等皆可免費看。",
       "fsSCHEDULE_DATE": null,
-      "fnORDER": 22
+      "fnORDER": 99
     },
     {
       "fnID": 283,
