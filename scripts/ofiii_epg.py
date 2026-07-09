@@ -18,17 +18,20 @@ HEADERS = {
 }
 
 def human_like_delay(min_seconds=1, max_seconds=5):
+    """人類仿真延遲"""
     delay = random.uniform(min_seconds, max_seconds)
     print(f"⏱️ 隨機延遲 {delay:.2f}秒")
     time.sleep(delay)
 
 def human_like_typing_effect(text, delay=0.03):
+    """人類仿真打字效果"""
     for char in text:
         print(char, end='', flush=True)
         time.sleep(delay)
     print()
 
 def parse_channel_list():
+    """解析頻道清單檔案內容（硬編碼部分頻道 + 大量自動生成 ofiii 頻道）"""
     other_channels = [
         "4gtv-4gtv009", "4gtv-4gtv040", "4gtv-4gtv041", "4gtv-4gtv052",
         "4gtv-4gtv074", "4gtv-4gtv084", "4gtv-4gtv085", "4gtv-4gtv076",
@@ -47,6 +50,7 @@ def parse_channel_list():
     return channel_list
 
 def fetch_epg_data(channel_id, max_retries=1):
+    """獲取指定頻道的電視節目表數據（解析 __NEXT_DATA__ JSON）"""
     url = f"https://www.ofiii.com/channel/watch/{channel_id}"
     for attempt in range(max_retries):
         try:
@@ -78,7 +82,14 @@ def fetch_epg_data(channel_id, max_retries=1):
     print(f"   ❌ 無法獲取 電視節目表 數據: {channel_id}")
     return None
 
+def parse_timestamp(ts):
+    """處理秒或毫秒的 Unix 時間戳，返回秒級 float"""
+    if ts > 9999999999:  # 大於 10^10 視為毫秒
+        return ts / 1000.0
+    return float(ts)
+
 def parse_schedule_data(json_data, channel_id):
+    """解析直播頻道的 schedule 資料"""
     if not json_data:
         return []
     programs = []
@@ -110,7 +121,8 @@ def parse_schedule_data(json_data, channel_id):
         print(f"   ❌ 解析直播節目表失敗: {str(e)}")
     return programs
 
-def parse_vod_schedule_data(json_data, channel_id):
+def parse_playout_schedule_data(json_data, channel_id):
+    """解析排程點播頻道的 vodChannelSchedule，節目已有確切 startTime / endTime"""
     if not json_data:
         return []
     programs = []
@@ -118,7 +130,46 @@ def parse_vod_schedule_data(json_data, channel_id):
         channel_data = json_data['props']['pageProps']['channel']
         vod_schedule = channel_data.get('vodChannelSchedule')
         if not vod_schedule:
-            print(f"   ⚠️ 點播頻道 {channel_id} 沒有 vodChannelSchedule")
+            print(f"   ⚠️ 排程點播頻道 {channel_id} 沒有 vodChannelSchedule")
+            return []
+        vod_programs = vod_schedule.get('programs', [])
+        if not vod_programs:
+            return []
+        channel_name = channel_data.get('title', channel_id)
+        for item in vod_programs:
+            try:
+                start_ts = parse_timestamp(item.get('startTime', 0))
+                end_ts = parse_timestamp(item.get('endTime', 0))
+                if start_ts == 0 or end_ts == 0:
+                    continue
+                start_taipei = datetime.datetime.fromtimestamp(start_ts, TAIPEI_TZ)
+                end_taipei = datetime.datetime.fromtimestamp(end_ts, TAIPEI_TZ)
+                programs.append({
+                    "channelId": channel_id,
+                    "channelName": channel_name,
+                    "programName": item.get('title', '未知節目'),
+                    "description": item.get('description', ''),
+                    "subtitle": item.get('subtitle', ''),
+                    "start": start_taipei,
+                    "end": end_taipei
+                })
+            except (KeyError, ValueError, TypeError) as e:
+                print(f"   ⚠️ 跳過無效節目數據: {channel_id}, {str(e)}")
+                continue
+    except Exception as e:
+        print(f"   ❌ 解析排程點播節目表失敗: {str(e)}")
+    return programs
+
+def parse_vod_schedule_data(json_data, channel_id):
+    """解析動態輪播點播頻道的 vodChannelSchedule，根據當前時間計算相對時間"""
+    if not json_data:
+        return []
+    programs = []
+    try:
+        channel_data = json_data['props']['pageProps']['channel']
+        vod_schedule = channel_data.get('vodChannelSchedule')
+        if not vod_schedule:
+            print(f"   ⚠️ 動態點播頻道 {channel_id} 沒有 vodChannelSchedule")
             return []
         vod_programs = vod_schedule.get('programs', [])
         if not vod_programs:
@@ -161,21 +212,31 @@ def parse_vod_schedule_data(json_data, channel_id):
                     "end": end
                 })
     except Exception as e:
-        print(f"   ❌ 解析點播節目表失敗: {str(e)}")
+        print(f"   ❌ 解析動態點播節目表失敗: {str(e)}")
     return programs
 
 def parse_epg_data(json_data, channel_id):
+    """分派給正確的解析器（直播 / 排程點播 / 動態點播）"""
     if not json_data:
         return []
     try:
         channel_data = json_data['props']['pageProps']['channel']
-        content_type = channel_data.get('contentType', '')
-        if content_type == 'vod-channel':
-            print(f"   📹 檢測到點播頻道: {channel_id}")
-            return parse_vod_schedule_data(json_data, channel_id)
-        elif 'schedule' in channel_data:
+        # 優先判斷直播頻道（具有 schedule）
+        if 'schedule' in channel_data:
             print(f"   📺 檢測到直播頻道: {channel_id}")
             return parse_schedule_data(json_data, channel_id)
+        # 其次判斷點播頻道 (vodChannelSchedule)
+        vod_schedule = channel_data.get('vodChannelSchedule')
+        if vod_schedule:
+            programs = vod_schedule.get('programs', [])
+            if programs and programs[0].get('startTime', 0) > 0:
+                # 具有確切時間戳的排程點播
+                print(f"   🗓️ 檢測到排程點播頻道: {channel_id}")
+                return parse_playout_schedule_data(json_data, channel_id)
+            else:
+                # 動態輪播點播
+                print(f"   📹 檢測到動態點播頻道: {channel_id}")
+                return parse_vod_schedule_data(json_data, channel_id)
         else:
             print(f"   ⚠️ 頻道 {channel_id} 無 schedule 或 vodChannelSchedule")
             return []
@@ -184,22 +245,23 @@ def parse_epg_data(json_data, channel_id):
         return []
 
 def get_channel_info(json_data, channel_id):
-    """提取頻道資訊，logo 新舊格式相容"""
+    """提取頻道資訊，logo 新舊格式相容，introduction 可能為 null"""
     if not json_data:
         return None
     try:
         page_props = json_data.get('props', {}).get('pageProps', {})
         channel_data = page_props.get('channel', {})
-        introduction = page_props.get('introduction', {})
+        # introduction 可能為 None
+        introduction = page_props.get('introduction') or {}
         channel_name = channel_data.get('title', channel_id)
-        
+
         logo = channel_data.get('picture', '')
         if logo:
             if not logo.startswith('http'):
                 logo = f"https://p-cdnstatic.svc.litv.tv/{logo}"
                 if '_tv' in logo:
                     logo = logo.replace('_tv', '_mobile')
-        
+
         description = introduction.get('description', '')
         return {
             "channelName": channel_name,
@@ -212,9 +274,10 @@ def get_channel_info(json_data, channel_id):
         return None
 
 def get_ofiii_epg():
-    print("="*50)
+    """主流程：獲取所有頻道的節目表"""
+    print("=" * 50)
     human_like_typing_effect("開始獲取歐飛電視節目表")
-    print("="*50)
+    print("=" * 50)
     channels = parse_channel_list()
     if not channels:
         print("❌ 無法解析頻道清單")
@@ -239,7 +302,7 @@ def get_ofiii_epg():
         print(f"   📺 解析到 {len(programs)} 個節目")
         if idx < len(channels) - 1:
             human_like_delay(1, 3)
-    print("\n" + "="*50)
+    print("\n" + "=" * 50)
     human_like_typing_effect("數據獲取完成，生成統計信息...")
     print(f"✅ 成功獲取 {len(all_channels_info)} 個頻道信息")
     print(f"✅ 成功獲取 {len(all_programs)} 個節目")
@@ -254,10 +317,11 @@ def get_ofiii_epg():
         print(f"   📺 {channel}: {count} 個節目")
     if len(channel_counts) > 10:
         print(f"   ... 還有 {len(channel_counts) - 10} 個頻道")
-    print("="*50)
+    print("=" * 50)
     return all_channels_info, all_programs
 
 def generate_xmltv(channels_info, programs, output_file="ofiii.xml"):
+    """生成 XMLTV 格式的 EPG 檔案"""
     print(f"\n📄 生成XMLTV檔案: {output_file}")
     human_like_typing_effect("正在生成XML格式的節目表數據...")
     root = ET.Element("tv", generator="OFIII-EPG-Generator", source="www.ofiii.com")
@@ -315,6 +379,7 @@ def generate_xmltv(channels_info, programs, output_file="ofiii.xml"):
         return False
 
 def generate_json_file(channels_info, output_file="ofiii.json"):
+    """生成 JSON 格式的頻道資訊備份"""
     print(f"\n📄 生成JSON檔案: {output_file}")
     human_like_typing_effect("正在生成JSON格式的頻道數據...")
     try:
