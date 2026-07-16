@@ -290,8 +290,6 @@ Yes娛樂,http://localhost:5000/ofiii47/index.m3u8
 饕客揪愛吃,http://localhost:5000/ofiii96/index.m3u8
 香港天王台,#genre#
 香港天王台,http://localhost:5000/ofiii78/index.m3u8
-鬼話連篇,#genre#
-鬼話連篇,http://localhost:5000/ofiii127/index.m3u8
 麥卡貝網路電視,#genre#
 麥卡貝網路電視,http://localhost:5000/ofiii144/index.m3u8
 黃金歲月,#genre#
