@@ -80,8 +80,6 @@ Yes娛樂,http://localhost:5000/ofiii47/index.m3u8
 台灣真善美,http://localhost:5000/ofiii241/index.m3u8
 台灣第一等,#genre#
 台灣第一等,http://localhost:5000/ofiii239/index.m3u8
-台灣靈異事件,#genre#
-台灣靈異事件,http://localhost:5000/ofiii150/index.m3u8
 史上最強弟子兼一(中文版),#genre#
 史上最強弟子兼一(中文版),http://localhost:5000/ofiii180/index.m3u8
 周星馳台,#genre#
@@ -276,8 +274,6 @@ Yes娛樂,http://localhost:5000/ofiii47/index.m3u8
 隊長小翼(中文版),http://localhost:5000/ofiii169/index.m3u8
 雖然等級只有1級但固有技能是最強的,#genre#
 雖然等級只有1級但固有技能是最強的,http://localhost:5000/ofiii159/index.m3u8
-雙軌,#genre#
-雙軌,http://localhost:5000/ofiii117/index.m3u8
 電動車時代,#genre#
 電動車時代,http://localhost:5000/ofiii215/index.m3u8
 非凡大探索,#genre#
