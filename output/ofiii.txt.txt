@@ -28,6 +28,8 @@ Yes娛樂,http://localhost:5000/ofiii47/index.m3u8
 三國,http://localhost:5000/ofiii103/index.m3u8
 世界第一等,#genre#
 世界第一等,http://localhost:5000/ofiii238/index.m3u8
+中國旅遊大探索,#genre#
+中國旅遊大探索,http://localhost:5000/ofiii247/index.m3u8
 中國美食大探索,#genre#
 中國美食大探索,http://localhost:5000/ofiii246/index.m3u8
 中天亞洲精采台,#genre#
@@ -180,6 +182,8 @@ Yes娛樂,http://localhost:5000/ofiii47/index.m3u8
 水龍吟,http://localhost:5000/ofiii105/index.m3u8
 法眼黑與白,#genre#
 法眼黑與白,http://localhost:5000/ofiii134/index.m3u8
+泰可愛旋風,#genre#
+泰可愛旋風,http://localhost:5000/ofiii89/index.m3u8
 溢起趣打卡,#genre#
 溢起趣打卡,http://localhost:5000/ofiii244/index.m3u8
 溢遊未盡,#genre#
