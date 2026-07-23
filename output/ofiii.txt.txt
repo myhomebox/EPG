@@ -98,6 +98,8 @@ Yes娛樂,http://localhost:5000/ofiii47/index.m3u8
 回到20歲,http://localhost:5000/ofiii145/index.m3u8
 國色芳華,#genre#
 國色芳華,http://localhost:5000/ofiii108/index.m3u8
+國際大小事,#genre#
+國際大小事,http://localhost:5000/ofiii55/index.m3u8
 在異世界獲得超強能力的我，在現實世界照樣無敵～等級提升改變人生命運～,#genre#
 在異世界獲得超強能力的我，在現實世界照樣無敵～等級提升改變人生命運～,http://localhost:5000/ofiii162/index.m3u8
 地球檔案庫,#genre#
