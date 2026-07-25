@@ -107,7 +107,7 @@
       "fsPICTURE_LOGO": null,
       "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-4gtv002_pc.png",
       "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv002_mobile.png",
-      "fcOVERSEAS": false,
+      "fcOVERSEAS": true,
       "lstEXCEPT_COUNTRY": [
         ""
       ],
@@ -132,7 +132,7 @@
       ],
       "fcFREE": true,
       "fsQUALITY": "HD",
-      "fnCHAT_ID": 1,
+      "fnCHAT_ID": 0,
       "fcHAS_PROGLIST": true,
       "fdLIKE_BEG_DATE": null,
       "fcLIKE": false,
@@ -142,7 +142,7 @@
       "fsVENDOR": "民視",
       "fsDESCRIPTION": "民視於1997年開播，是台灣第四家無線電視頻道。節目類型多元且收視率高，擁有廣大收視族群。近期熱播節目包含：《市井豪門》、《綜藝大集合》、《決勝的揮拍》、《最強綜藝秀》、《綜藝新時代》、《醫學大聯盟》、《姐妹亮起來》…等，皆可免費看。",
       "fsSCHEDULE_DATE": null,
-      "fnORDER": 1
+      "fnORDER": 99
     },
     {
       "fnID": 209,
@@ -1583,6 +1583,39 @@
       "fnORDER": 54
     },
     {
+      "fnID": 291,
+      "fsTYPE": "02",
+      "fsCDN_ROUTE": "A",
+      "fsTYPE_NAME": "新聞財經",
+      "fsNAME": "TVBS新聞",
+      "fs4GTV_ID": "4gtv-4gtv072",
+      "fnCHANNEL_NO": 55,
+      "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-4gtv072.jpg",
+      "fsPICTURE_LOGO": null,
+      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-4gtv072_pc.png",
+      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv072_mobile.png",
+      "fcOVERSEAS": false,
+      "lstEXCEPT_COUNTRY": [
+        ""
+      ],
+      "lstALL_BITRATE": null,
+      "fsFREE_PROFILE": null,
+      "lstSETs": null,
+      "fcFREE": true,
+      "fsQUALITY": "HD",
+      "fnCHAT_ID": 0,
+      "fcHAS_PROGLIST": true,
+      "fdLIKE_BEG_DATE": null,
+      "fcLIKE": true,
+      "fcRISTRICT": false,
+      "fsEXPIRE_DATE": "",
+      "fnGRADED": 0,
+      "fsVENDOR": "鳳梨傳媒",
+      "fsDESCRIPTION": "TVBS新聞台於1995年10月2日開播，當時是台灣第一個24小時本土新聞頻道，製播內容包括新聞報導、新聞回顧、娛樂資訊及時事論壇等。熱播節目包含：《十點不一樣》、《新聞夜視界》、《Focus全球新聞》、《一步一腳印 發現新台灣》…等精彩節目。",
+      "fsSCHEDULE_DATE": null,
+      "fnORDER": 99
+    },
+    {
       "fnID": 473,
       "fsTYPE": "02",
       "fsCDN_ROUTE": "B",
@@ -1626,39 +1659,6 @@
       "fnGRADED": 0,
       "fsVENDOR": "鳳梨傳媒",
       "fsDESCRIPTION": "TVBS新聞台於1995年10月2日開播，當時是台灣第一個24小時本土新聞頻道，製播內容包括新聞報導、新聞回顧、娛樂資訊及時事論壇等。熱播節目包含：《十點不一樣》、《新聞夜視界》、《Focus全球新聞》、《一步一腳印 發現新台灣》…等，皆可免費看。",
-      "fsSCHEDULE_DATE": null,
-      "fnORDER": 99
-    },
-    {
-      "fnID": 291,
-      "fsTYPE": "02",
-      "fsCDN_ROUTE": "A",
-      "fsTYPE_NAME": "新聞財經",
-      "fsNAME": "TVBS新聞",
-      "fs4GTV_ID": "4gtv-4gtv072",
-      "fnCHANNEL_NO": 55,
-      "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-4gtv072.jpg",
-      "fsPICTURE_LOGO": null,
-      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-4gtv072_pc.png",
-      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv072_mobile.png",
-      "fcOVERSEAS": false,
-      "lstEXCEPT_COUNTRY": [
-        ""
-      ],
-      "lstALL_BITRATE": null,
-      "fsFREE_PROFILE": null,
-      "lstSETs": null,
-      "fcFREE": true,
-      "fsQUALITY": "HD",
-      "fnCHAT_ID": 0,
-      "fcHAS_PROGLIST": true,
-      "fdLIKE_BEG_DATE": null,
-      "fcLIKE": true,
-      "fcRISTRICT": false,
-      "fsEXPIRE_DATE": "",
-      "fnGRADED": 0,
-      "fsVENDOR": "鳳梨傳媒",
-      "fsDESCRIPTION": "TVBS新聞台於1995年10月2日開播，當時是台灣第一個24小時本土新聞頻道，製播內容包括新聞報導、新聞回顧、娛樂資訊及時事論壇等。熱播節目包含：《十點不一樣》、《新聞夜視界》、《Focus全球新聞》、《一步一腳印 發現新台灣》…等精彩節目。",
       "fsSCHEDULE_DATE": null,
       "fnORDER": 99
     },
