@@ -31,17 +31,10 @@ jobs:
           OUTPUT_DIR: ./output      # 相對於工作空間的目錄
         run: python scripts/tbc.py
 
-      - name: 提交並推送 output 目錄到倉庫
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit and Push EPG
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # 確保 output 目錄存在（腳本已建立）
-          git add output/
-          # 若有變更則提交
-          git diff --staged --quiet || git commit -m "自動更新 EPG $(date '+%Y-%m-%d')"
-          
-          # 推送到目前分支（預設 main/master）
-          git push origin HEAD:${GITHUB_REF_NAME}
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add output/epg_tbc.xml
+          git commit -m "Auto-update TBC EPG" || echo "No changes to commit"
+          git push
