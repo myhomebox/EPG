@@ -50,6 +50,8 @@ Yes娛樂,http://localhost:5000/ofiii47/index.m3u8
 以愛為營,http://localhost:5000/ofiii120/index.m3u8
 俗女養成記,#genre#
 俗女養成記,http://localhost:5000/ofiii157/index.m3u8
+倚天屠龍記 2019,#genre#
+倚天屠龍記 2019,http://localhost:5000/ofiii111/index.m3u8
 健康問良醫,#genre#
 健康問良醫,http://localhost:5000/ofiii92/index.m3u8
 全民星攻略,#genre#
