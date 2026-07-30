@@ -44,8 +44,8 @@ Yes娛樂,http://localhost:5000/ofiii47/index.m3u8
 人氣動漫預告,http://localhost:5000/ofiii97/index.m3u8
 仁心俱樂部,#genre#
 仁心俱樂部,http://localhost:5000/ofiii121/index.m3u8
-以家人之名,#genre#
-以家人之名,http://localhost:5000/ofiii119/index.m3u8
+以家人之名《8/5即將下架》,#genre#
+以家人之名《8/5即將下架》,http://localhost:5000/ofiii119/index.m3u8
 以愛為營,#genre#
 以愛為營,http://localhost:5000/ofiii120/index.m3u8
 俗女養成記,#genre#
@@ -108,8 +108,8 @@ Yes娛樂,http://localhost:5000/ofiii47/index.m3u8
 夏日陽光海浪聲,http://localhost:5000/ofiii254/index.m3u8
 夢幻遊戲(中文版),#genre#
 夢幻遊戲(中文版),http://localhost:5000/ofiii181/index.m3u8
-大大平評理,#genre#
-大大平評理,http://localhost:5000/ofiii207/index.m3u8
+大大平評理《8/5即將下架》,#genre#
+大大平評理《8/5即將下架》,http://localhost:5000/ofiii207/index.m3u8
 大新聞大爆卦,#genre#
 大新聞大爆卦,http://localhost:5000/ofiii201/index.m3u8
 大生意人,#genre#
@@ -144,8 +144,8 @@ Yes娛樂,http://localhost:5000/ofiii47/index.m3u8
 掏掏新聞,http://localhost:5000/ofiii50/index.m3u8
 放鬆的爵士午後,#genre#
 放鬆的爵士午後,http://localhost:5000/ofiii252/index.m3u8
-政治琳龍SAY,#genre#
-政治琳龍SAY,http://localhost:5000/ofiii208/index.m3u8
+政治琳龍SAY《8/5即將下架》,#genre#
+政治琳龍SAY《8/5即將下架》,http://localhost:5000/ofiii208/index.m3u8
 新哆啦A夢(中文版),#genre#
 新哆啦A夢(中文版),http://localhost:5000/ofiii23/index.m3u8
 新哆啦A夢(中文版)2台,#genre#
@@ -230,8 +230,8 @@ Yes娛樂,http://localhost:5000/ofiii47/index.m3u8
 脖子解說 Mr. Neck,http://localhost:5000/ofiii218/index.m3u8
 膽大黨,#genre#
 膽大黨,http://localhost:5000/ofiii183/index.m3u8
-舌尖之福,#genre#
-舌尖之福,http://localhost:5000/ofiii232/index.m3u8
+舌尖之福《8/5即將下架》,#genre#
+舌尖之福《8/5即將下架》,http://localhost:5000/ofiii232/index.m3u8
 良陳美錦,#genre#
 良陳美錦,http://localhost:5000/ofiii100/index.m3u8
 華語金選台,#genre#
@@ -270,8 +270,8 @@ Yes娛樂,http://localhost:5000/ofiii47/index.m3u8
 鋼之鍊金術師,http://localhost:5000/ofiii177/index.m3u8
 錦繡安寧,#genre#
 錦繡安寧,http://localhost:5000/ofiii112/index.m3u8
-錦繡芳華,#genre#
-錦繡芳華,http://localhost:5000/ofiii109/index.m3u8
+錦繡芳華《8/5即將下架》,#genre#
+錦繡芳華《8/5即將下架》,http://localhost:5000/ofiii109/index.m3u8
 隊長小翼(中文版),#genre#
 隊長小翼(中文版),http://localhost:5000/ofiii169/index.m3u8
 雖然等級只有1級但固有技能是最強的,#genre#
