@@ -1795,78 +1795,6 @@
       "fnORDER": 29
     },
     {
-      "fnID": 258,
-      "fsTYPE": "02",
-      "fsCDN_ROUTE": "B",
-      "fsTYPE_NAME": "新聞財經",
-      "fsNAME": "中視新聞",
-      "fs4GTV_ID": "4gtv-live474",
-      "fnCHANNEL_NO": 57,
-      "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-live474.jpg",
-      "fsPICTURE_LOGO": null,
-      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-4gtv074_pc.png",
-      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv074_mobile.png",
-      "fcOVERSEAS": false,
-      "lstEXCEPT_COUNTRY": [
-        ""
-      ],
-      "lstALL_BITRATE": null,
-      "fsFREE_PROFILE": null,
-      "lstSETs": [
-        29,
-        44
-      ],
-      "fcFREE": true,
-      "fsQUALITY": "HD",
-      "fnCHAT_ID": 0,
-      "fcHAS_PROGLIST": true,
-      "fdLIKE_BEG_DATE": null,
-      "fcLIKE": false,
-      "fcRISTRICT": false,
-      "fsEXPIRE_DATE": "2026/08/01 00:00:00",
-      "fnGRADED": 0,
-      "fsVENDOR": "中視",
-      "fsDESCRIPTION": "中國電視公司旗下的新聞頻道，2004年7月1日開播，以全方位的純新聞頻道定位。除了整點新聞，熱播節目包含：《中視新聞全球報導》、《庶民大頭家》、《頭條開講》、《60分鐘》、《籌碼大師》、《金錢道》…等，皆可免費看。",
-      "fsSCHEDULE_DATE": null,
-      "fnORDER": 99
-    },
-    {
-      "fnID": 260,
-      "fsTYPE": "02",
-      "fsCDN_ROUTE": "B",
-      "fsTYPE_NAME": "新聞財經",
-      "fsNAME": "中天新聞台",
-      "fs4GTV_ID": "4gtv-live409",
-      "fnCHANNEL_NO": 58,
-      "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-live409.jpg",
-      "fsPICTURE_LOGO": null,
-      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-4gtv009_pc.png",
-      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv009_mobile.png",
-      "fcOVERSEAS": false,
-      "lstEXCEPT_COUNTRY": [
-        ""
-      ],
-      "lstALL_BITRATE": null,
-      "fsFREE_PROFILE": null,
-      "lstSETs": [
-        29,
-        44
-      ],
-      "fcFREE": true,
-      "fsQUALITY": "HD",
-      "fnCHAT_ID": 0,
-      "fcHAS_PROGLIST": true,
-      "fdLIKE_BEG_DATE": null,
-      "fcLIKE": false,
-      "fcRISTRICT": false,
-      "fsEXPIRE_DATE": "2026/08/01 00:00:00",
-      "fnGRADED": 0,
-      "fsVENDOR": "中天",
-      "fsDESCRIPTION": "中天新聞台於2020年12月12日零時起下架有線電視，轉型為網路電視，但仍維持新聞頻道規模，主播也更加強與觀眾的互動，並製播新聞政論節目，例如《頭條開講》、《大新聞大爆卦》、《全球大視野》...等皆可免費看。",
-      "fsSCHEDULE_DATE": null,
-      "fnORDER": 99
-    },
-    {
       "fnID": 283,
       "fsTYPE": "02",
       "fsCDN_ROUTE": "B",
@@ -1949,42 +1877,6 @@
       "fsDESCRIPTION": "台灣亞洲衛星電視旗下的衛星電視新聞頻道，是全天候聚焦國際新聞的專業頻道。 新聞合作夥伴橫跨歐美亞, 並延伸向俄羅斯, 包括: 路透社、美聯社、法新社、歐新社、今日俄羅斯電視、德國之聲…。熱播節目包含：《名人書房》、《看見新東協》…等，皆可免費看。",
       "fsSCHEDULE_DATE": null,
       "fnORDER": 27
-    },
-    {
-      "fnID": 262,
-      "fsTYPE": "02",
-      "fsCDN_ROUTE": "B",
-      "fsTYPE_NAME": "新聞財經",
-      "fsNAME": "寰宇新聞台",
-      "fs4GTV_ID": "4gtv-live408",
-      "fnCHANNEL_NO": 60,
-      "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-live408.jpg",
-      "fsPICTURE_LOGO": null,
-      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_litv-longturn14_pc.png",
-      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn14_mobile.png",
-      "fcOVERSEAS": false,
-      "lstEXCEPT_COUNTRY": [
-        ""
-      ],
-      "lstALL_BITRATE": null,
-      "fsFREE_PROFILE": null,
-      "lstSETs": [
-        29,
-        44
-      ],
-      "fcFREE": true,
-      "fsQUALITY": "HD",
-      "fnCHAT_ID": 0,
-      "fcHAS_PROGLIST": true,
-      "fdLIKE_BEG_DATE": null,
-      "fcLIKE": false,
-      "fcRISTRICT": false,
-      "fsEXPIRE_DATE": "2026/08/01 00:00:00",
-      "fnGRADED": 0,
-      "fsVENDOR": "亞洲衛星電視",
-      "fsDESCRIPTION": "台灣亞洲衛星電視旗下的衛星電視新聞頻道，是全天候聚焦國際新聞的專業頻道。 新聞合作夥伴橫跨歐美亞, 並延伸向俄羅斯, 包括: 路透社、美聯社、法新社、歐新社、今日俄羅斯電視、德國之聲…。熱播節目包含：《名人書房》、《看見新東協》…等，皆可免費看。",
-      "fsSCHEDULE_DATE": null,
-      "fnORDER": 99
     },
     {
       "fnID": 280,
@@ -2951,42 +2843,6 @@
       "fnORDER": 99
     },
     {
-      "fnID": 264,
-      "fsTYPE": "06",
-      "fsCDN_ROUTE": "B",
-      "fsTYPE_NAME": "運動健康生活",
-      "fsNAME": "博斯高球台",
-      "fs4GTV_ID": "4gtv-live405",
-      "fnCHANNEL_NO": 97,
-      "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-live405.jpg",
-      "fsPICTURE_LOGO": null,
-      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_litv-longturn05_mobile.png",
-      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn05_mobile.png",
-      "fcOVERSEAS": false,
-      "lstEXCEPT_COUNTRY": [
-        ""
-      ],
-      "lstALL_BITRATE": null,
-      "fsFREE_PROFILE": null,
-      "lstSETs": [
-        29,
-        44
-      ],
-      "fcFREE": false,
-      "fsQUALITY": "HD",
-      "fnCHAT_ID": 0,
-      "fcHAS_PROGLIST": true,
-      "fdLIKE_BEG_DATE": null,
-      "fcLIKE": false,
-      "fcRISTRICT": false,
-      "fsEXPIRE_DATE": "2026/08/01 00:00:00",
-      "fnGRADED": 0,
-      "fsVENDOR": "博斯",
-      "fsDESCRIPTION": "博斯高球台是台灣博斯電視旗下的體育頻道，轉播高爾夫、LPGA、裙襬搖搖等運動賽事、體育新聞節目。",
-      "fsSCHEDULE_DATE": null,
-      "fnORDER": 99
-    },
-    {
       "fnID": 486,
       "fsTYPE": "06;12",
       "fsCDN_ROUTE": "A",
@@ -3101,78 +2957,6 @@
       "fnORDER": 99
     },
     {
-      "fnID": 265,
-      "fsTYPE": "06",
-      "fsCDN_ROUTE": "B",
-      "fsTYPE_NAME": "運動健康生活",
-      "fsNAME": "博斯運動一台",
-      "fs4GTV_ID": "4gtv-live404",
-      "fnCHANNEL_NO": 99,
-      "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-live404.jpg",
-      "fsPICTURE_LOGO": null,
-      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_litv-longturn07_mobile.png",
-      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn07_mobile.png",
-      "fcOVERSEAS": false,
-      "lstEXCEPT_COUNTRY": [
-        ""
-      ],
-      "lstALL_BITRATE": null,
-      "fsFREE_PROFILE": null,
-      "lstSETs": [
-        29,
-        44
-      ],
-      "fcFREE": false,
-      "fsQUALITY": "HD",
-      "fnCHAT_ID": 0,
-      "fcHAS_PROGLIST": true,
-      "fdLIKE_BEG_DATE": null,
-      "fcLIKE": false,
-      "fcRISTRICT": false,
-      "fsEXPIRE_DATE": "2026/08/01 00:00:00",
-      "fnGRADED": 0,
-      "fsVENDOR": "博斯",
-      "fsDESCRIPTION": "播出賽事包括高爾夫球四大滿貫賽事（美國名人賽、美國高爾夫公開賽、英國公開賽、PGA錦標賽），以及網球四大賽（澳網、溫網、美網）等重要賽事。",
-      "fsSCHEDULE_DATE": null,
-      "fnORDER": 99
-    },
-    {
-      "fnID": 266,
-      "fsTYPE": "06",
-      "fsCDN_ROUTE": "B",
-      "fsTYPE_NAME": "運動健康生活",
-      "fsNAME": "博斯無限台",
-      "fs4GTV_ID": "4gtv-live407",
-      "fnCHANNEL_NO": 100,
-      "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-live407.jpg",
-      "fsPICTURE_LOGO": null,
-      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_litv-longturn10_mobile.png",
-      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn10_mobile.png",
-      "fcOVERSEAS": false,
-      "lstEXCEPT_COUNTRY": [
-        ""
-      ],
-      "lstALL_BITRATE": null,
-      "fsFREE_PROFILE": null,
-      "lstSETs": [
-        29,
-        44
-      ],
-      "fcFREE": false,
-      "fsQUALITY": "HD",
-      "fnCHAT_ID": 0,
-      "fcHAS_PROGLIST": true,
-      "fdLIKE_BEG_DATE": null,
-      "fcLIKE": false,
-      "fcRISTRICT": false,
-      "fsEXPIRE_DATE": "2026/08/01 00:00:00",
-      "fnGRADED": 0,
-      "fsVENDOR": "博斯",
-      "fsDESCRIPTION": "集結最受國人歡迎的頂尖運動賽事，打造獨特出的運動新天地，包括世界頂級的桌球聯賽，看莊智淵為國爭光；另有集腦力、體力、智力於一體的司諾克撞球聯賽。",
-      "fsSCHEDULE_DATE": null,
-      "fnORDER": 99
-    },
-    {
       "fnID": 489,
       "fsTYPE": "06;12",
       "fsCDN_ROUTE": "A",
@@ -3245,42 +3029,6 @@
       "fnGRADED": 0,
       "fsVENDOR": "博斯",
       "fsDESCRIPTION": "博斯網球台為您全天候直擊 ATP 與 WTA 全球巡迴賽，轉播澳網、法網、美網、溫布頓網球錦標賽事，從大滿貫到大師賽，是網球迷守候頂尖球星巔峰對決的唯一聖殿。",
-      "fsSCHEDULE_DATE": null,
-      "fnORDER": 99
-    },
-    {
-      "fnID": 267,
-      "fsTYPE": "06",
-      "fsCDN_ROUTE": "B",
-      "fsTYPE_NAME": "運動健康生活",
-      "fsNAME": "博斯網球台",
-      "fs4GTV_ID": "4gtv-live406",
-      "fnCHANNEL_NO": 101,
-      "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-live406.jpg",
-      "fsPICTURE_LOGO": null,
-      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_litv-longturn09_mobile.png",
-      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn09_mobile.png",
-      "fcOVERSEAS": false,
-      "lstEXCEPT_COUNTRY": [
-        ""
-      ],
-      "lstALL_BITRATE": null,
-      "fsFREE_PROFILE": null,
-      "lstSETs": [
-        29,
-        44
-      ],
-      "fcFREE": false,
-      "fsQUALITY": "HD",
-      "fnCHAT_ID": 0,
-      "fcHAS_PROGLIST": true,
-      "fdLIKE_BEG_DATE": null,
-      "fcLIKE": false,
-      "fcRISTRICT": false,
-      "fsEXPIRE_DATE": "2026/08/01 00:00:00",
-      "fnGRADED": 0,
-      "fsVENDOR": "博斯",
-      "fsDESCRIPTION": "博斯網球台是台灣博斯電視旗下的體育頻道，轉播澳網、法網、美網、溫布頓網球錦標賽事、四大滿貫網球賽體育新聞節目。",
       "fsSCHEDULE_DATE": null,
       "fnORDER": 99
     },
@@ -3809,42 +3557,6 @@
       "fnORDER": 112
     },
     {
-      "fnID": 261,
-      "fsTYPE": "03",
-      "fsCDN_ROUTE": "B",
-      "fsTYPE_NAME": "生活旅遊時尚",
-      "fsNAME": "亞洲旅遊台",
-      "fs4GTV_ID": "4gtv-live417",
-      "fnCHANNEL_NO": 113,
-      "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-live417.jpg",
-      "fsPICTURE_LOGO": null,
-      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_litv-longturn17_pc.png",
-      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn17_mobile.png",
-      "fcOVERSEAS": false,
-      "lstEXCEPT_COUNTRY": [
-        ""
-      ],
-      "lstALL_BITRATE": null,
-      "fsFREE_PROFILE": null,
-      "lstSETs": [
-        29,
-        44
-      ],
-      "fcFREE": true,
-      "fsQUALITY": "HD",
-      "fnCHAT_ID": 0,
-      "fcHAS_PROGLIST": true,
-      "fdLIKE_BEG_DATE": null,
-      "fcLIKE": false,
-      "fcRISTRICT": false,
-      "fsEXPIRE_DATE": "",
-      "fnGRADED": 0,
-      "fsVENDOR": "亞洲衛星電視",
-      "fsDESCRIPTION": "全天候播出的專業旅遊頻道，秉持著全新、精緻、活潑、高格調的節目規劃，採擷各地自然風光、風土民情、人文地理、飯店美食和流行購物資訊等為亞洲觀眾提供全方位的旅遊資訊。推薦節目有《溢遊未盡》、《王子的移動城堡》、《秘境。不思溢》",
-      "fsSCHEDULE_DATE": null,
-      "fnORDER": 99
-    },
-    {
       "fnID": 250,
       "fsTYPE": "03",
       "fsCDN_ROUTE": "A",
@@ -3888,6 +3600,42 @@
       "fsDESCRIPTION": "全天候播出的專業旅遊頻道，秉持著全新、精緻、活潑、高格調的節目規劃，採擷各地自然風光、風土民情、人文地理、飯店美食和流行購物資訊等為亞洲觀眾提供全方位的旅遊資訊。推薦節目有《溢遊未盡》、《王子的移動城堡》、《秘境。不思溢》",
       "fsSCHEDULE_DATE": null,
       "fnORDER": 113
+    },
+    {
+      "fnID": 261,
+      "fsTYPE": "03",
+      "fsCDN_ROUTE": "B",
+      "fsTYPE_NAME": "生活旅遊時尚",
+      "fsNAME": "亞洲旅遊台",
+      "fs4GTV_ID": "4gtv-live417",
+      "fnCHANNEL_NO": 113,
+      "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-live417.jpg",
+      "fsPICTURE_LOGO": null,
+      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_litv-longturn17_pc.png",
+      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn17_mobile.png",
+      "fcOVERSEAS": false,
+      "lstEXCEPT_COUNTRY": [
+        ""
+      ],
+      "lstALL_BITRATE": null,
+      "fsFREE_PROFILE": null,
+      "lstSETs": [
+        29,
+        44
+      ],
+      "fcFREE": true,
+      "fsQUALITY": "HD",
+      "fnCHAT_ID": 0,
+      "fcHAS_PROGLIST": true,
+      "fdLIKE_BEG_DATE": null,
+      "fcLIKE": false,
+      "fcRISTRICT": false,
+      "fsEXPIRE_DATE": "",
+      "fnGRADED": 0,
+      "fsVENDOR": "亞洲衛星電視",
+      "fsDESCRIPTION": "全天候播出的專業旅遊頻道，秉持著全新、精緻、活潑、高格調的節目規劃，採擷各地自然風光、風土民情、人文地理、飯店美食和流行購物資訊等為亞洲觀眾提供全方位的旅遊資訊。推薦節目有《溢遊未盡》、《王子的移動城堡》、《秘境。不思溢》",
+      "fsSCHEDULE_DATE": null,
+      "fnORDER": 99
     },
     {
       "fnID": 274,
