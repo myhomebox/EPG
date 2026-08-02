@@ -40,7 +40,7 @@ def parse_channel_list():
         "litv-xinchuang02", "litv-xinchuang03", "litv-xinchuang11",
         "litv-xinchuang12", "litv-longturn14", "litv-xinchuang18",
         "litv-xinchuang19", "litv-xinchuang20", "litv-xinchuang21",
-        "litv-xinchuang22", "iNEWS", "daystar"
+        "litv-xinchuang22", "iNEWS", "daystar", "setnews"
     ]
     ofiii_channels = [f"ofiii{i}" for i in range(13, 256)]
     channel_list = other_channels + ofiii_channels
