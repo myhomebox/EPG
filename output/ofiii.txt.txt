@@ -230,8 +230,6 @@ Yes娛樂,http://localhost:5000/ofiii47/index.m3u8
 脖子解說 Mr. Neck,http://localhost:5000/ofiii218/index.m3u8
 膽大黨,#genre#
 膽大黨,http://localhost:5000/ofiii183/index.m3u8
-舌尖之福《8/5即將下架》,#genre#
-舌尖之福《8/5即將下架》,http://localhost:5000/ofiii232/index.m3u8
 良陳美錦,#genre#
 良陳美錦,http://localhost:5000/ofiii100/index.m3u8
 華語金選台,#genre#
