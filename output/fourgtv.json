@@ -810,7 +810,7 @@
       "fsEXPIRE_DATE": "",
       "fnGRADED": 0,
       "fsVENDOR": "東森得易購",
-      "fsDESCRIPTION": "",
+      "fsDESCRIPTION": "【四季會員專屬優惠】東森購物放暑價！8月下單現折188元！新朋友首購加碼送200元現金券",
       "fsSCHEDULE_DATE": null,
       "fnORDER": 99
     },
@@ -1259,7 +1259,7 @@
       "fsEXPIRE_DATE": "",
       "fnGRADED": 0,
       "fsVENDOR": "東森得易購",
-      "fsDESCRIPTION": "",
+      "fsDESCRIPTION": "【四季會員專屬優惠】東森購物放暑價！8月下單現折188元！新朋友首購加碼送200元現金券",
       "fsSCHEDULE_DATE": null,
       "fnORDER": 99
     },
@@ -1583,6 +1583,39 @@
       "fnORDER": 54
     },
     {
+      "fnID": 291,
+      "fsTYPE": "02",
+      "fsCDN_ROUTE": "A",
+      "fsTYPE_NAME": "新聞財經",
+      "fsNAME": "TVBS新聞",
+      "fs4GTV_ID": "4gtv-4gtv072",
+      "fnCHANNEL_NO": 55,
+      "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-4gtv072.jpg",
+      "fsPICTURE_LOGO": null,
+      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-4gtv072_pc.png",
+      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv072_mobile.png",
+      "fcOVERSEAS": false,
+      "lstEXCEPT_COUNTRY": [
+        ""
+      ],
+      "lstALL_BITRATE": null,
+      "fsFREE_PROFILE": null,
+      "lstSETs": null,
+      "fcFREE": true,
+      "fsQUALITY": "HD",
+      "fnCHAT_ID": 0,
+      "fcHAS_PROGLIST": true,
+      "fdLIKE_BEG_DATE": null,
+      "fcLIKE": true,
+      "fcRISTRICT": false,
+      "fsEXPIRE_DATE": "",
+      "fnGRADED": 0,
+      "fsVENDOR": "鳳梨傳媒",
+      "fsDESCRIPTION": "TVBS新聞台於1995年10月2日開播，當時是台灣第一個24小時本土新聞頻道，製播內容包括新聞報導、新聞回顧、娛樂資訊及時事論壇等。熱播節目包含：《十點不一樣》、《新聞夜視界》、《Focus全球新聞》、《一步一腳印 發現新台灣》…等精彩節目。",
+      "fsSCHEDULE_DATE": null,
+      "fnORDER": 99
+    },
+    {
       "fnID": 473,
       "fsTYPE": "02",
       "fsCDN_ROUTE": "B",
@@ -1626,39 +1659,6 @@
       "fnGRADED": 0,
       "fsVENDOR": "鳳梨傳媒",
       "fsDESCRIPTION": "TVBS新聞台於1995年10月2日開播，當時是台灣第一個24小時本土新聞頻道，製播內容包括新聞報導、新聞回顧、娛樂資訊及時事論壇等。熱播節目包含：《十點不一樣》、《新聞夜視界》、《Focus全球新聞》、《一步一腳印 發現新台灣》…等，皆可免費看。",
-      "fsSCHEDULE_DATE": null,
-      "fnORDER": 99
-    },
-    {
-      "fnID": 291,
-      "fsTYPE": "02",
-      "fsCDN_ROUTE": "A",
-      "fsTYPE_NAME": "新聞財經",
-      "fsNAME": "TVBS新聞",
-      "fs4GTV_ID": "4gtv-4gtv072",
-      "fnCHANNEL_NO": 55,
-      "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-4gtv072.jpg",
-      "fsPICTURE_LOGO": null,
-      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-4gtv072_pc.png",
-      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv072_mobile.png",
-      "fcOVERSEAS": false,
-      "lstEXCEPT_COUNTRY": [
-        ""
-      ],
-      "lstALL_BITRATE": null,
-      "fsFREE_PROFILE": null,
-      "lstSETs": null,
-      "fcFREE": true,
-      "fsQUALITY": "HD",
-      "fnCHAT_ID": 0,
-      "fcHAS_PROGLIST": true,
-      "fdLIKE_BEG_DATE": null,
-      "fcLIKE": true,
-      "fcRISTRICT": false,
-      "fsEXPIRE_DATE": "",
-      "fnGRADED": 0,
-      "fsVENDOR": "鳳梨傳媒",
-      "fsDESCRIPTION": "TVBS新聞台於1995年10月2日開播，當時是台灣第一個24小時本土新聞頻道，製播內容包括新聞報導、新聞回顧、娛樂資訊及時事論壇等。熱播節目包含：《十點不一樣》、《新聞夜視界》、《Focus全球新聞》、《一步一腳印 發現新台灣》…等精彩節目。",
       "fsSCHEDULE_DATE": null,
       "fnORDER": 99
     },
@@ -2094,7 +2094,7 @@
       "fsEXPIRE_DATE": "",
       "fnGRADED": 0,
       "fsVENDOR": "東森得易購",
-      "fsDESCRIPTION": "",
+      "fsDESCRIPTION": "【四季會員專屬優惠】東森購物放暑價！8月下單現折188元！新朋友首購加碼送200元現金券",
       "fsSCHEDULE_DATE": null,
       "fnORDER": 99
     },
@@ -2762,7 +2762,7 @@
       "fsEXPIRE_DATE": "",
       "fnGRADED": 0,
       "fsVENDOR": "東森得易購",
-      "fsDESCRIPTION": "",
+      "fsDESCRIPTION": "【四季會員專屬優惠】東森購物放暑價！8月下單現折188元！新朋友首購加碼送200元現金券",
       "fsSCHEDULE_DATE": null,
       "fnORDER": 99
     },
@@ -3950,9 +3950,9 @@
     },
     {
       "fnID": 485,
-      "fsTYPE": "05;06;12",
+      "fsTYPE": "05;12",
       "fsCDN_ROUTE": "B",
-      "fsTYPE_NAME": "戲劇、電影與紀錄片,運動健康生活,熱播推薦",
+      "fsTYPE_NAME": "戲劇、電影與紀錄片,熱播推薦",
       "fsNAME": "ROCK Xstream搖滾極限頻道",
       "fs4GTV_ID": "4gtv-live124",
       "fnCHANNEL_NO": 124,
@@ -3983,7 +3983,7 @@
       "fsVENDOR": "杰德",
       "fsDESCRIPTION": "ROCK Xstream 是一個定位為「極致優質（Ultra-premium）」的影集頻道，旨在成為觀眾通往全球最受矚目、備受影評盛讚且視覺效果驚人的串流影集大門。該頻道打破了線上串流與傳統電視的界線，將大螢幕等級的製作直接帶入家中。",
       "fsSCHEDULE_DATE": null,
-      "fnORDER": 1
+      "fnORDER": 99
     },
     {
       "fnID": 7,
@@ -4485,6 +4485,43 @@
       "fnORDER": 108
     },
     {
+      "fnID": 502,
+      "fsTYPE": "01;03;12",
+      "fsCDN_ROUTE": "B",
+      "fsTYPE_NAME": "綜合,生活旅遊時尚,熱播推薦",
+      "fsNAME": "OUTtv",
+      "fs4GTV_ID": "4gtv-live140",
+      "fnCHANNEL_NO": 140,
+      "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-live140.jpg",
+      "fsPICTURE_LOGO": null,
+      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-4gtv-live140.png",
+      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv-live140.png",
+      "fcOVERSEAS": false,
+      "lstEXCEPT_COUNTRY": [
+        ""
+      ],
+      "lstALL_BITRATE": null,
+      "fsFREE_PROFILE": null,
+      "lstSETs": [
+        1,
+        4,
+        10
+      ],
+      "fcFREE": true,
+      "fsQUALITY": "HD",
+      "fnCHAT_ID": 0,
+      "fcHAS_PROGLIST": true,
+      "fdLIKE_BEG_DATE": null,
+      "fcLIKE": false,
+      "fcRISTRICT": false,
+      "fsEXPIRE_DATE": "",
+      "fnGRADED": 0,
+      "fsVENDOR": "友量",
+      "fsDESCRIPTION": "全球領先的 LGBTQ+ 專屬頻道 OUTtv，匯集了喜劇、劇情、紀錄片等優質原創的酷兒影視作品。呼應台灣的平權價值，我們期望透過忠實呈現多元性別面貌的影視內容，提供觀眾獨特的娛樂選擇，並致力推動社會的多元與包容。",
+      "fsSCHEDULE_DATE": null,
+      "fnORDER": 99
+    },
+    {
       "fnID": 25,
       "fsTYPE": "05",
       "fsCDN_ROUTE": "A",
@@ -4625,6 +4662,43 @@
       "fsDESCRIPTION": "提供歐美HD高畫質電影及各影展得獎優質歐美電影頻道。",
       "fsSCHEDULE_DATE": null,
       "fnORDER": 65
+    },
+    {
+      "fnID": 503,
+      "fsTYPE": "05;12",
+      "fsCDN_ROUTE": "B",
+      "fsTYPE_NAME": "戲劇、電影與紀錄片,熱播推薦",
+      "fsNAME": "wedotv Movies",
+      "fs4GTV_ID": "4gtv-live148",
+      "fnCHANNEL_NO": 148,
+      "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-live148.jpg",
+      "fsPICTURE_LOGO": null,
+      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-4gtv-live148.png",
+      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv-live148.png",
+      "fcOVERSEAS": false,
+      "lstEXCEPT_COUNTRY": [
+        ""
+      ],
+      "lstALL_BITRATE": null,
+      "fsFREE_PROFILE": null,
+      "lstSETs": [
+        1,
+        4,
+        10
+      ],
+      "fcFREE": true,
+      "fsQUALITY": "HD",
+      "fnCHAT_ID": 0,
+      "fcHAS_PROGLIST": true,
+      "fdLIKE_BEG_DATE": null,
+      "fcLIKE": false,
+      "fcRISTRICT": false,
+      "fsEXPIRE_DATE": "",
+      "fnGRADED": 0,
+      "fsVENDOR": "友量",
+      "fsDESCRIPTION": "Wedotv成立於2018年，是一家全球娛樂和網絡串流公司，wedotv現在更專注於在亞洲和拉丁美洲區域提供娛樂服務。「wedotv Movies」主要是以闔家電影、經典電影為核心，提供廣泛的闔家觀賞節目和內容。從動作到喜劇、劇情、科幻和驚悚片，擁有1930年至 2000年豐富的懷舊電影，享受熱門電影的同時也可回顧經典。",
+      "fsSCHEDULE_DATE": null,
+      "fnORDER": 99
     },
     {
       "fnID": 40,
@@ -4992,9 +5066,9 @@
     },
     {
       "fnID": 498,
-      "fsTYPE": "01;02;03;05;06",
+      "fsTYPE": "02",
       "fsCDN_ROUTE": "B",
-      "fsTYPE_NAME": "綜合,新聞財經,生活旅遊時尚,戲劇、電影與紀錄片,運動健康生活",
+      "fsTYPE_NAME": "新聞財經",
       "fsNAME": "ABC Australia 澳洲公廣頻道",
       "fs4GTV_ID": "4gtv-live167",
       "fnCHANNEL_NO": 167,
