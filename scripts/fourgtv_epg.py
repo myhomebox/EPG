@@ -22,14 +22,6 @@ MAX_CONCURRENT_REQUESTS = 5
 # 不抓取這些頻道ID
 SKIP_CHANNEL_IDS = {
     "4gtv-4gtv038",
-    "media-live001",
-    "media-live002",
-    "media-live003",
-    "media-live013",
-    "4gtv-live215",
-    "4gtv-live401",
-    "4gtv-live403",
-    "4gtv-live413",
 }
 
 def create_ssl_context():
@@ -64,6 +56,11 @@ def parse_channel_data(data):
     return channels
 
 async def fetch_channels_from_api(session):
+    """
+    從 4GTV API 取得所有頻道，過濾不抓取的 ID，並依 fsNAME 去重。
+    成功時回傳去重後的頻道列表，失敗則回傳 None。
+    同時會將去重後的資料寫入本地的 fourgtv.json。
+    """
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
         "Accept": "application/json, text/plain, */*",
@@ -81,24 +78,42 @@ async def fetch_channels_from_api(session):
                 return None
 
             all_items = data["Data"]
-            # 過濾要跳過的頻道
+
+            # 第一步：過濾要跳過的頻道 ID
             filtered_items = [item for item in all_items
                               if item.get("fs4GTV_ID") not in SKIP_CHANNEL_IDS]
-            # 覆寫本地 fourgtv.json（與 API 結構一致）
+
+            # 第二步：根據 fsNAME 去重（保留先出現的，跳過缺少 fsNAME 的項目）
+            seen_names = set()
+            deduped_items = []
+            for item in filtered_items:
+                name = item.get("fsNAME")
+                if name and name not in seen_names:
+                    seen_names.add(name)
+                    deduped_items.append(item)
+
+            # 將去重後的清單寫入本地 fourgtv.json（結構與原 API 一致）
             try:
                 with open(LOCAL_CHANNEL_FILE, "w", encoding="utf-8") as f:
-                    json.dump({"Success": True, "Data": filtered_items},
+                    json.dump({"Success": True, "Data": deduped_items},
                               f, ensure_ascii=False, indent=2)
-                logger.success(f"已更新本地頻道檔案，保存 {len(filtered_items)} 個頻道")
+                logger.success(f"已更新本地頻道檔案，保存 {len(deduped_items)} 個頻道")
             except Exception as e:
                 logger.error(f"寫入本地頻道檔案失敗: {e}")
 
-            channels = parse_channel_data({"Data": filtered_items})
+            # 解析為簡潔的頻道列表
+            channels = parse_channel_data({"Data": deduped_items})
             if not channels:
                 logger.warning("過濾後頻道列表為空")
                 return None
-            logger.success(f"從 API 獲取到 {len(channels)} 個頻道（已跳過 {len(all_items)-len(filtered_items)} 個）")
+
+            logger.success(
+                f"從 API 獲取到 {len(channels)} 個頻道"
+                f"（原始 {len(all_items)}，跳過 ID {len(all_items) - len(filtered_items)}，"
+                f"名稱去重後 {len(deduped_items)}）"
+            )
             return channels
+
     except Exception as e:
         logger.error(f"通過 API 獲取頻道列表失敗: {e}")
         return None
