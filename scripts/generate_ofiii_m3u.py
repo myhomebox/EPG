@@ -87,21 +87,17 @@ async def get_channel_data(asset_id, build_id):
             async with session.get(json_url, headers=headers, timeout=15) as resp:
                 if resp.status != 200:
                     print(f"⚠️ 頻道 {asset_id} 請求失敗，狀態碼: {resp.status}")
-                    # 如果是 404 錯誤，可能是頻道不存在，直接返回 None
                     if resp.status == 404:
                         print(f"⚠️ 頻道 {asset_id} 不存在 (404)")
                         return None
-                    # 嘗試備用方法獲取數據
                     return await get_channel_data_fallback(asset_id)
                 
                 data = await resp.json()
                 
-                # 檢查返回的數據是否有效
                 if not data:
                     print(f"⚠️ 頻道 {asset_id} 返回的數據為空")
                     return await get_channel_data_fallback(asset_id)
                 
-                # 檢查數據結構是否完整
                 if 'pageProps' not in data:
                     print(f"⚠️ 頻道 {asset_id} 數據結構不完整，缺少 pageProps")
                     return await get_channel_data_fallback(asset_id)
@@ -135,7 +131,6 @@ async def get_channel_data_fallback(asset_id):
                 html = await resp.text()
                 soup = BeautifulSoup(html, 'html.parser')
                 
-                # 嘗試從 script 標籤中提取 JSON 數據
                 script_tag = soup.find('script', id='__NEXT_DATA__')
                 if script_tag:
                     try:
@@ -150,20 +145,30 @@ async def get_channel_data_fallback(asset_id):
         print(f"⚠️ 備用方法獲取頻道 {asset_id} 數據失敗: {str(e)}")
         return None
 
+def normalize_picture_url(picture_path: str) -> str:
+    """補全圖片相對路徑為完整 URL"""
+    if not picture_path:
+        return ''
+    if picture_path.startswith(('http://', 'https://')):
+        return picture_path
+    if picture_path.startswith('pics/'):
+        return f"https://p-cdnstatic.svc.litv.tv/{picture_path}"
+    elif picture_path.startswith('/'):
+        return f"https://p-cdnstatic.svc.litv.tv{picture_path}"
+    else:
+        return f"https://p-cdnstatic.svc.litv.tv/{picture_path}"
+
 def extract_channel_details(channel_data):
-    """從頻道數據中提取詳細信息"""
+    """從頻道數據中提取詳細信息（適配新 JSON 結構）"""
     try:
-        # 檢查 channel_data 是否為 None 或空
         if not channel_data:
             print("❌ 頻道數據為空")
             return None
             
-        # 深度檢查數據結構
         if not isinstance(channel_data, dict):
             print(f"❌ 頻道數據類型錯誤: {type(channel_data)}")
             return None
             
-        # 檢查 pageProps 是否存在
         page_props = channel_data.get('pageProps', {})
         if not page_props:
             print("❌ pageProps 為空")
@@ -176,37 +181,25 @@ def extract_channel_details(channel_data):
             
         introduction = page_props.get('introduction', {})
         
-        # 根據 content_type 判斷頻道類型
-        content_type = channel.get('content_type', '')
+        # ----- 新結構字段 -----
+        content_type = channel.get('contentType', '')
         if content_type in ['vod-channel', 'playout-channel']:
             channel_type = 'vod'
         else:
             channel_type = 'live'
         
-        # 獲取頻道名稱
         channel_name = channel.get('title', '未知頻道')
         
-        # 獲取頻道分組
-        station_categories = channel.get('station_categories', [])
-        channel_group = station_categories[0].get('Name', '默認分組') if station_categories else '默認分組'
+        # 分組（stationCategories）
+        station_categories = channel.get('stationCategories', [])
+        channel_group = station_categories[0].get('name', '默認分組') if station_categories else '默認分組'
         
-        # 獲取頻道圖片 - 從多個可能的位置查找
-        channel_picture = ''
-        
-        # 1. 首先嘗試從 introduction 中獲取
-        if introduction and isinstance(introduction, dict):
-            channel_picture = introduction.get('image', '')
-        
-        # 2. 如果沒有，嘗試從 channel 的 picture 字段獲取
-        if not channel_picture:
-            channel_picture = channel.get('picture', '')
-        
-        # 3. 如果圖片路徑是相對路徑，轉換為完整 URL
-        if channel_picture and not channel_picture.startswith(('http://', 'https://')):
-            if channel_picture.startswith('pics/'):
-                channel_picture = f"https://p-cdnstatic.svc.litv.tv/{channel_picture}"
-            elif channel_picture.startswith('/'):
-                channel_picture = f"https://p-cdnstatic.svc.litv.tv{channel_picture}"
+        # 圖片（優先 channel.picture，若無則用 introduction.image）
+        picture = channel.get('picture', '')
+        channel_picture = normalize_picture_url(picture)
+        if not channel_picture and introduction:
+            intro_img = introduction.get('image', '')
+            channel_picture = normalize_picture_url(intro_img)
         
         details = {
             'type': channel_type,
@@ -216,12 +209,12 @@ def extract_channel_details(channel_data):
             'raw_data': channel_data
         }
         
-        # 如果是點播類，獲取節目清單
+        # 如果是點播類，獲取節目清單（新字段）
         if channel_type == 'vod':
-            vod_schedule = channel.get('vod_channel_schedule', {})
+            vod_schedule = channel.get('vodChannelSchedule', {})
             programs = vod_schedule.get('programs', []) if vod_schedule else []
             details['programs'] = programs
-            
+        
         return details
         
     except Exception as e:
@@ -264,11 +257,10 @@ def cleanup_json_files(json_dir):
             json_file.unlink()
             deleted_count += 1
         
-        # 嘗試刪除目錄（如果為空）
         try:
             json_dir.rmdir()
         except OSError:
-            pass  # 目錄不為空，不刪除
+            pass
             
         print(f"🧹 已清理 {deleted_count} 個暫存JSON檔案")
         return deleted_count
@@ -288,23 +280,22 @@ def get_display_name(title, subtitle):
         return "未知節目"
 
 def generate_m3u_vod_content(channel_id, channel_details, group_name):
-    """生成 M3U 選集類內容"""
+    """生成 M3U 選集類內容（新結構：使用 assetId）"""
     content = ""
     programs = channel_details.get('programs', [])
     
     for program in programs:
-        asset_id = program.get('asset_id')
+        asset_id = program.get('assetId')          # 新字段
         title = program.get('title', '')
         subtitle = program.get('subtitle', '')
         
-        # 合併標題和副標題
-        if title and subtitle:
-            program_name = f"{title}-{subtitle}"
-        else:
-            program_name = title or subtitle or '未知節目'
+        if not asset_id:
+            continue
         
-        # 獲取節目圖片，如果沒有則使用頻道圖片
-        program_picture = program.get('picture', '') or channel_details.get('picture', '')
+        program_name = get_display_name(title, subtitle)
+        
+        # 節目圖片（如果沒有，使用頻道圖片）
+        program_picture = channel_details.get('picture', '')
         
         content += (f'#EXTINF:-1 tvg-id="{program_name}" tvg-name="{program_name}" '
                    f'tvg-logo="{program_picture}" group-title="{group_name}",{program_name}\n'
@@ -313,7 +304,7 @@ def generate_m3u_vod_content(channel_id, channel_details, group_name):
     return content
 
 def generate_txt_vod_by_name(channels_by_name):
-    """按頻道名稱生成 TXT 選集類內容"""
+    """按頻道名稱生成 TXT 選集類內容（新結構）"""
     content = ""
     
     for channel_name, programs in sorted(channels_by_name.items()):
@@ -331,13 +322,12 @@ def generate_txt_vod_by_name(channels_by_name):
     return content
 
 def generate_m3u_content(channel_data, channel_id, asset_seen):
-    """生成M3U內容"""
+    """生成M3U內容（新結構）"""
     m3u_lines = []
     added_programs = 0
     duplicate_assets = 0
     
     try:
-        # 提取頻道詳細信息
         channel_details = extract_channel_details(channel_data)
         if not channel_details:
             print(f"⚠️  頻道 {channel_id} 沒有有效的頻道資訊")
@@ -350,9 +340,7 @@ def generate_m3u_content(channel_data, channel_id, asset_seen):
         
         print(f"📺 處理頻道: {name} ({channel_id}) - 類型: {channel_type} - 分組: {group}")
         
-        # 根據頻道類型生成不同的內容
         if channel_type == 'vod':
-            # 點播頻道：處理每個節目
             programs = channel_details.get('programs', [])
             
             if not programs:
@@ -361,7 +349,6 @@ def generate_m3u_content(channel_data, channel_id, asset_seen):
             
             vod_content = generate_m3u_vod_content(channel_id, channel_details, group)
             if vod_content:
-                # 將內容分割成行並添加到 m3u_lines
                 vod_lines = vod_content.strip().split('\n')
                 m3u_lines.extend(vod_lines)
                 added_programs = len([line for line in vod_lines if line.startswith('#EXTINF:')])
@@ -370,10 +357,8 @@ def generate_m3u_content(channel_data, channel_id, asset_seen):
                 print(f"⚠️ 頻道 {name} 沒有可用的點播內容")
             
         else:
-            # 直播頻道：生成整個頻道的條目
+            # 直播頻道
             display_name = name
-            
-            # 生成M3U條目
             extinf_line = (f'#EXTINF:-1 tvg-id="{name}" tvg-name="{name}" '
                           f'tvg-logo="{picture}" group-title="{group}",{display_name}')
             url_line = f'http://localhost:5000/{channel_id}/index.m3u8'
@@ -392,12 +377,11 @@ def generate_m3u_content(channel_data, channel_id, asset_seen):
     return m3u_lines, added_programs, duplicate_assets
 
 def generate_txt_content(channel_data, channel_id, asset_seen, channels_by_name):
-    """生成TXT內容，按頻道名稱組織"""
+    """生成TXT內容，按頻道名稱組織（新結構）"""
     added_programs = 0
     duplicate_assets = 0
     
     try:
-        # 提取頻道詳細信息
         channel_details = extract_channel_details(channel_data)
         if not channel_details:
             return added_programs, duplicate_assets
@@ -405,35 +389,27 @@ def generate_txt_content(channel_data, channel_id, asset_seen, channels_by_name)
         name = channel_details.get('name', 'Unknown')
         channel_type = channel_details.get('type', 'live')
         
-        # 初始化頻道名稱的列表
         if name not in channels_by_name:
             channels_by_name[name] = []
         
-        # 根據頻道類型生成不同的內容
         if channel_type == 'vod':
-            # 點播頻道：處理每個節目
             programs = channel_details.get('programs', [])
             
             for program in programs:
-                asset_id = program.get('asset_id', '')
+                asset_id = program.get('assetId')   # 新字段
                 title = program.get('title', '')
                 subtitle = program.get('subtitle', '')
                 
                 if not asset_id:
                     continue
                     
-                # 檢查asset_id是否已經存在
                 if asset_id in asset_seen:
                     duplicate_assets += 1
                     continue
                     
-                # 標記asset_id為已使用
                 asset_seen.add(asset_id)
-                    
-                # 生成顯示名稱
                 program_name = get_display_name(title, subtitle)
                 
-                # 將節目信息添加到頻道名稱下
                 channels_by_name[name].append({
                     "channel_id": channel_id,
                     "program_name": program_name,
@@ -442,14 +418,12 @@ def generate_txt_content(channel_data, channel_id, asset_seen, channels_by_name)
                 added_programs += 1
                 
         else:
-            # 直播頻道：生成整個頻道的條目
+            # 直播頻道
             display_name = name
-            
-            # 將直播頻道信息添加到頻道名稱下
             channels_by_name[name].append({
                 "channel_id": channel_id,
                 "program_name": display_name,
-                "asset_id": None  # 直播頻道沒有asset_id
+                "asset_id": None
             })
             added_programs += 1
             
@@ -459,7 +433,7 @@ def generate_txt_content(channel_data, channel_id, asset_seen, channels_by_name)
     return added_programs, duplicate_assets
 
 def get_channel_info(channel_data, channel_id):
-    """獲取頻道基本資訊"""
+    """獲取頻道基本資訊（新結構）"""
     try:
         channel_details = extract_channel_details(channel_data)
         if not channel_details:
@@ -495,23 +469,19 @@ def ensure_json_dir(output_dir):
     return json_dir
 
 def remove_duplicate_channels(channel_data):
-    """去除重複的頻道資料"""
+    """去除重複的頻道資料（保持原有邏輯）"""
     unique_channels = {}
     duplicates_removed = 0
     
     for channel_id, channel_info in channel_data.items():
-        # 使用頻道名稱作為唯一標識
         channel_name = channel_info[0]
         
-        # 如果這個頻道名稱還不存在，則添加
         if channel_name not in unique_channels:
             unique_channels[channel_name] = (channel_id, channel_info)
         else:
-            # 如果已經存在，保留第一個找到的，移除重複的
             duplicates_removed += 1
             print(f"🔄 移除重複頻道: {channel_name} (ID: {channel_id})")
     
-    # 重建不重複的頻道字典
     result = {channel_id: channel_info for channel_id, channel_info in unique_channels.values()}
     
     if duplicates_removed > 0:
@@ -522,10 +492,8 @@ def remove_duplicate_channels(channel_data):
 def generate_playout_channel_json(channel_ids):
     """生成ofiii_playout-channel.json檔案"""
     playout_data = {}
-    
     for channel_id in channel_ids:
         playout_data[channel_id] = ["ofiii", channel_id]
-    
     return playout_data
 
 def generate_ofiii_channel_ids(start=13, end=255):
@@ -536,13 +504,11 @@ async def process_channel(channel_id, json_dir, asset_seen, channels_by_name, m3
     """處理單個頻道 - 異步版本"""
     print(f"📋 處理頻道: {channel_id}")
     
-    # 獲取 build_id
     build_id = await get_build_id()
     if not build_id:
         print(f"❌ 無法獲取 build_id，跳過頻道 {channel_id}")
         return 0, 0, 0, 0, None
     
-    # 獲取頻道資料
     channel_json = await get_channel_data(channel_id, build_id)
     
     saved_json = 0
@@ -551,29 +517,23 @@ async def process_channel(channel_id, json_dir, asset_seen, channels_by_name, m3
     channel_info = None
     
     if channel_json:
-        # 儲存頻道JSON資料 - 所有頻道都儲存
         if save_channel_json(channel_id, channel_json, json_dir):
             saved_json = 1
             print(f"💾 已儲存 {channel_id}.json")
         
-        # 獲取頻道基本資訊 - 所有頻道都獲取
         channel_info = get_channel_info(channel_json, channel_id)
         
-        # 檢查是否要從 M3U 和 TXT 中排除
         if channel_id not in exclude_from_m3u_txt:
-            # 生成M3U內容 - 只對非排除頻道
             channel_lines, programs_added, assets_duplicated = generate_m3u_content(channel_json, channel_id, asset_seen)
             added_programs = programs_added
             duplicate_assets = assets_duplicated
             
             if channel_lines:
-                # 直接將內容添加到 m3u_content 中
                 m3u_content.extend(channel_lines)
                 print(f"✅ 成功添加頻道 {channel_id} 到 M3U ({added_programs} 個節目)")
             else:
                 print(f"⚠️ 跳過頻道 {channel_id} (無有效節目)")
                 
-            # 生成TXT內容 - 只對非排除頻道
             txt_programs, txt_duplicates = generate_txt_content(channel_json, channel_id, asset_seen.copy(), channels_by_name)
         else:
             print(f"🚫 頻道 {channel_id} 從 M3U/TXT 中排除，但仍儲存 JSON 數據")
@@ -597,7 +557,7 @@ async def main():
     
     # 要從 M3U 和 TXT 中排除的頻道ID列表
     exclude_from_m3u_txt = [
-        "nnews-zh",
+        "setnews",
         "4gtv-4gtv009",
         "4gtv-4gtv040",
         "4gtv-4gtv041",
@@ -628,9 +588,9 @@ async def main():
         "daystar"
     ]
     
-    # 所有頻道ID列表（包含所有頻道，包括要從 M3U/TXT 中排除的）
+    # 所有頻道ID列表
     all_channel_ids = ofiii_channels + [
-        "nnews-zh",
+        "setnews",
         "4gtv-4gtv009",
         "4gtv-4gtv040",
         "4gtv-4gtv041",
@@ -661,15 +621,9 @@ async def main():
         "daystar"
     ]
     
-    # M3U檔案頭
     m3u_content = ['#EXTM3U']
-    
-    # TXT檔案內容 - 按頻道名稱組織
-    channels_by_name = {}  # 用於按頻道名稱組織頻道
-    
+    channels_by_name = {}
     channel_data = {}
-    
-    # 用於追蹤已使用的asset_id
     asset_seen = set()
     
     print("🚀 開始獲取頻道資料...")
@@ -682,23 +636,17 @@ async def main():
     total_duplicate_assets = 0
     saved_json_files = 0
     
-    # 使用信號量控制併發數量
-    semaphore = asyncio.Semaphore(5)  # 同時處理5個頻道
+    semaphore = asyncio.Semaphore(5)
     
     async def process_with_semaphore(channel_id):
         async with semaphore:
             return await process_channel(channel_id, json_dir, asset_seen, channels_by_name, m3u_content, exclude_from_m3u_txt)
     
-    # 建立所有任務
     tasks = [process_with_semaphore(channel_id) for channel_id in all_channel_ids]
     
-    # 直接執行所有任務，不再分批和延遲
     print(f"\n🔄 開始處理所有頻道...")
-    
-    # 執行所有任務
     results = await asyncio.gather(*tasks, return_exceptions=True)
     
-    # 處理結果
     for result in results:
         if isinstance(result, Exception):
             failed_channels += 1
@@ -716,7 +664,6 @@ async def main():
         else:
             failed_channels += 1
         
-        # 儲存頻道信息 - 所有頻道都儲存
         if channel_info:
             channel_data[channel_info['content_id']] = [
                 channel_info['name'],
@@ -724,40 +671,31 @@ async def main():
                 channel_info['group_title']
             ]
     
-    # 生成TXT檔案內容
     print("\n🔄 生成 TXT 檔案內容...")
     txt_content = generate_txt_vod_by_name(channels_by_name)
     
-    # 去除重複的頻道資料
     print("\n🔄 檢查並移除重複頻道...")
     unique_channel_data = remove_duplicate_channels(channel_data)
     
-    # 生成ofiii_playout-channel.json - 包含所有頻道
     print("\n🔄 生成ofiii_playout-channel.json...")
     playout_channel_data = generate_playout_channel_json(all_channel_ids)
     
-    # 寫入M3U檔案
     with open(m3u_file, 'w', encoding='utf-8') as f:
         f.write('\n'.join(m3u_content))
     
-    # 寫入TXT檔案
     with open(txt_file, 'w', encoding='utf-8') as f:
         f.write(txt_content)
     
-    # 寫入channel.json檔案 - 包含所有頻道
     with open(channel_json_file, 'w', encoding='utf-8') as f:
         json.dump(unique_channel_data, f, ensure_ascii=False, indent=2)
     
-    # 寫入ofiii_playout-channel.json檔案 - 包含所有頻道
     with open(playout_channel_json_file, 'w', encoding='utf-8') as f:
         json.dump(playout_channel_data, f, ensure_ascii=False, indent=2)
     
-    # 建立頻道JSON壓縮檔 - 包含所有頻道
     print(f"\n🗜️ 建立頻道JSON壓縮檔...")
     if create_channel_zip(json_dir, output_dir):
         print(f"✅ 成功建立 ofiii_channel.zip，包含 {saved_json_files} 個頻道JSON檔案")
     
-    # 清理暫存JSON檔案
     print(f"\n🧹 清理暫存檔案...")
     cleaned_files = cleanup_json_files(json_dir)
     
