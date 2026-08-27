@@ -1117,8 +1117,8 @@
       "fnCHANNEL_NO": 42,
       "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-live107.jpg",
       "fsPICTURE_LOGO": null,
-      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-live107.png",
-      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live107.png",
+      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/4gtv-live107.png",
+      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/4gtv-live107.png",
       "fcOVERSEAS": false,
       "lstEXCEPT_COUNTRY": [
         ""
@@ -1151,7 +1151,7 @@
       "fsVENDOR": "優視",
       "fsDESCRIPTION": "專為兒童打造的優質影音平台，內容涵蓋MOMO歡樂谷律動唱跳、ABC故事屋語言啟蒙，以及動物大明星等科普知識。更有百味小廚神與紙箱做玩具等手作單元，寓教於樂。適合親子共賞，讓孩子在歡笑中學習，激發無限創造力。",
       "fsSCHEDULE_DATE": null,
-      "fnORDER": 42
+      "fnORDER": 99
     },
     {
       "fnID": 173,
@@ -1589,8 +1589,8 @@
       "fnCHANNEL_NO": 60,
       "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/litv-longturn14.jpg",
       "fsPICTURE_LOGO": null,
-      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_litv-longturn14_pc.png",
-      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn14_mobile.png",
+      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_litv-longturn14.png",
+      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn14.png",
       "fcOVERSEAS": false,
       "lstEXCEPT_COUNTRY": [
         ""
@@ -1619,9 +1619,9 @@
       "fsEXPIRE_DATE": "",
       "fnGRADED": 0,
       "fsVENDOR": "亞洲衛星電視",
-      "fsDESCRIPTION": "台灣亞洲衛星電視旗下的衛星電視新聞頻道，是全天候聚焦國際新聞的專業頻道。 新聞合作夥伴橫跨歐美亞, 並延伸向俄羅斯, 包括: 路透社、美聯社、法新社、歐新社、今日俄羅斯電視、德國之聲…。熱播節目包含：《名人書房》、《看見新東協》…等，皆可免費看。",
+      "fsDESCRIPTION": "帶台灣到世界，讓【從台灣出發．關注亞洲．放眼全球】的經營理念，以服務全亞洲華人為目標，集台灣和全亞洲經貿生活、文化娛樂、旅遊休閒等訊息於一體。",
       "fsSCHEDULE_DATE": null,
-      "fnORDER": 27
+      "fnORDER": 99
     },
     {
       "fnID": 280,
@@ -1633,8 +1633,8 @@
       "fnCHANNEL_NO": 61,
       "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-4gtv156.jpg",
       "fsPICTURE_LOGO": null,
-      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_litv-longturn15_pc.png",
-      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn15_mobile.png",
+      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-4gtv156.png",
+      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv156.png",
       "fcOVERSEAS": false,
       "lstEXCEPT_COUNTRY": [
         ""
@@ -3261,9 +3261,9 @@
       "fsEXPIRE_DATE": "",
       "fnGRADED": 0,
       "fsVENDOR": "亞洲衛星電視",
-      "fsDESCRIPTION": "全天候播出的專業旅遊頻道，秉持著全新、精緻、活潑、高格調的節目規劃，採擷各地自然風光、風土民情、人文地理、飯店美食和流行購物資訊等為亞洲觀眾提供全方位的旅遊資訊。推薦節目有《溢遊未盡》、《王子的移動城堡》、《秘境。不思溢》",
+      "fsDESCRIPTION": "亞洲旅遊台為專業跨國旅遊頻道，擁有25年節目專業製播經驗，並陸續於48-53屆金鐘獎中得到肯定，廣大行銷版圖涵蓋全球。全天候提供全方位優質旅遊、美食、人文、娛樂等精緻節目內容。",
       "fsSCHEDULE_DATE": null,
-      "fnORDER": 113
+      "fnORDER": 99
     },
     {
       "fnID": 274,
