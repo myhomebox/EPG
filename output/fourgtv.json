@@ -737,7 +737,16 @@
         8,
         10,
         16,
-        22
+        17,
+        19,
+        22,
+        27,
+        28,
+        29,
+        30,
+        40,
+        41,
+        44
       ],
       "fcFREE": true,
       "fsQUALITY": "HD",
@@ -3293,7 +3302,7 @@
         41,
         44
       ],
-      "fcFREE": true,
+      "fcFREE": false,
       "fsQUALITY": "HD",
       "fnCHAT_ID": 0,
       "fcHAS_PROGLIST": true,
@@ -4007,7 +4016,7 @@
         41,
         44
       ],
-      "fcFREE": true,
+      "fcFREE": false,
       "fsQUALITY": "HD",
       "fnCHAT_ID": 0,
       "fcHAS_PROGLIST": true,
@@ -4407,7 +4416,7 @@
         41,
         44
       ],
-      "fcFREE": true,
+      "fcFREE": false,
       "fsQUALITY": "HD",
       "fnCHAT_ID": 0,
       "fcHAS_PROGLIST": true,
@@ -4419,7 +4428,7 @@
       "fsVENDOR": "友量",
       "fsDESCRIPTION": "ALL CLASSIC MOVIES 全經典電影頻道，囊括全球影展得獎佳片及好萊塢巨星雋永鉅作，除此之外亦擁有全球獨立製片大搜集，配合台灣時下的各大影系列，AMC之頻道內影展深受電影迷的喜愛，讓你回味各大影星的精采之作。",
       "fsSCHEDULE_DATE": null,
-      "fnORDER": 61
+      "fnORDER": 99
     },
     {
       "fnID": 225,
