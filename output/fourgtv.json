@@ -1726,6 +1726,43 @@
       "fnORDER": 62
     },
     {
+      "fnID": 281,
+      "fsTYPE": "02",
+      "fsCDN_ROUTE": "A",
+      "fsTYPE_NAME": "新聞財經",
+      "fsNAME": "寰宇財經台",
+      "fs4GTV_ID": "4gtv-4gtv158",
+      "fnCHANNEL_NO": 63,
+      "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-4gtv158.jpg",
+      "fsPICTURE_LOGO": null,
+      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-4gtv158.png",
+      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv158.png",
+      "fcOVERSEAS": false,
+      "lstEXCEPT_COUNTRY": [
+        ""
+      ],
+      "lstALL_BITRATE": null,
+      "fsFREE_PROFILE": null,
+      "lstSETs": [
+        1,
+        4,
+        10
+      ],
+      "fcFREE": true,
+      "fsQUALITY": "HD",
+      "fnCHAT_ID": 0,
+      "fcHAS_PROGLIST": true,
+      "fdLIKE_BEG_DATE": null,
+      "fcLIKE": false,
+      "fcRISTRICT": false,
+      "fsEXPIRE_DATE": "",
+      "fnGRADED": 0,
+      "fsVENDOR": "亞洲衛星電視",
+      "fsDESCRIPTION": "提供當日最即時、最專業的國際與台灣金融市場訊息與分析。從台灣深刻評析世界經濟趨勢，專業多元跳脫理財等同投資股市的傳統窠臼，帶著您投資理財生活化。",
+      "fsSCHEDULE_DATE": null,
+      "fnORDER": 99
+    },
+    {
       "fnID": 183,
       "fsTYPE": "02",
       "fsCDN_ROUTE": "A",
