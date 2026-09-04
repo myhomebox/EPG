@@ -21,7 +21,7 @@
   ],
   "ofiii25": [
     "毛茸茸親子台",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3952_ofiii25_mobile_20251223.png",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3952_ofiii25_mobile_20260903.png",
     "卡通‧兒童"
   ],
   "ofiii26": [
@@ -62,6 +62,16 @@
   "ofiii55": [
     "國際大小事",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3560_ofiii55_mobile_20241202.png",
+    "新聞‧財經"
+  ],
+  "ofiii58": [
+    "鄉民大學問",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4184_ofiii58_mobile_20260826.png",
+    "新聞‧財經"
+  ],
+  "ofiii59": [
+    "民視異言堂",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4185_ofiii59_mobile_20260826.png",
     "新聞‧財經"
   ],
   "ofiii64": [
@@ -117,11 +127,6 @@
   "ofiii82": [
     "Focus探索新知台",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2683_ofiii82_mobile_20260526.png",
-    "綜合"
-  ],
-  "ofiii83": [
-    "鄉民大學問《9/4移至CH58》",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3407_ofiii83_mobile_20250220.png",
     "綜合"
   ],
   "ofiii84": [
@@ -259,11 +264,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2591_ofiii116_mobile_20250220.png",
     "熱門收視頻道"
   ],
-  "ofiii117": [
-    "雙軌《9/4即將下架》",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4057_ofiii117_mobile_20260325.png",
-    "戲劇"
-  ],
   "ofiii118": [
     "有你的時光裡",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4132_ofiii118_mobile_20260626.png",
@@ -324,11 +324,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2594_ofiii131_mobile_20250220.png",
     "熱門收視頻道"
   ],
-  "ofiii132": [
-    "醫學大聯盟《9/4即將下架》",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3955_ofiii132_mobile_20251216.png",
-    "綜藝"
-  ],
   "ofiii133": [
     "台灣啟示錄",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2595_ofiii133_mobile_20250220.png",
@@ -369,11 +364,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3661_ofiii145_mobile_20250305.png",
     "戲劇"
   ],
-  "ofiii146": [
-    "白雪公主非死不可《9/4即將下架》",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3515_ofiii146_mobile_20250220.png",
-    "戲劇"
-  ],
   "ofiii147": [
     "好搭檔",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3516_ofiii147_mobile_20250220.png",
@@ -404,9 +394,9 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3358_ofiii157_mobile_20250220.png",
     "戲劇"
   ],
-  "ofiii159": [
-    "雖然等級只有1級但固有技能是最強的《9/4即將下架》",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3359_ofiii159_mobile_20250220.png",
+  "ofiii161": [
+    "NANA",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4187_ofiii161_mobile_20260826.png",
     "動漫"
   ],
   "ofiii162": [
@@ -509,11 +499,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3634_ofiii184_mobile_20250220.png",
     "動漫"
   ],
-  "ofiii185": [
-    "科學小飛俠《9/4即將下架》",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3966_ofiii185_mobile_20251216.png",
-    "動漫"
-  ],
   "ofiii187": [
     "超人力霸王台",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3843_ofiii187_mobile_20250827.png",
@@ -538,6 +523,16 @@
     "生命的贏家",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_ofiii192_mobile_20230329.png",
     "綜合"
+  ],
+  "ofiii197": [
+    "新兵日記",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4189_ofiii197_mobile_20260826.png",
+    "戲劇"
+  ],
+  "ofiii198": [
+    "新兵日記之特戰英雄",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4190_ofiii198_mobile_20260826.png",
+    "戲劇"
   ],
   "ofiii199": [
     "我的老師叫小賀",
@@ -564,35 +559,10 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3845_ofiii210_mobile_20250827.png",
     "新聞‧財經"
   ],
-  "ofiii211": [
-    "民視異言堂《9/4移至CH59》",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3884_ofiii211_mobile_20250924.png",
-    "新聞‧財經"
-  ],
   "ofiii212": [
     "新聞觀測站",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3885_ofiii212_mobile_20250924.png",
     "新聞‧財經"
-  ],
-  "ofiii215": [
-    "電動車時代《9/4即將下架》",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3475_ofiii215_mobile_20240930.png",
-    "綜合"
-  ],
-  "ofiii216": [
-    "SiCAR愛車酷《9/4即將下架》",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3521_ofiii216_mobile_20241104.png",
-    "綜合"
-  ],
-  "ofiii217": [
-    "狂人日誌《9/4即將下架》",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3522_ofiii217_mobile_20241104.png",
-    "綜合"
-  ],
-  "ofiii218": [
-    "脖子解說 Mr. Neck《9/4即將下架》",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3523_ofiii218_mobile_20250220.png",
-    "綜合"
   ],
   "ofiii225": [
     "好運來",
@@ -602,11 +572,6 @@
   "ofiii226": [
     "黃金歲月",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4087_ofiii226_mobile_20260429.png",
-    "綜藝"
-  ],
-  "ofiii230": [
-    "歡迎光琳《9/4即將下架》",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3963_ofiii230_mobile_20251216.png",
     "綜藝"
   ],
   "ofiii231": [
