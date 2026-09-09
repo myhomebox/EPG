@@ -2473,6 +2473,43 @@
       "fnORDER": 50
     },
     {
+      "fnID": 285,
+      "fsTYPE": "04",
+      "fsCDN_ROUTE": "B",
+      "fsTYPE_NAME": "音樂綜藝",
+      "fsNAME": "灣聲線上音樂廳",
+      "fs4GTV_ID": "4gtv-live088",
+      "fnCHANNEL_NO": 88,
+      "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-live088.jpg",
+      "fsPICTURE_LOGO": null,
+      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/4gtv-live088.png",
+      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/4gtv-live088.png",
+      "fcOVERSEAS": false,
+      "lstEXCEPT_COUNTRY": [
+        ""
+      ],
+      "lstALL_BITRATE": null,
+      "fsFREE_PROFILE": null,
+      "lstSETs": [
+        1,
+        4,
+        10
+      ],
+      "fcFREE": true,
+      "fsQUALITY": "HD",
+      "fnCHAT_ID": 0,
+      "fcHAS_PROGLIST": true,
+      "fdLIKE_BEG_DATE": null,
+      "fcLIKE": false,
+      "fcRISTRICT": false,
+      "fsEXPIRE_DATE": "",
+      "fnGRADED": 0,
+      "fsVENDOR": "灣聲國際",
+      "fsDESCRIPTION": "熟悉的臺灣流行曲與民謠，化為古典音樂！灣聲樂團是全臺唯一專注臺灣音樂的專業樂團。頻道收錄精選演出影音，重現深植人心的土地記憶與跨界旋律，帶您感受最動人的臺灣之聲！",
+      "fsSCHEDULE_DATE": null,
+      "fnORDER": 99
+    },
+    {
       "fnID": 287,
       "fsTYPE": "01",
       "fsCDN_ROUTE": "B",
