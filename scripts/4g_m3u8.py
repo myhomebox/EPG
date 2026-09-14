@@ -9,10 +9,9 @@ import sys
 import re
 import warnings
 import os
-from urllib.parse import urljoin, urlparse, parse_qs, quote
-from Crypto.Cipher import AES
-from Crypto.Util.Padding import unpad
-import requests
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from urllib.parse import urlparse
 import logging
 
 # 关闭所有警告和日志
@@ -26,89 +25,73 @@ log.disabled = True
 
 # 默认配置
 DEFAULT_USER_AGENT = "%E5%9B%9B%E5%AD%A3%E7%B7%9A%E4%B8%8A/4 CFNetwork/3826.500.131 Darwin/24.5.0"
-DEFAULT_TIMEOUT = 30  # 增加超时时间
-CHANNEL_DELAY = 1  # 增加频道之间的延迟时间（秒）
-MAX_RETRIES = 1  # 最大重试次数
+DEFAULT_TIMEOUT = 30
+CHANNEL_DELAY = 1
+MAX_RETRIES = 1
+DEFAULT_WORKERS = 1
+DEFAULT_HEADER_KEY = "7F3DD6981A72707B12A8C0CC80A3C96B75B9057AD55F1AE1"
 
 # 默认账号（可被环境变量覆盖）
 DEFAULT_USER = os.environ.get('GTV_USER', '')
 DEFAULT_PASS = os.environ.get('GTV_PASS', '')
 
-# ========== 代理设置（支持 HTTP/HTTPS/SOCKS5/SOCKS5h） ==========
-# 优先级：命令行 --proxy > 专用环境变量 > ALL_PROXY > http_proxy/https_proxy
-# 支持的环境变量：
-#   HTTP_PROXY / http_proxy
-#   HTTPS_PROXY / https_proxy
-#   SOCKS5_PROXY / socks5_proxy  (标准 SOCKS5，本地 DNS)
-#   SOCKS5H_PROXY / socks5h_proxy (SOCKS5 with remote DNS)
-#   ALL_PROXY / all_proxy（同时用于 http 和 https）
-PROXY_SETTINGS = {
-    'http': os.environ.get('http_proxy') or os.environ.get('HTTP_PROXY', ''),
-    'https': os.environ.get('https_proxy') or os.environ.get('HTTPS_PROXY', ''),
-}
-
-# 读取 SOCKS5 环境变量
-socks5_proxy = os.environ.get('socks5_proxy') or os.environ.get('SOCKS5_PROXY', '')
-socks5h_proxy = os.environ.get('socks5h_proxy') or os.environ.get('SOCKS5H_PROXY', '')
-
-# 注意：先检查 socks5h，再检查 socks5，以便 socks5h 优先（如果同时设置）
-if socks5h_proxy:
-    # 确保协议前缀存在，如果没有则添加 socks5h://
-    if not socks5h_proxy.startswith(('socks5h://', 'socks5://')):
-        socks5h_proxy = f'socks5h://{socks5h_proxy}'
-    PROXY_SETTINGS['http'] = socks5h_proxy
-    PROXY_SETTINGS['https'] = socks5h_proxy
-elif socks5_proxy:
-    # 确保协议前缀存在，如果没有则添加 socks5://
-    if not socks5_proxy.startswith(('socks5://', 'socks5h://')):
-        socks5_proxy = f'socks5://{socks5_proxy}'
-    PROXY_SETTINGS['http'] = socks5_proxy
-    PROXY_SETTINGS['https'] = socks5_proxy
-
-# ALL_PROXY 兜底（同样保留原始协议）
-all_proxy = os.environ.get('all_proxy') or os.environ.get('ALL_PROXY', '')
-if all_proxy and not (PROXY_SETTINGS['http'] or PROXY_SETTINGS['https']):
-    # 自动补全协议头（如果缺失，默认 http://）
-    if not re.match(r'^(http|https|socks5|socks5h)://', all_proxy):
-        all_proxy = f'http://{all_proxy}'
-    PROXY_SETTINGS['http'] = all_proxy
-    PROXY_SETTINGS['https'] = all_proxy
+# 代理设置（从环境变量读取）
+HTTP_PROXY = os.environ.get('http_proxy', '') or os.environ.get('HTTP_PROXY', '')
+HTTPS_PROXY = os.environ.get('https_proxy', '') or os.environ.get('HTTPS_PROXY', '')
+SOCKS_PROXY = os.environ.get('SOCKS_PROXY', '') or os.environ.get('SOCKS5_PROXY', '') or os.environ.get('ALL_PROXY', '')
 
 # 内存缓存
 cache_play_urls = {}
-CACHE_EXPIRATION_TIME = 86400  # 24小时有效期
+CACHE_EXPIRATION_TIME = 86400
+thread_local = threading.local()
 
 
 def is_github_actions():
-    """检查是否在 GitHub Actions 环境中运行"""
     return os.environ.get('GITHUB_ACTIONS') == 'true'
 
 
-def get_proxies():
-    """从环境变量或命令行参数获取代理设置，完全保留用户指定的协议（socks5 和 socks5h 分开）"""
+def get_proxies(announce=True):
     proxies = {}
-    for scheme in ('http', 'https'):
-        proxy_url = PROXY_SETTINGS.get(scheme, '')
-        if proxy_url:
-            # 确保有协议头
-            if not re.match(r'^(http|https|socks5|socks5h)://', proxy_url):
-                proxy_url = f'http://{proxy_url}'
-            proxies[scheme] = proxy_url
 
-    if proxies:
-        for k, v in proxies.items():
-            print(f"🔌 代理 {k}: {v}")
-    else:
-        if is_github_actions():
-            print("🔌 GitHub Actions 环境中未设置代理，使用直接连接")
+    if HTTP_PROXY:
+        proxies['http'] = HTTP_PROXY
+        if not HTTPS_PROXY:
+            proxies['https'] = HTTP_PROXY
+
+    if HTTPS_PROXY:
+        proxies['https'] = HTTPS_PROXY
+        if not HTTP_PROXY:
+            proxies['http'] = HTTPS_PROXY
+
+    if SOCKS_PROXY:
+        parsed = urlparse(SOCKS_PROXY)
+        if parsed.scheme in ('socks5', 'socks5h'):
+            proxies['http'] = SOCKS_PROXY
+            proxies['https'] = SOCKS_PROXY
         else:
-            print("🔌 未设置代理，使用直接连接")
+            if announce:
+                print(f"⚠️ SOCKS_PROXY 变量包含非 socks 协议: {SOCKS_PROXY}，已忽略")
+
+    if announce:
+        if proxies:
+            proxy_types = set()
+            for p in proxies.values():
+                scheme = urlparse(p).scheme
+                proxy_types.add(scheme)
+            if is_github_actions():
+                print(f"🔌 GitHub Actions 环境中使用代理: {proxies}")
+            else:
+                print(f"🔌 使用代理 ({', '.join(proxy_types)}): {proxies}")
+        else:
+            if is_github_actions():
+                print("🔌 GitHub Actions 环境中未设置代理，使用直接连接")
+            else:
+                print("🔌 未设置代理，使用直接连接")
 
     return proxies if proxies else None
 
 
 def test_proxy_connection(scraper, timeout=10):
-    """测试代理连接是否正常（支持 SOCKS5/SOCKS5h）"""
     try:
         test_url = "https://httpbin.org/ip"
         response = scraper.get(test_url, timeout=timeout)
@@ -123,22 +106,28 @@ def test_proxy_connection(scraper, timeout=10):
         return False
 
 
-def create_scraper_with_proxy(ua):
-    """创建带有代理设置的 scraper（支持 socks5 和 socks5h 分开）"""
+def create_scraper_with_proxy(ua, announce=True, test_proxy=True):
     scraper = cloudscraper.create_scraper()
     scraper.headers.update({"User-Agent": ua})
 
-    # 设置代理
-    proxies = get_proxies()
+    proxies = get_proxies(announce=announce)
     if proxies:
         try:
-            scraper.proxies.update(proxies)
+            for proxy_url in proxies.values():
+                if proxy_url.startswith('socks'):
+                    try:
+                        import socks  # noqa
+                    except ImportError:
+                        print("⚠️ 使用 SOCKS 代理需要安装 PySocks，请执行: pip install pysocks")
+                        proxies = None
+                        break
+            if proxies:
+                scraper.proxies.update(proxies)
 
-            # 在非 GitHub Actions 环境中测试代理连接
-            if not is_github_actions():
-                if not test_proxy_connection(scraper):
-                    print("⚠️ 代理连接测试失败，将使用直接连接")
-                    scraper.proxies.clear()
+                if test_proxy and not is_github_actions():
+                    if not test_proxy_connection(scraper):
+                        print("⚠️ 代理连接测试失败，将使用直接连接")
+                        scraper.proxies.clear()
         except Exception as e:
             print(f"⚠️ 代理设置失败: {e}，将使用直接连接")
             scraper.proxies.clear()
@@ -146,28 +135,26 @@ def create_scraper_with_proxy(ua):
     return scraper
 
 
+def get_thread_scraper(ua):
+    scraper = getattr(thread_local, 'scraper', None)
+    if scraper is None:
+        scraper = create_scraper_with_proxy(ua, announce=False, test_proxy=False)
+        thread_local.scraper = scraper
+    return scraper
+
+
 def generate_uuid(user):
-    """根据账号和当前日期生成唯一 UUID，确保不同用户每天 UUID 不同"""
     today = datetime.datetime.utcnow().strftime('%Y-%m-%d')
     name = f"{user}-{today}"
     return str(uuid.uuid5(uuid.NAMESPACE_DNS, name)).upper()
 
 
 def generate_4gtv_auth():
-    head_key = "PyPJU25iI2IQCMWq7kblwh9sGCypqsxMp4sKjJo95SK43h08ff+j1nbWliTySSB+N67BnXrYv9DfwK+ue5wWkg=="
-    KEY = b"ilyB29ZdruuQjC45JhBBR7o2Z8WJ26Vg"
-    IV = b"JUMxvVMmszqUTeKn"
-    decoded = base64.b64decode(head_key)
-    cipher = AES.new(KEY, AES.MODE_CBC, IV)
-    decrypted = cipher.decrypt(decoded)
-    pad_len = decrypted[-1]
-    decrypted = decrypted[:-pad_len].decode('utf-8')
     today = datetime.datetime.utcnow().strftime('%Y%m%d')
-    sha512 = hashlib.sha512((today + decrypted).encode()).digest()
-    return base64.b64encode(sha512).decode()
+    sha512 = hashlib.sha512((today + DEFAULT_HEADER_KEY).encode('utf-8')).digest()
+    return base64.b64encode(sha512).decode('ascii')
 
-
-def sign_in_4gtv(user, password, fsenc_key, auth_val, ua, timeout):
+def sign_in_4gtv(user, password, fsenc_key, auth_val, ua, timeout, scraper=None):
     url = "https://api2.4gtv.tv/AppAccount/SignIn"
     headers = {
         "Content-Type": "application/json; charset=UTF-8",
@@ -178,7 +165,7 @@ def sign_in_4gtv(user, password, fsenc_key, auth_val, ua, timeout):
         "User-Agent": ua
     }
     payload = {"fsUSER": user, "fsPASSWORD": password, "fsENC_KEY": fsenc_key}
-    scraper = create_scraper_with_proxy(ua)
+    scraper = scraper or create_scraper_with_proxy(ua)
 
     resp = scraper.post(url, headers=headers, json=payload, timeout=timeout)
     resp.raise_for_status()
@@ -186,43 +173,60 @@ def sign_in_4gtv(user, password, fsenc_key, auth_val, ua, timeout):
     return data.get("Data") if data.get("Success") else None
 
 
-def get_all_channels(ua, timeout):
-    """获取所有频道集合的频道，并去除重复频道"""
-    channel_sets = [1, 4]  # 已知的频道集合ID
+def get_all_channels(ua, timeout, scraper=None, include_fast_live=False):
+    """获取全部频道，并根据开关决定是否包含 fs4GTV_ID 以 fast-live 开头的频道。"""
     all_channels = []
-    seen_channel_ids = set()  # 用于跟踪已看到的频道ID
 
-    for set_id in channel_sets:
-        print(f"📡 正在获取频道集合 {set_id}...")
-        url = f'https://api2.4gtv.tv/Channel/GetChannelBySetId/{set_id}/pc/L/V'
-        headers = {"accept": "*/*", "origin": "https://www.4gtv.tv", "referer": "https://www.4gtv.tv/", "User-AAgent": ua}
-        scraper = create_scraper_with_proxy(ua)
+    print("📡 正在获取全部频道...")
+    url = "https://api2.4gtv.tv/Channel/GetAllChannel2/mobile"
+    headers = {
+        "accept": "*/*",
+        "origin": "https://www.4gtv.tv",
+        "referer": "https://www.4gtv.tv/",
+        "User-Agent": ua
+    }
+    active_scraper = scraper or create_scraper_with_proxy(ua)
 
-        try:
-            resp = scraper.get(url, headers=headers, timeout=timeout)
-            resp.raise_for_status()
-            data = resp.json()
-            if data.get("Success"):
-                channels = data.get("Data", [])
-                for channel in channels:
-                    channel_id = channel.get("fs4GTV_ID", "")
-                    # 检查是否已经处理过这个频道
-                    if channel_id not in seen_channel_ids:
-                        seen_channel_ids.add(channel_id)
-                        all_channels.append(channel)
-                        print(f"   ✅ 添加频道: {channel.get('fsNAME', '未知')}")
-                    else:
-                        print(f"   ⏭️  跳过重复频道: {channel.get('fsNAME', '未知')}")
-        except Exception as e:
-            print(f"   ❌ 获取频道集合 {set_id} 失败: {e}")
-            continue
+    try:
+        resp = active_scraper.get(url, headers=headers, timeout=timeout)
+        resp.raise_for_status()
+        data = resp.json()
+
+        if not data.get("Success"):
+            print(f"   ❌ 获取频道列表失败: {data.get('ErrMessage')}")
+            return all_channels
+
+        channels = data.get("Data", [])
+        for channel in channels:
+            channel_id = str(channel.get("fs4GTV_ID", ""))
+            channel_name = channel.get("fsNAME", "未知")
+
+            # 判定 fs4GTV_ID 是否以 fast-live 开头
+            if channel_id.lower().startswith("fast-live") and not include_fast_live:
+                print(f"   ⏭️  跳过 fast-live 频道: {channel_name} ({channel_id})")
+                continue
+
+            # 若是 fast-live 频道，统一分类名并清理频道名称
+            if channel_id.startswith("fast-live"):
+                channel_type = "FastTV飛速看"
+                channel_name = channel.get("fsNAME", "")
+                channel_name = re.sub(r"[-－]?FastTV[飛速看]*", "", channel_name)
+                channel_name = re.sub(r"[-－]?飛速看", "", channel_name)
+                channel_name = re.sub(r"^[-－\s]+|[-－\s]+$", "", channel_name)
+                channel["fsNAME"] = channel_name
+
+            all_channels.append(channel)
+            print(f"   ✅ 添加频道: {channel_name} ({channel_id})")
+
+    except Exception as e:
+        print(f"   ❌ 获取频道列表失败: {e}")
 
     return all_channels
 
 
-def get_4gtv_channel_url_with_retry(channel_id, fnCHANNEL_ID, fsVALUE, fsenc_key, auth_val, ua, timeout, max_retries=MAX_RETRIES):
-    """带重试机制的获取频道URL函数"""
-    # 检查缓存
+def get_4gtv_channel_url_with_retry(channel_id, fnCHANNEL_ID, fsVALUE, fsenc_key, auth_val, ua, timeout, max_retries=MAX_RETRIES, scraper=None):
+    max_retries = max(1, int(max_retries))
+
     current_time = time.time()
     cache_key = f"{channel_id}_{fnCHANNEL_ID}"
     if cache_key in cache_play_urls:
@@ -249,80 +253,123 @@ def get_4gtv_channel_url_with_retry(channel_id, fnCHANNEL_ID, fsVALUE, fsenc_key
                 "fsASSET_ID": channel_id,
                 "fsDEVICE_TYPE": "mobile"
             }
-            scraper = create_scraper_with_proxy(ua)
+            active_scraper = scraper or get_thread_scraper(ua)
 
-            resp = scraper.post('https://api2.4gtv.tv/App/GetChannelUrl2', headers=headers, json=payload, timeout=timeout)
+            resp = active_scraper.post('https://api2.4gtv.tv/App/GetChannelUrl2', headers=headers, json=payload, timeout=timeout)
             resp.raise_for_status()
             data = resp.json()
-            if data.get('Success') and 'flstURLs' in data.get('Data', {}):
-                url = data['Data']['flstURLs'][1]
-                # 更新缓存
+            print(f"频道 {channel_id} 响应: {json.dumps(data, ensure_ascii=False)[:200]}")
+            response_data = data.get('Data', {}) if isinstance(data, dict) else {}
+            raw_urls = response_data.get('flstURLs', []) if isinstance(response_data, dict) else []
+            urls = raw_urls if isinstance(raw_urls, list) else []
+            if isinstance(data, dict) and data.get('Success') and urls:
+                url = urls[1] if len(urls) > 1 else urls[0]
                 cache_play_urls[cache_key] = (current_time, url)
                 return url
             return None
         except Exception as e:
             if attempt < max_retries - 1:
                 print(f"⚠️ 获取频道 {channel_id} 失败，正在重试 ({attempt + 1}/{max_retries})")
-                time.sleep(2)  # 重试前等待2秒
+                time.sleep(2)
             else:
                 print(f"❌ 获取频道 {channel_id} 失败，已达到最大重试次数")
                 return None
     return None
 
 
-def get_highest_bitrate_url(master_url):
-    """尝试获取更高质量的URL - 只对特定开头的网址进行处理"""
-    # 只对以 "https://4gtvfree-mozai.4gtv.tv" 开头的网址进行处理
+def get_highest_bitrate_url(master_url, channel_id="", log=True):
+    """根据频道 ID 前缀尝试获取更高质量的 URL。"""
     if master_url.startswith("https://4gtvfree-mozai.4gtv.tv") and 'index.m3u8' in master_url:
-        print(f"   📶 尝试获取高质量URL (1080p)...")
-        return master_url.replace('index.m3u8', '1080.m3u8')
+        new_filename = None
 
-    # 对于其他网址，保持原样
-    print(f"   📶 使用原始URL（非4gtvfree-mozai域名）")
+        if channel_id.startswith("media-live"):
+            new_filename = "1080p_35.m3u8"
+        elif channel_id.startswith("4gtv-live") or channel_id.startswith("fast-live"):
+            new_filename = "1080.m3u8"
+
+        if new_filename:
+            if log:
+                print(f"   📶 尝试获取高质量URL ({new_filename})...")
+            return master_url.replace('index.m3u8', new_filename)
+
+    if log:
+        print(f"   📶 使用原始URL（非 4gtvfree-mozai 域名或未匹配频道前缀）")
     return master_url
 
 
 def print_progress_bar(iteration, total, prefix='', suffix='', decimals=1, length=50, fill='█', print_end="\r"):
-    """
-    打印进度条
-    @params:
-        iteration   - 当前进度 (Int)
-        total       - 总数 (Int)
-        prefix      - 前缀字符串 (Str)
-        suffix      - 后缀字符串 (Str)
-        decimals    - 小数位数 (Int)
-        length      - 进度条长度 (Int)
-        fill        - 进度条填充字符 (Str)
-        print_end   - 结束字符 (Str)
-    """
     percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
     filled_length = int(length * iteration // total)
     bar = fill * filled_length + '-' * (length - filled_length)
     print(f'\r{prefix} |{bar}| {percent}% {suffix}', end=print_end)
-    # 如果完成，打印新行
     if iteration == total:
         print()
 
 
-def generate_m3u_playlist(user, password, ua, timeout, output_dir="playlist", delay=CHANNEL_DELAY):
+def get_channel_metadata(channel):
+    """提取频道元数据，并统一处理频道分类。"""
+    channel_id = channel.get("fs4GTV_ID", "")
+    channel_name = channel.get("fsNAME", "")
+    channel_type = channel.get("fsTYPE_NAME", "其他")
+    channel_logo = channel.get("fsLOGO_MOBILE", "")
+    fnCHANNEL_ID = channel.get("fnID", "")
+
+    if channel_type:
+        channel_type = channel_type.split(',')[0]
+
+    if channel_id.startswith('fast-live'):
+        channel_type = "FastTV飛速看"
+
+    return channel_id, channel_name, channel_type, channel_logo, fnCHANNEL_ID
+
+
+def build_channel_playlist_entry(channel, fsVALUE, fsenc_key, auth_val, ua, timeout, retries, delay=0, scraper=None):
+    """获取单个频道 URL 并组装 M3U 条目。"""
+    channel_id, channel_name, channel_type, channel_logo, fnCHANNEL_ID = get_channel_metadata(channel)
+
+    if delay > 0:
+        time.sleep(delay)
+
+    stream_url = get_4gtv_channel_url_with_retry(
+        channel_id,
+        fnCHANNEL_ID,
+        fsVALUE,
+        fsenc_key,
+        auth_val,
+        ua,
+        timeout,
+        retries,
+        scraper=scraper
+    )
+    if not stream_url:
+        return False, channel_name, channel_type, "", "无法获取URL"
+
+    highest_url = get_highest_bitrate_url(stream_url, channel_id=channel_id, log=False)
+    entry = (
+        f'#EXTINF:-1 tvg-id="{channel_name}" tvg-name="{channel_name}" '
+        f'tvg-logo="{channel_logo}" group-title="{channel_type}",{channel_name}\n'
+        f"{highest_url}\n"
+    )
+    return True, channel_name, channel_type, entry, ""
+
+
+def generate_m3u_playlist(user, password, ua, timeout, output_dir="playlist", delay=CHANNEL_DELAY, retries=MAX_RETRIES, workers=DEFAULT_WORKERS, include_fast_live=False):
     """生成M3U播放列表"""
     try:
-        # 创建输出目录
         os.makedirs(output_dir, exist_ok=True)
 
         print("🔑 正在生成认证信息...")
-        # 生成认证信息
         fsenc_key = generate_uuid(user)
         auth_val = generate_4gtv_auth()
-        fsVALUE = sign_in_4gtv(user, password, fsenc_key, auth_val, ua, timeout)
+        scraper = create_scraper_with_proxy(ua)
+        fsVALUE = sign_in_4gtv(user, password, fsenc_key, auth_val, ua, timeout, scraper=scraper)
 
         if not fsVALUE:
             print("❌ 登录失败")
             return False
 
         print("📡 正在获取频道列表...")
-        # 获取所有频道
-        channels = get_all_channels(ua, timeout)
+        channels = get_all_channels(ua, timeout, scraper=scraper, include_fast_live=include_fast_live)
 
         if not channels:
             print("❌ 无法获取频道列表")
@@ -330,69 +377,92 @@ def generate_m3u_playlist(user, password, ua, timeout, output_dir="playlist", de
 
         print(f"📺 共找到 {len(channels)} 个频道")
 
-        # 创建M3U文件
         m3u_content = "#EXTM3U\n"
         successful_channels = 0
         failed_channels = 0
         failed_list = []
 
-        # 显示进度条
-        print("🚀 开始处理频道:")
+        workers = max(1, int(workers))
+        delay = max(0, float(delay))
+        print(f"🚀 开始处理频道: workers={workers}, delay={delay}s")
         total_channels = len(channels)
+        playlist_entries = [""] * total_channels
 
-        for index, channel in enumerate(channels):
-            channel_id = channel.get("fs4GTV_ID", "")
-            channel_name = channel.get("fsNAME", "")
-            channel_type = channel.get("fsTYPE_NAME", "其他")
-            channel_logo = channel.get("fsLOGO_MOBILE", "")
-            fnCHANNEL_ID = channel.get("fnID", "")
+        if workers == 1:
+            for index, channel in enumerate(channels):
+                _, channel_name, channel_type, _, _ = get_channel_metadata(channel)
 
-            # 处理频道类型
-            if channel_type:
-                # 分割字符串并取第一部分
-                channel_type = channel_type.split(',')[0]
+                print(f"\n[{index+1}/{total_channels}] 处理频道: {channel_name}")
+                print(f"   📺 频道类型: {channel_type}")
 
-            # 检查是否为fast-live开头，如果是则修改类型为FastTV飞速看
-            if channel_id.startswith('fast-live'):
-                channel_type = "FastTV飞速看"
+                try:
+                    print(f"   🔗 获取频道URL...")
+                    ok, channel_name, _, entry, error = build_channel_playlist_entry(
+                        channel,
+                        fsVALUE,
+                        fsenc_key,
+                        auth_val,
+                        ua,
+                        timeout,
+                        retries,
+                        delay=delay,
+                        scraper=scraper
+                    )
+                    if not ok:
+                        print(f"   ❌ 无法获取频道 {channel_name} 的URL")
+                        failed_channels += 1
+                        failed_list.append((channel_name, error))
+                        continue
 
-            # 显示当前处理的频道信息
-            print(f"\n[{index+1}/{total_channels}] 处理频道: {channel_name}")
-            print(f"   📺 频道类型: {channel_type}")
+                    playlist_entries[index] = entry
+                    print(f"   ✅ 已添加频道: {channel_name}")
+                    successful_channels += 1
 
-            # 添加延迟
-            time.sleep(delay)
-
-            # 获取频道URL（带重试机制）
-            try:
-                print(f"   🔗 获取频道URL...")
-                stream_url = get_4gtv_channel_url_with_retry(channel_id, fnCHANNEL_ID, fsVALUE, fsenc_key, auth_val, ua, timeout)
-                if not stream_url:
-                    print(f"   ❌ 无法获取频道 {channel_name} 的URL")
+                except Exception as e:
+                    print(f"   ❌ 处理频道 {channel_name} 时出错: {e}")
                     failed_channels += 1
-                    failed_list.append((channel_name, "无法获取URL"))
+                    failed_list.append((channel_name, str(e)))
                     continue
 
-                # 尝试获取更高质量的URL（仅对特定域名）
-                highest_url = get_highest_bitrate_url(stream_url)
+                print_progress_bar(index + 1, total_channels, prefix='进度:', suffix=f'完成 {index+1}/{total_channels}')
+        else:
+            completed_channels = 0
+            with ThreadPoolExecutor(max_workers=workers) as executor:
+                futures = {}
+                for index, channel in enumerate(channels):
+                    future = executor.submit(
+                        build_channel_playlist_entry,
+                        channel,
+                        fsVALUE,
+                        fsenc_key,
+                        auth_val,
+                        ua,
+                        timeout,
+                        retries,
+                        delay=delay
+                    )
+                    futures[future] = index
 
-                # 添加到M3U内容
-                m3u_content += f'#EXTINF:-1 tvg-id="{channel_name}" tvg-name="{channel_name}" tvg-logo="{channel_logo}" group-title="{channel_type}",{channel_name}\n'
-                m3u_content += f"{highest_url}\n"
+                for future in as_completed(futures):
+                    index = futures[future]
+                    try:
+                        ok, channel_name, _, entry, error = future.result()
+                        if ok:
+                            playlist_entries[index] = entry
+                            successful_channels += 1
+                        else:
+                            failed_channels += 1
+                            failed_list.append((channel_name, error))
+                    except Exception as e:
+                        channel_name = channels[index].get("fsNAME", "未知")
+                        failed_channels += 1
+                        failed_list.append((channel_name, str(e)))
 
-                print(f"   ✅ 已添加频道: {channel_name}")
-                successful_channels += 1
+                    completed_channels += 1
+                    print_progress_bar(completed_channels, total_channels, prefix='进度:', suffix=f'完成 {completed_channels}/{total_channels}')
 
-            except Exception as e:
-                print(f"   ❌ 处理频道 {channel_name} 时出错: {e}")
-                failed_channels += 1
-                failed_list.append((channel_name, str(e)))
-                continue
+        m3u_content += "".join(playlist_entries)
 
-            # 更新进度条
-            print_progress_bar(index + 1, total_channels, prefix='进度:', suffix=f'完成 {index+1}/{total_channels}')
-
-        # 写入文件
         output_path = os.path.join(output_dir, "4gtv.m3u")
         with open(output_path, "w", encoding="utf-8") as f:
             f.write(m3u_content)
@@ -416,7 +486,6 @@ def generate_m3u_playlist(user, password, ua, timeout, output_dir="playlist", de
 
 
 def main():
-    """主函数，提供命令行界面"""
     import argparse
 
     parser = argparse.ArgumentParser(description='4GTV 流媒体获取工具')
@@ -428,27 +497,36 @@ def main():
     parser.add_argument('--output-dir', type=str, default="playlist", help='输出目录')
     parser.add_argument('--delay', type=float, default=CHANNEL_DELAY, help='频道之间的延迟时间(秒)')
     parser.add_argument('--retries', type=int, default=MAX_RETRIES, help='最大重试次数')
+    parser.add_argument('--workers', type=int, default=1, help='并发处理频道数量')
     parser.add_argument('--verbose', action='store_true', help='显示详细处理信息')
-    parser.add_argument('--proxy', type=str, help='代理服务器（支持 http://, https://, socks5://, socks5h://）')
+    parser.add_argument('--proxy', type=str, help='代理服务器（例如: http://username:password@proxy.com:port 或 socks5://127.0.0.1:1080）')
     parser.add_argument('--no-proxy', action='store_true', help='强制不使用代理')
+    parser.add_argument('--include-fast-live', action='store_true', default=True,
+                        help='包含 fs4GTV_ID 以 fast-live 开头的频道（默认包含）')
 
     args = parser.parse_args()
 
-    # 设置代理（命令行参数优先于环境变量）
-    global PROXY_SETTINGS
+    global HTTP_PROXY, HTTPS_PROXY, SOCKS_PROXY
 
     if args.no_proxy:
-        PROXY_SETTINGS['http'] = ''
-        PROXY_SETTINGS['https'] = ''
+        HTTP_PROXY = ''
+        HTTPS_PROXY = ''
+        SOCKS_PROXY = ''
         print("🔌 强制禁用代理")
     elif args.proxy:
-        proxy_url = args.proxy
-        # 自动补全协议（如果用户只输入了 host:port，默认 http://）
-        if not re.match(r'^(http|https|socks5|socks5h)://', proxy_url):
-            proxy_url = f'http://{proxy_url}'
-        PROXY_SETTINGS['http'] = proxy_url
-        PROXY_SETTINGS['https'] = proxy_url
-        print(f"🔌 使用命令行指定的代理: {proxy_url}")
+        parsed = urlparse(args.proxy)
+        if parsed.scheme in ('http', 'https'):
+            HTTP_PROXY = args.proxy
+            HTTPS_PROXY = args.proxy
+            SOCKS_PROXY = ''
+            print(f"🔌 使用命令行指定的 HTTP(S) 代理: {args.proxy}")
+        elif parsed.scheme in ('socks5', 'socks5h'):
+            HTTP_PROXY = ''
+            HTTPS_PROXY = ''
+            SOCKS_PROXY = args.proxy
+            print(f"🔌 使用命令行指定的 SOCKS 代理: {args.proxy}")
+        else:
+            print(f"⚠️ 不支持的代理协议: {parsed.scheme}，将使用环境变量或直接连接")
 
     if args.generate_playlist:
         success = generate_m3u_playlist(
@@ -457,7 +535,10 @@ def main():
             args.ua,
             args.timeout,
             args.output_dir,
-            args.delay
+            args.delay,
+            args.retries,
+            args.workers,
+            args.include_fast_live
         )
         return 0 if success else 1
     else:
