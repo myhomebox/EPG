@@ -2019,8 +2019,6 @@ Clevatess Ⅱ-魔獸之王與虛假的勇者傳承-,http://localhost:5000/ofiii9
 第102集 鴨博士的冰火滷味,http://localhost:5000/ofiii245/index.m3u8?episode_id=vod43534-010102M001
 第103集 阿達仔ㄟ奶凍捲,http://localhost:5000/ofiii245/index.m3u8?episode_id=vod43534-010103M001
 台灣最前線,#genre#
-第391集 大洋流首航現貪食龍！蔣大勢已去？遇辯論推拖拉？溫室小蔣打安全牌？,http://localhost:5000/ofiii209/index.m3u8?episode_id=vod79238-000391M001
-第392集 撲馬建立長輩緣！蔣秘密行程固票？ 閃避辯論藉口多？蔣萬安臨陣脫逃？,http://localhost:5000/ofiii209/index.m3u8?episode_id=vod79238-000392M001
 第393集 少康2度訪沈！蔣不談市政上綜藝？洋流橫掃士林！國共出招替蔣解套？,http://localhost:5000/ofiii209/index.m3u8?episode_id=vod79238-000393M001
 第394集 把握與沈交流！市民心態冷感→希望？遷松機倉促.菜頭用搶的？蔣急求表現？,http://localhost:5000/ofiii209/index.m3u8?episode_id=vod79238-000394M001
 第395集 沈解市民疑難雜症！蔣慘任昌消遣？低調出巡？蔣去夜市給攤商惹麻煩？,http://localhost:5000/ofiii209/index.m3u8?episode_id=vod79238-000395M001
@@ -2029,6 +2027,8 @@ Clevatess Ⅱ-魔獸之王與虛假的勇者傳承-,http://localhost:5000/ofiii9
 第398集 沈民調大勝蔣？小水滴警惕不鬆懈！洋流潮襲全台！蔣少康專訪也背稿？,http://localhost:5000/ofiii209/index.m3u8?episode_id=vod79238-000398M001
 第399集 銀髮族追沈伯洋！蔣專訪落漆成常態？蔣市政仍擺爛？藍營全黨下海救一人？,http://localhost:5000/ofiii209/index.m3u8?episode_id=vod79238-000399M001
 第400集,http://localhost:5000/ofiii209/index.m3u8?episode_id=vod79238-000400M001
+第401集,http://localhost:5000/ofiii209/index.m3u8?episode_id=vod79238-000401M001
+第402集,http://localhost:5000/ofiii209/index.m3u8?episode_id=vod79238-000402M001
 台灣真善美,#genre#
 第563集 有機村泥火山豆腐,http://localhost:5000/ofiii241/index.m3u8?episode_id=vod14686-000563M001
 第564集 古法日曬的蓮藕粉,http://localhost:5000/ofiii241/index.m3u8?episode_id=vod14686-000564M001
@@ -3319,8 +3319,6 @@ TVSP,http://localhost:5000/ofiii162/index.m3u8?episode_id=vod62481-019001M001
 第41集,http://localhost:5000/ofiii109/index.m3u8?episode_id=vod84476-000041M001
 第42集,http://localhost:5000/ofiii109/index.m3u8?episode_id=vod84476-000042M001
 寰宇全視界,#genre#
-第695集 川普親手挑的人反了！華許上任不但不降息 期中選舉前恐補上一刀！東亞離開戰不遠？日韓尖端武器接連上場、中國補強戰時動員！,http://localhost:5000/ofiii204/index.m3u8?episode_id=vod48393-000695M001
-第696集 美債殖利率直逼5%、日圓恐再探底！華許升息箭在弦上 川普降息夢難圓！伊朗轉守為攻、胡塞點燃紅海 美伊恐真的打到2029？,http://localhost:5000/ofiii204/index.m3u8?episode_id=vod48393-000696M001
 第697集 美日升息擋不住市場焦慮！美國想壓住通膨、日本連日圓都拉不回來！AI一旦失控誰來拔插頭？,http://localhost:5000/ofiii204/index.m3u8?episode_id=vod48393-000697M001
 第698集 川普等習近平救選票對中鷹派先閉嘴！白宮排場拉到頂 就盼中國買黃豆、鬆稀土！川普喊殲滅伊朗 轉身卻派人密談！荷姆茲海峽還要卡多久？,http://localhost:5000/ofiii204/index.m3u8?episode_id=vod48393-000698M001
 第699集 川普又要加碼打伊朗？近萬美軍增援難逼退讓 長期部署越打越疲！AI恐成紅藍鬥爭武器！川普改名SI、巨頭自管 民主黨不買單！,http://localhost:5000/ofiii204/index.m3u8?episode_id=vod48393-000699M001
@@ -3329,6 +3327,8 @@ TVSP,http://localhost:5000/ofiii162/index.m3u8?episode_id=vod62481-019001M001
 第702集 中國戰機潛艦搶進美國地盤！從印尼到泰國 軍售一路打進美國盟友！中國民眾最不滿日本！擴軍引強烈反彈 高市仍打核潛艦主意！,http://localhost:5000/ofiii204/index.m3u8?episode_id=vod48393-000702M001
 第703集 美國被利息壓垮！百姓借錢吃不消、政府發債也喊痛！傳停發20年債 換借法能解套？缺兵缺彈仍不退 歐洲金援難補缺口 烏克蘭苦撐怕割地,http://localhost:5000/ofiii204/index.m3u8?episode_id=vod48393-000703M001
 第704集 美債壓身還想圍堵中國！北京穩經濟、拚科技，航母戰機加速布局！AI狂燒錢亮紅燈！用戶再多也難付算力帳單 雲端擴張恐埋償債危機！,http://localhost:5000/ofiii204/index.m3u8?episode_id=vod48393-000704M001
+第705集,http://localhost:5000/ofiii204/index.m3u8?episode_id=vod48393-000705M001
+第706集,http://localhost:5000/ofiii204/index.m3u8?episode_id=vod48393-000706M001
 廉政英雄,#genre#
 第1集 飆速100,http://localhost:5000/ofiii196/index.m3u8?episode_id=vod8696-000001M001
 第2集 飆速100,http://localhost:5000/ofiii196/index.m3u8?episode_id=vod8696-000002M001
@@ -3848,14 +3848,10 @@ TVSP,http://localhost:5000/ofiii162/index.m3u8?episode_id=vod62481-019001M001
 第99集,http://localhost:5000/ofiii199/index.m3u8?episode_id=vod11066-000099M001
 第100集,http://localhost:5000/ofiii199/index.m3u8?episode_id=vod11066-000100M001
 掏掏新聞,#genre#
-2026大車拚-第36集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod83720-000036M001
-台灣1001個故事-第10集 第十集-鮮肉飯桌仔,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod64567-000010M001
-大大平評理-第42集 美日台合演兩國論大戲？聯合利劍軍演專打台獨？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69896-000042M001
-幸福空間-第124集 雙格局規劃 精準貼合居家需求,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod70063-000124M001
-幸福空間-第15集 第十五集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod70063-000015M001
 2026大車拚-第40集 民進黨執政25年 嘉義真的能變天？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod83720-000040M001
 健康紅燈區-第4集 生理年齡改不了 卵巢功能決定青春,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod86039-000004M001
 大大平評理-第442集 國軍防衛北移 共軍搶灘台北？台灣城鎮戰慘烈 美日反受益？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69896-000442M001
+幸福空間-第15集 第十五集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod70063-000015M001
 大大平評理-第443集 美俄APEC會面 川普斷烏軍星鏈為雙普會鋪路?,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69896-000443M001
 大雲時堂-第331集 後慈湖神秘面紗揭密,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod51575-000331M001
 人生從此不一樣-第4集 第四集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod57381-000004M001
@@ -3873,6 +3869,7 @@ TVSP,http://localhost:5000/ofiii162/index.m3u8?episode_id=vod62481-019001M001
 【52直播間｜歷史哥】-第126集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69643-020126M001
 幸福空間-第123集 會所風精品公設 讓回家變成一種享受,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod70063-000123M001
 台灣1001個故事-第11集 第十一集-森林辦桌的美好時刻,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod64567-000011M001
+幸福空間-第16集 第十六集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod70063-000016M001
 放鬆的爵士午後,#genre#
 【咖啡館爵士樂】,http://localhost:5000/ofiii252/index.m3u8?episode_id=vod73052-000001M001
 【咖啡館爵士樂-動態版】,http://localhost:5000/ofiii252/index.m3u8?episode_id=vod73052-000002M001
@@ -5789,19 +5786,17 @@ INFINITE東雨x成烈見面會2023台北站,http://localhost:5000/ofiii91/index.
 秘境不思溢4-第15集 日本：前往日本海的秘境 體驗不同的海岸風情,http://localhost:5000/ofiii248/index.m3u8?episode_id=vod20116-040015M001
 秘境不思溢4-第16集 日本：日本美食之都大阪 體驗茶道文化,http://localhost:5000/ofiii248/index.m3u8?episode_id=vod20116-040016M001
 空中英語教室HD頻道,#genre#
-空中英語教室-第1022集 Argentina: A Land of Contrasts  阿根廷：對比之境（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-261022M001
-Info Cloud-第924集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-240924M001
-大家說英語-第1023集 Master Hsu’s Noodle  許師傅手工麵線,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261023M001
-空中英語教室-第1023集 Argentina: A Land of Contrasts  阿根廷：對比之境（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-261023M001
-大家說英語-第1024集 Saturday Review本週課程複習,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261024M001
-Info Cloud-第925集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-240925M001
-Calendar Phrase-第508集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-200508M001
-大家說英語-第1022集 Good Ways to Take Photos  拍照小撇步（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261022M001
 空中英語教室-第1021集 The Detention Ghost  留校察看驚魂（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-261021M001
+Info Cloud-第925集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-240925M001
+空中英語教室-第1022集 Argentina: A Land of Contrasts  阿根廷：對比之境（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-261022M001
+Calendar Phrase-第508集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-200508M001
+空中英語教室-第1023集 Argentina: A Land of Contrasts  阿根廷：對比之境（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-261023M001
 空中英語教室-第1026集 Turning Waste Into Useful Products  再生奇蹟：翻轉廢棄邏輯,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-261026M001
 Info Cloud-第926集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-240926M001
 大家說英語-第1026集 I Want to Go Home!  我想回家！,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261026M001
 Calendar Phrase-第511集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-200511M001
+大家說英語-第1023集 Master Hsu’s Noodle  許師傅手工麵線,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261023M001
+大家說英語-第1024集 Saturday Review本週課程複習,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261024M001
 空中英語教室-第1027集 Moltbook: AI Agents, Social Networking and Religion  Moltbook：AI 社交場（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-261027M001
 Info Cloud-第927集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-240927M001
 大家說英語-第1027集 Where Do You Live?  你住在哪裡？（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261027M001
