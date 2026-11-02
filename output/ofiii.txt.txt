@@ -641,7 +641,6 @@ Yes娛樂,#genre#
 馬天宇自曝低谷期曾致電楊冪傾訴輕生念頭，感恩對方接住自己,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod86548-000000M001
 被網友貼上 “瘋批天才” 標籤，鄭雲龍坦言最想演普通人,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod86547-000000M001
 新女團 A2O LITE均齡 14.9 歲出道引爭議，李秀滿回應低齡愛豆話題,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod86543-000000M001
-志效「告別JYP」獨立當老闆！告白TWICE「無比珍貴」 曝團體動向,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod86516-000000M001
 三十而已,#genre#
 第1集,http://localhost:5000/ofiii123/index.m3u8?episode_id=vod43738-000001M001
 第2集,http://localhost:5000/ofiii123/index.m3u8?episode_id=vod43738-000002M001
@@ -3318,8 +3317,6 @@ TVSP,http://localhost:5000/ofiii162/index.m3u8?episode_id=vod62481-019001M001
 第41集,http://localhost:5000/ofiii109/index.m3u8?episode_id=vod84476-000041M001
 第42集,http://localhost:5000/ofiii109/index.m3u8?episode_id=vod84476-000042M001
 寰宇全視界,#genre#
-第697集 美日升息擋不住市場焦慮！美國想壓住通膨、日本連日圓都拉不回來！AI一旦失控誰來拔插頭？,http://localhost:5000/ofiii204/index.m3u8?episode_id=vod48393-000697M001
-第698集 川普等習近平救選票對中鷹派先閉嘴！白宮排場拉到頂 就盼中國買黃豆、鬆稀土！川普喊殲滅伊朗 轉身卻派人密談！荷姆茲海峽還要卡多久？,http://localhost:5000/ofiii204/index.m3u8?episode_id=vod48393-000698M001
 第699集 川普又要加碼打伊朗？近萬美軍增援難逼退讓 長期部署越打越疲！AI恐成紅藍鬥爭武器！川普改名SI、巨頭自管 民主黨不買單！,http://localhost:5000/ofiii204/index.m3u8?episode_id=vod48393-000699M001
 第700集 普丁保飛地不惜跟北約翻臉！核武警告拉高對峙 波羅的海關鍵據點俄歐角力最前線！美軍六代機重押波音 中國雙機已試飛 軍事版圖改寫！,http://localhost:5000/ofiii204/index.m3u8?episode_id=vod48393-000700M001
 第701集 川普淪選舉毒藥？共和黨候選人急切割、德州亮紅燈！美債爆雷誰陪葬？達里歐警告財政心臟病！川普還要擴軍減稅、全球恐被拖下水！,http://localhost:5000/ofiii204/index.m3u8?episode_id=vod48393-000701M001
@@ -3328,6 +3325,8 @@ TVSP,http://localhost:5000/ofiii162/index.m3u8?episode_id=vod62481-019001M001
 第704集 美債壓身還想圍堵中國！北京穩經濟、拚科技，航母戰機加速布局！AI狂燒錢亮紅燈！用戶再多也難付算力帳單 雲端擴張恐埋償債危機！,http://localhost:5000/ofiii204/index.m3u8?episode_id=vod48393-000704M001
 第705集 美國AI燒錢燒出無底洞！Meta自由現金流轉負仍加碼 巨頭爭搶市場資金！伊朗零紅線報復瞄準石油、AI設施 川普還敢再押一戰！,http://localhost:5000/ofiii204/index.m3u8?episode_id=vod48393-000705M001
 第706集 普丁要戰果烏克蘭要活路！澤倫斯基鬆口凍結戰線 美烏俄談判迎轉折！中國40項技術擬納出口管制 科技戰從關鍵材料打到核心技術！,http://localhost:5000/ofiii204/index.m3u8?episode_id=vod48393-000706M001
+第707集,http://localhost:5000/ofiii204/index.m3u8?episode_id=vod48393-000707M001
+第708集,http://localhost:5000/ofiii204/index.m3u8?episode_id=vod48393-000708M001
 廉政英雄,#genre#
 第1集 飆速100,http://localhost:5000/ofiii196/index.m3u8?episode_id=vod8696-000001M001
 第2集 飆速100,http://localhost:5000/ofiii196/index.m3u8?episode_id=vod8696-000002M001
@@ -3847,14 +3846,10 @@ TVSP,http://localhost:5000/ofiii162/index.m3u8?episode_id=vod62481-019001M001
 第99集,http://localhost:5000/ofiii199/index.m3u8?episode_id=vod11066-000099M001
 第100集,http://localhost:5000/ofiii199/index.m3u8?episode_id=vod11066-000100M001
 掏掏新聞,#genre#
-台灣1001個故事-第11集 第十一集-森林辦桌的美好時刻,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod64567-000011M001
-大大平評理-第444集 美俄柴油協議+烏軍星鏈受限！川普靠攏普丁 烏克蘭慘遭拋棄？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69896-000444M001
-幸福空間-第123集 會所風精品公設 讓回家變成一種享受,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod70063-000123M001
-2026大車拚-第39集 藍黨缺主軸 洋流鑽空檔？川習會成2026最大變數？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod83720-000039M001
+健康紅燈區-第5集 膠原蛋白逆齡再生 打造青春美顏,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod86039-000005M001
 大大平評理-第443集 美俄APEC會面 川普斷烏軍星鏈為雙普會鋪路?,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69896-000443M001
 幸福空間-第16集 第十六集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod70063-000016M001
 2026大車拚-第40集 民進黨執政25年 嘉義真的能變天？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod83720-000040M001
-健康紅燈區-第5集 膠原蛋白逆齡再生 打造青春美顏,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod86039-000005M001
 大大平評理-第445集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69896-000445M001
 大雲時堂-第332集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod51575-000332M001
 2026大車拚-第41集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod83720-000041M001
@@ -3871,6 +3866,8 @@ TVSP,http://localhost:5000/ofiii162/index.m3u8?episode_id=vod62481-019001M001
 【52直播間｜歷史哥】-第127集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69643-020127M001
 幸福空間-第124集 雙格局規劃 精準貼合居家需求,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod70063-000124M001
 台灣1001個故事-第12集 第十二集-咕咾石厝的綠島媽媽餐桌,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod64567-000012M001
+幸福空間-第17集 第十七集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod70063-000017M001
+健康紅燈區-第4集 生理年齡改不了 卵巢功能決定青春,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod86039-000004M001
 放鬆的爵士午後,#genre#
 【咖啡館爵士樂】,http://localhost:5000/ofiii252/index.m3u8?episode_id=vod73052-000001M001
 【咖啡館爵士樂-動態版】,http://localhost:5000/ofiii252/index.m3u8?episode_id=vod73052-000002M001
@@ -5786,18 +5783,14 @@ INFINITE東雨x成烈見面會2023台北站,http://localhost:5000/ofiii91/index.
 秘境不思溢4-第16集 日本：日本美食之都大阪 體驗茶道文化,http://localhost:5000/ofiii248/index.m3u8?episode_id=vod20116-040016M001
 空中英語教室HD頻道,#genre#
 空中英語教室-第1030集 Can It Really Rain Fish?  天降魚雨？（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-261030M001
-Info Cloud-第1001集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-241001M001
-大家說英語-第1031集 Saturday Review本週課程複習,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261031M001
-Info Cloud-第1002集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-241002M001
 Calendar Phrase-第518集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-200518M001
-大家說英語-第1029集 Fun in the Fall  戶外秋趣（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261029M001
-大家說英語-第1030集 Fun in the Fall  戶外秋趣（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261030M001
-空中英語教室-第1028集 Moltbook: AI Agents, Social Networking and Religion  Moltbook：AI 社交場（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-261028M001
-空中英語教室-第1029集 Can It Really Rain Fish?  天降魚雨？（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-261029M001
 空中英語教室-第1102集 Voting Power  投票決勝負（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-261102M001
 Info Cloud-第1003集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-241003M001
 大家說英語-第1102集 Cats Are Nice  貓咪很好喔（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261102M001
 Calendar Phrase-第519集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-200519M001
+空中英語教室-第1029集 Can It Really Rain Fish?  天降魚雨？（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-261029M001
+大家說英語-第1030集 Fun in the Fall  戶外秋趣（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261030M001
+大家說英語-第1031集 Saturday Review本週課程複習,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261031M001
 空中英語教室-第1103集 Voting Power  投票決勝負（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-261103M001
 Info Cloud-第1004集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-241004M001
 大家說英語-第1103集 Cats Are Nice  貓咪很好喔（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261103M001
@@ -5817,6 +5810,8 @@ Calendar Phrase-第526集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vo
 Info Cloud-第1009集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-241009M001
 大家說英語-第1107集 Saturday Review本週課程複習,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261107M001
 Calendar Phrase-第527集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-200527M001
+Info Cloud-第1010集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-241010M001
+Calendar Phrase-第528集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-200528M001
 第1財經,#genre#
 鉅亨加密世界-第236集 比特幣卡在8萬美元！聯準會本週出手，最後上車機會要來了？,http://localhost:5000/ofiii64/index.m3u8?episode_id=vod50513-000236M001
 財經皓角-第301集 全球債務風暴 台灣逆風而行？,http://localhost:5000/ofiii64/index.m3u8?episode_id=vod40896-000301M001
