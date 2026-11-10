@@ -2030,7 +2030,6 @@ Clevatess Ⅱ-魔獸之王與虛假的勇者傳承-,http://localhost:5000/ofiii9
 第102集 鴨博士的冰火滷味,http://localhost:5000/ofiii245/index.m3u8?episode_id=vod43534-010102M001
 第103集 阿達仔ㄟ奶凍捲,http://localhost:5000/ofiii245/index.m3u8?episode_id=vod43534-010103M001
 台灣最前線,#genre#
-第403集 洋流童行！撲馬助陣拚基隆翻轉！ 勘災如朕親臨？藍動員救蔣一人？,http://localhost:5000/ofiii209/index.m3u8?episode_id=vod79238-000403M001
 第404集 洋流版圖擴！掀東泉vs.馬露醬之爭？好感度大跌？蔣改憨慢性格救選情？,http://localhost:5000/ofiii209/index.m3u8?episode_id=vod79238-000404M001
 第405集 正版vs.冒牌？蔣反攻號角從抄襲起步？撲馬民調5戰3勝？藍矇眼戰術能止血？,http://localhost:5000/ofiii209/index.m3u8?episode_id=vod79238-000405M001
 第406集 洋流慧聚前進汐止！撲馬專訪再破圈？萬安辯論前閉關？藍媒救蔣反被拖累？,http://localhost:5000/ofiii209/index.m3u8?episode_id=vod79238-000406M001
@@ -2040,6 +2039,7 @@ Clevatess Ⅱ-魔獸之王與虛假的勇者傳承-,http://localhost:5000/ofiii9
 第410集 大洋流壓軸場不能輸！沈籌備彩蛋？  跟風跟上癮？萬安抄襲順報下一步？,http://localhost:5000/ofiii209/index.m3u8?episode_id=vod79238-000410M001
 第411集 沈掃市場如巨星！蔣掃街地名也講錯？撲馬跨界圈粉！蔣營養午餐出2g菜鬆！,http://localhost:5000/ofiii209/index.m3u8?episode_id=vod79238-000411M001
 第412集,http://localhost:5000/ofiii209/index.m3u8?episode_id=vod79238-000412M001
+第413集,http://localhost:5000/ofiii209/index.m3u8?episode_id=vod79238-000413M001
 台灣真善美,#genre#
 第563集 有機村泥火山豆腐,http://localhost:5000/ofiii241/index.m3u8?episode_id=vod14686-000563M001
 第564集 古法日曬的蓮藕粉,http://localhost:5000/ofiii241/index.m3u8?episode_id=vod14686-000564M001
@@ -3859,16 +3859,13 @@ TVSP,http://localhost:5000/ofiii162/index.m3u8?episode_id=vod62481-019001M001
 第99集,http://localhost:5000/ofiii199/index.m3u8?episode_id=vod11066-000099M001
 第100集,http://localhost:5000/ofiii199/index.m3u8?episode_id=vod11066-000100M001
 掏掏新聞,#genre#
-健康紅燈區-第4集 生理年齡改不了 卵巢功能決定青春,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod86039-000004M001
-大大平評理-第446集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69896-000446M001
-幸福空間-第17集 第十七集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod70063-000017M001
-2026大車拚-第41集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod83720-000041M001
-大大平評理-第447集 美日利劍軍演聚焦台海？中國太空武器成美軍惡夢？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69896-000447M001
 大雲時堂-第333集 脫胎換骨的新雲林,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod51575-000333M001
 2026大車拚-第42集 人造洋流選舉最大騙術？蔣萬安連任安可沒問題？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod83720-000042M001
 人生從此不一樣-第6集 第六集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod57381-000006M001
+大大平評理-第447集 美日利劍軍演聚焦台海？中國太空武器成美軍惡夢？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69896-000447M001
 大大平評理-第448集 三巨頭APEC先摸底？中國攻台時間表生變？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69896-000448M001
 大雲時堂-第332集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod51575-000332M001
+2026大車拚-第41集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod83720-000041M001
 健康紅燈區-第6集 尿意來了就憋不住?憋尿損害腎臟功能?,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod86039-000006M001
 大雲時堂-第331集 後慈湖神秘面紗揭密,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod51575-000331M001
 政治琳龍SAY-第98集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod70083-000098M001
@@ -5799,20 +5796,14 @@ H.O.T. 張佑赫台北粉絲見面會,http://localhost:5000/ofiii91/index.m3u8?e
 秘境不思溢4-第15集 日本：前往日本海的秘境 體驗不同的海岸風情,http://localhost:5000/ofiii248/index.m3u8?episode_id=vod20116-040015M001
 秘境不思溢4-第16集 日本：日本美食之都大阪 體驗茶道文化,http://localhost:5000/ofiii248/index.m3u8?episode_id=vod20116-040016M001
 空中英語教室HD頻道,#genre#
-Info Cloud-第1010集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-241010M001
-空中英語教室-第1106集 The Millionaire Next Door  原來有錢人都這麼做（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-261106M001
-Calendar Phrase-第528集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-200528M001
-空中英語教室-第1109集 Card Games Are Making a Comeback  紙牌遊戲捲土重來,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-261109M001
-Info Cloud-第1011集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-241011M001
-大家說英語-第1109集 Late Nate  遲到大王Nate,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261109M001
-Calendar Phrase-第529集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-200529M001
-空中英語教室-第1105集 The Millionaire Next Door  原來有錢人都這麼做（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-261105M001
-大家說英語-第1106集 Goa Is Calling  果亞在呼喚（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261106M001
-大家說英語-第1107集 Saturday Review本週課程複習,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261107M001
 空中英語教室-第1110集 The Hidden Cost of Adoption  收養的代價（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-261110M001
 Info Cloud-第1012集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-241012M001
 大家說英語-第1110集 Rumpelstiltskin  侏儒怪（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261110M001
 Calendar Phrase-第601集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-200601M001
+空中英語教室-第1106集 The Millionaire Next Door  原來有錢人都這麼做（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-261106M001
+大家說英語-第1107集 Saturday Review本週課程複習,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261107M001
+空中英語教室-第1109集 Card Games Are Making a Comeback  紙牌遊戲捲土重來,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-261109M001
+大家說英語-第1109集 Late Nate  遲到大王Nate,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261109M001
 空中英語教室-第1111集 The Hidden Cost of Adoption  收養的代價（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-261111M001
 Info Cloud-第1014集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-241014M001
 大家說英語-第1111集 Rumpelstiltskin  侏儒怪（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261111M001
@@ -5830,6 +5821,10 @@ Info Cloud-第1017集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod345
 Calendar Phrase-第605集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-200605M001
 Info Cloud-第1018集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-241018M001
 Calendar Phrase-第608集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-200608M001
+空中英語教室-第1116集 Y2K Fashion Returns  Y2K時尚風潮再起,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-261116M001
+Info Cloud-第1019集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-241019M001
+大家說英語-第1116集 Enjoy Fast Food!  享受速食！,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-261116M001
+Calendar Phrase-第609集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-200609M001
 第1財經,#genre#
 鉅亨加密世界-第237集 利空出盡？升息、法案卡關都不怕！比特幣為何逆勢大漲？,http://localhost:5000/ofiii64/index.m3u8?episode_id=vod50513-000237M001
 財經皓角-第302集 全球轉鷹 台灣央行該升息？,http://localhost:5000/ofiii64/index.m3u8?episode_id=vod40896-000302M001
@@ -5973,7 +5968,6 @@ Calendar Phrase-第608集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vo
 【白噪音系列，雷雨聲】,http://localhost:5000/ofiii250/index.m3u8?episode_id=vod73056-000001M001
 【白噪音系列，雷雨聲－房間版】,http://localhost:5000/ofiii250/index.m3u8?episode_id=vod73056-000002M001
 綜藝大集合,#genre#
-第1198集 瓜哥是無敵幸運星！林輝瑝表示不要逼我！大家都想和牛奶玩遊戲？(台中烏日),http://localhost:5000/ofiii125/index.m3u8?episode_id=vod9838-001198M001
 第1199集 秀秀子展現十八般武藝！瓜哥慘遭處罰彈額頭！顏佑庭的超強好腰力！(雲林斗六),http://localhost:5000/ofiii125/index.m3u8?episode_id=vod9838-001199M001
 第1200集 籃籃：我當時害怕極了！賴慧如為自己爭口氣！大手筆把廟拆了？因為速度瓜哥會破產！？綠茶被當場脫褲子！？鄭楠鐘讓粉絲為他尖叫？栗子為自己加油！(彰化埔鹽),http://localhost:5000/ofiii125/index.m3u8?episode_id=vod9838-001200M001
 第1201集 李多慧來拜年 跟籃籃起內鬨啦！遊戲玩到感情生變？歐弟、藍波老師簡直寶刀未老！李多慧對瓜哥丟垃圾！？衣服要先穿好 歐弟為求財下跪了 (新北萬里),http://localhost:5000/ofiii125/index.m3u8?episode_id=vod9838-001201M001
@@ -6069,6 +6063,7 @@ Calendar Phrase-第608集,http://localhost:5000/ofiii16/index.m3u8?episode_id=vo
 第1291集 瓜哥籃籃合作無間！這是要了瓜哥老命嗎？(台中烏日),http://localhost:5000/ofiii125/index.m3u8?episode_id=vod9838-001291M001
 第1292集 瓜哥頭好撞撞不服輸一撞再撞!? 檸檬、秀秀子兩位女神比賽大PK??無尊初次挑戰北海小英雄結果如何?? (新北石門),http://localhost:5000/ofiii125/index.m3u8?episode_id=vod9838-001292M001
 第1293集 籃籃、郭忠祐主持大對決 籃籃竟然不講武德!? 頭好撞撞秀秀子、小珍奶殺紅眼? 一比鴨鴨小CALL越幫越忙? (彰化溪州),http://localhost:5000/ofiii125/index.m3u8?episode_id=vod9838-001293M001
+第1294集 郭忠祐殺瘋啦！瓜哥蓋布袋被打跟大家都有仇？瘦到不行坐地上馬上有錢進帳？ 秀秀子抒情版？剪刀石頭不好意思啦！(苗栗通宵),http://localhost:5000/ofiii125/index.m3u8?episode_id=vod9838-001294M001
 膽大黨,#genre#
 膽大黨-第1集 那就是戀情的開端,http://localhost:5000/ofiii183/index.m3u8?episode_id=vod73503-010001M001
 膽大黨-第2集 那是外星人吧,http://localhost:5000/ofiii183/index.m3u8?episode_id=vod73503-010002M001
