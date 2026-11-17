@@ -2521,7 +2521,8 @@
       "lstSETs": [
         1,
         4,
-        10
+        10,
+        46
       ],
       "fcFREE": true,
       "fsQUALITY": "HD",
@@ -3013,7 +3014,7 @@
       "fsVENDOR": "愛爾達",
       "fsDESCRIPTION": "全球第一家致力於報導世界運動明星生活的娛樂型體育頻道，以「運動明星」為主角，所有的頻道節目都與「運動明星」緊緊相連。從歌星與運動明星的擂台競技，到健身選手培訓電影明星，再到時尚設計師為運動名人穿衣打扮，本頻道為您呈現運動明星的日常生活與幕後花絮報導。推薦節目有《足球明星》、《邁向卡達世足》、《事實揭露:體育場》、《直擊俱樂部》",
       "fsSCHEDULE_DATE": null,
-      "fnORDER": 100
+      "fnORDER": 99
     },
     {
       "fnID": 58,
@@ -3429,53 +3430,6 @@
       "fsDESCRIPTION": "全球第一個4K音樂娛樂頻道，超高畫質觀賞演唱會、演奏會、展覽與煙火秀，零距離彷彿置身表演現場。Festival 4k的音樂節目內容橫跨古典、流行、搖滾、爵士、電音及芭蕾，全天候無間斷播出來自全球各地的表宴盛況；聚焦最即時最熱門的話題及表演，同時擁有最豐富的片庫，提供給觀眾全新的高畫質影音饗宴。",
       "fsSCHEDULE_DATE": null,
       "fnORDER": 99
-    },
-    {
-      "fnID": 123,
-      "fsTYPE": "03",
-      "fsCDN_ROUTE": "A",
-      "fsTYPE_NAME": "生活旅遊時尚",
-      "fsNAME": "幸福空間居家台",
-      "fs4GTV_ID": "4gtv-4gtv064",
-      "fnCHANNEL_NO": 115,
-      "fsHEAD_FRAME": "https://4gtvimg2.4gtv.tv/4gtv-Image/Production/Channel/Live/4gtv-4gtv064.jpg",
-      "fsPICTURE_LOGO": null,
-      "fsLOGO_PC": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/pc/logo_4gtv_4gtv-live206_mobile.webp",
-      "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live206_mobile.webp",
-      "fcOVERSEAS": false,
-      "lstEXCEPT_COUNTRY": [
-        ""
-      ],
-      "lstALL_BITRATE": null,
-      "fsFREE_PROFILE": null,
-      "lstSETs": [
-        1,
-        4,
-        10,
-        16,
-        19,
-        22,
-        26,
-        27,
-        28,
-        29,
-        30,
-        41,
-        44
-      ],
-      "fcFREE": true,
-      "fsQUALITY": "HD",
-      "fnCHAT_ID": 0,
-      "fcHAS_PROGLIST": true,
-      "fdLIKE_BEG_DATE": null,
-      "fcLIKE": false,
-      "fcRISTRICT": false,
-      "fsEXPIRE_DATE": "",
-      "fnGRADED": 0,
-      "fsVENDOR": "幸福空間",
-      "fsDESCRIPTION": "全台首創、最專業的居家設計影音平台！ 幸福空間居家台與超過千位專業室內設計師合作，提供每日最新裝修案例、收納技巧與建材知識。無論是新屋裝潢、老屋翻新或空間美化，我們陪您從靈感出發，打造專屬的夢想家園。",
-      "fsSCHEDULE_DATE": null,
-      "fnORDER": 19
     },
     {
       "fnID": 139,
